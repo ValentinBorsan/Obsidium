@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "GDG",
+    "DSD",
+    "GDG"
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "D": {
+      "item": "obsidium:volcanite_dust"
+    },
+    "G": {
+      "item": "obsidium:volcanite_glass"
+    }
+  },
+  "result": {
+    "count": 4,
+    "id": "obsidium:supreme_volcanite_glass"
+  }
+}

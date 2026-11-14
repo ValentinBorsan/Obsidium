@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " G ",
+    "ASA",
+    " L "
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "L": {
+      "item": "obsidium:silver_nugget"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:electrum_sapling"
+  }
+}
+

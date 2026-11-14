@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "VSV",
+    "S#S",
+    "VSV"
+  ],
+  "key": {
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    },
+    "S": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "#": {
+      "item": "obsidium:hephaestus_volcanite_sapling"
+    }
+  },
+  "result": {
+    "count": 2,
+    "id": "obsidium:tartarean_netherite_sapling"
+  }
+}
+

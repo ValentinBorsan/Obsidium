@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": [
+      {
+        "item": "obsidium:volcanite_ingot"
+      },
+      {
+        "item": "obsidium:volcanite"
+      }
+    ],
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "O": [
+      {
+        "item": "minecraft:obsidian"
+      },
+      {
+        "item": "minecraft:crying_obsidian"
+      }
+    ],
+    "A": [
+      {
+        "item": "obsidium:volcanic_ash"
+      },
+      {
+        "item": "obsidium:ash_briquette"
+      },
+      {
+        "item": "minecraft:blaze_powder"
+      }
+    ]
+  },
+  "pattern": [
+    "OGO",
+    "VAV",
+    "OGO"
+  ],
+  "result": {
+    "count": 2,
+    "id": "obsidium:volcanic_alloy"
+  }
+}

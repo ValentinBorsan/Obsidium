@@ -1,0 +1,47 @@
+{
+  "parent": "obsidium:odyssey/mechanical_pulverization",
+  "display": {
+    "icon": {
+      "id": "obsidium:volcanic_alloy"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.magmatic_smelting.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.magmatic_smelting.description"
+    },
+    "frame": "goal",
+    "show_toast": true
+  },
+  "criteria": {
+    "volcanite_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanite_ingot",
+            "count": {
+              "min": 4
+            }
+          }
+        ]
+      }
+    },
+    "volcanic_alloy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanic_alloy",
+            "count": {
+              "min": 2
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 75
+  }
+}

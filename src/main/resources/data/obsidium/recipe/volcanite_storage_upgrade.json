@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GRG",
+    "RCR",
+    "GRG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:emerald"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "C": {
+      "item": "obsidium:volcanite_storage_processor"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_storage_upgrade",
+    "count": 1
+  }
+}

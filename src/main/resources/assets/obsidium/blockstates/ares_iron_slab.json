@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "obsidium:block/ares_iron_slab"
+    },
+    "type=double": {
+      "model": "obsidium:block/ares_iron_planks"
+    },
+    "type=top": {
+      "model": "obsidium:block/ares_iron_slab_top"
+    }
+  }
+}

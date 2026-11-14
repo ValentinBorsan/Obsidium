@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FCF",
+    "AUA"
+  ],
+  "key": {
+    "F": { "item": "obsidium:volcanite_flux_mechanism" },
+    "C": { "item": "obsidium:synchrotron_ring_coil" },
+    "A": { "item": "obsidium:supreme_volcanic_alloy" },
+    "U": { "item": "obsidium:volcanite_energy_unit" }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:hadron_energy_port"
+  }
+}

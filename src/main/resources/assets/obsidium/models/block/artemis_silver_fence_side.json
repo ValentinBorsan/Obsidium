@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "obsidium:block/artemis_silver_planks"
+  }
+}

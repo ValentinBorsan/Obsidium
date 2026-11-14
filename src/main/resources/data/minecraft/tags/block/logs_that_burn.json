@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:ares_iron_log",
+    "obsidium:artemis_silver_log",
+    "obsidium:cronus_lead_log",
+    "obsidium:electrum_log",
+    "obsidium:hephaestus_volcanite_log",
+    "obsidium:hermes_copper_log",
+    "obsidium:midas_gold_log",
+    "obsidium:tartarean_netherite_log",
+    "obsidium:zeus_tin_log"
+  ]
+}

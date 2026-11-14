@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "obsidium:block/ares_iron_planks",
+    "side": "obsidium:block/ares_iron_planks",
+    "top": "obsidium:block/ares_iron_planks"
+  }
+}

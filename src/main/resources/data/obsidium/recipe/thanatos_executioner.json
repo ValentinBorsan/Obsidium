@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SCS",
+    "EME",
+    "AHA"
+  ],
+  "key": {
+    "S": { "item": "minecraft:diamond_sword" },
+    "C": { "item": "obsidium:advanced_volcanite_casing" },
+    "E": { "item": "obsidium:volcanite_energy_cell" },
+    "M": { "item": "obsidium:volcanite_grinder" },
+    "A": { "item": "obsidium:volcanic_alloy" },
+    "H": { "item": "minecraft:hopper" }
+  },
+  "result": {
+    "id": "obsidium:thanatos_executioner",
+    "count": 1
+  }
+}
+

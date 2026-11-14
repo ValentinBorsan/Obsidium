@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "obsidium:block/volcanite_storage_unit"
+    },
+    "facing=south": {
+      "model": "obsidium:block/volcanite_storage_unit",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "obsidium:block/volcanite_storage_unit",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "obsidium:block/volcanite_storage_unit",
+      "y": 90
+    }
+  }
+}

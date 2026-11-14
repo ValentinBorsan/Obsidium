@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " V ",
+    "VNV",
+    " V "
+  ],
+  "key": {
+    "V": { "item": "obsidium:volcanic_alloy" },
+    "N": { "item": "minecraft:nether_star" }
+  },
+  "result": {
+    "id": "obsidium:volcanite_warp_gauntlet",
+    "count": 1
+  }
+}

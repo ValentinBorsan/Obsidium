@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "obsidium:block/volcanite_lamp" },
+    "lit=true": { "model": "obsidium:block/volcanite_lamp" }
+  }
+}

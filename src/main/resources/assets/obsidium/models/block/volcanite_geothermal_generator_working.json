@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/volcanite_geothermal_generator_side",
+    "down": "obsidium:block/volcanite_geothermal_generator_bottom",
+    "up": "obsidium:block/volcanite_geothermal_generator_top",
+    "north": "obsidium:block/volcanite_geothermal_generator_front_working",
+    "south": "obsidium:block/volcanite_geothermal_generator_side",
+    "west": "obsidium:block/volcanite_geothermal_generator_side",
+    "east": "obsidium:block/volcanite_geothermal_generator_side"
+  }
+}

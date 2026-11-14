@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:ares_iron_slab",
+    "obsidium:artemis_silver_slab",
+    "obsidium:cronus_lead_slab",
+    "obsidium:electrum_slab",
+    "obsidium:hephaestus_volcanite_slab",
+    "obsidium:hermes_copper_slab",
+    "obsidium:midas_gold_slab",
+    "obsidium:tartarean_netherite_slab",
+    "obsidium:zeus_tin_slab"
+  ]
+}

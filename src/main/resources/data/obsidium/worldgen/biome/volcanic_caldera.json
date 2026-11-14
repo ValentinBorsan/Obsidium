@@ -1,0 +1,128 @@
+{
+  "has_precipitation": false,
+  "temperature": 1.2,
+  "downfall": 0.0,
+  "effects": {
+    "fog_color": 4861245,
+    "sky_color": 14441530,
+    "water_color": 4417124,
+    "water_fog_color": 1515568,
+    "foliage_color": 8612152,
+    "grass_color": 6702128,
+    "particle": {
+      "options": {
+        "type": "minecraft:ash"
+      },
+      "probability": 0.02
+    },
+    "ambient_sound": "minecraft:ambient.basalt_deltas.loop",
+    "mood_sound": {
+      "sound": "minecraft:ambient.basalt_deltas.mood",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "additions_sound": {
+      "sound": "minecraft:ambient.basalt_deltas.additions",
+      "tick_chance": 0.015
+    },
+    "music": {
+      "sound": "minecraft:music.overworld.badlands",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    }
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "obsidium:cinder_stalker",
+        "weight": 25,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:magma_cube",
+        "weight": 20,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:skeleton",
+        "weight": 60,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:zombie",
+        "weight": 60,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:spider",
+        "weight": 40,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:creeper",
+        "weight": 30,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "creature": [],
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_coal_lower",
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "minecraft:ore_gold",
+      "minecraft:ore_redstone",
+      "obsidium:tin_ore_placed",
+      "obsidium:lead_ore_placed",
+      "obsidium:volcanite_ore_placed",
+      "obsidium:volcanite_thermal_ore_placed"
+    ],
+    [
+      "obsidium:volcanic_cone",
+      "obsidium:midas_gold_tree_placed",
+      "obsidium:ares_iron_tree_placed",
+      "obsidium:hermes_copper_tree_placed",
+      "obsidium:hephaestus_volcanite_tree_placed"
+    ]
+  ]
+}

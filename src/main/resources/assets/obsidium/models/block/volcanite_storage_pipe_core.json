@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "obsidium:block/volcanite_storage_pipe",
+    "texture": "obsidium:block/volcanite_storage_pipe"
+  },
+  "elements": [
+    {
+      "from": [6, 6, 6],
+      "to": [10, 10, 10],
+      "faces": {
+        "down":  { "uv": [6, 6, 10, 10], "texture": "#texture", "tintindex": 0 },
+        "up":    { "uv": [6, 6, 10, 10], "texture": "#texture", "tintindex": 0 },
+        "north": { "uv": [6, 6, 10, 10], "texture": "#texture", "tintindex": 0 },
+        "south": { "uv": [6, 6, 10, 10], "texture": "#texture", "tintindex": 0 },
+        "west":  { "uv": [6, 6, 10, 10], "texture": "#texture", "tintindex": 0 },
+        "east":  { "uv": [6, 6, 10, 10], "texture": "#texture", "tintindex": 0 }
+      }
+    }
+  ]
+}

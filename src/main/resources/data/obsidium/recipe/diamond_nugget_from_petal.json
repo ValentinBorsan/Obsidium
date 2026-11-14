@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "obsidium:diamond_petal"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:diamond_nugget"
+  }
+}

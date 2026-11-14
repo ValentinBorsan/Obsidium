@@ -1,0 +1,33 @@
+{
+    "textures": {
+        "wire": "obsidium:block/supreme_volcanite_energy_wire"
+    },
+    "elements": [
+        {
+            "from": [
+                0,
+                6,
+                6
+            ],
+            "to": [
+                6,
+                10,
+                10
+            ],
+            "faces": {
+                "down": {
+                    "texture": "#wire"
+                },
+                "up": {
+                    "texture": "#wire"
+                },
+                "north": {
+                    "texture": "#wire"
+                },
+                "south": {
+                    "texture": "#wire"
+                }
+            }
+        }
+    ]
+}

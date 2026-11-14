@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "obsidium:block/hermes_copper_sapling"
+  }
+}

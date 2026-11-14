@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ATA",
+    "FPF",
+    "ACA"
+  ],
+  "key": {
+    "A": { "item": "obsidium:advanced_volcanite_casing" },
+    "T": { "item": "obsidium:volcanite_thermo_core" },
+    "F": { "item": "obsidium:volcanite_flux_mechanism" },
+    "P": { "item": "obsidium:dionysian_press" },
+    "C": { "item": "obsidium:pyric_bronze_ingot" }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:advanced_dionysian_press"
+  }
+}

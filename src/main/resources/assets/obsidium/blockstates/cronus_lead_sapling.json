@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "obsidium:block/cronus_lead_sapling"
+    },
+    "stage=1": {
+      "model": "obsidium:block/cronus_lead_sapling"
+    }
+  }
+}

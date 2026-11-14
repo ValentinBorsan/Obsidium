@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north,formed=false,lit=false": { "model": "obsidium:block/olympian_hadron_collider" },
+    "facing=east,formed=false,lit=false":  { "model": "obsidium:block/olympian_hadron_collider", "y": 90 },
+    "facing=south,formed=false,lit=false": { "model": "obsidium:block/olympian_hadron_collider", "y": 180 },
+    "facing=west,formed=false,lit=false":  { "model": "obsidium:block/olympian_hadron_collider", "y": 270 },
+    "facing=north,formed=false,lit=true":  { "model": "obsidium:block/olympian_hadron_collider" },
+    "facing=east,formed=false,lit=true":   { "model": "obsidium:block/olympian_hadron_collider", "y": 90 },
+    "facing=south,formed=false,lit=true":  { "model": "obsidium:block/olympian_hadron_collider", "y": 180 },
+    "facing=west,formed=false,lit=true":   { "model": "obsidium:block/olympian_hadron_collider", "y": 270 },
+    "facing=north,formed=true,lit=false":  { "model": "obsidium:block/olympian_hadron_collider_formed" },
+    "facing=east,formed=true,lit=false":   { "model": "obsidium:block/olympian_hadron_collider_formed", "y": 90 },
+    "facing=south,formed=true,lit=false":  { "model": "obsidium:block/olympian_hadron_collider_formed", "y": 180 },
+    "facing=west,formed=true,lit=false":   { "model": "obsidium:block/olympian_hadron_collider_formed", "y": 270 },
+    "facing=north,formed=true,lit=true":   { "model": "obsidium:block/olympian_hadron_collider_formed" },
+    "facing=east,formed=true,lit=true":    { "model": "obsidium:block/olympian_hadron_collider_formed", "y": 90 },
+    "facing=south,formed=true,lit=true":   { "model": "obsidium:block/olympian_hadron_collider_formed", "y": 180 },
+    "facing=west,formed=true,lit=true":    { "model": "obsidium:block/olympian_hadron_collider_formed", "y": 270 }
+  }
+}

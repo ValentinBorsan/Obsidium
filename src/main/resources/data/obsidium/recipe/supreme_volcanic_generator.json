@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "E": {
+      "item": "obsidium:volcanite_energy_core"
+    },
+    "G": {
+      "item": "obsidium:volcanite_geothermal_generator"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    },
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    }
+  },
+  "pattern": [
+    "SES",
+    "TGT",
+    "SCS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:supreme_volcanic_generator"
+  }
+}

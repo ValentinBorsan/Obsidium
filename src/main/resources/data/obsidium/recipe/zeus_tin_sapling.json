@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "AMA"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "M": {
+      "item": "obsidium:tin_nugget"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:zeus_tin_sapling"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SG",
+    "VG"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    }
+  },
+  "result": {
+    "id": "minecraft:netherite_ingot",
+    "count": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building_blocks",
+  "key": {
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    "ASA",
+    "SWS",
+    "ASA"
+  ],
+  "result": {
+    "count": 8,
+    "id": "obsidium:volcanic_cement_block"
+  }
+}
+

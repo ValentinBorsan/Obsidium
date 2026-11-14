@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "pattern": [
+    "VDV",
+    "DFD",
+    "OVO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanite_grinder"
+  }
+}

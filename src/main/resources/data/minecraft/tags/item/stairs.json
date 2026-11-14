@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:midas_gold_stairs",
+    "obsidium:ares_iron_stairs",
+    "obsidium:hermes_copper_stairs",
+    "obsidium:hephaestus_volcanite_stairs",
+    "obsidium:electrum_stairs",
+    "obsidium:tartarean_netherite_stairs"
+  ]
+}

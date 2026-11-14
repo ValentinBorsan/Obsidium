@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DAD",
+    "ABA",
+    "PCP"
+  ],
+  "key": {
+    "D": {
+      "item": "obsidium:gold_dust"
+    },
+    "A": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "B": {
+      "item": "obsidium:volcanite_binding"
+    },
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanite_flux_mechanism"
+  }
+}

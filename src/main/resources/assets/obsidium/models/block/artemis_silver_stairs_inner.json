@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "obsidium:block/artemis_silver_planks",
+    "top": "obsidium:block/artemis_silver_planks",
+    "side": "obsidium:block/artemis_silver_planks"
+  }
+}

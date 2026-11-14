@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " V ",
+    " RV",
+    "O  "
+  ],
+  "key": {
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_wrench",
+    "count": 1
+  }
+}

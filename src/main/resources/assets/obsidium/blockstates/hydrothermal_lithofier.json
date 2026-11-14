@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,lit=false": { "model": "obsidium:block/hydrothermal_lithofier" },
+    "facing=east,lit=false":  { "model": "obsidium:block/hydrothermal_lithofier", "y": 90 },
+    "facing=south,lit=false": { "model": "obsidium:block/hydrothermal_lithofier", "y": 180 },
+    "facing=west,lit=false":  { "model": "obsidium:block/hydrothermal_lithofier", "y": 270 },
+    "facing=north,lit=true":  { "model": "obsidium:block/hydrothermal_lithofier_lit" },
+    "facing=east,lit=true":   { "model": "obsidium:block/hydrothermal_lithofier_lit", "y": 90 },
+    "facing=south,lit=true":  { "model": "obsidium:block/hydrothermal_lithofier_lit", "y": 180 },
+    "facing=west,lit=true":   { "model": "obsidium:block/hydrothermal_lithofier_lit", "y": 270 }
+  }
+}
+

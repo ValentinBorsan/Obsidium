@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "obsidium:block/tartarean_netherite_log_top",
+    "side": "obsidium:block/tartarean_netherite_log"
+  }
+}
+

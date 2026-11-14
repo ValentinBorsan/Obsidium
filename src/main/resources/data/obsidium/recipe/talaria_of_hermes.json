@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "HNH",
+    "SES",
+    "PCP"
+  ],
+  "key": {
+    "H": {
+      "item": "obsidium:hermes_copper_fruit"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "E": {
+      "item": "minecraft:elytra"
+    },
+    "P": {
+      "item": "obsidium:pyric_bronze_ingot"
+    },
+    "C": {
+      "item": "obsidium:cinder_stalker_skull"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:talaria_of_hermes"
+  }
+}

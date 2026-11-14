@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "obsidium:block/hephaestus_volcanite_slab"
+    },
+    "type=double": {
+      "model": "obsidium:block/hephaestus_volcanite_planks"
+    },
+    "type=top": {
+      "model": "obsidium:block/hephaestus_volcanite_slab_top"
+    }
+  }
+}

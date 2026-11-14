@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "obsidium:item/astrape_energy_pylon"
+  }
+}
+

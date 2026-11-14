@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "obsidium:pyric_bronze_ingot"
+    },
+    "/": [
+      {
+        "item": "minecraft:stick"
+      },
+      {
+        "tag": "c:wooden_rods"
+      }
+    ]
+  },
+  "pattern": [
+    "#",
+    "#",
+    "/"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:promethean_sword"
+  }
+}
+

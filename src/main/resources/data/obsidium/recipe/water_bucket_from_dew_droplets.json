@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "item": "obsidium:dew_droplet"
+    },
+    {
+      "item": "obsidium:dew_droplet"
+    },
+    {
+      "item": "obsidium:dew_droplet"
+    },
+    {
+      "item": "obsidium:dew_droplet"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:water_bucket"
+  }
+}
+

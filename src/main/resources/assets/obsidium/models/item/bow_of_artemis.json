@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "obsidium:item/bow_of_artemis"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "pulling": 1
+      },
+      "model": "obsidium:item/bow_of_artemis_pulling_0"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "pull": 0.65
+      },
+      "model": "obsidium:item/bow_of_artemis_pulling_1"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "pull": 0.9
+      },
+      "model": "obsidium:item/bow_of_artemis_pulling_2"
+    }
+  ]
+}

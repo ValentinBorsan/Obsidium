@@ -1,0 +1,41 @@
+{
+  "parent": "obsidium:odyssey/grid_infrastructure",
+  "display": {
+    "icon": {
+      "id": "obsidium:volcanite_storage_remote"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.digital_nexus.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.digital_nexus.description"
+    },
+    "frame": "goal",
+    "show_toast": true
+  },
+  "criteria": {
+    "volcanite_storage_controller": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanite_storage_controller"
+          }
+        ]
+      }
+    },
+    "volcanite_storage_remote": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanite_storage_remote"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

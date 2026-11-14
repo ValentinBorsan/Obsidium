@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "obsidium:block/olympian_hadron_collider_top",
+    "front": "obsidium:block/olympian_hadron_collider_front",
+    "side": "obsidium:block/olympian_hadron_collider_side"
+  }
+}
+

@@ -1,0 +1,58 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SWS",
+    "SAS",
+    "SLS"
+  ],
+  "key": {
+    "S": [
+      {
+        "item": "minecraft:smooth_basalt"
+      },
+      {
+        "item": "minecraft:smooth_stone"
+      },
+      {
+        "item": "minecraft:stone"
+      },
+      {
+        "item": "minecraft:cobblestone"
+      },
+      {
+        "item": "minecraft:deepslate"
+      }
+    ],
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    },
+    "A": [
+      {
+        "item": "obsidium:volcanic_ash"
+      },
+      {
+        "item": "obsidium:ash_briquette"
+      },
+      {
+        "item": "minecraft:redstone"
+      },
+      {
+        "item": "obsidium:volcanite"
+      },
+      {
+        "item": "obsidium:volcanite_dust"
+      },
+      {
+        "item": "obsidium:volcanite_ingot"
+      }
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:hydrothermal_vitrifier"
+  }
+}

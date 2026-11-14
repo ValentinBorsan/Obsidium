@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "obsidium:block/pyretic_titan_sapling"
+  }
+}

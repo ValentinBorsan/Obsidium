@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "minecraft:oak_planks"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "B": {
+      "item": "minecraft:barrel"
+    }
+  },
+  "pattern": [
+    "POP",
+    "PBP",
+    "POP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:dionysian_aging_barrel"
+  }
+}

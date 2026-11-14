@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "fruiting=false": {
+      "model": "obsidium:block/cronus_lead_leaves"
+    },
+    "fruiting=true": {
+      "model": "obsidium:block/cronus_lead_leaves"
+    }
+  }
+}

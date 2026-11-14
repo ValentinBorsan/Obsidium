@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "AMA"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "M": {
+      "item": "obsidium:lead_nugget"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:cronus_lead_sapling"
+  }
+}

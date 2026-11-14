@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,aging=false": { "model": "obsidium:block/dionysian_aging_barrel" },
+    "facing=east,aging=false":  { "model": "obsidium:block/dionysian_aging_barrel", "y": 90 },
+    "facing=south,aging=false": { "model": "obsidium:block/dionysian_aging_barrel", "y": 180 },
+    "facing=west,aging=false":  { "model": "obsidium:block/dionysian_aging_barrel", "y": 270 },
+    "facing=north,aging=true":  { "model": "obsidium:block/dionysian_aging_barrel" },
+    "facing=east,aging=true":   { "model": "obsidium:block/dionysian_aging_barrel", "y": 90 },
+    "facing=south,aging=true":  { "model": "obsidium:block/dionysian_aging_barrel", "y": 180 },
+    "facing=west,aging=true":   { "model": "obsidium:block/dionysian_aging_barrel", "y": 270 }
+  }
+}
+

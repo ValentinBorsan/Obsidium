@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "active=false,storm=false": {
+      "model": "obsidium:block/aeolus_storm_turbine"
+    },
+    "active=false,storm=true": {
+      "model": "obsidium:block/aeolus_storm_turbine_storm"
+    },
+    "active=true,storm=false": {
+      "model": "obsidium:block/aeolus_storm_turbine_active"
+    },
+    "active=true,storm=true": {
+      "model": "obsidium:block/aeolus_storm_turbine_storm"
+    }
+  }
+}
+

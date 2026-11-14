@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "obsidium:block/synchrotron_ring_coil_top_formed",
+    "side": "obsidium:block/synchrotron_ring_coil_side_formed"
+  }
+}

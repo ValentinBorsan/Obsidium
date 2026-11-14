@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "obsidium:block/zeus_tin_planks",
+    "side": "obsidium:block/zeus_tin_planks",
+    "top": "obsidium:block/zeus_tin_planks"
+  }
+}

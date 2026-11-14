@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    },
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    }
+  },
+  "pattern": [
+    " P ",
+    "CTC",
+    " P "
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:geothermal_arborist"
+  }
+}

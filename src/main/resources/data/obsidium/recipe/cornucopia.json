@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "minecraft:goat_horn"
+    },
+    "C": {
+      "item": "obsidium:hermes_copper_fruit"
+    },
+    "G": {
+      "item": "obsidium:midas_gold_fruit"
+    },
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    }
+  },
+  "pattern": [
+    "CGC",
+    " V ",
+    " H "
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:cornucopia"
+  }
+}
+

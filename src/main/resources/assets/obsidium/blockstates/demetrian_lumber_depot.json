@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "obsidium:block/demetrian_lumber_depot" },
+    "facing=east":  { "model": "obsidium:block/demetrian_lumber_depot", "y": 90 },
+    "facing=south": { "model": "obsidium:block/demetrian_lumber_depot", "y": 180 },
+    "facing=west":  { "model": "obsidium:block/demetrian_lumber_depot", "y": 270 }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "obsidium:block/electrum_slab"
+    },
+    "type=double": {
+      "model": "obsidium:block/electrum_planks"
+    },
+    "type=top": {
+      "model": "obsidium:block/electrum_slab_top"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "parent": "obsidium:odyssey/digital_nexus",
+  "display": {
+    "icon": {
+      "id": "obsidium:hephaestean_charging_plate"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.hephaestean_induction.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.hephaestean_induction.description"
+    },
+    "frame": "task",
+    "show_toast": true
+  },
+  "criteria": {
+    "hephaestean_charging_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:hephaestean_charging_plate"
+          }
+        ]
+      }
+    },
+    "volcanite_portable_battery": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanite_portable_battery"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

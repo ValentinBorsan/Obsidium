@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "obsidium:silver_petal"
+    }
+  },
+  "result": {
+    "id": "obsidium:silver_ingot",
+    "count": 1
+  }
+}

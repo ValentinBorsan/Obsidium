@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "obsidium",
+	"version": "${version}",
+	"name": "Obsidium",
+	"description": "A volcanic tech, mythology, and industrial automation mod featuring obsidian alloys, multi-block reactors, particle colliders, and cryo-thermic engines.",
+	"authors": [
+		"ValentinBorsan"
+	],
+	"contact": {
+		"sources": "https://github.com/ValentinBorsan/Obsidium",
+		"issues": "https://github.com/ValentinBorsan/Obsidium/issues"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/obsidium/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.valentin.obsidium.ObsidiumMod"
+		],
+		"client": [
+			"net.valentin.obsidium.ObsidiumModClient"
+		],
+		"rei_client": [
+			"net.valentin.obsidium.client.rei.ObsidiumReiClientPlugin"
+		],
+		"jade": [
+			"net.valentin.obsidium.compat.jade.ObsidiumJadePlugin"
+		]
+	},
+	"mixins": [
+		"obsidium.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

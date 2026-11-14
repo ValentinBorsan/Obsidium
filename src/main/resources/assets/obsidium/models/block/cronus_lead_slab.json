@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "obsidium:block/cronus_lead_planks",
+    "side": "obsidium:block/cronus_lead_planks",
+    "top": "obsidium:block/cronus_lead_planks"
+  }
+}

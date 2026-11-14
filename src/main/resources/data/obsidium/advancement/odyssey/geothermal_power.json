@@ -1,0 +1,47 @@
+{
+  "parent": "obsidium:odyssey/magmatic_smelting",
+  "display": {
+    "icon": {
+      "id": "obsidium:volcanite_geothermal_generator"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.geothermal_power.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.geothermal_power.description"
+    },
+    "frame": "task",
+    "show_toast": true
+  },
+  "criteria": {
+    "volcanite_steam_generator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanite_steam_generator"
+          }
+        ]
+      }
+    },
+    "volcanite_geothermal_generator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanite_geothermal_generator"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "volcanite_steam_generator",
+      "volcanite_geothermal_generator"
+    ]
+  ],
+  "rewards": {
+    "experience": 75
+  }
+}

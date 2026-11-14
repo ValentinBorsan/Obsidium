@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": [
+      { "item": "obsidium:volcanic_ash" },
+      { "item": "minecraft:paper" }
+    ],
+    "B": [
+      { "item": "obsidium:volcanite_casing" },
+      { "tag": "minecraft:planks" },
+      { "tag": "c:stones" }
+    ]
+  },
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "result": {
+    "count": 4,
+    "id": "obsidium:pipe_facade"
+  }
+}
+

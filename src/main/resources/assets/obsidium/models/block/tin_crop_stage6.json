@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "obsidium:block/tin_crop_stage6"
+  }
+}

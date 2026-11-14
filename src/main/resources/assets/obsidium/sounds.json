@@ -1,0 +1,334 @@
+{
+  "machine.distillation_bubble": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.distillation_bubble",
+    "sounds": [
+      {
+        "name": "obsidium:machine/distillation_bubble",
+        "stream": false
+      }
+    ]
+  },
+  "machine.distillation_complete": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.distillation_complete",
+    "sounds": [
+      {
+        "name": "obsidium:machine/distillation_complete",
+        "stream": false
+      }
+    ]
+  },
+  "machine.energy_charge": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.energy_charge",
+    "sounds": [
+      {
+        "name": "obsidium:machine/energy_charge_1",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/energy_charge_2",
+        "stream": false
+      }
+    ]
+  },
+  "machine.energy_core_hum": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.energy_core_hum",
+    "sounds": [
+      {
+        "name": "obsidium:machine/energy_core_hum",
+        "stream": false
+      }
+    ]
+  },
+  "machine.energy_discharge": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.energy_discharge",
+    "sounds": [
+      {
+        "name": "obsidium:machine/energy_discharge",
+        "stream": false
+      }
+    ]
+  },
+  "machine.forge_ambient": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.forge_ambient",
+    "sounds": [
+      {
+        "name": "obsidium:machine/forge_ambient",
+        "stream": false
+      }
+    ]
+  },
+  "machine.forge_complete": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.forge_complete",
+    "sounds": [
+      {
+        "name": "obsidium:machine/forge_complete",
+        "stream": false
+      }
+    ]
+  },
+  "machine.forge_fail": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.forge_fail",
+    "sounds": [
+      {
+        "name": "obsidium:machine/forge_fail",
+        "stream": false
+      }
+    ]
+  },
+  "machine.forge_perfect_strike": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.forge_perfect_strike",
+    "sounds": [
+      {
+        "name": "obsidium:machine/forge_perfect_strike_1",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/forge_perfect_strike_2",
+        "stream": false
+      }
+    ]
+  },
+  "machine.forge_strike": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.forge_strike",
+    "sounds": [
+      {
+        "name": "obsidium:machine/forge_strike_1",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/forge_strike_2",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/forge_strike_3",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/forge_strike_4",
+        "stream": false
+      }
+    ]
+  },
+  "machine.furnace_roar": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.furnace_roar",
+    "sounds": [
+      {
+        "name": "obsidium:machine/furnace_roar",
+        "stream": false
+      }
+    ]
+  },
+  "machine.generator_hum": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.generator_hum",
+    "sounds": [
+      {
+        "name": "obsidium:machine/generator_hum",
+        "stream": false
+      }
+    ]
+  },
+  "machine.geothermal_bubble": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.geothermal_bubble",
+    "sounds": [
+      {
+        "name": "obsidium:machine/geothermal_bubble_1",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/geothermal_bubble_2",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/geothermal_bubble_3",
+        "stream": false
+      }
+    ]
+  },
+  "machine.grinder_run": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.grinder_run",
+    "sounds": [
+      {
+        "name": "obsidium:machine/grinder_run",
+        "stream": false
+      }
+    ]
+  },
+  "machine.machine_click": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.machine_click",
+    "sounds": [
+      {
+        "name": "obsidium:machine/machine_click_1",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/machine_click_2",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/machine_click_3",
+        "stream": false
+      }
+    ]
+  },
+  "machine.machine_toggle_off": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.machine_toggle_off",
+    "sounds": [
+      {
+        "name": "obsidium:machine/machine_toggle_off",
+        "stream": false
+      }
+    ]
+  },
+  "machine.machine_toggle_on": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.machine_toggle_on",
+    "sounds": [
+      {
+        "name": "obsidium:machine/machine_toggle_on",
+        "stream": false
+      }
+    ]
+  },
+  "machine.multiblock_break": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.multiblock_break",
+    "sounds": [
+      {
+        "name": "obsidium:machine/multiblock_break",
+        "stream": false
+      }
+    ]
+  },
+  "machine.multiblock_form": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.multiblock_form",
+    "sounds": [
+      {
+        "name": "obsidium:machine/multiblock_form",
+        "stream": false
+      }
+    ]
+  },
+  "machine.pipe_connect": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.pipe_connect",
+    "sounds": [
+      {
+        "name": "obsidium:machine/pipe_connect_1",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/pipe_connect_2",
+        "stream": false
+      }
+    ]
+  },
+  "machine.pump_run": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.pump_run",
+    "sounds": [
+      {
+        "name": "obsidium:machine/pump_run",
+        "stream": false
+      }
+    ]
+  },
+  "machine.steam_generator_run": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.steam_generator_run",
+    "sounds": [
+      {
+        "name": "obsidium:machine/steam_generator_run",
+        "stream": false
+      }
+    ]
+  },
+  "machine.steam_hiss": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.steam_hiss",
+    "sounds": [
+      {
+        "name": "obsidium:machine/steam_hiss_1",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/steam_hiss_2",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/steam_hiss_3",
+        "stream": false
+      }
+    ]
+  },
+  "machine.supreme_eruption": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.supreme_eruption",
+    "sounds": [
+      {
+        "name": "obsidium:machine/supreme_eruption",
+        "stream": false
+      }
+    ]
+  },
+  "machine.supreme_vent": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.supreme_vent",
+    "sounds": [
+      {
+        "name": "obsidium:machine/supreme_vent",
+        "stream": false
+      }
+    ]
+  },
+  "machine.turbine_spindown": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.turbine_spindown",
+    "sounds": [
+      {
+        "name": "obsidium:machine/turbine_spindown",
+        "stream": false
+      }
+    ]
+  },
+  "machine.turbine_spinup": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.turbine_spinup",
+    "sounds": [
+      {
+        "name": "obsidium:machine/turbine_spinup",
+        "stream": false
+      }
+    ]
+  },
+  "machine.wrench_ratchet": {
+    "category": "block",
+    "subtitle": "subtitles.obsidium.machine.wrench_ratchet",
+    "sounds": [
+      {
+        "name": "obsidium:machine/wrench_ratchet_1",
+        "stream": false
+      },
+      {
+        "name": "obsidium:machine/wrench_ratchet_2",
+        "stream": false
+      }
+    ]
+  }
+}

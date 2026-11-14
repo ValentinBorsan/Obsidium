@@ -1,0 +1,57 @@
+{
+    "multipart": [
+        {
+            "apply": {
+                "model": "obsidium:block/volcanite_energy_wire_center"
+            }
+        },
+        {
+            "when": {
+                "up": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_energy_wire_up"
+            }
+        },
+        {
+            "when": {
+                "down": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_energy_wire_down"
+            }
+        },
+        {
+            "when": {
+                "north": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_energy_wire_north"
+            }
+        },
+        {
+            "when": {
+                "east": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_energy_wire_east"
+            }
+        },
+        {
+            "when": {
+                "south": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_energy_wire_south"
+            }
+        },
+        {
+            "when": {
+                "west": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_energy_wire_west"
+            }
+        }
+    ]
+}

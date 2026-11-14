@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ACA",
+    "RWR",
+    "ACA"
+  ],
+  "key": {
+    "A": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "C": {
+      "item": "obsidium:volcanite_dust"
+    },
+    "W": {
+      "item": "obsidium:volcanite_energy_wire"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_basic_pipe_energy_upgrade",
+    "count": 1
+  }
+}

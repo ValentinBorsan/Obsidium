@@ -1,0 +1,31 @@
+{
+  "parent": "obsidium:odyssey/spark_of_vulcan",
+  "display": {
+    "icon": {
+      "id": "obsidium:volcanite_grinder"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.mechanical_pulverization.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.mechanical_pulverization.description"
+    },
+    "frame": "task",
+    "show_toast": true
+  },
+  "criteria": {
+    "volcanite_grinder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanite_grinder"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}

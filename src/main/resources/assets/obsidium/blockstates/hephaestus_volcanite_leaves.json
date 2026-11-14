@@ -1,0 +1,17 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "obsidium:block/hephaestus_volcanite_leaves"
+      }
+    },
+    {
+      "when": {
+        "fruiting": "true"
+      },
+      "apply": {
+        "model": "obsidium:block/hephaestus_volcanite_fruit_overlay"
+      }
+    }
+  ]
+}

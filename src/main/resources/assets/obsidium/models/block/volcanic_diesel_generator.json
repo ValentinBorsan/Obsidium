@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "obsidium:block/volcanic_diesel_generator_side",
+    "base": "minecraft:block/obsidian",
+    "side": "obsidium:block/volcanic_diesel_generator_side",
+    "front": "obsidium:block/volcanic_diesel_generator_front",
+    "top": "obsidium:block/volcanic_diesel_generator_top"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 3, 16],
+      "faces": {
+        "north": { "texture": "#base" },
+        "south": { "texture": "#base" },
+        "west": { "texture": "#base" },
+        "east": { "texture": "#base" },
+        "up": { "texture": "#side" },
+        "down": { "texture": "#base" }
+      }
+    },
+    {
+      "from": [1, 3, 1],
+      "to": [15, 11, 15],
+      "faces": {
+        "north": { "texture": "#front" },
+        "south": { "texture": "#side" },
+        "west": { "texture": "#side" },
+        "east": { "texture": "#side" },
+        "up": { "texture": "#top" },
+        "down": { "texture": "#base" }
+      }
+    },
+    {
+      "from": [2, 11, 2],
+      "to": [14, 13, 14],
+      "faces": {
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west": { "texture": "#side" },
+        "east": { "texture": "#side" },
+        "up": { "texture": "#top" },
+        "down": { "texture": "#base" }
+      }
+    }
+  ]
+}

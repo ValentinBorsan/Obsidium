@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/volcanite_modular_chest_front",
+    "north": "obsidium:block/volcanite_modular_chest_front",
+    "south": "obsidium:block/volcanite_modular_chest_side",
+    "east": "obsidium:block/volcanite_modular_chest_side",
+    "west": "obsidium:block/volcanite_modular_chest_side",
+    "up": "obsidium:block/volcanite_modular_chest_top",
+    "down": "obsidium:block/volcanite_modular_chest_top"
+  }
+}

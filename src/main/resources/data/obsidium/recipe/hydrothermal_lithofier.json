@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CWC",
+    "CDC",
+    "CLC"
+  ],
+  "key": {
+    "C": [
+      { "item": "minecraft:cobblestone" },
+      { "item": "minecraft:stone" }
+    ],
+    "W": [
+      { "item": "minecraft:water_bucket" },
+      { "item": "obsidium:dew_droplet" }
+    ],
+    "L": [
+      { "item": "minecraft:lava_bucket" },
+      { "item": "obsidium:magma_droplet" }
+    ],
+    "D": [
+      { "item": "obsidium:volcanite_casing" },
+      { "item": "obsidium:volcanic_alloy" },
+      { "item": "obsidium:volcanite_ingot" }
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:hydrothermal_lithofier"
+  }
+}
+

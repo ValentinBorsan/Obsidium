@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "OSO",
+    "LBL",
+    "OEO"
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "L": {
+      "item": "obsidium:lead_ingot"
+    },
+    "B": {
+      "item": "obsidium:volcanite_portable_battery"
+    },
+    "E": {
+      "item": "obsidium:volcanite_energy_unit"
+    }
+  },
+  "result": {
+    "id": "obsidium:advanced_volcanite_portable_battery",
+    "count": 1
+  }
+}

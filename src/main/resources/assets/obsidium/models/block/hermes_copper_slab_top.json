@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "obsidium:block/hermes_copper_planks",
+    "side": "obsidium:block/hermes_copper_planks",
+    "top": "obsidium:block/hermes_copper_planks"
+  }
+}

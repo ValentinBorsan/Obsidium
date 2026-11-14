@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "obsidium:block/tartarean_netherite_planks",
+    "side": "obsidium:block/tartarean_netherite_planks",
+    "top": "obsidium:block/tartarean_netherite_planks"
+  }
+}

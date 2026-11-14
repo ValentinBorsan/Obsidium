@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    "RER",
+    " B "
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanite_storage_processor"
+    },
+    "R": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "B": {
+      "item": "obsidium:volcanite_portable_battery"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_storage_remote",
+    "count": 1
+  }
+}

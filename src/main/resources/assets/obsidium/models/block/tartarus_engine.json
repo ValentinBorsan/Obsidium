@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "particle": "obsidium:block/tartarus_engine_front",
+    "top": "obsidium:block/tartarus_engine_top",
+    "bottom": "obsidium:block/tartarus_engine_bottom",
+    "side": "obsidium:block/tartarus_engine_side_lower",
+    "front": "obsidium:block/tartarus_engine_front"
+  }
+}
+

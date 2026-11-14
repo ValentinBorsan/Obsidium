@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "item": "minecraft:copper_ingot"
+      },
+      {
+        "tag": "c:ingots/copper"
+      },
+      {
+        "tag": "c:copper_ingots"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:copper_ingot"
+      },
+      {
+        "tag": "c:ingots/copper"
+      },
+      {
+        "tag": "c:copper_ingots"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:copper_ingot"
+      },
+      {
+        "tag": "c:ingots/copper"
+      },
+      {
+        "tag": "c:copper_ingots"
+      }
+    ],
+    [
+      {
+        "item": "obsidium:tin_ingot"
+      },
+      {
+        "tag": "c:ingots/tin"
+      },
+      {
+        "tag": "c:tin_ingots"
+      }
+    ]
+  ],
+  "result": {
+    "count": 4,
+    "id": "obsidium:pyric_bronze_ingot"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "pos_x=0,pos_z=0,upper=false": {
+      "model": "obsidium:block/tartarus_engine_part_lower"
+    },
+    "pos_x=1,pos_z=0,upper=false": {
+      "model": "obsidium:block/tartarus_engine_part_lower"
+    },
+    "pos_x=0,pos_z=1,upper=false": {
+      "model": "obsidium:block/tartarus_engine_part_lower"
+    },
+    "pos_x=1,pos_z=1,upper=false": {
+      "model": "obsidium:block/tartarus_engine_part_lower"
+    },
+    "pos_x=0,pos_z=0,upper=true": {
+      "model": "obsidium:block/tartarus_engine_part_upper"
+    },
+    "pos_x=1,pos_z=0,upper=true": {
+      "model": "obsidium:block/tartarus_engine_part_upper"
+    },
+    "pos_x=0,pos_z=1,upper=true": {
+      "model": "obsidium:block/tartarus_engine_part_upper"
+    },
+    "pos_x=1,pos_z=1,upper=true": {
+      "model": "obsidium:block/tartarus_engine_part_upper"
+    }
+  }
+}
+

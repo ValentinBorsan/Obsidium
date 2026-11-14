@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ARA",
+    "GCG",
+    "AWA"
+  ],
+  "key": {
+    "A": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "obsidium:volcanite_energy_cell"
+    },
+    "W": {
+      "item": "obsidium:volcanite_energy_wire"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_energy_unit",
+    "count": 1
+  }
+}
+

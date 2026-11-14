@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "LPA",
+    " I "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:shield"
+    },
+    "P": {
+      "item": "obsidium:volcanic_papyrus"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:scroll_of_athena"
+  }
+}

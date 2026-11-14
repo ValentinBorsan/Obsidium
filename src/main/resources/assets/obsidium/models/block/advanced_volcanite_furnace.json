@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/advanced_volcanite_furnace",
+    "down": "obsidium:block/advanced_machine_bottom",
+    "up": "obsidium:block/advanced_machine_top",
+    "north": "obsidium:block/advanced_volcanite_furnace",
+    "south": "obsidium:block/advanced_machine_side",
+    "west": "obsidium:block/advanced_machine_side",
+    "east": "obsidium:block/advanced_machine_side"
+  }
+}

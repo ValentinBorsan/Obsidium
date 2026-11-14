@@ -1,0 +1,17 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "obsidium:block/hermes_copper_leaves"
+      }
+    },
+    {
+      "when": {
+        "fruiting": "true"
+      },
+      "apply": {
+        "model": "obsidium:block/hermes_copper_fruit_overlay"
+      }
+    }
+  ]
+}

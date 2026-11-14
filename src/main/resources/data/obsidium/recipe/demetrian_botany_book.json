@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "tag": "minecraft:saplings"
+    },
+    {
+      "item": "obsidium:volcanic_ash"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:demetrian_botany_book"
+  }
+}

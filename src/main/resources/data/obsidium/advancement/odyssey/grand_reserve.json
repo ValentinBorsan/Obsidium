@@ -1,0 +1,41 @@
+{
+  "parent": "obsidium:odyssey/alchemical_still",
+  "display": {
+    "icon": {
+      "id": "obsidium:vintage_volcanic_tuica"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.grand_reserve.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.grand_reserve.description"
+    },
+    "frame": "goal",
+    "show_toast": true
+  },
+  "criteria": {
+    "dionysian_aging_barrel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:dionysian_aging_barrel"
+          }
+        ]
+      }
+    },
+    "vintage_volcanic_tuica": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:vintage_volcanic_tuica"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 150
+  }
+}

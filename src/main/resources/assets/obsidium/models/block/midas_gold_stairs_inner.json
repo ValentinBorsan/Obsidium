@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "obsidium:block/midas_gold_planks",
+    "side": "obsidium:block/midas_gold_planks",
+    "top": "obsidium:block/midas_gold_planks"
+  }
+}

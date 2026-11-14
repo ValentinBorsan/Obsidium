@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "obsidium:block/dionysian_bio_caldera_top_se",
+    "bottom": "obsidium:block/dionysian_bio_caldera_side_upper",
+    "side": "obsidium:block/dionysian_bio_caldera_side_upper"
+  }
+}
+

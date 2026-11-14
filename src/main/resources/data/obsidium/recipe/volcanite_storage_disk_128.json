@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "CDC",
+    "PRP"
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "C": {
+      "item": "obsidium:volcanite_storage_capacitor"
+    },
+    "D": {
+      "item": "obsidium:volcanite_storage_disk_64"
+    },
+    "R": {
+      "item": "obsidium:volcanite_storage_processor"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_storage_disk_128",
+    "count": 1
+  }
+}

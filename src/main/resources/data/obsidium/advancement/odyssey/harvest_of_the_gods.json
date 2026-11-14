@@ -1,0 +1,44 @@
+{
+  "parent": "obsidium:odyssey/magmatic_smelting",
+  "display": {
+    "icon": {
+      "id": "obsidium:dionysian_press"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.harvest_of_the_gods.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.harvest_of_the_gods.description"
+    },
+    "frame": "task",
+    "show_toast": true
+  },
+  "criteria": {
+    "dionysian_press": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:dionysian_press"
+          }
+        ]
+      }
+    },
+    "dionysian_pomace": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:dionysian_pomace",
+            "count": {
+              "min": 8
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 75
+  }
+}

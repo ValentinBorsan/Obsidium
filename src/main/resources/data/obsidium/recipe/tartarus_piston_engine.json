@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "minecraft:piston"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "G": {
+      "item": "obsidium:volcanite_generator"
+    },
+    "A": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    }
+  },
+  "pattern": [
+    "POP",
+    "AGA",
+    "COC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:tartarus_piston_engine"
+  }
+}

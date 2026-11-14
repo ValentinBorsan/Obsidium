@@ -1,0 +1,41 @@
+{
+  "parent": "obsidium:odyssey/harvest_of_the_gods",
+  "display": {
+    "icon": {
+      "id": "obsidium:volcanic_tuica"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.alchemical_still.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.alchemical_still.description"
+    },
+    "frame": "task",
+    "show_toast": true
+  },
+  "criteria": {
+    "volcanic_tuica": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanic_tuica"
+          }
+        ]
+      }
+    },
+    "volcanic_cider": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanic_cider"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

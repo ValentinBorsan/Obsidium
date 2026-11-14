@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "obsidium:block/dionysian_bio_caldera",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "obsidium:block/dionysian_bio_caldera",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "obsidium:block/dionysian_bio_caldera",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "obsidium:block/dionysian_bio_caldera",
+      "y": 270
+    }
+  }
+}
+

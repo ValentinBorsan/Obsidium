@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building_blocks",
+  "ingredients": [
+    {
+      "item": "obsidium:artemis_silver_log"
+    }
+  ],
+  "result": {
+    "id": "obsidium:artemis_silver_planks",
+    "count": 4
+  }
+}

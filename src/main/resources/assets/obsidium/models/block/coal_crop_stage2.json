@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "obsidium:block/coal_crop_stage2"
+  }
+}

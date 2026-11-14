@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "obsidium:block/demetrian_sapling_barrel_top",
+    "bottom": "obsidium:block/demetrian_sapling_barrel_bottom",
+    "side": "obsidium:block/demetrian_sapling_barrel_side"
+  }
+}
+

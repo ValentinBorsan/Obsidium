@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "obsidium:tin_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "obsidium:tin_nugget"
+  }
+}

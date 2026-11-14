@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "obsidium:item/volcanite_advanced_pipe_energy_upgrade"
+  }
+}

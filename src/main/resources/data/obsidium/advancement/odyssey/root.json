@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "id": "obsidium:volcanic_ash"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.root.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.root.description"
+    },
+    "frame": "task",
+    "background": "minecraft:textures/block/blackstone.png",
+    "announce_to_chat": false,
+    "show_toast": true
+  },
+  "criteria": {
+    "volcanic_ash": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanic_ash"
+          }
+        ]
+      }
+    }
+  }
+}

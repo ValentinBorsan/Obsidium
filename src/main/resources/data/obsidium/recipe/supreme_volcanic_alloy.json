@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "VTV",
+    "DSD",
+    "VTV"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:supreme_volcanic_alloy"
+  }
+}

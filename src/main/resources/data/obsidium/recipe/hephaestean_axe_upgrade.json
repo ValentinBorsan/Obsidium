@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "obsidium:typhonic_axe"
+    },
+    {
+      "item": "obsidium:supreme_volcanic_alloy"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:hephaestean_axe"
+  }
+}

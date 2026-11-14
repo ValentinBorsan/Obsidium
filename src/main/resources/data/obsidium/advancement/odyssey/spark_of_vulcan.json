@@ -1,0 +1,47 @@
+{
+  "parent": "obsidium:odyssey/root",
+  "display": {
+    "icon": {
+      "id": "obsidium:ash_briquette"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.spark_of_vulcan.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.spark_of_vulcan.description"
+    },
+    "frame": "task",
+    "show_toast": true
+  },
+  "criteria": {
+    "volcanic_ash": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanic_ash",
+            "count": {
+              "min": 16
+            }
+          }
+        ]
+      }
+    },
+    "ash_briquette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:ash_briquette",
+            "count": {
+              "min": 4
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 25
+  }
+}

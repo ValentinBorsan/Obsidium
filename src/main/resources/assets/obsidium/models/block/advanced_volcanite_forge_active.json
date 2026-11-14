@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "obsidium:block/advanced_volcanite_forge_active",
+    "bottom": "obsidium:block/advanced_machine_bottom",
+    "top": "obsidium:block/advanced_machine_top",
+    "side": "obsidium:block/advanced_volcanite_forge_active"
+  }
+}

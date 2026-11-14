@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/volcanite_storage_controller_casing",
+    "down": "obsidium:block/volcanite_storage_controller_bottom",
+    "up": "obsidium:block/volcanite_storage_controller_top",
+    "north": "obsidium:block/volcanite_storage_interface_front",
+    "south": "obsidium:block/volcanite_storage_controller_casing",
+    "west": "obsidium:block/volcanite_storage_controller_casing",
+    "east": "obsidium:block/volcanite_storage_controller_casing"
+  }
+}

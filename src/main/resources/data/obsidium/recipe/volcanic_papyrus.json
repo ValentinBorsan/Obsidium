@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "PPP",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "S": {
+      "item": "obsidium:silver_nugget"
+    }
+  },
+  "result": {
+    "count": 2,
+    "id": "obsidium:volcanic_papyrus"
+  }
+}
+

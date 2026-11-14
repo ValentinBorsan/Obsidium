@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "obsidium:block/volcanite_casing",
+    "layer1": "obsidium:item/pipe_facade_frame"
+  }
+}
+

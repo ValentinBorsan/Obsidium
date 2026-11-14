@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "obsidium:block/hephaestean_charging_plate"
+    },
+    "lit=true": {
+      "model": "obsidium:block/hephaestean_charging_plate_lit"
+    }
+  }
+}
+

@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/demetrian_biomass_generator_front",
+    "down": "obsidium:block/volcanite_machine_bottom",
+    "up": "obsidium:block/volcanite_machine_top",
+    "north": "obsidium:block/demetrian_biomass_generator_front",
+    "south": "obsidium:block/volcanite_machine_side",
+    "west": "obsidium:block/volcanite_machine_side",
+    "east": "obsidium:block/volcanite_machine_side"
+  }
+}
+

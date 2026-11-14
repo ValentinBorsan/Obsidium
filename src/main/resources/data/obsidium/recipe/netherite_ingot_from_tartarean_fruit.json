@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "obsidium:tartarean_netherite_fruit" },
+    { "item": "obsidium:tartarean_netherite_fruit" },
+    { "item": "obsidium:tartarean_netherite_fruit" },
+    { "item": "obsidium:tartarean_netherite_fruit" },
+    { "item": "minecraft:gold_ingot" },
+    { "item": "minecraft:gold_ingot" },
+    { "item": "minecraft:gold_ingot" },
+    { "item": "minecraft:gold_ingot" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:netherite_ingot"
+  }
+}
+

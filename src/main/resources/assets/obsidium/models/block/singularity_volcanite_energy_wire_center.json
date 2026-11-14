@@ -1,0 +1,39 @@
+{
+    "textures": {
+        "wire": "obsidium:block/singularity_volcanite_energy_wire"
+    },
+    "elements": [
+        {
+            "from": [
+                6,
+                6,
+                6
+            ],
+            "to": [
+                10,
+                10,
+                10
+            ],
+            "faces": {
+                "down": {
+                    "texture": "#wire"
+                },
+                "up": {
+                    "texture": "#wire"
+                },
+                "north": {
+                    "texture": "#wire"
+                },
+                "south": {
+                    "texture": "#wire"
+                },
+                "west": {
+                    "texture": "#wire"
+                },
+                "east": {
+                    "texture": "#wire"
+                }
+            }
+        }
+    ]
+}

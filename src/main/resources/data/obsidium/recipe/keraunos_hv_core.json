@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LFL",
+    "ECE",
+    "ACA"
+  ],
+  "key": {
+    "L": { "item": "minecraft:lightning_rod" },
+    "F": { "item": "obsidium:volcanite_flux_mechanism" },
+    "E": { "item": "obsidium:electrum_fruit" },
+    "C": { "item": "obsidium:volcanite_energy_core" },
+    "A": { "item": "obsidium:advanced_volcanite_casing" }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:keraunos_hv_core"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "obsidium:block/astrape_energy_pylon"
+    },
+    "facing=down": {
+      "model": "obsidium:block/astrape_energy_pylon",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "obsidium:block/astrape_energy_pylon",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "obsidium:block/astrape_energy_pylon",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "obsidium:block/astrape_energy_pylon",
+      "x": 90,
+      "y": 270
+    },
+    "facing=east": {
+      "model": "obsidium:block/astrape_energy_pylon",
+      "x": 90,
+      "y": 90
+    }
+  }
+}
+

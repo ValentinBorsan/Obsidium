@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:ares_iron_leaves",
+    "obsidium:artemis_silver_leaves",
+    "obsidium:cronus_lead_leaves",
+    "obsidium:electrum_leaves",
+    "obsidium:hephaestus_volcanite_leaves",
+    "obsidium:hermes_copper_leaves",
+    "obsidium:midas_gold_leaves",
+    "obsidium:pyretic_titan_leaves",
+    "obsidium:tartarean_netherite_leaves",
+    "obsidium:zeus_tin_leaves"
+  ]
+}

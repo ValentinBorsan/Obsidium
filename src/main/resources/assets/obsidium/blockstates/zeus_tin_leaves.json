@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "fruiting=false": {
+      "model": "obsidium:block/zeus_tin_leaves"
+    },
+    "fruiting=true": {
+      "model": "obsidium:block/zeus_tin_leaves"
+    }
+  }
+}

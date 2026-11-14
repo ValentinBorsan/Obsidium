@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:midas_gold_fence",
+    "obsidium:ares_iron_fence",
+    "obsidium:hermes_copper_fence",
+    "obsidium:hephaestus_volcanite_fence",
+    "obsidium:electrum_fence",
+    "obsidium:tartarean_netherite_fence"
+  ]
+}
+

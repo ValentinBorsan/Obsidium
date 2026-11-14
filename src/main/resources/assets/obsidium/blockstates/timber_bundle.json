@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": { "model": "obsidium:block/timber_bundle" },
+    "axis=z": { "model": "obsidium:block/timber_bundle_horizontal", "x": 90 },
+    "axis=x": { "model": "obsidium:block/timber_bundle_horizontal", "x": 90, "y": 90 }
+  }
+}

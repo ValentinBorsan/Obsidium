@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "obsidium:block/advanced_machine_bottom",
+    "up": "minecraft:block/daylight_detector_top",
+    "north": "obsidium:block/advanced_volcanite_casing",
+    "south": "obsidium:block/advanced_volcanite_casing",
+    "east": "obsidium:block/advanced_volcanite_casing",
+    "west": "obsidium:block/advanced_volcanite_casing",
+    "particle": "obsidium:block/advanced_volcanite_casing"
+  }
+}
+

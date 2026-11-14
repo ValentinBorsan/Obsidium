@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/dionysian_bio_caldera_front",
+    "north": "obsidium:block/dionysian_bio_caldera_front",
+    "south": "obsidium:block/dionysian_bio_caldera_side_lower",
+    "east": "obsidium:block/dionysian_bio_caldera_side_lower",
+    "west": "obsidium:block/dionysian_bio_caldera_side_lower",
+    "up": "obsidium:block/dionysian_bio_caldera_side_lower",
+    "down": "obsidium:block/dionysian_bio_caldera_bottom"
+  }
+}
+

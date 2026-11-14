@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    "ECE",
+    "PPP"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "C": {
+      "item": "obsidium:volcanite_storage_processor"
+    },
+    "P": {
+      "item": "obsidium:volcanite_casing"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_network_node_receiver",
+    "count": 1
+  }
+}

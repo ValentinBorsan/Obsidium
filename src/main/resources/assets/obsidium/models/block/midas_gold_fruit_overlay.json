@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "obsidium:block/midas_gold_fruit"
+  }
+}

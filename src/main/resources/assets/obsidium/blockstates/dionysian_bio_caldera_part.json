@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "pos_x=0,pos_z=0,upper=false": {
+      "model": "obsidium:block/dionysian_bio_caldera_part_lower"
+    },
+    "pos_x=1,pos_z=0,upper=false": {
+      "model": "obsidium:block/dionysian_bio_caldera_part_lower"
+    },
+    "pos_x=0,pos_z=1,upper=false": {
+      "model": "obsidium:block/dionysian_bio_caldera_part_lower"
+    },
+    "pos_x=1,pos_z=1,upper=false": {
+      "model": "obsidium:block/dionysian_bio_caldera_part_lower"
+    },
+    "pos_x=0,pos_z=0,upper=true": {
+      "model": "obsidium:block/dionysian_bio_caldera_part_top_nw"
+    },
+    "pos_x=1,pos_z=0,upper=true": {
+      "model": "obsidium:block/dionysian_bio_caldera_part_top_ne"
+    },
+    "pos_x=0,pos_z=1,upper=true": {
+      "model": "obsidium:block/dionysian_bio_caldera_part_top_sw"
+    },
+    "pos_x=1,pos_z=1,upper=true": {
+      "model": "obsidium:block/dionysian_bio_caldera_part_top_se"
+    }
+  }
+}
+

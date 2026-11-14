@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SWS",
+    "SAS",
+    "SLS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stone"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    },
+    "A": [
+      {
+        "item": "obsidium:volcanic_ash"
+      },
+      {
+        "item": "obsidium:ash_briquette"
+      }
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:hydrothermal_vitrifier"
+  }
+}

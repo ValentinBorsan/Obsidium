@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#c:pickaxes",
+    "#c:axes",
+    "#c:swords",
+    "#c:shovels",
+    "#c:hoes",
+    "#c:wrenches"
+  ]
+}

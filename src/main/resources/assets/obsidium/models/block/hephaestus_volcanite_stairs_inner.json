@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "obsidium:block/hephaestus_volcanite_planks",
+    "side": "obsidium:block/hephaestus_volcanite_planks",
+    "top": "obsidium:block/hephaestus_volcanite_planks"
+  }
+}

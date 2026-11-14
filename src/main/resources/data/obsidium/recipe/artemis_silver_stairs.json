@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building_blocks",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "obsidium:artemis_silver_planks"
+    }
+  },
+  "result": {
+    "id": "obsidium:artemis_silver_stairs",
+    "count": 4
+  }
+}

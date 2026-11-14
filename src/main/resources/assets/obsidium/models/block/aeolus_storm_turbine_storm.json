@@ -1,0 +1,8 @@
+{
+  "parent": "obsidium:block/aeolus_storm_turbine",
+  "textures": {
+    "side": "obsidium:block/aeolus_storm_turbine_side_storm",
+    "particle": "obsidium:block/aeolus_storm_turbine_side_storm"
+  }
+}
+

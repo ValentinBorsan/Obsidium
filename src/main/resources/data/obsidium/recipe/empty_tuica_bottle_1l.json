@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "W": {
+      "item": "minecraft:string"
+    },
+    "K": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " S ",
+    "NGW",
+    "KWK"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:empty_tuica_bottle_1l"
+  }
+}

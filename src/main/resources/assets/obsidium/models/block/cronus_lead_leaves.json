@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "obsidium:block/cronus_lead_leaves"
+  }
+}

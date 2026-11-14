@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AVA",
+    "VTV",
+    "AVA"
+  ],
+  "key": {
+    "A": { "item": "obsidium:volcanic_alloy" },
+    "V": { "item": "obsidium:volcanite_glass" },
+    "T": { "item": "minecraft:amethyst_shard" }
+  },
+  "result": {
+    "id": "obsidium:reinforced_tinted_glass",
+    "count": 4
+  }
+}
+

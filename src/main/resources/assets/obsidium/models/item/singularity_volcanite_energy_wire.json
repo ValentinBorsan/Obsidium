@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "obsidium:item/singularity_volcanite_energy_wire"
+    }
+}

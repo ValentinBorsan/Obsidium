@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "C": {
+      "item": "obsidium:volcanite_casing"
+    },
+    "K": {
+      "item": "obsidium:dionysian_barrel_core"
+    },
+    "R": {
+      "item": "obsidium:reinforced_volcanic_liquid_barrel"
+    }
+  },
+  "pattern": [
+    "OCO",
+    "CKC",
+    "CRC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:mega_volcanic_barrel"
+  }
+}

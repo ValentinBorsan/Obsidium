@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GDG",
+    "TMT",
+    "CCC"
+  ],
+  "key": {
+    "G": {
+      "item": "obsidium:midas_gold_fruit"
+    },
+    "D": {
+      "item": "minecraft:daylight_detector"
+    },
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    },
+    "M": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:apollo_solar_generator"
+  }
+}
+

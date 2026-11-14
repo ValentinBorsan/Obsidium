@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "WAW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "obsidium:supreme_volcanite_energy_wire"
+    },
+    "A": {
+      "item": "obsidium:singularity_hadron_alloy"
+    }
+  },
+  "result": {
+    "count": 8,
+    "id": "obsidium:singularity_volcanite_energy_wire"
+  }
+}

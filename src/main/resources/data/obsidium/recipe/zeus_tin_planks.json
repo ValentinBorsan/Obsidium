@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "obsidium:zeus_tin_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "obsidium:zeus_tin_planks"
+  }
+}

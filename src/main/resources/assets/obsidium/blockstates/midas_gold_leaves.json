@@ -1,0 +1,17 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "obsidium:block/midas_gold_leaves"
+      }
+    },
+    {
+      "when": {
+        "fruiting": "true"
+      },
+      "apply": {
+        "model": "obsidium:block/midas_gold_fruit_overlay"
+      }
+    }
+  ]
+}

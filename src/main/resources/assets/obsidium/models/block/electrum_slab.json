@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "obsidium:block/electrum_planks",
+    "side": "obsidium:block/electrum_planks",
+    "top": "obsidium:block/electrum_planks"
+  }
+}

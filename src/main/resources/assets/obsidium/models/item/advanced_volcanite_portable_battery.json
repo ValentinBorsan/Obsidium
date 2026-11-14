@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "obsidium:item/advanced_volcanite_portable_battery"
+    }
+}

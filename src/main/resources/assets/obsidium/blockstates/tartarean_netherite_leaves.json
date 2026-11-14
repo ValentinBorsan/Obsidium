@@ -1,0 +1,18 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "obsidium:block/tartarean_netherite_leaves"
+      }
+    },
+    {
+      "when": {
+        "fruiting": "true"
+      },
+      "apply": {
+        "model": "obsidium:block/tartarean_netherite_fruit_overlay"
+      }
+    }
+  ]
+}
+

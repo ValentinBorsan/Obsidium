@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SCS",
+    "AFA",
+    "AGA"
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    },
+    "A": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "F": {
+      "item": "obsidium:volcanite_furnace"
+    },
+    "G": {
+      "item": "obsidium:volcanite_generator"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:advanced_volcanite_furnace"
+  }
+}

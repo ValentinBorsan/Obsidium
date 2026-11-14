@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "obsidium:block/volcanite_energy_core",
+        "formed_top": "obsidium:block/energy_core_formed_top",
+        "formed_side": "obsidium:block/energy_core_formed_side"
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "obsidium:item/bow_of_artemis_pulling_0"
+  }
+}
+

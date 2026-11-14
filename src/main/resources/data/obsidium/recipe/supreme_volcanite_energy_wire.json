@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "WAW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "obsidium:advanced_volcanite_energy_wire"
+    },
+    "A": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    }
+  },
+  "result": {
+    "count": 8,
+    "id": "obsidium:supreme_volcanite_energy_wire"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "obsidium:block/zeus_tin_log"
+    },
+    "axis=z": {
+      "model": "obsidium:block/zeus_tin_log_horizontal",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "obsidium:block/zeus_tin_log_horizontal",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:tartarean_chestplate",
+    "obsidium:typhonic_chestplate",
+    "obsidium:hephaestean_chestplate",
+    "obsidium:faraday_chestplate"
+  ]
+}

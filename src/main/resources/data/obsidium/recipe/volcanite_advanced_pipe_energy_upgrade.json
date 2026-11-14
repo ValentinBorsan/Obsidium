@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SAS",
+    "EUE",
+    "SAS"
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "A": {
+      "item": "minecraft:blaze_powder"
+    },
+    "E": {
+      "item": "obsidium:volcanite_energy_cell"
+    },
+    "U": {
+      "item": "obsidium:volcanite_basic_pipe_energy_upgrade"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_advanced_pipe_energy_upgrade",
+    "count": 1
+  }
+}

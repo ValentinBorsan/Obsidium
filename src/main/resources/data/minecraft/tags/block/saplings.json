@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:ares_iron_sapling",
+    "obsidium:artemis_silver_sapling",
+    "obsidium:cronus_lead_sapling",
+    "obsidium:electrum_sapling",
+    "obsidium:hephaestus_volcanite_sapling",
+    "obsidium:hermes_copper_sapling",
+    "obsidium:midas_gold_sapling",
+    "obsidium:tartarean_netherite_sapling",
+    "obsidium:zeus_tin_sapling"
+  ]
+}

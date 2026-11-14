@@ -1,0 +1,14 @@
+pluginManagement {
+	repositories {
+		maven {
+			name = 'Fabric'
+			url = 'https://maven.fabricmc.net/'
+		}
+		mavenCentral()
+		gradlePluginPortal()
+	}
+}
+
+// Match the mod id so the distributable JAR has a clear name.
+rootProject.name = 'obsidium'
+

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/volcanite_liquid_storage_tank_side",
+    "down": "obsidium:block/volcanite_liquid_storage_tank_bottom",
+    "up": "obsidium:block/volcanite_liquid_storage_tank_top",
+    "north": "obsidium:block/volcanite_liquid_storage_tank_front",
+    "south": "obsidium:block/volcanite_liquid_storage_tank_side",
+    "west": "obsidium:block/volcanite_liquid_storage_tank_side",
+    "east": "obsidium:block/volcanite_liquid_storage_tank_side"
+  }
+}

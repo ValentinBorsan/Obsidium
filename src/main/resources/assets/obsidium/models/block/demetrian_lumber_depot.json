@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "obsidium:block/demetrian_lumber_depot_top",
+    "bottom": "obsidium:block/demetrian_lumber_depot_bottom",
+    "side": "obsidium:block/demetrian_lumber_depot_side",
+    "front": "obsidium:block/demetrian_lumber_depot_front"
+  }
+}

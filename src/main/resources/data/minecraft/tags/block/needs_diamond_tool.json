@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:volcanite_furnace",
+    "obsidium:volcanite_grinder",
+    "obsidium:volcanite_generator",
+    "obsidium:advanced_volcanite_furnace",
+    "obsidium:volcanite_steam_generator",
+    "obsidium:volcanite_geothermal_generator",
+    "obsidium:supreme_volcanic_generator",
+    "obsidium:demetrian_biomass_generator",
+    "obsidium:volcanic_distillation_chamber",
+    "obsidium:dionysian_distillery",
+    "obsidium:magma_forge_core",
+    "obsidium:tartarus_piston_engine",
+    "obsidium:dionysian_bio_caldera",
+    "obsidium:mega_volcanic_barrel",
+    "obsidium:magmatic_crucible",
+    "obsidium:hydrothermal_condenser",
+    "obsidium:hydrothermal_vitrifier",
+    "obsidium:volcanite_block",
+    "obsidium:volcanite_ore"
+  ]
+}

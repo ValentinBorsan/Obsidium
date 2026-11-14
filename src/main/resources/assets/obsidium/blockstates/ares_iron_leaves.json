@@ -1,0 +1,17 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "obsidium:block/ares_iron_leaves"
+      }
+    },
+    {
+      "when": {
+        "fruiting": "true"
+      },
+      "apply": {
+        "model": "obsidium:block/ares_iron_fruit_overlay"
+      }
+    }
+  ]
+}

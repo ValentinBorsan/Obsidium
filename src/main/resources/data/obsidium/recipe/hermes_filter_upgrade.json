@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CPC",
+    "GVG",
+    "CPC"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "V": {
+      "item": "obsidium:volcanite"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:hermes_filter_upgrade"
+  }
+}
+

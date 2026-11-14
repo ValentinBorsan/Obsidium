@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "obsidium:block/olympian_altar_side",
+    "up": "obsidium:block/olympian_altar_top",
+    "north": "obsidium:block/olympian_altar_side",
+    "south": "obsidium:block/olympian_altar_side",
+    "east": "obsidium:block/olympian_altar_side",
+    "west": "obsidium:block/olympian_altar_side",
+    "particle": "obsidium:block/olympian_altar_top"
+  }
+}
+

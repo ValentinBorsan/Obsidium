@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "obsidium:block/volcanite_network_node_receiver"
+  }
+}

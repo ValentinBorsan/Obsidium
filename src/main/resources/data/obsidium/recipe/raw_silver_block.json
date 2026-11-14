@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building_blocks",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "obsidium:raw_silver"
+    }
+  },
+  "result": {
+    "id": "obsidium:raw_silver_block",
+    "count": 1
+  }
+}

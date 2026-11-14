@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:ares_iron_sapling",
+    "obsidium:artemis_silver_sapling",
+    "obsidium:cronus_lead_sapling",
+    "obsidium:electrum_sapling",
+    "obsidium:hephaestus_volcanite_sapling",
+    "obsidium:hermes_copper_sapling",
+    "obsidium:midas_gold_sapling",
+    "obsidium:pyretic_titan_sapling",
+    "obsidium:hades_coal_sapling",
+    "obsidium:astrape_redstone_sapling",
+    "obsidium:poseidon_lapis_sapling",
+    "obsidium:apollo_quartz_sapling",
+    "obsidium:dionysian_amethyst_sapling",
+    "obsidium:hyperion_glowstone_sapling",
+    "obsidium:plouton_emerald_sapling",
+    "obsidium:adamantine_diamond_sapling",
+    "obsidium:tartarean_netherite_sapling",
+    "obsidium:zeus_tin_sapling"
+  ]
+}

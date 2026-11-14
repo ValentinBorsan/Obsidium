@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "formed=false": { "model": "obsidium:block/synchrotron_ring_coil" },
+    "formed=true":  { "model": "obsidium:block/synchrotron_ring_coil_formed" }
+  }
+}

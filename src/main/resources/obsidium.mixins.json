@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "net.valentin.obsidium.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CraftingMenuMixin",
+    "OverworldBiomeBuilderMixin",
+    "SurfaceRuleDataMixin",
+    "WaterPotionStorageMixin"
+  ],
+  "client": [
+    "SoundEngineMixin",
+    "SoundMuteScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

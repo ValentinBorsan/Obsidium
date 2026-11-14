@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "obsidium:item/volcanite_warp_gauntlet"
+  }
+}

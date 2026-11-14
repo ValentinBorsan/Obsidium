@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "bottom": "obsidium:block/advanced_machine_bottom",
+    "top": "obsidium:block/aeolus_storm_turbine_top",
+    "side": "obsidium:block/aeolus_storm_turbine_side",
+    "particle": "obsidium:block/aeolus_storm_turbine_side"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 4, 16],
+      "faces": {
+        "down":  { "texture": "#bottom", "cullface": "down" },
+        "up":    { "texture": "#top" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west":  { "texture": "#side" },
+        "east":  { "texture": "#side" }
+      }
+    },
+    {
+      "from": [1, 4, 1],
+      "to": [15, 13, 15],
+      "faces": {
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west":  { "texture": "#side" },
+        "east":  { "texture": "#side" }
+      }
+    },
+    {
+      "from": [0, 13, 0],
+      "to": [16, 15, 16],
+      "faces": {
+        "down":  { "texture": "#bottom" },
+        "up":    { "texture": "#top" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west":  { "texture": "#side" },
+        "east":  { "texture": "#side" }
+      }
+    },
+    {
+      "from": [6, 15, 6],
+      "to": [10, 16, 10],
+      "faces": {
+        "up":    { "texture": "#top", "cullface": "up" },
+        "north": { "texture": "#top" },
+        "south": { "texture": "#top" },
+        "west":  { "texture": "#top" },
+        "east":  { "texture": "#top" }
+      }
+    }
+  ]
+}
+

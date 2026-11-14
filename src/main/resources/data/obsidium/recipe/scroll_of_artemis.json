@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "FPA",
+    " R "
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:silver_ingot"
+    },
+    "P": {
+      "item": "obsidium:volcanic_papyrus"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "A": [
+      {
+        "item": "minecraft:amethyst_shard"
+      },
+      {
+        "item": "obsidium:silver_nugget"
+      }
+    ],
+    "R": {
+      "item": "minecraft:arrow"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:scroll_of_artemis"
+  }
+}

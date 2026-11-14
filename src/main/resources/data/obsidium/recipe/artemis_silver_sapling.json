@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "AMA"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "M": {
+      "item": "obsidium:silver_nugget"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:artemis_silver_sapling"
+  }
+}
+

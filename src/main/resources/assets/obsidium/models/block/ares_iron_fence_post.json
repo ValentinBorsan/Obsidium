@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "obsidium:block/ares_iron_planks"
+  }
+}

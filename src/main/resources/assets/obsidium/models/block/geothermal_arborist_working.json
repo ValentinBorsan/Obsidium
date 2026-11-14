@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/geothermal_arborist_side",
+    "down": "obsidium:block/geothermal_arborist_bottom",
+    "up": "obsidium:block/geothermal_arborist_top",
+    "north": "obsidium:block/geothermal_arborist_front_working",
+    "south": "obsidium:block/geothermal_arborist_side",
+    "west": "obsidium:block/geothermal_arborist_side",
+    "east": "obsidium:block/geothermal_arborist_side"
+  }
+}

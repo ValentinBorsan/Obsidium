@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "obsidium:block/hephaestus_volcanite_fruit"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "obsidium:block/zeus_tin_sapling"
+  }
+}

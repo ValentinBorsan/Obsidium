@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "obsidium:block/zeus_tin_slab"
+    },
+    "type=double": {
+      "model": "obsidium:block/zeus_tin_planks"
+    },
+    "type=top": {
+      "model": "obsidium:block/zeus_tin_slab_top"
+    }
+  }
+}

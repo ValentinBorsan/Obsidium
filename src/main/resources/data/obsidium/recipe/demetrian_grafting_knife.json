@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "  P",
+    " GM",
+    "S  "
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "M": {
+      "item": "obsidium:dionysian_pomace"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "obsidium:demetrian_grafting_knife",
+    "count": 1
+  }
+}
+

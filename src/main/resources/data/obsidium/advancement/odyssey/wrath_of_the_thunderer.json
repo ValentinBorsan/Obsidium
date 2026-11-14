@@ -1,0 +1,24 @@
+{
+  "parent": "obsidium:odyssey/sacred_inscriptions",
+  "display": {
+    "icon": {
+      "id": "obsidium:scroll_of_zeus"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.wrath_of_the_thunderer.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.wrath_of_the_thunderer.description"
+    },
+    "frame": "challenge",
+    "show_toast": true
+  },
+  "criteria": {
+    "zeus": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 300
+  }
+}

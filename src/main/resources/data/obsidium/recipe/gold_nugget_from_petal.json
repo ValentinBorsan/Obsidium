@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "obsidium:gold_petal"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:gold_nugget"
+  }
+}

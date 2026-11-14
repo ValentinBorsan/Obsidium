@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:wheat_seeds",
+    "minecraft:beetroot_seeds",
+    "minecraft:melon_seeds",
+    "minecraft:pumpkin_seeds",
+    "minecraft:torchflower_seeds",
+    "minecraft:pitcher_pod",
+    "obsidium:volcanite_seed",
+    "obsidium:iron_seed",
+    "obsidium:gold_seed",
+    "obsidium:copper_seed",
+    "obsidium:coal_seed",
+    "obsidium:lapis_seed",
+    "obsidium:redstone_seed",
+    "obsidium:diamond_seed",
+    "obsidium:netherite_seed",
+    "obsidium:tin_seed",
+    "obsidium:lead_seed",
+    "obsidium:silver_seed"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CC",
+    "CC"
+  ],
+  "key": {
+    "C": {
+      "item": "obsidium:volcanic_honeycomb"
+    }
+  },
+  "result": {
+    "id": "minecraft:honeycomb_block",
+    "count": 1
+  }
+}

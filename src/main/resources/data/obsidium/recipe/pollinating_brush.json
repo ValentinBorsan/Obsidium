@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F",
+    "G",
+    "S"
+  ],
+  "key": {
+    "F": { "item": "minecraft:feather" },
+    "G": { "item": "minecraft:gold_ingot" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "result": {
+    "id": "obsidium:pollinating_brush",
+    "count": 1
+  }
+}
+

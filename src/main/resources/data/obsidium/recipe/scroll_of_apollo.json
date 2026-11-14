@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " B ",
+    "GPG",
+    " D "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "P": {
+      "item": "obsidium:volcanic_papyrus"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "D": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:scroll_of_apollo"
+  }
+}

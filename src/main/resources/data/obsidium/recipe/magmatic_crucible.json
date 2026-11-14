@@ -1,0 +1,64 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SIS",
+    "SAS",
+    "SCS"
+  ],
+  "key": {
+    "S": [
+      {
+        "item": "minecraft:smooth_basalt"
+      },
+      {
+        "item": "minecraft:smooth_stone"
+      },
+      {
+        "item": "minecraft:stone"
+      },
+      {
+        "item": "minecraft:cobblestone"
+      },
+      {
+        "item": "minecraft:deepslate"
+      }
+    ],
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "A": [
+      {
+        "item": "obsidium:volcanic_ash"
+      },
+      {
+        "item": "obsidium:ash_briquette"
+      },
+      {
+        "item": "minecraft:redstone"
+      },
+      {
+        "item": "obsidium:volcanite"
+      },
+      {
+        "item": "obsidium:volcanite_dust"
+      }
+    ],
+    "C": [
+      {
+        "item": "minecraft:campfire"
+      },
+      {
+        "item": "minecraft:magma_block"
+      },
+      {
+        "item": "minecraft:furnace"
+      }
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:magmatic_crucible"
+  }
+}
+

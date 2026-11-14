@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/volcanic_beehive_side",
+    "up": "obsidium:block/volcanic_beehive_top",
+    "down": "obsidium:block/volcanic_beehive_bottom",
+    "north": "obsidium:block/volcanic_beehive_front_honey",
+    "south": "obsidium:block/volcanic_beehive_side",
+    "east": "obsidium:block/volcanic_beehive_side",
+    "west": "obsidium:block/volcanic_beehive_side"
+  }
+}
+

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PCP",
+    "RGR",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "C": {
+      "item": "obsidium:volcanite_storage_processor"
+    },
+    "G": {
+      "item": "obsidium:volcanite_glass"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_storage_interface",
+    "count": 1
+  }
+}

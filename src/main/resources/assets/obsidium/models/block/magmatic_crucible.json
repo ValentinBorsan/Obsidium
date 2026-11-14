@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "obsidium:block/volcanite_machine_top",
+    "front": "obsidium:block/magmatic_crucible_front",
+    "side": "obsidium:block/volcanite_machine_side",
+    "bottom": "obsidium:block/volcanite_machine_bottom"
+  }
+}
+

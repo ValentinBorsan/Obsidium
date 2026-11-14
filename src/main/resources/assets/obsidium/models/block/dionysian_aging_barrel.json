@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "obsidium:block/dionysian_aging_barrel_top",
+    "bottom": "obsidium:block/dionysian_aging_barrel_bottom",
+    "side": "obsidium:block/dionysian_aging_barrel_side"
+  }
+}
+

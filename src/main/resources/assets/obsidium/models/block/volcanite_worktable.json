@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "obsidium:block/volcanite_worktable",
+    "bottom": "obsidium:block/volcanite_machine_bottom",
+    "top": "obsidium:block/volcanite_worktable_top",
+    "side": "obsidium:block/volcanite_worktable"
+  }
+}

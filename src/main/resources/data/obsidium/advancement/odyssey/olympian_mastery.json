@@ -1,0 +1,42 @@
+{
+  "parent": "obsidium:odyssey/wrath_of_the_thunderer",
+  "display": {
+    "icon": {
+      "id": "obsidium:olympian_altar"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.olympian_mastery.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.olympian_mastery.description"
+    },
+    "frame": "challenge",
+    "show_toast": true
+  },
+  "criteria": {
+    "zeus": {
+      "trigger": "minecraft:impossible"
+    },
+    "apollo": {
+      "trigger": "minecraft:impossible"
+    },
+    "artemis": {
+      "trigger": "minecraft:impossible"
+    },
+    "athena": {
+      "trigger": "minecraft:impossible"
+    },
+    "hephaestus": {
+      "trigger": "minecraft:impossible"
+    },
+    "poseidon": {
+      "trigger": "minecraft:impossible"
+    },
+    "thanatos": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1000
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ACA",
+    "SBS",
+    "DFD"
+  ],
+  "key": {
+    "A": { "item": "obsidium:astral_volcanic_catalyst" },
+    "C": { "item": "minecraft:ender_eye" },
+    "S": { "item": "obsidium:supreme_volcanic_alloy" },
+    "B": { "item": "obsidium:basic_volcanic_teleporter" },
+    "D": { "item": "obsidium:volcanite_energy_unit" },
+    "F": { "item": "obsidium:volcanite_flux_mechanism" }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanic_core_teleporter"
+  }
+}
+

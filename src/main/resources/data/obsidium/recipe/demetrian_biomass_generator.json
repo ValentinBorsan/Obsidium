@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "obsidium:hermes_copper_fruit"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "A": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "G": {
+      "item": "obsidium:volcanite_generator"
+    },
+    "C": {
+      "item": "obsidium:volcanite_casing"
+    }
+  },
+  "pattern": [
+    "FOF",
+    "AGA",
+    "OCO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:demetrian_biomass_generator"
+  }
+}

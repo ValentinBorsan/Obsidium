@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "lit=false": { "model": "obsidium:block/volcanic_core_teleporter" },
+    "lit=true":  { "model": "obsidium:block/volcanic_core_teleporter" }
+  }
+}
+

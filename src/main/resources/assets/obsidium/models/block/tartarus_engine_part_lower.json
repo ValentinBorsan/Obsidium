@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "obsidium:block/tartarus_engine_side_lower",
+    "bottom": "obsidium:block/tartarus_engine_bottom",
+    "side": "obsidium:block/tartarus_engine_side_lower"
+  }
+}
+

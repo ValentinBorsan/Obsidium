@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OCO",
+    "ABA",
+    "OCO"
+  ],
+  "key": {
+    "O": { "item": "minecraft:crying_obsidian" },
+    "C": { "item": "obsidium:advanced_volcanite_casing" },
+    "A": { "item": "obsidium:astral_volcanic_catalyst" },
+    "B": { "item": "obsidium:advanced_volcanite_item_barrel" }
+  },
+  "result": {
+    "id": "obsidium:supreme_volcanite_item_barrel",
+    "count": 1
+  }
+}
+

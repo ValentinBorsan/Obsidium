@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "obsidium:block/tartarus_engine",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "obsidium:block/tartarus_engine",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "obsidium:block/tartarus_engine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "obsidium:block/tartarus_engine",
+      "y": 270
+    }
+  }
+}
+

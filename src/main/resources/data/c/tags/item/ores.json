@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#c:ores/lead",
+    "#c:ores/tin",
+    "#c:ores/volcanite",
+    "obsidium:deepslate_silver_ore",
+    "obsidium:silver_ore"
+  ]
+}

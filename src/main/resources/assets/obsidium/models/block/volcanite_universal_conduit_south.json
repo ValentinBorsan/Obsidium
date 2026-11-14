@@ -1,0 +1,67 @@
+{
+    "textures": {
+        "wire": "obsidium:block/volcanite_universal_conduit_horizontal"
+    },
+    "elements": [
+        {
+            "from": [
+                5,
+                5,
+                11
+            ],
+            "to": [
+                11,
+                11,
+                16
+            ],
+            "faces": {
+                "south": {
+                    "uv": [
+                        5,
+                        5,
+                        11,
+                        11
+                    ],
+                    "texture": "#wire",
+                    "cullface": "south"
+                },
+                "down": {
+                    "uv": [
+                        5,
+                        11,
+                        11,
+                        16
+                    ],
+                    "texture": "#wire"
+                },
+                "up": {
+                    "uv": [
+                        5,
+                        11,
+                        11,
+                        16
+                    ],
+                    "texture": "#wire"
+                },
+                "west": {
+                    "uv": [
+                        11,
+                        5,
+                        16,
+                        11
+                    ],
+                    "texture": "#wire"
+                },
+                "east": {
+                    "uv": [
+                        11,
+                        5,
+                        16,
+                        11
+                    ],
+                    "texture": "#wire"
+                }
+            }
+        }
+    ]
+}

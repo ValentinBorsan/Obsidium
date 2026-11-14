@@ -1,0 +1,44 @@
+{
+  "parent": "obsidium:odyssey/hephaestean_induction",
+  "display": {
+    "icon": {
+      "id": "obsidium:olympian_altar"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.olympian_high_altar.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.olympian_high_altar.description"
+    },
+    "frame": "task",
+    "show_toast": true
+  },
+  "criteria": {
+    "olympian_altar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:olympian_altar"
+          }
+        ]
+      }
+    },
+    "astrape_ritual_obelisk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:astrape_ritual_obelisk",
+            "count": {
+              "min": 4
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 150
+  }
+}

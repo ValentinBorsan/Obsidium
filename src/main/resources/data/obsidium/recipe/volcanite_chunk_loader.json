@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SFS",
+    "FDF",
+    "SFS"
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_chunk_loader",
+    "count": 1
+  }
+}
+

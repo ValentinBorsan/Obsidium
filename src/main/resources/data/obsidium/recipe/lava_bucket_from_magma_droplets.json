@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "item": "obsidium:magma_droplet"
+    },
+    {
+      "item": "obsidium:magma_droplet"
+    },
+    {
+      "item": "obsidium:magma_droplet"
+    },
+    {
+      "item": "obsidium:magma_droplet"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:lava_bucket"
+  }
+}
+

@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "facing=north": { "model": "obsidium:block/basic_volcanite_item_barrel" },
+    "facing=east":  { "model": "obsidium:block/basic_volcanite_item_barrel", "y": 90 },
+    "facing=south": { "model": "obsidium:block/basic_volcanite_item_barrel", "y": 180 },
+    "facing=west":  { "model": "obsidium:block/basic_volcanite_item_barrel", "y": 270 }
+  }
+}
+

@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/hydrothermal_lithofier_front_lit",
+    "down": "obsidium:block/volcanite_machine_bottom",
+    "up": "obsidium:block/volcanite_machine_top",
+    "north": "obsidium:block/hydrothermal_lithofier_front_lit",
+    "south": "obsidium:block/volcanite_machine_side",
+    "west": "obsidium:block/volcanite_machine_side",
+    "east": "obsidium:block/volcanite_machine_side"
+  }
+}
+

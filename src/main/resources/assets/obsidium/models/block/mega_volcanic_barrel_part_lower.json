@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "obsidium:block/mega_volcanic_barrel_side_lower",
+    "bottom": "obsidium:block/mega_volcanic_barrel_bottom",
+    "side": "obsidium:block/mega_volcanic_barrel_side_lower"
+  }
+}

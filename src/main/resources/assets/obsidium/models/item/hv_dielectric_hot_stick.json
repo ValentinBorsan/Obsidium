@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "obsidium:item/hv_dielectric_hot_stick"
+  }
+}

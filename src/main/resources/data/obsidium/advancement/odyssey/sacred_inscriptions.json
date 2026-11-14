@@ -1,0 +1,44 @@
+{
+  "parent": "obsidium:odyssey/olympian_high_altar",
+  "display": {
+    "icon": {
+      "id": "obsidium:scroll_of_zeus"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.sacred_inscriptions.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.sacred_inscriptions.description"
+    },
+    "frame": "task",
+    "show_toast": true
+  },
+  "criteria": {
+    "volcanic_papyrus": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanic_papyrus",
+            "count": {
+              "min": 4
+            }
+          }
+        ]
+      }
+    },
+    "scroll_of_zeus": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:scroll_of_zeus"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 150
+  }
+}

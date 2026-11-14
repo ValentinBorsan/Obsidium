@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "pattern": [
+    "OVO",
+    "VFV",
+    "OVO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanite_furnace"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "textures": {
+    "all": "obsidium:block/astrape_ritual_obelisk",
+    "top": "obsidium:block/olympian_altar_top",
+    "particle": "obsidium:block/astrape_ritual_obelisk"
+  },
+  "elements": [
+    {
+      "name": "base",
+      "from": [ 2, 0, 2 ],
+      "to": [ 14, 3, 14 ],
+      "faces": {
+        "down":  { "texture": "#all", "cullface": "down" },
+        "up":    { "texture": "#top" },
+        "north": { "texture": "#all" },
+        "south": { "texture": "#all" },
+        "west":  { "texture": "#all" },
+        "east":  { "texture": "#all" }
+      }
+    },
+    {
+      "name": "shaft",
+      "from": [ 4, 3, 4 ],
+      "to": [ 12, 13, 12 ],
+      "faces": {
+        "north": { "texture": "#all" },
+        "south": { "texture": "#all" },
+        "west":  { "texture": "#all" },
+        "east":  { "texture": "#all" }
+      }
+    },
+    {
+      "name": "bowl",
+      "from": [ 3, 13, 3 ],
+      "to": [ 13, 16, 13 ],
+      "faces": {
+        "down":  { "texture": "#all" },
+        "up":    { "texture": "#top" },
+        "north": { "texture": "#all" },
+        "south": { "texture": "#all" },
+        "west":  { "texture": "#all" },
+        "east":  { "texture": "#all" }
+      }
+    }
+  ]
+}
+

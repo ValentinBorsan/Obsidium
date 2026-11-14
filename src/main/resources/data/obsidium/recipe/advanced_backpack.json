@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SPS",
+    "SBS",
+    "SFS"
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "P": {
+      "item": "obsidium:volcanite_portable_battery"
+    },
+    "B": {
+      "item": "obsidium:basic_backpack"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    }
+  },
+  "result": {
+    "id": "obsidium:advanced_backpack",
+    "count": 1
+  }
+}
+

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:ares_iron_fence_gate",
+    "obsidium:artemis_silver_fence_gate",
+    "obsidium:cronus_lead_fence_gate",
+    "obsidium:electrum_fence_gate",
+    "obsidium:hephaestus_volcanite_fence_gate",
+    "obsidium:hermes_copper_fence_gate",
+    "obsidium:midas_gold_fence_gate",
+    "obsidium:tartarean_netherite_fence_gate",
+    "obsidium:zeus_tin_fence_gate"
+  ]
+}

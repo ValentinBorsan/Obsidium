@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "obsidium:block/artemis_silver_slab"
+    },
+    "type=top": {
+      "model": "obsidium:block/artemis_silver_slab_top"
+    },
+    "type=double": {
+      "model": "obsidium:block/artemis_silver_planks"
+    }
+  }
+}

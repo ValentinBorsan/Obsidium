@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 0.1,
+  "ingredient": [
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "result": {
+    "id": "obsidium:volcanic_ash"
+  }
+}
+

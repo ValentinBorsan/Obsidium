@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "active=false,grounded=false": { "model": "obsidium:block/keraunos_hv_core_idle" },
+    "active=true,grounded=false": { "model": "obsidium:block/keraunos_hv_core_active" },
+    "active=false,grounded=true": { "model": "obsidium:block/keraunos_hv_core_grounded" },
+    "active=true,grounded=true": { "model": "obsidium:block/keraunos_hv_core_grounded" }
+  }
+}

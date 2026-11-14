@@ -1,0 +1,57 @@
+{
+    "multipart": [
+        {
+            "apply": {
+                "model": "obsidium:block/volcanite_universal_conduit_center"
+            }
+        },
+        {
+            "when": {
+                "up": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_universal_conduit_up"
+            }
+        },
+        {
+            "when": {
+                "down": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_universal_conduit_down"
+            }
+        },
+        {
+            "when": {
+                "north": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_universal_conduit_north"
+            }
+        },
+        {
+            "when": {
+                "east": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_universal_conduit_east"
+            }
+        },
+        {
+            "when": {
+                "south": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_universal_conduit_south"
+            }
+        },
+        {
+            "when": {
+                "west": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/volcanite_universal_conduit_west"
+            }
+        }
+    ]
+}

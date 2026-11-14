@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DOD",
+    "OUO",
+    "DOD"
+  ],
+  "key": {
+    "D": { "item": "minecraft:diamond" },
+    "O": { "item": "minecraft:obsidian" },
+    "U": { "item": "obsidium:volcanite_advanced_barrel_upgrade" }
+  },
+  "result": {
+    "id": "obsidium:volcanite_supreme_barrel_upgrade",
+    "count": 1
+  }
+}
+

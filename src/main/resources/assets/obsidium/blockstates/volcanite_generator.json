@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "obsidium:block/volcanite_generator"
+    },
+    "lit=true": {
+      "model": "obsidium:block/volcanite_generator_active"
+    }
+  }
+}

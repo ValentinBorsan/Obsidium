@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "obsidium:block/advanced_dionysian_press_front_on",
+    "down": "obsidium:block/advanced_dionysian_press_bottom",
+    "up": "obsidium:block/advanced_dionysian_press_top",
+    "north": "obsidium:block/advanced_dionysian_press_front_on",
+    "south": "obsidium:block/advanced_dionysian_press_side",
+    "west": "obsidium:block/advanced_dionysian_press_side",
+    "east": "obsidium:block/advanced_dionysian_press_side"
+  }
+}

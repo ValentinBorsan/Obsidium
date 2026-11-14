@@ -1,0 +1,12 @@
+{
+  "formatVersion": 1,
+  "game": "minecraft",
+  "versionId": "1.0.0",
+  "name": "Obsidium: Olympian Odyssey",
+  "summary": "The flagship Fabric 1.21 modpack fusing volcanic industry, automation, and ancient Greek mythological divine ascension.",
+  "dependencies": {
+    "minecraft": "1.21",
+    "fabric-loader": "0.16.5"
+  },
+  "files": []
+}

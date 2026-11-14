@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:string"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "B": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SBS",
+    " A "
+  ],
+  "result": {
+    "count": 4,
+    "id": "obsidium:demetrian_grafting_tape"
+  }
+}

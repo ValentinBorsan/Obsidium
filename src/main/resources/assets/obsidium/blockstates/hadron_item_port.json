@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "formed=false": { "model": "obsidium:block/hadron_item_port" },
+    "formed=true":  { "model": "obsidium:block/hadron_item_port_formed" }
+  }
+}

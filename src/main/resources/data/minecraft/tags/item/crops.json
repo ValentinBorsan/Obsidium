@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:volcanite_petal",
+    "obsidium:iron_petal",
+    "obsidium:gold_petal",
+    "obsidium:copper_petal",
+    "obsidium:coal_petal",
+    "obsidium:lapis_petal",
+    "obsidium:redstone_petal",
+    "obsidium:diamond_petal",
+    "obsidium:netherite_petal",
+    "obsidium:tin_petal",
+    "obsidium:lead_petal",
+    "obsidium:silver_petal"
+  ]
+}

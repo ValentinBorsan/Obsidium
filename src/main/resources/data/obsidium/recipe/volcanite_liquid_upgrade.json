@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BLB",
+    "LCL",
+    "BLB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "L": {
+      "item": "minecraft:bucket"
+    },
+    "C": {
+      "item": "obsidium:volcanite_storage_processor"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_liquid_upgrade",
+    "count": 1
+  }
+}

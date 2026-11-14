@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PCP",
+    "LAL",
+    "   "
+  ],
+  "key": {
+    "P": { "item": "obsidium:pyric_bronze_ingot" },
+    "C": { "item": "minecraft:copper_ingot" },
+    "L": { "item": "minecraft:leather" },
+    "A": { "item": "minecraft:amethyst_shard" }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:faraday_helmet"
+  }
+}

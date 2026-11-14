@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OCO",
+    "RER",
+    "OCO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "C": {
+      "item": "obsidium:volcanite_casing"
+    },
+    "R": {
+      "item": "obsidium:volcanite_storage_processor"
+    },
+    "E": {
+      "item": "obsidium:volcanite_energy_core"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_storage_controller",
+    "count": 1
+  }
+}

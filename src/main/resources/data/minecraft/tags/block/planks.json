@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:ares_iron_planks",
+    "obsidium:artemis_silver_planks",
+    "obsidium:cronus_lead_planks",
+    "obsidium:electrum_planks",
+    "obsidium:hephaestus_volcanite_planks",
+    "obsidium:hermes_copper_planks",
+    "obsidium:midas_gold_planks",
+    "obsidium:tartarean_netherite_planks",
+    "obsidium:zeus_tin_planks"
+  ]
+}

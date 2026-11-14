@@ -1,0 +1,8 @@
+{
+  "parent": "obsidium:block/keraunos_hv_core_idle",
+  "textures": {
+    "frame": "obsidium:block/keraunos_hv_core_frame",
+    "plasma": "obsidium:block/keraunos_hv_core_grounded",
+    "particle": "obsidium:block/keraunos_hv_core_frame"
+  }
+}

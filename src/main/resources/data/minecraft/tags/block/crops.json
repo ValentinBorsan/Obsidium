@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "obsidium:coal_crop",
+    "obsidium:copper_crop",
+    "obsidium:diamond_crop",
+    "obsidium:gold_crop",
+    "obsidium:iron_crop",
+    "obsidium:lapis_crop",
+    "obsidium:lead_crop",
+    "obsidium:netherite_crop",
+    "obsidium:redstone_crop",
+    "obsidium:silver_crop",
+    "obsidium:tin_crop",
+    "obsidium:volcanite_crop"
+  ]
+}

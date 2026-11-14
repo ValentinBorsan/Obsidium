@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "obsidium:stick_bundle"
+    }
+  ],
+  "result": {
+    "id": "minecraft:stick",
+    "count": 9
+  }
+}
+

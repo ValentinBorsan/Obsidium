@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "obsidium:block/tartarean_netherite_slab"
+    },
+    "type=double": {
+      "model": "obsidium:block/tartarean_netherite_planks"
+    },
+    "type=top": {
+      "model": "obsidium:block/tartarean_netherite_slab_top"
+    }
+  }
+}

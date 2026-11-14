@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " AC",
+    " BA",
+    "R  "
+  ],
+  "key": {
+    "A": { "item": "minecraft:amethyst_shard" },
+    "C": { "item": "minecraft:copper_ingot" },
+    "B": { "item": "minecraft:blaze_rod" },
+    "R": { "item": "minecraft:leather" }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:hv_dielectric_hot_stick"
+  }
+}

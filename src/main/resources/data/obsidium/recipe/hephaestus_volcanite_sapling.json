@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {"item": "minecraft:stick"},
+    "A": {"item": "obsidium:volcanic_ash"},
+    "M": {"item": "obsidium:volcanite_ingot"}
+  },
+  "pattern": [" S ", "AMA"],
+  "result": {"count": 1, "id": "obsidium:hephaestus_volcanite_sapling"}
+}

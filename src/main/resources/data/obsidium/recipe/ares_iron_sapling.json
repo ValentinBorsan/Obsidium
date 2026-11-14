@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {"item": "minecraft:stick"},
+    "A": {"item": "obsidium:volcanic_ash"},
+    "M": {"item": "minecraft:raw_iron"}
+  },
+  "pattern": [" S ", "AMA"],
+  "result": {"count": 1, "id": "obsidium:ares_iron_sapling"}
+}

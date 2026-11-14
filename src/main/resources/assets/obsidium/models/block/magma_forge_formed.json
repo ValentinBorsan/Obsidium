@@ -1,0 +1,36 @@
+{
+    "parent": "block/block",
+    "textures": {
+        "particle": "obsidium:block/magma_forge_core",
+        "core": "obsidium:block/magma_forge_core",
+        "casing": "obsidium:block/volcanite_casing",
+        "furnace": "obsidium:block/advanced_volcanite_furnace_active",
+        "formed_top": "obsidium:block/magma_forge_formed_top",
+        "formed_side": "obsidium:block/magma_forge_formed_side"
+    },
+    "elements": [
+        {
+            "from": [-16, 0, -16],
+            "to": [32, 16, 32],
+            "faces": {
+                "up":    { "uv": [0.0, 0.0, 16.0, 16.0], "texture": "#formed_top" },
+                "down":  { "uv": [0.0, 0.0, 16.0, 16.0], "texture": "#formed_top" },
+                "north": { "uv": [0.0, 0.0, 16.0, 5.3333], "texture": "#formed_side" },
+                "south": { "uv": [0.0, 0.0, 16.0, 5.3333], "texture": "#formed_side" },
+                "west":  { "uv": [0.0, 0.0, 16.0, 5.3333], "texture": "#formed_side" },
+                "east":  { "uv": [0.0, 0.0, 16.0, 5.3333], "texture": "#formed_side" }
+            }
+        },
+        {
+            "from": [1, 16, 1],
+            "to": [15, 20, 15],
+            "faces": {
+                "up":    { "uv": [1, 1, 15, 15], "texture": "#core" },
+                "north": { "uv": [1, 12, 15, 16], "texture": "#furnace" },
+                "south": { "uv": [1, 12, 15, 16], "texture": "#furnace" },
+                "east":  { "uv": [1, 12, 15, 16], "texture": "#furnace" },
+                "west":  { "uv": [1, 12, 15, 16], "texture": "#furnace" }
+            }
+        }
+    ]
+}

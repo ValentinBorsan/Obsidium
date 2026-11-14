@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " G ",
+    "F#F",
+    " C "
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "F": {
+      "item": "obsidium:feroplumb_ingot"
+    },
+    "#": {
+      "tag": "minecraft:coals"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "id": "obsidium:charon_coin",
+    "count": 1
+  }
+}
+

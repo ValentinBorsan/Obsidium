@@ -1,0 +1,84 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "obsidium:block/astrape_energy_pylon_base",
+    "base": "obsidium:block/astrape_energy_pylon_base",
+    "pillar": "obsidium:block/astrape_energy_pylon_pillar"
+  },
+  "elements": [
+    {
+      "comment": "Pedestal Base",
+      "from": [3, 0, 3],
+      "to": [13, 3, 13],
+      "faces": {
+        "down":  { "uv": [3, 3, 13, 13], "texture": "#base", "cullface": "down" },
+        "up":    { "uv": [3, 3, 13, 13], "texture": "#base" },
+        "north": { "uv": [3, 13, 13, 16], "texture": "#base" },
+        "south": { "uv": [3, 13, 13, 16], "texture": "#base" },
+        "west":  { "uv": [3, 13, 13, 16], "texture": "#base" },
+        "east":  { "uv": [3, 13, 13, 16], "texture": "#base" }
+      }
+    },
+    {
+      "comment": "Center Energy Column",
+      "from": [6, 3, 6],
+      "to": [10, 12, 10],
+      "faces": {
+        "up":    { "uv": [6, 6, 10, 10], "texture": "#pillar" },
+        "north": { "uv": [6, 3, 10, 12], "texture": "#pillar" },
+        "south": { "uv": [6, 3, 10, 12], "texture": "#pillar" },
+        "west":  { "uv": [6, 3, 10, 12], "texture": "#pillar" },
+        "east":  { "uv": [6, 3, 10, 12], "texture": "#pillar" }
+      }
+    },
+    {
+      "comment": "North-West Resonator Prong",
+      "from": [4, 3, 4],
+      "to": [6, 14, 6],
+      "faces": {
+        "up":    { "uv": [4, 4, 6, 6], "texture": "#base" },
+        "north": { "uv": [4, 2, 6, 13], "texture": "#base" },
+        "south": { "uv": [4, 2, 6, 13], "texture": "#base" },
+        "west":  { "uv": [4, 2, 6, 13], "texture": "#base" },
+        "east":  { "uv": [4, 2, 6, 13], "texture": "#base" }
+      }
+    },
+    {
+      "comment": "North-East Resonator Prong",
+      "from": [10, 3, 4],
+      "to": [12, 14, 6],
+      "faces": {
+        "up":    { "uv": [10, 4, 12, 6], "texture": "#base" },
+        "north": { "uv": [10, 2, 12, 13], "texture": "#base" },
+        "south": { "uv": [10, 2, 12, 13], "texture": "#base" },
+        "west":  { "uv": [10, 2, 12, 13], "texture": "#base" },
+        "east":  { "uv": [10, 2, 12, 13], "texture": "#base" }
+      }
+    },
+    {
+      "comment": "South-West Resonator Prong",
+      "from": [4, 3, 10],
+      "to": [6, 14, 12],
+      "faces": {
+        "up":    { "uv": [4, 10, 6, 12], "texture": "#base" },
+        "north": { "uv": [4, 2, 6, 13], "texture": "#base" },
+        "south": { "uv": [4, 2, 6, 13], "texture": "#base" },
+        "west":  { "uv": [4, 2, 6, 13], "texture": "#base" },
+        "east":  { "uv": [4, 2, 6, 13], "texture": "#base" }
+      }
+    },
+    {
+      "comment": "South-East Resonator Prong",
+      "from": [10, 3, 10],
+      "to": [12, 14, 12],
+      "faces": {
+        "up":    { "uv": [10, 10, 12, 12], "texture": "#base" },
+        "north": { "uv": [10, 2, 12, 13], "texture": "#base" },
+        "south": { "uv": [10, 2, 12, 13], "texture": "#base" },
+        "west":  { "uv": [10, 2, 12, 13], "texture": "#base" },
+        "east":  { "uv": [10, 2, 12, 13], "texture": "#base" }
+      }
+    }
+  ]
+}
+

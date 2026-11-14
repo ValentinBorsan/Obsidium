@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "obsidium:item/supreme_link_tool"
+    }
+}
+

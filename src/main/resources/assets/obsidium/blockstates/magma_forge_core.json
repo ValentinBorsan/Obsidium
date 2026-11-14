@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "formed=false": { "model": "obsidium:block/magma_forge_core" },
+    "formed=true": { "model": "obsidium:block/magma_forge_formed" }
+  }
+}

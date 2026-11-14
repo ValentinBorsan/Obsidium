@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P P",
+    "AFA",
+    "WWW"
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    },
+    "A": {
+      "item": "obsidium:volcanite_energy_cell"
+    },
+    "W": {
+      "item": "obsidium:advanced_volcanite_energy_wire"
+    }
+  },
+  "result": {
+    "id": "obsidium:hephaestean_charging_plate",
+    "count": 1
+  }
+}
+
