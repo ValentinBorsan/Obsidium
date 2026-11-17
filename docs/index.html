@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Explore Obsidium for Minecraft 1.21 Fabric: item images, crafting recipes, volcanic machinery, botany and multiblock construction guides." />
   <meta name="theme-color" content="#0b0812" />
@@ -28,7 +30,7 @@
         <h1>Ancient myths.<br><em>Modern industry.</em></h1>
         <p>From your first Volcanite ingot to an Olympian-scale factory. Discover the materials, machines and living systems in this Minecraft 1.21 Fabric mod.</p>
         <div class="cta-row"><a class="btn btn-primary" href="https://www.curseforge.com/minecraft/mc-mods/obsidium">Download on CurseForge ↗</a><a class="btn btn-secondary" href="#catalog">Explore the catalog</a><a class="text-link" href="#guides">Learn how to build →</a></div>
-        <div class="hero-notes"><span>Actual game textures</span><span>Source-backed recipes</span><span>Layer-by-layer guides</span></div>
+        <div class="hero-notes"><span>Actual game textures</span><span>Visual crafting recipes</span><span>Layer-by-layer guides</span></div>
       </div>
       <div class="hero-workshop" aria-label="Obsidium workshop highlights">
         <span class="workshop-label">THE WORKSHOP CODEX / 01</span>
@@ -39,8 +41,9 @@
       </div>
     </section>
     <section id="catalog" class="section container">
-      <div class="section-heading"><div><span class="eyebrow">THE COLLECTION</span><h2>Find your next invention.</h2></div><p>Browse by system. Inspect every ingredient, explore alternatives and follow the recipe to its source.</p></div>
-      <div class="category-grid">
+      <div class="section-heading"><div><span class="eyebrow">THE COLLECTION</span><h2>Find your next invention.</h2></div><p>Choose a system, find an item and see how to craft or obtain it.</p></div>
+      <div class="collection-toolbar"><label for="categorySearch">What are you building?</label><div class="collection-search"><input id="categorySearch" type="search" placeholder="Find a category: storage, botany, energy…" autocomplete="off" aria-controls="categoryCollection" /><button id="clearCategorySearch" type="button" hidden>Clear</button></div><p id="categorySearchStatus" aria-live="polite">10 categories to explore</p></div>
+      <div class="category-grid" id="categoryCollection">
         <a class="category-card" href="wiki.html?page=Item-Catalog"><div class="category-top"><span>01 / MATERIALS</span><span aria-hidden="true">↗</span></div><div class="category-art"><img src="assets/catalog-icons/obsidium/volcanite_ingot.png" alt="" width="88" height="88" loading="lazy" /></div><h3>Materials & Components</h3><p>Metals, dusts and alloys. The foundations of your workshop.</p><span class="category-action">Explore category <span aria-hidden="true">→</span></span></a>
         <a class="category-card" href="wiki.html?page=Machine-Catalog"><div class="category-top"><span>02 / MACHINES</span><span aria-hidden="true">↗</span></div><div class="category-art"><img src="assets/catalog-icons/obsidium/volcanite_grinder.png" alt="" width="88" height="88" loading="lazy" /></div><h3>Machines & Generators</h3><p>Turn raw resources into an automated production line.</p><span class="category-action">Explore category <span aria-hidden="true">→</span></span></a>
         <a class="category-card" href="wiki.html?page=Transport-Catalog"><div class="category-top"><span>03 / TRANSPORT</span><span aria-hidden="true">↗</span></div><div class="category-art"><img src="assets/catalog-icons/obsidium/volcanite_universal_conduit.png" alt="" width="88" height="88" loading="lazy" /></div><h3>Pipes & Wires</h3><p>Move items, fluids and energy. Connect every part of your factory.</p><span class="category-action">Explore category <span aria-hidden="true">→</span></span></a>
@@ -49,11 +52,12 @@
         <a class="category-card" href="wiki.html?page=Energy-Catalog"><div class="category-top"><span>06 / ENERGY</span><span aria-hidden="true">↗</span></div><div class="category-art"><img src="assets/catalog-icons/obsidium/volcanite_energy_core.png" alt="" width="88" height="88" loading="lazy" /></div><h3>Energy & Upgrades</h3><p>Store power, link pylons and fine-tune your machines.</p><span class="category-action">Explore category <span aria-hidden="true">→</span></span></a>
         <a class="category-card" href="wiki.html?page=Equipment-Catalog"><div class="category-top"><span>07 / EQUIPMENT</span><span aria-hidden="true">↗</span></div><div class="category-art"><img src="assets/catalog-icons/obsidium/hephaestean_pickaxe.png" alt="" width="88" height="88" loading="lazy" /></div><h3>Equipment &amp; Exploration</h3><p>Forge tools and armor, discover mythic equipment and explore your world.</p><span class="category-action">Explore category <span aria-hidden="true">→</span></span></a>
         <a class="category-card" href="wiki.html?page=Building-Catalog"><div class="category-top"><span>08 / BUILDING</span><span aria-hidden="true">↗</span></div><div class="category-art"><img src="assets/catalog-icons/obsidium/volcanic_cement_bricks.png" alt="" width="88" height="88" loading="lazy" /></div><h3>Building Blocks</h3><p>Shape your workshop with living-tree wood, metal blocks, glass and volcanic cement.</p><span class="category-action">Explore category <span aria-hidden="true">→</span></span></a>
-<a class="category-card" href="wiki.html?page=Mythology-Catalog"><div class="category-top"><span>09 / COLLECTION</span><span aria-hidden="true">↗</span></div><div class="category-art"><img src="assets/catalog-icons/obsidium/olympian_altar.png" alt="" width="88" height="88" loading="lazy" /></div><h3>Mythology &amp; Rituals</h3><p>Divine scrolls, ritual structures and Stygian recovery.</p><span class="category-action">Explore category →</span></a>
-<a class="category-card" href="wiki.html?page=Supplies-Catalog"><div class="category-top"><span>10 / COLLECTION</span><span aria-hidden="true">↗</span></div><div class="category-art"><img src="assets/catalog-icons/obsidium/pyroclastic_flask.png" alt="" width="88" height="88" loading="lazy" /></div><h3>Fluids &amp; Utilities</h3><p>Fluid containers, fuels, processing products and teleportation.</p><span class="category-action">Explore category →</span></a>
+<a class="category-card" href="wiki.html?page=Mythology-Catalog"><div class="category-top"><span>09 / MYTHOLOGY</span><span aria-hidden="true">↗</span></div><div class="category-art"><img src="assets/catalog-icons/obsidium/olympian_altar.png" alt="" width="88" height="88" loading="lazy" /></div><h3>Mythology &amp; Rituals</h3><p>Divine scrolls, ritual structures and Stygian recovery.</p><span class="category-action">Explore category →</span></a>
+<a class="category-card" href="wiki.html?page=Supplies-Catalog"><div class="category-top"><span>10 / SUPPLIES</span><span aria-hidden="true">↗</span></div><div class="category-art"><img src="assets/catalog-icons/obsidium/pyroclastic_flask.png" alt="" width="88" height="88" loading="lazy" /></div><h3>Fluids &amp; Utilities</h3><p>Fluid containers, fuels, processing products and teleportation.</p><span class="category-action">Explore category →</span></a>
       </div>
       <p class="coverage-note">405 core items across 10 categories. Crafting stations and non-crafting acquisition routes are documented separately.</p>
     </section>
+    <section class="section container first-steps" aria-labelledby="firstStepsHeading"><div class="section-heading"><div><span class="eyebrow">YOUR FIRST WORKSHOP</span><h2 id="firstStepsHeading">Start small. Build outward.</h2></div><p>Three useful places to begin, at your own pace.</p></div><ol class="step-grid"><li><span class="step-number">01</span><h3>Gather your foundations</h3><p>Explore Volcanite, materials and the first component recipes.</p><a href="wiki.html?page=Item-Catalog">Browse materials →</a></li><li><span class="step-number">02</span><h3>Set up your worktable</h3><p>Check the crafting station label. Some recipes require the Volcanite Worktable.</p><a href="wiki.html?page=Machine-Catalog#item-obsidium-volcanite_worktable">Build a Worktable →</a></li><li><span class="step-number">03</span><h3>Connect your workshop</h3><p>Choose your machines, supply power and route items or fluids.</p><a href="wiki.html?page=Transport-Catalog">Explore logistics →</a></li></ol></section>
     <section id="guides" class="section container">
       <div class="section-heading"><div><span class="eyebrow">FROM BLUEPRINT TO BUILD</span><h2>A little guidance.<br>A bigger workshop.</h2></div><p>Practical guides for the systems that need more than a crafting table.</p></div>
       <div class="guide-grid">
@@ -62,7 +66,9 @@
       </div>
     </section>
     <section id="install" class="section container"><div class="start-panel"><div><span class="eyebrow">START YOUR WORLD</span><h2>Your workshop awaits.</h2><p>Install Obsidium and Fabric API in a Minecraft 1.21 Fabric instance, then start with Materials &amp; Components.</p></div><a class="btn btn-secondary" href="wiki.html?page=Item-Catalog">Start with materials →</a></div></section>
+    <section class="section container faq-section" aria-labelledby="faqHeading"><div class="section-heading"><div><span class="eyebrow">GOOD TO KNOW</span><h2 id="faqHeading">Before you dive in.</h2></div></div><div class="landing-faq"><details><summary>What do I need to play?</summary><p>Minecraft Java Edition 1.21, Java 21, Fabric Loader and Fabric API. Install Obsidium on both the client and server when playing multiplayer.</p></details><details><summary>Why does the vanilla crafting table show no result?</summary><p>Some Obsidium recipes require a Volcanite Worktable. Check the station label above each recipe in the catalog.</p><a href="wiki.html?page=Machine-Catalog#item-obsidium-volcanite_worktable">Find the Worktable recipe →</a></details><details><summary>How do I read a multiblock layout?</summary><p>Each square is one block. Read each layer from above and build from bottom to top; follow the controller orientation shown in the guide.</p><a href="wiki.html?page=Multiblocks">Open the construction guide →</a></details></div></section>
   </main>
   <footer><div class="container footer-inner"><a class="brand" href="index.html">OBSIDIUM</a><p>Mythic industry, crafted by SAPIRA MODS.</p><a href="#catalog">Back to catalog ↑</a></div></footer>
+  <script src="landing.js" defer></script>
 </body>
 </html>

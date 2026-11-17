@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Obsidium Wiki — SAPIRA MODS</title>
   <link rel="stylesheet" href="styles.css" />
@@ -192,7 +194,7 @@
     }
 
     document.querySelectorAll("#wikiNav a").forEach(a => {
-      if (a.dataset.page === page) a.classList.add("active");
+      if (a.dataset.page === page) { a.classList.add("active"); a.setAttribute("aria-current", "page"); }
     });
 
     function escapeHtml(str) {

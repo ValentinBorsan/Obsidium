@@ -35,10 +35,21 @@ Progress through thermal machinery, automation and demanding late-game technolog
 
 ## Guidance as you build
 
-Use the in-game manual and Odyssey advancements to discover systems and milestones.
+Use the in-game manuals, Odyssey advancements and online wiki to discover systems and milestones.
 
 - Follow progression goals while choosing which parts of the workshop to expand.
 - Use configuration options to adjust supported systems for your world or modpack.
+
+## Explore the wiki & item catalog
+
+Find what you need before you build: the wiki brings together **405 core items across 10 categories**, with game images, visual crafting recipes and acquisition methods.
+
+- **Browse by system:** materials, machines, pipes, storage, botany, energy, equipment, building blocks, mythology and supplies.
+- **Craft at the right station:** recipe labels identify when a **Volcanite Worktable** is needed instead of the vanilla crafting table.
+- **Build multiblocks layer by layer:** follow illustrated layouts, component lists and formation instructions.
+- **Grow your resources:** use the Botany Manual for grafting, living-tree hybrids, rare mutations and beekeeping.
+
+[Open the Obsidium Wiki & Catalog](https://obsidium.pages.dev/) · [Multiblock Guide](https://obsidium.pages.dev/wiki.html?page=Multiblocks) · [Botany Manual](https://obsidium.pages.dev/wiki.html?page=Botany-Manual)
 
 ## Before you install
 

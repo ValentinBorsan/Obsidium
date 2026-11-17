@@ -1,5 +1,16 @@
 # Changelog
 
+## Website — Navigation & Collection Refinement — 2026-11-17
+
+- Refined the index into aligned illustrated category cards, with category search,
+  clear/keyboard controls, a three-step workshop introduction and practical FAQ.
+- Reduced catalog header clutter by moving alternate categories into a disclosure;
+  added a collection breadcrumb, clearer crafting help and larger item portraits.
+- Improved small-screen navigation with scrollable category links and active-page
+  accessibility; retained large recipes and neutral icon backgrounds.
+- Validation: landing search interaction checks, all catalog/multiblock/completion
+  checks and local link/asset checks pass. Browser visual review remains pending.
+
 ## Wiki — Stair Perspective & Cleaner Recipe Pages — 2026-11-17
 
 - Corrected the model camera/visible-face projection so stair steps face the viewer;
