@@ -1,6 +1,6 @@
-# Obsidium Wiki
+# Obsidium Official Wiki
 
-**Obsidium** is a Greek-mythology-inspired industrial & progression mod for **Minecraft 1.21 (Fabric)**, developed by **SAPIRA MODS**.
+**Obsidium** is a Greek-mythology-inspired industrial, energy, and progression mod for **Minecraft 1.21 (Fabric)**, created by **SAPIRA MODS**.
 
 - **Main Mod**: `Obsidium` (`v1.1.0`)
 - **Optional Addon**: `Obsidium: Mythic Rails` (`v0.5.0`)
@@ -8,16 +8,14 @@
 
 ---
 
-## Wiki Pages
+## Manual Chapters
 
-1. [Progression & Materials](Progression-and-Materials.md) — Ores, alloys, ingots, tiers, tools, and armor.
-2. [Machines & Energy](Machines-and-Energy.md) — Furnaces, Forges, Grinders, Generators, Astrape Energy Wires, Energy Cells, and Wireless Pylons.
-3. [Logistics, Fluids & Utility](Logistics-and-Fluids.md) — Item & Fluid Pipes, Tanks, Barrels, Pumps, Chunk Loader, and Volcanic Teleporter.
-4. [Mythology & Rituals](Mythology-and-Rituals.md) — Olympian Altar, Astrape Ritual Obelisk, and Hephaestean Armory.
-5. [Addon: Mythic Rails](Mythic-Rails-Addon.md) — Hermes Modular Cart, Modules, Loading/Unloading Stations, High-Speed/Detector/Switch Rails, Semaphores, Buffer Stops, and Olympus Dispatch Console.
-
----
-
-## How to Publish This Wiki
-- **GitHub Wiki**: Copy the `.md` files from `docs/wiki/` directly into your GitHub repository's **Wiki** tab (`Home.md` becomes the Wiki homepage).
-- **GitHub Pages (MkDocs)**: Run `mkdocs serve` locally or enable GitHub Pages using `mkdocs.yml` in the repository root.
+1. [Caldera & Volcanite Ores](Caldera-and-Ores.md) — Caldera biome, Volcanic Cones, Volcanite mining, and Telluric Astrolabe.
+2. [Power & Generators](Power-and-Generators.md) — Generators, Steam Turbine, Biomass, Tartarus Piston, Bio-Caldera, and Fluid Alchemy.
+3. [Magma Forge](Magma-Forge.md) — 3×3 Forge multiblock, Magma Tempering mini-game, Masterwork bonuses, and 1-click Auto-Fill.
+4. [Energy Core & High-Voltage](Energy-Core.md) — 3×3 Energy Core Matrix, Keraunos 3×3×3 HV Matrix (1B–15B+ RF), and HV Safety.
+5. [Storage & Pipes](Storage-and-Pipes.md) — Digital Disk Storage, Barrels & Tanks, Hermes/Naiad Pipes, Optic Fiber, and Astrape Wires.
+6. [Mythology & Rituals](Mythology-and-Rituals.md) — Olympian Altar, 7 Divine Pacts, Relics, Helio-Concentrator, and Pylons.
+7. [Olympian Hadron Collider](Hadron-Collider.md) — 5×5 Collider ring, Cryo cooling (<120 K), Plasma fuels, and Particle Collisions.
+8. [Demetrian Botany](Demetrian-Botany.md) — Living Ore Trees, Hybrid Grafting recipes, and Bonsai automation.
+9. [Addon: Mythic Rails](Mythic-Rails-Addon.md) — Hermes Modular Cart, 5-side Stations, 5 Rail Types, Semaphores, Buffer Stops & Olympus Dispatch Console.

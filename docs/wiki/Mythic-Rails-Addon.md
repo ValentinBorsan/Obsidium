@@ -5,6 +5,8 @@
 ---
 
 ## 1. Hermes Modular Cart
+![Hermes Modular Cart](assets/icons/hermes_freight_cart.png) ![Recipe: Hermes Modular Cart](assets/recipes/hermes_freight_cart.png)
+
 A single 58-slot modular rail vehicle (`54` Cargo slots + `Motor`, `Payload Module`, `Fuel`, and `Aux` slots).
 
 ### Drive Motors (Slot: Motor)
@@ -22,6 +24,8 @@ A single 58-slot modular rail vehicle (`54` Cargo slots + `Motor`, `Payload Modu
 ---
 
 ## 2. Stations (Place Directly Below a Straight Rail)
+![Loading Station](assets/icons/hermes_loading_station.png) ![Unloading Station](assets/icons/hermes_unloading_station.png) ![Fluid Station](assets/icons/hermes_fluid_loading_station.png) ![Energy Station](assets/icons/hermes_energy_loading_station.png)
+
 All stations face the **departure direction** and support redstone hold + GUI control.
 
 - **Hermes Loading / Unloading Station (Items)**
@@ -35,17 +39,25 @@ All stations face the **departure direction** and support redstone hold + GUI co
 ---
 
 ## 3. Rails
+![Obsidian Rail](assets/icons/obsidian_rail.png) ![Ember Powered Rail](assets/icons/ember_powered_rail.png) ![Helios Hyper-Rail](assets/icons/volcanite_speed_rail.png) ![Oracle Scanner Rail](assets/icons/obsidian_detector_rail.png) ![Labyrinth Switch Rail](assets/icons/switch_rail.png)
+
 - **Obsidian Rail** — Blast-resistant (`1200.0` explosion resistance) and faster than vanilla rails (`0.52` max speed).
 - **Ember Powered Rail** — Reinforced powered booster/brake rail.
 - **Helios Volcanite Hyper-Rail** — High-speed rail (`0.78` straight max speed, auto-capped to `0.42` in curves to prevent derailing).
 - **Oracle Scanner Rail** — Emits redstone signal + comparator analog output (`0–15`) proportional to cart fill (items, fluid, or RF).
 - **Labyrinth Switch Rail** — Redstone-controlled junction rail (toggles straight/curved on redstone signal, or cycle manually with right-click).
 
+![Helios Hyper-Rail Recipe](assets/recipes/volcanite_speed_rail.png) ![Oracle Scanner Rail Recipe](assets/recipes/obsidian_detector_rail.png) ![Labyrinth Switch Rail Recipe](assets/recipes/switch_rail.png)
+
 ---
 
 ## 4. Signaling, Buffer Stops & Remote Control
+![Atlas Buffer Stop](assets/icons/rail_bumper.png) ![Apollo Signal Semaphore](assets/icons/rail_semaphore.png) ![Iris Signal Relay](assets/icons/signal_connector.png) ![Olympus Dispatch Console](assets/icons/rail_control_system.png) ![Caduceus Signal Linker](assets/icons/signal_linker.png)
+
 - **Atlas Buffer Stop** — End-of-line stop that halts approaching carts cleanly; when powered by redstone or remote command, reverses and launches the cart back along the track.
 - **Apollo Signal Semaphore** — Scans up to `16` blocks ahead (or obeys redstone/remote signal). Holds carts on **RED** without turning off their motor, and automatically lets them resume on **GREEN**.
 - **Iris Signal Relay** — Compact transceiver placed next to a Semaphore, Buffer Stop, or Switch Rail.
 - **Olympus Dispatch Console** — Central GUI console controlling up to `8` linked **Iris Signal Relays** individually or via Master Controls (`ALL GO`, `ALL STOP`, `LAUNCH`, `SWITCH`).
 - **Caduceus Signal Linker** — Right-click the **Olympus Dispatch Console** to bind, then right-click **Iris Signal Relays** to link them.
+
+![Atlas Buffer Stop Recipe](assets/recipes/rail_bumper.png) ![Apollo Signal Semaphore Recipe](assets/recipes/rail_semaphore.png) ![Olympus Dispatch Console Recipe](assets/recipes/rail_control_system.png) ![Iris Signal Relay Recipe](assets/recipes/signal_connector.png) ![Caduceus Signal Linker Recipe](assets/recipes/signal_linker.png)
