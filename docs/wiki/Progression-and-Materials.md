@@ -2,6 +2,9 @@
 
 Obsidium expands Minecraft's mid-to-late game progression around **Volcanite** and volcanic metallurgy.
 
+[Open the illustrated materials catalog](wiki.html?page=Item-Catalog) for item images,
+crafting grids, ingredient alternatives and processing sources.
+
 ## Core Resources
 - **Volcanite Ore** → drops **Volcanite** (can be crushed into **Volcanite Dust** in the Volcanite Grinder).
 - **Volcanic Ash** & **Volcanic Alloy** → early/mid-game alloy components used for casings, pipes, and basic machines.

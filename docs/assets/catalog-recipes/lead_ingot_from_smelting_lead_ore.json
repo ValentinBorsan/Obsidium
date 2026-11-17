@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": [
+    {
+      "item": "obsidium:lead_ore"
+    },
+    {
+      "tag": "c:ores/lead"
+    }
+  ],
+  "result": {
+    "id": "obsidium:lead_ingot"
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

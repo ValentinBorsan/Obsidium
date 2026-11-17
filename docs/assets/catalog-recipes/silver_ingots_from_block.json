@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "obsidium:silver_block"
+    }
+  ],
+  "result": {
+    "id": "obsidium:silver_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "obsidium:feroplumb_ingot"
+    }
+  ],
+  "result": {
+    "id": "obsidium:feroplumb_nugget",
+    "count": 9
+  }
+}

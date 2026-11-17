@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "obsidium:lapis_petal"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:lapis_nugget"
+  }
+}

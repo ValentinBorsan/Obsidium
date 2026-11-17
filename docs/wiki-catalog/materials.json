@@ -1,0 +1,3362 @@
+{
+  "schema": 1,
+  "category": "materials",
+  "title": "Materials & Components",
+  "note": "First documented category. Images are copied from game textures; block ingredients use a representative block face. Recipes reflect the checked-in source and may be overridden by modpacks.",
+  "scope": "All registered ingots, dusts, nuggets and raw metal items (excluding storage blocks), plus the explicitly listed core components. Other wiki categories are added in later batches.",
+  "count": 43,
+  "items": [
+    {
+      "id": "obsidium:astral_volcanic_catalyst",
+      "name": "Astral Volcanic Catalyst",
+      "image": "assets/catalog-icons/obsidium/astral_volcanic_catalyst.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "An advanced catalyst used in rare-resource and industrial progression.",
+      "recipes": [
+        {
+          "id": "obsidium:astral_volcanic_catalyst",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:astral_volcanic_catalyst",
+            "name": "Astral Volcanic Catalyst",
+            "image": "assets/catalog-icons/obsidium/astral_volcanic_catalyst.png",
+            "imageKind": "item texture"
+          },
+          "count": 2,
+          "source": "src/main/resources/data/obsidium/recipe/astral_volcanic_catalyst.json",
+          "json": "assets/catalog-recipes/astral_volcanic_catalyst.json",
+          "pattern": [
+            "AVA",
+            "BSB",
+            "AVA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "minecraft:blaze_powder",
+                "name": "Blaze Powder",
+                "image": "assets/catalog-icons/minecraft/blaze_powder.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:nether_star",
+                "name": "Nether Star",
+                "image": "assets/catalog-icons/minecraft/nether_star.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:cinder_core",
+      "name": "Cinder Core",
+      "image": "assets/catalog-icons/obsidium/cinder_core.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "A hostile-mob resource used as a special crafting component.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Mob drop",
+          "note": "Obtain from Cinder Stalkers; loot-table conditions and randomness apply.",
+          "source": "src/main/resources/data/obsidium/loot_table/entities/cinder_stalker.json"
+        }
+      ]
+    },
+    {
+      "id": "obsidium:cinder_stalker_skull",
+      "name": "Cinder Stalker Skull",
+      "image": "assets/catalog-icons/obsidium/cinder_stalker_skull.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "A Cinder Stalker trophy with progression uses.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Mob drop",
+          "note": "Obtain from Cinder Stalkers; loot-table conditions and randomness apply.",
+          "source": "src/main/resources/data/obsidium/loot_table/entities/cinder_stalker.json"
+        }
+      ]
+    },
+    {
+      "id": "obsidium:coal_nugget",
+      "name": "Coal Nugget",
+      "image": "assets/catalog-icons/obsidium/coal_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:coal_nugget_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:coal_nugget",
+            "name": "Coal Nugget",
+            "image": "assets/catalog-icons/obsidium/coal_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/coal_nugget_from_petal.json",
+          "json": "assets/catalog-recipes/coal_nugget_from_petal.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:coal_petal",
+                "name": "Coal Petal",
+                "image": "assets/catalog-icons/obsidium/coal_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:coal_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:coal_nugget",
+            "name": "Coal Nugget",
+            "image": "assets/catalog-icons/obsidium/coal_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/coal_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/coal_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "minecraft:coal",
+                "name": "Coal",
+                "image": "assets/catalog-icons/minecraft/coal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:copper_dust",
+      "name": "Copper Dust",
+      "image": "assets/catalog-icons/obsidium/copper_dust.png",
+      "imageKind": "item texture",
+      "group": "Dusts",
+      "description": "A powdered processing material.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one matching ingot into one dust.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "inputs": [
+            {
+              "id": "minecraft:copper_ingot",
+              "name": "Copper Ingot",
+              "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+              "imageKind": "item texture"
+            }
+          ]
+        },
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one raw resource into two dusts. Matching ores are also supported by the machine.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "count": 2,
+          "inputs": [
+            {
+              "id": "minecraft:raw_copper",
+              "name": "Raw Copper",
+              "image": "assets/catalog-icons/minecraft/raw_copper.png",
+              "imageKind": "item texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsidium:copper_nugget",
+      "name": "Copper Nugget",
+      "image": "assets/catalog-icons/obsidium/copper_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:copper_nugget_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:copper_nugget",
+            "name": "Copper Nugget",
+            "image": "assets/catalog-icons/obsidium/copper_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/copper_nugget_from_petal.json",
+          "json": "assets/catalog-recipes/copper_nugget_from_petal.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:copper_petal",
+                "name": "Copper Petal",
+                "image": "assets/catalog-icons/obsidium/copper_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:copper_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:copper_nugget",
+            "name": "Copper Nugget",
+            "image": "assets/catalog-icons/obsidium/copper_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/copper_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/copper_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:diamond_nugget",
+      "name": "Diamond Nugget",
+      "image": "assets/catalog-icons/obsidium/diamond_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:diamond_nugget_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:diamond_nugget",
+            "name": "Diamond Nugget",
+            "image": "assets/catalog-icons/obsidium/diamond_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/diamond_nugget_from_petal.json",
+          "json": "assets/catalog-recipes/diamond_nugget_from_petal.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:diamond_petal",
+                "name": "Diamond Petal",
+                "image": "assets/catalog-icons/obsidium/diamond_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:diamond_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:diamond_nugget",
+            "name": "Diamond Nugget",
+            "image": "assets/catalog-icons/obsidium/diamond_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/diamond_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/diamond_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "minecraft:diamond",
+                "name": "Diamond",
+                "image": "assets/catalog-icons/minecraft/diamond.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:feroplumb_dust",
+      "name": "Feroplumb Dust",
+      "image": "assets/catalog-icons/obsidium/feroplumb_dust.png",
+      "imageKind": "item texture",
+      "group": "Dusts",
+      "description": "A powdered processing material.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one matching ingot into one dust.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "inputs": [
+            {
+              "id": "obsidium:feroplumb_ingot",
+              "name": "Feroplumb Ingot",
+              "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+              "imageKind": "item texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsidium:feroplumb_ingot",
+      "name": "Feroplumb Ingot",
+      "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+      "imageKind": "item texture",
+      "group": "Metals & raw resources",
+      "description": "A metal resource for crafting and processing.",
+      "recipes": [
+        {
+          "id": "obsidium:feroplumb_ingot_from_crafting",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:feroplumb_ingot",
+            "name": "Feroplumb Ingot",
+            "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 2,
+          "source": "src/main/resources/data/obsidium/recipe/feroplumb_ingot_from_crafting.json",
+          "json": "assets/catalog-recipes/feroplumb_ingot_from_crafting.json",
+          "ingredients": [
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:iron_ingot",
+                    "name": "Iron Ingot",
+                    "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:ingots/iron"
+                },
+                {
+                  "tag": "c:iron_ingots"
+                }
+              ]
+            },
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "obsidium:lead_ingot",
+                    "name": "Lead Ingot",
+                    "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:ingots/lead"
+                },
+                {
+                  "tag": "c:lead_ingots"
+                }
+              ]
+            },
+            {
+              "tag": "minecraft:coals"
+            }
+          ]
+        },
+        {
+          "id": "obsidium:feroplumb_ingot_from_nuggets",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:feroplumb_ingot",
+            "name": "Feroplumb Ingot",
+            "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/feroplumb_ingot_from_nuggets.json",
+          "json": "assets/catalog-recipes/feroplumb_ingot_from_nuggets.json",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:feroplumb_nugget",
+                "name": "Feroplumb Nugget",
+                "image": "assets/catalog-icons/obsidium/feroplumb_nugget.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:feroplumb_nugget",
+      "name": "Feroplumb Nugget",
+      "image": "assets/catalog-icons/obsidium/feroplumb_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:feroplumb_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:feroplumb_nugget",
+            "name": "Feroplumb Nugget",
+            "image": "assets/catalog-icons/obsidium/feroplumb_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/feroplumb_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/feroplumb_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:gold_dust",
+      "name": "Gold Dust",
+      "image": "assets/catalog-icons/obsidium/gold_dust.png",
+      "imageKind": "item texture",
+      "group": "Dusts",
+      "description": "A powdered processing material.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one matching ingot into one dust.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "inputs": [
+            {
+              "id": "minecraft:gold_ingot",
+              "name": "Gold Ingot",
+              "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+              "imageKind": "item texture"
+            }
+          ]
+        },
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one raw resource into two dusts. Matching ores are also supported by the machine.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "count": 2,
+          "inputs": [
+            {
+              "id": "minecraft:raw_gold",
+              "name": "Raw Gold",
+              "image": "assets/catalog-icons/minecraft/raw_gold.png",
+              "imageKind": "item texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsidium:iron_dust",
+      "name": "Iron Dust",
+      "image": "assets/catalog-icons/obsidium/iron_dust.png",
+      "imageKind": "item texture",
+      "group": "Dusts",
+      "description": "A powdered processing material.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one matching ingot into one dust.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "inputs": [
+            {
+              "id": "minecraft:iron_ingot",
+              "name": "Iron Ingot",
+              "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+              "imageKind": "item texture"
+            }
+          ]
+        },
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one raw resource into two dusts. Matching ores are also supported by the machine.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "count": 2,
+          "inputs": [
+            {
+              "id": "minecraft:raw_iron",
+              "name": "Raw Iron",
+              "image": "assets/catalog-icons/minecraft/raw_iron.png",
+              "imageKind": "item texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsidium:lapis_nugget",
+      "name": "Lapis Nugget",
+      "image": "assets/catalog-icons/obsidium/lapis_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:lapis_nugget_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:lapis_nugget",
+            "name": "Lapis Nugget",
+            "image": "assets/catalog-icons/obsidium/lapis_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lapis_nugget_from_petal.json",
+          "json": "assets/catalog-recipes/lapis_nugget_from_petal.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:lapis_petal",
+                "name": "Lapis Petal",
+                "image": "assets/catalog-icons/obsidium/lapis_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:lapis_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:lapis_nugget",
+            "name": "Lapis Nugget",
+            "image": "assets/catalog-icons/obsidium/lapis_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/lapis_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/lapis_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "minecraft:lapis_lazuli",
+                "name": "Lapis Lazuli",
+                "image": "assets/catalog-icons/minecraft/lapis_lazuli.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:lead_dust",
+      "name": "Lead Dust",
+      "image": "assets/catalog-icons/obsidium/lead_dust.png",
+      "imageKind": "item texture",
+      "group": "Dusts",
+      "description": "A powdered processing material.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one matching ingot into one dust.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "inputs": [
+            {
+              "id": "obsidium:lead_ingot",
+              "name": "Lead Ingot",
+              "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+              "imageKind": "item texture"
+            }
+          ]
+        },
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one raw resource into two dusts. Matching ores are also supported by the machine.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "count": 2,
+          "inputs": [
+            {
+              "id": "obsidium:raw_lead",
+              "name": "Raw Lead",
+              "image": "assets/catalog-icons/obsidium/raw_lead.png",
+              "imageKind": "item texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsidium:lead_ingot",
+      "name": "Lead Ingot",
+      "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+      "imageKind": "item texture",
+      "group": "Metals & raw resources",
+      "description": "A metal resource for crafting and processing.",
+      "recipes": [
+        {
+          "id": "obsidium:lead_ingot_from_blasting",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_blasting.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_blasting.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:lead_dust",
+              "name": "Lead Dust",
+              "image": "assets/catalog-icons/obsidium/lead_dust.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:lead_ingot_from_blasting_deepslate_lead_ore",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_blasting_deepslate_lead_ore.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_blasting_deepslate_lead_ore.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:deepslate_lead_ore",
+              "name": "Deepslate Lead Ore",
+              "image": "assets/catalog-icons/obsidium/deepslate_lead_ore.png",
+              "imageKind": "block texture"
+            }
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:lead_ingot_from_blasting_lead_ore",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_blasting_lead_ore.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_blasting_lead_ore.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "obsidium:lead_ore",
+                  "name": "Lead Ore",
+                  "image": "assets/catalog-icons/obsidium/lead_ore.png",
+                  "imageKind": "block texture"
+                }
+              },
+              {
+                "tag": "c:ores/lead"
+              }
+            ]
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:lead_ingot_from_blasting_raw_lead",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_blasting_raw_lead.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_blasting_raw_lead.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "obsidium:raw_lead",
+                  "name": "Raw Lead",
+                  "image": "assets/catalog-icons/obsidium/raw_lead.png",
+                  "imageKind": "item texture"
+                }
+              },
+              {
+                "tag": "c:raw_materials/lead"
+              }
+            ]
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:lead_ingot_from_lead_block",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_lead_block.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_lead_block.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:lead_block",
+                "name": "Block of Lead",
+                "image": "assets/catalog-icons/obsidium/lead_block.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:lead_ingot_from_nuggets",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_nuggets.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_nuggets.json",
+          "pattern": [
+            "NNN",
+            "NNN",
+            "NNN"
+          ],
+          "key": {
+            "N": {
+              "item": {
+                "id": "obsidium:lead_nugget",
+                "name": "Lead Nugget",
+                "image": "assets/catalog-icons/obsidium/lead_nugget.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:lead_ingot_from_petals",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_petals.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_petals.json",
+          "pattern": [
+            "PPP",
+            "PPP",
+            "PPP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:lead_petal",
+                "name": "Lead Petal",
+                "image": "assets/catalog-icons/obsidium/lead_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:lead_ingot_from_smelting",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_smelting.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_smelting.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:lead_dust",
+              "name": "Lead Dust",
+              "image": "assets/catalog-icons/obsidium/lead_dust.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:lead_ingot_from_smelting_deepslate_lead_ore",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_smelting_deepslate_lead_ore.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_smelting_deepslate_lead_ore.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:deepslate_lead_ore",
+              "name": "Deepslate Lead Ore",
+              "image": "assets/catalog-icons/obsidium/deepslate_lead_ore.png",
+              "imageKind": "block texture"
+            }
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:lead_ingot_from_smelting_lead_ore",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_smelting_lead_ore.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_smelting_lead_ore.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "obsidium:lead_ore",
+                  "name": "Lead Ore",
+                  "image": "assets/catalog-icons/obsidium/lead_ore.png",
+                  "imageKind": "block texture"
+                }
+              },
+              {
+                "tag": "c:ores/lead"
+              }
+            ]
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:lead_ingot_from_smelting_raw_lead",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:lead_ingot",
+            "name": "Lead Ingot",
+            "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_smelting_raw_lead.json",
+          "json": "assets/catalog-recipes/lead_ingot_from_smelting_raw_lead.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "obsidium:raw_lead",
+                  "name": "Raw Lead",
+                  "image": "assets/catalog-icons/obsidium/raw_lead.png",
+                  "imageKind": "item texture"
+                }
+              },
+              {
+                "tag": "c:raw_materials/lead"
+              }
+            ]
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:lead_nugget",
+      "name": "Lead Nugget",
+      "image": "assets/catalog-icons/obsidium/lead_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:lead_nugget_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:lead_nugget",
+            "name": "Lead Nugget",
+            "image": "assets/catalog-icons/obsidium/lead_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_nugget_from_petal.json",
+          "json": "assets/catalog-recipes/lead_nugget_from_petal.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:lead_petal",
+                "name": "Lead Petal",
+                "image": "assets/catalog-icons/obsidium/lead_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:lead_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:lead_nugget",
+            "name": "Lead Nugget",
+            "image": "assets/catalog-icons/obsidium/lead_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/lead_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/lead_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:lead_ingot",
+                "name": "Lead Ingot",
+                "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:netherite_nugget",
+      "name": "Netherite Nugget",
+      "image": "assets/catalog-icons/obsidium/netherite_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:netherite_nugget_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:netherite_nugget",
+            "name": "Netherite Nugget",
+            "image": "assets/catalog-icons/obsidium/netherite_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/netherite_nugget_from_petal.json",
+          "json": "assets/catalog-recipes/netherite_nugget_from_petal.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:netherite_petal",
+                "name": "Netherite Petal",
+                "image": "assets/catalog-icons/obsidium/netherite_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:netherite_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:netherite_nugget",
+            "name": "Netherite Nugget",
+            "image": "assets/catalog-icons/obsidium/netherite_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/netherite_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/netherite_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "minecraft:netherite_ingot",
+                "name": "Netherite Ingot",
+                "image": "assets/catalog-icons/minecraft/netherite_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:pyric_bronze_dust",
+      "name": "Pyric Bronze Dust",
+      "image": "assets/catalog-icons/obsidium/pyric_bronze_dust.png",
+      "imageKind": "item texture",
+      "group": "Dusts",
+      "description": "A powdered processing material.",
+      "recipes": [
+        {
+          "id": "obsidium:pyric_bronze_dust_from_crafting",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:pyric_bronze_dust",
+            "name": "Pyric Bronze Dust",
+            "image": "assets/catalog-icons/obsidium/pyric_bronze_dust.png",
+            "imageKind": "item texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_dust_from_crafting.json",
+          "json": "assets/catalog-recipes/pyric_bronze_dust_from_crafting.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:copper_dust",
+                "name": "Copper Dust",
+                "image": "assets/catalog-icons/obsidium/copper_dust.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:copper_dust",
+                "name": "Copper Dust",
+                "image": "assets/catalog-icons/obsidium/copper_dust.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:copper_dust",
+                "name": "Copper Dust",
+                "image": "assets/catalog-icons/obsidium/copper_dust.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:tin_dust",
+                "name": "Tin Dust",
+                "image": "assets/catalog-icons/obsidium/tin_dust.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one matching ingot into one dust.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "inputs": [
+            {
+              "id": "obsidium:pyric_bronze_ingot",
+              "name": "Pyric Bronze Ingot",
+              "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+              "imageKind": "item texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsidium:pyric_bronze_ingot",
+      "name": "Pyric Bronze Ingot",
+      "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+      "imageKind": "item texture",
+      "group": "Metals & raw resources",
+      "description": "A metal resource for crafting and processing.",
+      "recipes": [
+        {
+          "id": "obsidium:pyric_bronze_ingot_from_blasting",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:pyric_bronze_ingot",
+            "name": "Pyric Bronze Ingot",
+            "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_ingot_from_blasting.json",
+          "json": "assets/catalog-recipes/pyric_bronze_ingot_from_blasting.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:pyric_bronze_dust",
+              "name": "Pyric Bronze Dust",
+              "image": "assets/catalog-icons/obsidium/pyric_bronze_dust.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:pyric_bronze_ingot_from_crafting",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:pyric_bronze_ingot",
+            "name": "Pyric Bronze Ingot",
+            "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_ingot_from_crafting.json",
+          "json": "assets/catalog-recipes/pyric_bronze_ingot_from_crafting.json",
+          "ingredients": [
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:copper_ingot",
+                    "name": "Copper Ingot",
+                    "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:ingots/copper"
+                },
+                {
+                  "tag": "c:copper_ingots"
+                }
+              ]
+            },
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:copper_ingot",
+                    "name": "Copper Ingot",
+                    "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:ingots/copper"
+                },
+                {
+                  "tag": "c:copper_ingots"
+                }
+              ]
+            },
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:copper_ingot",
+                    "name": "Copper Ingot",
+                    "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:ingots/copper"
+                },
+                {
+                  "tag": "c:copper_ingots"
+                }
+              ]
+            },
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "obsidium:tin_ingot",
+                    "name": "Tin Ingot",
+                    "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:ingots/tin"
+                },
+                {
+                  "tag": "c:tin_ingots"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "obsidium:pyric_bronze_ingot_from_crafting_fuel",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:pyric_bronze_ingot",
+            "name": "Pyric Bronze Ingot",
+            "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 3,
+          "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_ingot_from_crafting_fuel.json",
+          "json": "assets/catalog-recipes/pyric_bronze_ingot_from_crafting_fuel.json",
+          "ingredients": [
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:copper_ingot",
+                    "name": "Copper Ingot",
+                    "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:copper_ingots"
+                }
+              ]
+            },
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:copper_ingot",
+                    "name": "Copper Ingot",
+                    "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:copper_ingots"
+                }
+              ]
+            },
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "obsidium:tin_ingot",
+                    "name": "Tin Ingot",
+                    "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:tin_ingots"
+                }
+              ]
+            },
+            {
+              "tag": "minecraft:coals"
+            }
+          ]
+        },
+        {
+          "id": "obsidium:pyric_bronze_ingot_from_nuggets",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:pyric_bronze_ingot",
+            "name": "Pyric Bronze Ingot",
+            "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_ingot_from_nuggets.json",
+          "json": "assets/catalog-recipes/pyric_bronze_ingot_from_nuggets.json",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:pyric_bronze_nugget",
+                "name": "Pyric Bronze Nugget",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_nugget.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:pyric_bronze_ingot_from_smelting",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:pyric_bronze_ingot",
+            "name": "Pyric Bronze Ingot",
+            "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_ingot_from_smelting.json",
+          "json": "assets/catalog-recipes/pyric_bronze_ingot_from_smelting.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:pyric_bronze_dust",
+              "name": "Pyric Bronze Dust",
+              "image": "assets/catalog-icons/obsidium/pyric_bronze_dust.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:pyric_bronze_nugget",
+      "name": "Pyric Bronze Nugget",
+      "image": "assets/catalog-icons/obsidium/pyric_bronze_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:pyric_bronze_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:pyric_bronze_nugget",
+            "name": "Pyric Bronze Nugget",
+            "image": "assets/catalog-icons/obsidium/pyric_bronze_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/pyric_bronze_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:raw_lead",
+      "name": "Raw Lead",
+      "image": "assets/catalog-icons/obsidium/raw_lead.png",
+      "imageKind": "item texture",
+      "group": "Metals & raw resources",
+      "description": "A metal resource for crafting and processing.",
+      "recipes": [
+        {
+          "id": "obsidium:raw_lead_from_raw_lead_block",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:raw_lead",
+            "name": "Raw Lead",
+            "image": "assets/catalog-icons/obsidium/raw_lead.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/raw_lead_from_raw_lead_block.json",
+          "json": "assets/catalog-recipes/raw_lead_from_raw_lead_block.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:raw_lead_block",
+                "name": "Block of Raw Lead",
+                "image": "assets/catalog-icons/obsidium/raw_lead_block.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [
+        {
+          "kind": "Mining",
+          "note": "Mine the corresponding ore. Block-unpacking recipes below are recycling routes, not the original source.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/lead_ore.json"
+        }
+      ]
+    },
+    {
+      "id": "obsidium:raw_silver",
+      "name": "Raw Silver",
+      "image": "assets/catalog-icons/obsidium/raw_silver.png",
+      "imageKind": "item texture",
+      "group": "Metals & raw resources",
+      "description": "A metal resource for crafting and processing.",
+      "recipes": [
+        {
+          "id": "obsidium:raw_silver_from_block",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:raw_silver",
+            "name": "Raw Silver",
+            "image": "assets/catalog-icons/obsidium/raw_silver.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/raw_silver_from_block.json",
+          "json": "assets/catalog-recipes/raw_silver_from_block.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:raw_silver_block",
+                "name": "Block of Raw Silver",
+                "image": "assets/catalog-icons/obsidium/raw_silver_block.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [
+        {
+          "kind": "Mining",
+          "note": "Mine the corresponding ore. Block-unpacking recipes below are recycling routes, not the original source.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/silver_ore.json"
+        }
+      ]
+    },
+    {
+      "id": "obsidium:raw_tin",
+      "name": "Raw Tin",
+      "image": "assets/catalog-icons/obsidium/raw_tin.png",
+      "imageKind": "item texture",
+      "group": "Metals & raw resources",
+      "description": "A metal resource for crafting and processing.",
+      "recipes": [
+        {
+          "id": "obsidium:raw_tin_from_raw_tin_block",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:raw_tin",
+            "name": "Raw Tin",
+            "image": "assets/catalog-icons/obsidium/raw_tin.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/raw_tin_from_raw_tin_block.json",
+          "json": "assets/catalog-recipes/raw_tin_from_raw_tin_block.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:raw_tin_block",
+                "name": "Block of Raw Tin",
+                "image": "assets/catalog-icons/obsidium/raw_tin_block.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [
+        {
+          "kind": "Mining",
+          "note": "Mine the corresponding ore. Block-unpacking recipes below are recycling routes, not the original source.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/tin_ore.json"
+        }
+      ]
+    },
+    {
+      "id": "obsidium:redstone_nugget",
+      "name": "Redstone Nugget",
+      "image": "assets/catalog-icons/obsidium/redstone_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:redstone_nugget_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:redstone_nugget",
+            "name": "Redstone Nugget",
+            "image": "assets/catalog-icons/obsidium/redstone_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/redstone_nugget_from_petal.json",
+          "json": "assets/catalog-recipes/redstone_nugget_from_petal.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:redstone_petal",
+                "name": "Redstone Petal",
+                "image": "assets/catalog-icons/obsidium/redstone_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:redstone_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:redstone_nugget",
+            "name": "Redstone Nugget",
+            "image": "assets/catalog-icons/obsidium/redstone_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/redstone_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/redstone_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:silver_dust",
+      "name": "Silver Dust",
+      "image": "assets/catalog-icons/obsidium/silver_dust.png",
+      "imageKind": "item texture",
+      "group": "Dusts",
+      "description": "A powdered processing material.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one matching ingot into one dust.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "inputs": [
+            {
+              "id": "obsidium:silver_ingot",
+              "name": "Silver Ingot",
+              "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+              "imageKind": "item texture"
+            }
+          ]
+        },
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one raw resource into two dusts. Matching ores are also supported by the machine.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "count": 2,
+          "inputs": [
+            {
+              "id": "obsidium:raw_silver",
+              "name": "Raw Silver",
+              "image": "assets/catalog-icons/obsidium/raw_silver.png",
+              "imageKind": "item texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsidium:silver_ingot",
+      "name": "Silver Ingot",
+      "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+      "imageKind": "item texture",
+      "group": "Metals & raw resources",
+      "description": "A metal resource for crafting and processing.",
+      "recipes": [
+        {
+          "id": "obsidium:silver_ingot_from_blasting_dust",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:silver_ingot",
+            "name": "Silver Ingot",
+            "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_ingot_from_blasting_dust.json",
+          "json": "assets/catalog-recipes/silver_ingot_from_blasting_dust.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:silver_dust",
+              "name": "Silver Dust",
+              "image": "assets/catalog-icons/obsidium/silver_dust.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:silver_ingot_from_blasting_ore",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:silver_ingot",
+            "name": "Silver Ingot",
+            "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_ingot_from_blasting_ore.json",
+          "json": "assets/catalog-recipes/silver_ingot_from_blasting_ore.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "obsidium:silver_ore",
+                  "name": "Silver Ore",
+                  "image": "assets/catalog-icons/obsidium/silver_ore.png",
+                  "imageKind": "block texture"
+                }
+              },
+              {
+                "item": {
+                  "id": "obsidium:deepslate_silver_ore",
+                  "name": "Deepslate Silver Ore",
+                  "image": "assets/catalog-icons/obsidium/deepslate_silver_ore.png",
+                  "imageKind": "block texture"
+                }
+              }
+            ]
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:silver_ingot_from_blasting_raw",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:silver_ingot",
+            "name": "Silver Ingot",
+            "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_ingot_from_blasting_raw.json",
+          "json": "assets/catalog-recipes/silver_ingot_from_blasting_raw.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:raw_silver",
+              "name": "Raw Silver",
+              "image": "assets/catalog-icons/obsidium/raw_silver.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:silver_ingot_from_nuggets",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:silver_ingot",
+            "name": "Silver Ingot",
+            "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_ingot_from_nuggets.json",
+          "json": "assets/catalog-recipes/silver_ingot_from_nuggets.json",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:silver_nugget",
+                "name": "Silver Nugget",
+                "image": "assets/catalog-icons/obsidium/silver_nugget.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:silver_ingot_from_petals",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:silver_ingot",
+            "name": "Silver Ingot",
+            "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_ingot_from_petals.json",
+          "json": "assets/catalog-recipes/silver_ingot_from_petals.json",
+          "pattern": [
+            "##",
+            "##"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:silver_petal",
+                "name": "Silver Petal",
+                "image": "assets/catalog-icons/obsidium/silver_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:silver_ingot_from_smelting_dust",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:silver_ingot",
+            "name": "Silver Ingot",
+            "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_ingot_from_smelting_dust.json",
+          "json": "assets/catalog-recipes/silver_ingot_from_smelting_dust.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:silver_dust",
+              "name": "Silver Dust",
+              "image": "assets/catalog-icons/obsidium/silver_dust.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:silver_ingot_from_smelting_ore",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:silver_ingot",
+            "name": "Silver Ingot",
+            "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_ingot_from_smelting_ore.json",
+          "json": "assets/catalog-recipes/silver_ingot_from_smelting_ore.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "obsidium:silver_ore",
+                  "name": "Silver Ore",
+                  "image": "assets/catalog-icons/obsidium/silver_ore.png",
+                  "imageKind": "block texture"
+                }
+              },
+              {
+                "item": {
+                  "id": "obsidium:deepslate_silver_ore",
+                  "name": "Deepslate Silver Ore",
+                  "image": "assets/catalog-icons/obsidium/deepslate_silver_ore.png",
+                  "imageKind": "block texture"
+                }
+              }
+            ]
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:silver_ingot_from_smelting_raw",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:silver_ingot",
+            "name": "Silver Ingot",
+            "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_ingot_from_smelting_raw.json",
+          "json": "assets/catalog-recipes/silver_ingot_from_smelting_raw.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:raw_silver",
+              "name": "Raw Silver",
+              "image": "assets/catalog-icons/obsidium/raw_silver.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:silver_ingots_from_block",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:silver_ingot",
+            "name": "Silver Ingot",
+            "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/silver_ingots_from_block.json",
+          "json": "assets/catalog-recipes/silver_ingots_from_block.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:silver_block",
+                "name": "Block of Silver",
+                "image": "assets/catalog-icons/obsidium/silver_block.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:silver_nugget",
+      "name": "Silver Nugget",
+      "image": "assets/catalog-icons/obsidium/silver_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:silver_nugget_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:silver_nugget",
+            "name": "Silver Nugget",
+            "image": "assets/catalog-icons/obsidium/silver_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_nugget_from_petal.json",
+          "json": "assets/catalog-recipes/silver_nugget_from_petal.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:silver_petal",
+                "name": "Silver Petal",
+                "image": "assets/catalog-icons/obsidium/silver_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:silver_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:silver_nugget",
+            "name": "Silver Nugget",
+            "image": "assets/catalog-icons/obsidium/silver_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/silver_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/silver_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:silver_ingot",
+                "name": "Silver Ingot",
+                "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:singularity_hadron_alloy",
+      "name": "Singularity Hadron Alloy",
+      "image": "assets/catalog-icons/obsidium/singularity_hadron_alloy.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "A rare late-game collider product with probabilistic acquisition.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Hadron Collider",
+          "note": "A collision of 4 Supreme Volcanic Alloy and 4 Astral Volcanic Catalysts has a 10% success chance. This is not a guaranteed crafting recipe. Cryogenic bonus drops are another possible route; see the collider guide.",
+          "source": "src/main/java/net/valentin/obsidium/block/OlympianHadronColliderBlockEntity.java",
+          "inputs": [
+            {
+              "id": "obsidium:supreme_volcanic_alloy",
+              "name": "Supreme Volcanic Alloy",
+              "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+              "imageKind": "item texture"
+            },
+            {
+              "id": "obsidium:astral_volcanic_catalyst",
+              "name": "Astral Volcanic Catalyst",
+              "image": "assets/catalog-icons/obsidium/astral_volcanic_catalyst.png",
+              "imageKind": "item texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsidium:supreme_volcanic_alloy",
+      "name": "Supreme Volcanic Alloy",
+      "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "An advanced alloy whose crafting recipe includes a Nether Star.",
+      "recipes": [
+        {
+          "id": "obsidium:supreme_volcanic_alloy",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:supreme_volcanic_alloy",
+            "name": "Supreme Volcanic Alloy",
+            "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/supreme_volcanic_alloy.json",
+          "json": "assets/catalog-recipes/supreme_volcanic_alloy.json",
+          "pattern": [
+            "VTV",
+            "DSD",
+            "VTV"
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "minecraft:nether_star",
+                "name": "Nether Star",
+                "image": "assets/catalog-icons/minecraft/nether_star.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "T": {
+              "item": {
+                "id": "obsidium:volcanite_thermo_core",
+                "name": "Volcanite Thermodynamic Core",
+                "image": "assets/catalog-icons/obsidium/volcanite_thermo_core.png",
+                "imageKind": "item texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "minecraft:diamond",
+                "name": "Diamond",
+                "image": "assets/catalog-icons/minecraft/diamond.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:tartarean_fang",
+      "name": "Tartarean Fang",
+      "image": "assets/catalog-icons/obsidium/tartarean_fang.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "A Tartarean Hound resource used in special crafting.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Mob drop",
+          "note": "Obtain from Tartarean Hounds; loot-table conditions and randomness apply.",
+          "source": "src/main/resources/data/obsidium/loot_table/entities/tartarean_hound.json"
+        }
+      ]
+    },
+    {
+      "id": "obsidium:tin_dust",
+      "name": "Tin Dust",
+      "image": "assets/catalog-icons/obsidium/tin_dust.png",
+      "imageKind": "item texture",
+      "group": "Dusts",
+      "description": "A powdered processing material.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one matching ingot into one dust.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "inputs": [
+            {
+              "id": "obsidium:tin_ingot",
+              "name": "Tin Ingot",
+              "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+              "imageKind": "item texture"
+            }
+          ]
+        },
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one raw resource into two dusts. Matching ores are also supported by the machine.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "count": 2,
+          "inputs": [
+            {
+              "id": "obsidium:raw_tin",
+              "name": "Raw Tin",
+              "image": "assets/catalog-icons/obsidium/raw_tin.png",
+              "imageKind": "item texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsidium:tin_ingot",
+      "name": "Tin Ingot",
+      "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+      "imageKind": "item texture",
+      "group": "Metals & raw resources",
+      "description": "A metal resource for crafting and processing.",
+      "recipes": [
+        {
+          "id": "obsidium:tin_ingot_from_blasting",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_blasting.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_blasting.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:tin_dust",
+              "name": "Tin Dust",
+              "image": "assets/catalog-icons/obsidium/tin_dust.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:tin_ingot_from_blasting_deepslate_tin_ore",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_blasting_deepslate_tin_ore.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_blasting_deepslate_tin_ore.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:deepslate_tin_ore",
+              "name": "Deepslate Tin Ore",
+              "image": "assets/catalog-icons/obsidium/deepslate_tin_ore.png",
+              "imageKind": "block texture"
+            }
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:tin_ingot_from_blasting_raw_tin",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_blasting_raw_tin.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_blasting_raw_tin.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "obsidium:raw_tin",
+                  "name": "Raw Tin",
+                  "image": "assets/catalog-icons/obsidium/raw_tin.png",
+                  "imageKind": "item texture"
+                }
+              },
+              {
+                "tag": "c:raw_materials/tin"
+              }
+            ]
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:tin_ingot_from_blasting_tin_ore",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_blasting_tin_ore.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_blasting_tin_ore.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "obsidium:tin_ore",
+                  "name": "Tin Ore",
+                  "image": "assets/catalog-icons/obsidium/tin_ore.png",
+                  "imageKind": "block texture"
+                }
+              },
+              {
+                "tag": "c:ores/tin"
+              }
+            ]
+          },
+          "cookingtime": 100,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:tin_ingot_from_nuggets",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_nuggets.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_nuggets.json",
+          "pattern": [
+            "NNN",
+            "NNN",
+            "NNN"
+          ],
+          "key": {
+            "N": {
+              "item": {
+                "id": "obsidium:tin_nugget",
+                "name": "Tin Nugget",
+                "image": "assets/catalog-icons/obsidium/tin_nugget.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:tin_ingot_from_petals",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_petals.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_petals.json",
+          "pattern": [
+            "PPP",
+            "PPP",
+            "PPP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:tin_petal",
+                "name": "Tin Petal",
+                "image": "assets/catalog-icons/obsidium/tin_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:tin_ingot_from_smelting",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_smelting.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_smelting.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:tin_dust",
+              "name": "Tin Dust",
+              "image": "assets/catalog-icons/obsidium/tin_dust.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:tin_ingot_from_smelting_deepslate_tin_ore",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_smelting_deepslate_tin_ore.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_smelting_deepslate_tin_ore.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:deepslate_tin_ore",
+              "name": "Deepslate Tin Ore",
+              "image": "assets/catalog-icons/obsidium/deepslate_tin_ore.png",
+              "imageKind": "block texture"
+            }
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:tin_ingot_from_smelting_raw_tin",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_smelting_raw_tin.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_smelting_raw_tin.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "obsidium:raw_tin",
+                  "name": "Raw Tin",
+                  "image": "assets/catalog-icons/obsidium/raw_tin.png",
+                  "imageKind": "item texture"
+                }
+              },
+              {
+                "tag": "c:raw_materials/tin"
+              }
+            ]
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:tin_ingot_from_smelting_tin_ore",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_smelting_tin_ore.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_smelting_tin_ore.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "obsidium:tin_ore",
+                  "name": "Tin Ore",
+                  "image": "assets/catalog-icons/obsidium/tin_ore.png",
+                  "imageKind": "block texture"
+                }
+              },
+              {
+                "tag": "c:ores/tin"
+              }
+            ]
+          },
+          "cookingtime": 200,
+          "experience": 0.7
+        },
+        {
+          "id": "obsidium:tin_ingot_from_tin_block",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:tin_ingot",
+            "name": "Tin Ingot",
+            "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_tin_block.json",
+          "json": "assets/catalog-recipes/tin_ingot_from_tin_block.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:tin_block",
+                "name": "Block of Tin",
+                "image": "assets/catalog-icons/obsidium/tin_block.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:tin_nugget",
+      "name": "Tin Nugget",
+      "image": "assets/catalog-icons/obsidium/tin_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:tin_nugget_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:tin_nugget",
+            "name": "Tin Nugget",
+            "image": "assets/catalog-icons/obsidium/tin_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_nugget_from_petal.json",
+          "json": "assets/catalog-recipes/tin_nugget_from_petal.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:tin_petal",
+                "name": "Tin Petal",
+                "image": "assets/catalog-icons/obsidium/tin_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:tin_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:tin_nugget",
+            "name": "Tin Nugget",
+            "image": "assets/catalog-icons/obsidium/tin_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/tin_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/tin_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:tin_ingot",
+                "name": "Tin Ingot",
+                "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:volcanic_alloy",
+      "name": "Volcanic Alloy",
+      "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "A crafted alloy used throughout the workshop and its machinery.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanic_alloy",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanic_alloy",
+            "name": "Volcanic Alloy",
+            "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+            "imageKind": "item texture"
+          },
+          "count": 2,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_alloy.json",
+          "json": "assets/catalog-recipes/volcanic_alloy.json",
+          "pattern": [
+            "OGO",
+            "VAV",
+            "OGO"
+          ],
+          "key": {
+            "V": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "obsidium:volcanite_ingot",
+                    "name": "Volcanite Ingot",
+                    "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "item": {
+                    "id": "obsidium:volcanite",
+                    "name": "Volcanite",
+                    "image": "assets/catalog-icons/obsidium/volcanite.png",
+                    "imageKind": "item texture"
+                  }
+                }
+              ]
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "O": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:obsidian",
+                    "name": "Obsidian",
+                    "image": "assets/catalog-icons/minecraft/obsidian.png",
+                    "imageKind": "block texture"
+                  }
+                },
+                {
+                  "item": {
+                    "id": "minecraft:crying_obsidian",
+                    "name": "Crying Obsidian",
+                    "image": "assets/catalog-icons/minecraft/crying_obsidian.png",
+                    "imageKind": "block texture"
+                  }
+                }
+              ]
+            },
+            "A": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "obsidium:volcanic_ash",
+                    "name": "Volcanic Ash",
+                    "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "item": {
+                    "id": "obsidium:ash_briquette",
+                    "name": "Volcanic Ash Briquette",
+                    "image": "assets/catalog-icons/obsidium/ash_briquette.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "item": {
+                    "id": "minecraft:blaze_powder",
+                    "name": "Blaze Powder",
+                    "image": "assets/catalog-icons/minecraft/blaze_powder.png",
+                    "imageKind": "item texture"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:volcanic_ash",
+      "name": "Volcanic Ash",
+      "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "A reusable volcanic ingredient for crafting and industrial recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanic_ash_from_campfire",
+          "type": "minecraft:campfire_cooking",
+          "output": {
+            "id": "obsidium:volcanic_ash",
+            "name": "Volcanic Ash",
+            "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_ash_from_campfire.json",
+          "json": "assets/catalog-recipes/volcanic_ash_from_campfire.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "minecraft:charcoal",
+                  "name": "Charcoal",
+                  "image": "assets/catalog-icons/minecraft/charcoal.png",
+                  "imageKind": "item texture"
+                }
+              },
+              {
+                "item": {
+                  "id": "minecraft:coal",
+                  "name": "Coal",
+                  "image": "assets/catalog-icons/minecraft/coal.png",
+                  "imageKind": "item texture"
+                }
+              }
+            ]
+          },
+          "cookingtime": 300,
+          "experience": 0.1
+        },
+        {
+          "id": "obsidium:volcanic_ash_from_charcoal_flint",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanic_ash",
+            "name": "Volcanic Ash",
+            "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_ash_from_charcoal_flint.json",
+          "json": "assets/catalog-recipes/volcanic_ash_from_charcoal_flint.json",
+          "ingredients": [
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:charcoal",
+                    "name": "Charcoal",
+                    "image": "assets/catalog-icons/minecraft/charcoal.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "item": {
+                    "id": "minecraft:coal",
+                    "name": "Coal",
+                    "image": "assets/catalog-icons/minecraft/coal.png",
+                    "imageKind": "item texture"
+                  }
+                }
+              ]
+            },
+            {
+              "item": {
+                "id": "minecraft:flint",
+                "name": "Flint",
+                "image": "assets/catalog-icons/minecraft/flint.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:volcanic_ash_from_charcoal_gunpowder",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanic_ash",
+            "name": "Volcanic Ash",
+            "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+            "imageKind": "item texture"
+          },
+          "count": 2,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_ash_from_charcoal_gunpowder.json",
+          "json": "assets/catalog-recipes/volcanic_ash_from_charcoal_gunpowder.json",
+          "ingredients": [
+            {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:charcoal",
+                    "name": "Charcoal",
+                    "image": "assets/catalog-icons/minecraft/charcoal.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "item": {
+                    "id": "minecraft:coal",
+                    "name": "Coal",
+                    "image": "assets/catalog-icons/minecraft/coal.png",
+                    "imageKind": "item texture"
+                  }
+                }
+              ]
+            },
+            {
+              "item": {
+                "id": "minecraft:gunpowder",
+                "name": "Gunpowder",
+                "image": "assets/catalog-icons/minecraft/gunpowder.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:volcanic_ash_from_smelting_basalt",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:volcanic_ash",
+            "name": "Volcanic Ash",
+            "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_ash_from_smelting_basalt.json",
+          "json": "assets/catalog-recipes/volcanic_ash_from_smelting_basalt.json",
+          "ingredient": {
+            "alternatives": [
+              {
+                "item": {
+                  "id": "minecraft:basalt",
+                  "name": "Basalt",
+                  "image": "assets/catalog-icons/minecraft/basalt.png",
+                  "imageKind": "block texture"
+                }
+              },
+              {
+                "item": {
+                  "id": "minecraft:smooth_basalt",
+                  "name": "Smooth Basalt",
+                  "image": "assets/catalog-icons/minecraft/smooth_basalt.png",
+                  "imageKind": "block texture"
+                }
+              }
+            ]
+          },
+          "cookingtime": 200,
+          "experience": 0.2
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:volcanic_plate",
+      "name": "Volcanic Plate",
+      "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "A manufactured plate used as a crafting component.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanic_plate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanic_plate",
+            "name": "Volcanic Plate",
+            "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+            "imageKind": "item texture"
+          },
+          "count": 2,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_plate.json",
+          "json": "assets/catalog-recipes/volcanic_plate.json",
+          "pattern": [
+            "TAT",
+            "AOA",
+            "TAT"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "T": {
+              "item": {
+                "id": "obsidium:tin_ingot",
+                "name": "Tin Ingot",
+                "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:volcanite",
+      "name": "Volcanite",
+      "image": "assets/catalog-icons/obsidium/volcanite.png",
+      "imageKind": "item texture",
+      "group": "Metals & raw resources",
+      "description": "The natural volcanic resource at the beginning of Obsidium metallurgy.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Mining",
+          "note": "Mine Volcanite Ore. The ore loot table supplies the natural resource.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/volcanite_ore.json"
+        }
+      ]
+    },
+    {
+      "id": "obsidium:volcanite_binding",
+      "name": "Volcanite Binding",
+      "image": "assets/catalog-icons/obsidium/volcanite_binding.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "A structural binding component for Obsidium crafting.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_binding",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_binding",
+            "name": "Volcanite Binding",
+            "image": "assets/catalog-icons/obsidium/volcanite_binding.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_binding.json",
+          "json": "assets/catalog-recipes/volcanite_binding.json",
+          "pattern": [
+            "RAR",
+            "A A",
+            "RAR"
+          ],
+          "key": {
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:volcanite_dust",
+      "name": "Volcanite Dust",
+      "image": "assets/catalog-icons/obsidium/volcanite_dust.png",
+      "imageKind": "item texture",
+      "group": "Dusts",
+      "description": "A powdered processing material.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one matching ingot into one dust.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "inputs": [
+            {
+              "id": "obsidium:volcanite_ingot",
+              "name": "Volcanite Ingot",
+              "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+              "imageKind": "item texture"
+            }
+          ]
+        },
+        {
+          "kind": "Volcanite Grinder",
+          "note": "Grind one raw resource into two dusts. Matching ores are also supported by the machine.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java",
+          "count": 2,
+          "inputs": [
+            {
+              "id": "obsidium:volcanite",
+              "name": "Volcanite",
+              "image": "assets/catalog-icons/obsidium/volcanite.png",
+              "imageKind": "item texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsidium:volcanite_flux_mechanism",
+      "name": "Volcanite Flux Mechanism",
+      "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "A mechanical component used by automation and progression recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_flux_mechanism",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_flux_mechanism",
+            "name": "Volcanite Flux Mechanism",
+            "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_flux_mechanism.json",
+          "json": "assets/catalog-recipes/volcanite_flux_mechanism.json",
+          "pattern": [
+            "DAD",
+            "ABA",
+            "PCP"
+          ],
+          "key": {
+            "D": {
+              "item": {
+                "id": "obsidium:gold_dust",
+                "name": "Gold Dust",
+                "image": "assets/catalog-icons/obsidium/gold_dust.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:volcanite_binding",
+                "name": "Volcanite Binding",
+                "image": "assets/catalog-icons/obsidium/volcanite_binding.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:volcanite_flux_mechanism_from_silver",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_flux_mechanism",
+            "name": "Volcanite Flux Mechanism",
+            "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+            "imageKind": "item texture"
+          },
+          "count": 2,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_flux_mechanism_from_silver.json",
+          "json": "assets/catalog-recipes/volcanite_flux_mechanism_from_silver.json",
+          "pattern": [
+            "DAD",
+            "ABA",
+            "PSP"
+          ],
+          "key": {
+            "D": {
+              "item": {
+                "id": "obsidium:silver_dust",
+                "name": "Silver Dust",
+                "image": "assets/catalog-icons/obsidium/silver_dust.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:volcanite_binding",
+                "name": "Volcanite Binding",
+                "image": "assets/catalog-icons/obsidium/volcanite_binding.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "obsidium:silver_ingot",
+                "name": "Silver Ingot",
+                "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:volcanite_ingot",
+      "name": "Volcanite Ingot",
+      "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+      "imageKind": "item texture",
+      "group": "Metals & raw resources",
+      "description": "A metal resource for crafting and processing.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_from_block",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_ingot",
+            "name": "Volcanite Ingot",
+            "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_from_block.json",
+          "json": "assets/catalog-recipes/volcanite_from_block.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_block",
+                "name": "Block of Volcanite",
+                "image": "assets/catalog-icons/obsidium/volcanite_block.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:volcanite_ingot_from_blasting",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:volcanite_ingot",
+            "name": "Volcanite Ingot",
+            "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_ingot_from_blasting.json",
+          "json": "assets/catalog-recipes/volcanite_ingot_from_blasting.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:volcanite_dust",
+              "name": "Volcanite Dust",
+              "image": "assets/catalog-icons/obsidium/volcanite_dust.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 100,
+          "experience": 1.0
+        },
+        {
+          "id": "obsidium:volcanite_ingot_from_blasting_ore",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:volcanite_ingot",
+            "name": "Volcanite Ingot",
+            "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_ingot_from_blasting_ore.json",
+          "json": "assets/catalog-recipes/volcanite_ingot_from_blasting_ore.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:volcanite_ore",
+              "name": "Volcanite Ore",
+              "image": "assets/catalog-icons/obsidium/volcanite_ore.png",
+              "imageKind": "block texture"
+            }
+          },
+          "cookingtime": 100,
+          "experience": 1.5
+        },
+        {
+          "id": "obsidium:volcanite_ingot_from_blasting_volcanite",
+          "type": "minecraft:blasting",
+          "output": {
+            "id": "obsidium:volcanite_ingot",
+            "name": "Volcanite Ingot",
+            "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_ingot_from_blasting_volcanite.json",
+          "json": "assets/catalog-recipes/volcanite_ingot_from_blasting_volcanite.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:volcanite",
+              "name": "Volcanite",
+              "image": "assets/catalog-icons/obsidium/volcanite.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 100,
+          "experience": 1.2
+        },
+        {
+          "id": "obsidium:volcanite_ingot_from_nuggets",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_ingot",
+            "name": "Volcanite Ingot",
+            "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_ingot_from_nuggets.json",
+          "json": "assets/catalog-recipes/volcanite_ingot_from_nuggets.json",
+          "pattern": [
+            "NNN",
+            "NNN",
+            "NNN"
+          ],
+          "key": {
+            "N": {
+              "item": {
+                "id": "obsidium:volcanite_nugget",
+                "name": "Volcanite Nugget",
+                "image": "assets/catalog-icons/obsidium/volcanite_nugget.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:volcanite_ingot_from_petals",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_ingot",
+            "name": "Volcanite Ingot",
+            "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_ingot_from_petals.json",
+          "json": "assets/catalog-recipes/volcanite_ingot_from_petals.json",
+          "pattern": [
+            "PPP",
+            "PPP",
+            "PPP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanite_petal",
+                "name": "Volcanite Petal",
+                "image": "assets/catalog-icons/obsidium/volcanite_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:volcanite_ingot_from_smelting",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:volcanite_ingot",
+            "name": "Volcanite Ingot",
+            "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_ingot_from_smelting.json",
+          "json": "assets/catalog-recipes/volcanite_ingot_from_smelting.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:volcanite_dust",
+              "name": "Volcanite Dust",
+              "image": "assets/catalog-icons/obsidium/volcanite_dust.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 200,
+          "experience": 1.0
+        },
+        {
+          "id": "obsidium:volcanite_ingot_from_smelting_ore",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:volcanite_ingot",
+            "name": "Volcanite Ingot",
+            "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_ingot_from_smelting_ore.json",
+          "json": "assets/catalog-recipes/volcanite_ingot_from_smelting_ore.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:volcanite_ore",
+              "name": "Volcanite Ore",
+              "image": "assets/catalog-icons/obsidium/volcanite_ore.png",
+              "imageKind": "block texture"
+            }
+          },
+          "cookingtime": 200,
+          "experience": 1.5
+        },
+        {
+          "id": "obsidium:volcanite_ingot_from_smelting_volcanite",
+          "type": "minecraft:smelting",
+          "output": {
+            "id": "obsidium:volcanite_ingot",
+            "name": "Volcanite Ingot",
+            "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_ingot_from_smelting_volcanite.json",
+          "json": "assets/catalog-recipes/volcanite_ingot_from_smelting_volcanite.json",
+          "ingredient": {
+            "item": {
+              "id": "obsidium:volcanite",
+              "name": "Volcanite",
+              "image": "assets/catalog-icons/obsidium/volcanite.png",
+              "imageKind": "item texture"
+            }
+          },
+          "cookingtime": 200,
+          "experience": 1.2
+        },
+        {
+          "id": "obsidium:volcanite_ingots_from_block",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_ingot",
+            "name": "Volcanite Ingot",
+            "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_ingots_from_block.json",
+          "json": "assets/catalog-recipes/volcanite_ingots_from_block.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_block",
+                "name": "Block of Volcanite",
+                "image": "assets/catalog-icons/obsidium/volcanite_block.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:volcanite_nugget",
+      "name": "Volcanite Nugget",
+      "image": "assets/catalog-icons/obsidium/volcanite_nugget.png",
+      "imageKind": "item texture",
+      "group": "Nuggets",
+      "description": "A small material unit used in conversion recipes.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_nugget_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_nugget",
+            "name": "Volcanite Nugget",
+            "image": "assets/catalog-icons/obsidium/volcanite_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_nugget_from_petal.json",
+          "json": "assets/catalog-recipes/volcanite_nugget_from_petal.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_petal",
+                "name": "Volcanite Petal",
+                "image": "assets/catalog-icons/obsidium/volcanite_petal.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:volcanite_nuggets_from_ingot",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_nugget",
+            "name": "Volcanite Nugget",
+            "image": "assets/catalog-icons/obsidium/volcanite_nugget.png",
+            "imageKind": "item texture"
+          },
+          "count": 9,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_nuggets_from_ingot.json",
+          "json": "assets/catalog-recipes/volcanite_nuggets_from_ingot.json",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": []
+    },
+    {
+      "id": "obsidium:volcanite_thermo_core",
+      "name": "Volcanite Thermodynamic Core",
+      "image": "assets/catalog-icons/obsidium/volcanite_thermo_core.png",
+      "imageKind": "item texture",
+      "group": "Alloys & components",
+      "description": "A heat-themed component used by machinery and higher-tier materials.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_thermo_core",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_thermo_core",
+            "name": "Volcanite Thermodynamic Core",
+            "image": "assets/catalog-icons/obsidium/volcanite_thermo_core.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_thermo_core.json",
+          "json": "assets/catalog-recipes/volcanite_thermo_core.json",
+          "pattern": [
+            "OCO",
+            "BLB",
+            "OAO"
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:cinder_core",
+                "name": "Cinder Core",
+                "image": "assets/catalog-icons/obsidium/cinder_core.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "minecraft:blaze_rod",
+                "name": "Blaze Rod",
+                "image": "assets/catalog-icons/minecraft/blaze_rod.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:lava_bucket",
+                "name": "Lava Bucket",
+                "image": "assets/catalog-icons/minecraft/lava_bucket.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": []
+    }
+  ]
+}

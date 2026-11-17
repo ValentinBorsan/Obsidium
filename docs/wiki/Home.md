@@ -8,6 +8,15 @@
 
 ---
 
+## Item Catalog
+
+[Materials & Components — images and recipes](wiki.html?page=Item-Catalog)
+
+The first category covers materials and components with actual textures,
+source JSON recipe variants, and documented machine/mining/drop routes.
+Search by name or item ID and filter metals, dusts, nuggets and components.
+Additional categories will be published in separate batches.
+
 ## Manual Chapters
 
 1. [Caldera & Volcanite Ores](Caldera-and-Ores.md) — Caldera biome, Volcanic Cones, Volcanite mining, and Telluric Astrolabe.

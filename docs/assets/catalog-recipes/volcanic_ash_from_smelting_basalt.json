@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "ingredient": [
+    {
+      "item": "minecraft:basalt"
+    },
+    {
+      "item": "minecraft:smooth_basalt"
+    }
+  ],
+  "result": {
+    "id": "obsidium:volcanic_ash"
+  }
+}
+

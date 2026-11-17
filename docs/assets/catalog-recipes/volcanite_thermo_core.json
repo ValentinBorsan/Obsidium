@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "C": {
+      "item": "obsidium:cinder_core"
+    },
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "pattern": [
+    "OCO",
+    "BLB",
+    "OAO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanite_thermo_core"
+  }
+}

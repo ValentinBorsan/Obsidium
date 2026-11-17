@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.2,
+  "ingredient": {
+    "item": "obsidium:volcanite"
+  },
+  "result": {
+    "id": "obsidium:volcanite_ingot"
+  }
+}
+

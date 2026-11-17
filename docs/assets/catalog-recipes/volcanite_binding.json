@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RAR",
+    "A A",
+    "RAR"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_binding",
+    "count": 1
+  }
+}

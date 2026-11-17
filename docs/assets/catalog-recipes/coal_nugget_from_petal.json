@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "obsidium:coal_petal"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:coal_nugget"
+  }
+}
