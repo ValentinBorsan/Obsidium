@@ -1,0 +1,16 @@
+site_name: Obsidium Wiki
+site_description: Official Wiki for Obsidium & Obsidium: Mythic Rails (Minecraft 1.21 Fabric)
+docs_dir: docs/wiki
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: amber
+nav:
+  - Home: Home.md
+  - Progression & Materials: Progression-and-Materials.md
+  - Machines & Energy: Machines-and-Energy.md
+  - Logistics & Fluids: Logistics-and-Fluids.md
+  - Mythology & Rituals: Mythology-and-Rituals.md
+  - "Addon: Mythic Rails": Mythic-Rails-Addon.md
