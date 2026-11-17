@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "VVV",
+    "RGR",
+    "VVV"
+  ],
+  "key": {
+    "V": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "G": {
+      "item": "obsidium:volcanite_glass"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_storage_pipe",
+    "count": 6
+  }
+}

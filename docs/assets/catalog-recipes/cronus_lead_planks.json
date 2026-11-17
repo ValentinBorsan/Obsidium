@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "obsidium:cronus_lead_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "obsidium:cronus_lead_planks"
+  }
+}

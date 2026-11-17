@@ -1,5 +1,7 @@
 # Magma Forge
 
+[Multiblock construction guide — layers, blocks and formation](wiki.html?page=Multiblocks)
+
 ## 3×3 Magma Forge Blueprint
 Build a flat **3×3** platform:
 - **Center:** `1× Forge Core`

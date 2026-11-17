@@ -138,7 +138,7 @@ public class DemetrianBotanyScreen extends Screen {
         // Step 1
         drawItemSlot(g, px + 14, py + 30, new ItemStack(ObsidiumMod.DEMETRIAN_GRAFTING_KNIFE), mx, my);
         g.drawString(this.font, "§2Step 1: Harvest Scion", px + 38, py + 30, 0x14532D, false);
-        drawWrapped(g, "Right-click leaves with the Grafting Knife to harvest cuttings.", px + 38, py + 40, textW, 0x374151);
+        drawWrapped(g, "Sneak + right-click leaves with the Grafting Knife to harvest cuttings.", px + 38, py + 40, textW, 0x374151);
 
         // Step 2
         drawItemSlot(g, px + 14, py + 64, new ItemStack(ObsidiumMod.MIDAS_GOLD_SAPLING), mx, my);
@@ -188,12 +188,12 @@ public class DemetrianBotanyScreen extends Screen {
         int maxW = pw - 34;
         int curY = py + 30;
 
-        curY += drawWrapped(g, "Legendary trees (§4Netherite§0 & §bDiamond§0) are sterile! Their leaves never drop saplings — grafting is required.", px + 14, curY, maxW, 0x1F2937);
+        curY += drawWrapped(g, "Legendary trees (§4Netherite§0 & §bDiamond§0) are sterile! Their leaves never drop saplings — craft the first Netherite specimen in late game.", px + 14, curY, maxW, 0x1F2937);
         curY += 6;
 
         curY += drawWrapped(g, "§8✦ §4Tartarean Netherite Sapling:", px + 14, curY, maxW, 0x991B1B);
         curY += drawWrapped(g, "  • Rootstock: §cHephaestus Volcanite", px + 18, curY, maxW - 4, 0x374151);
-        curY += drawWrapped(g, "  • Scion: §7Cronus Lead", px + 18, curY, maxW - 4, 0x374151);
+        curY += drawWrapped(g, "  • Scion: §4Tartarean Netherite (late-game parent)", px + 18, curY, maxW - 4, 0x374151);
         curY += 6;
 
         curY += drawWrapped(g, "§8✦ §bAdamantine Diamond Sapling (Apex):", px + 14, curY, maxW, 0x0284C7);

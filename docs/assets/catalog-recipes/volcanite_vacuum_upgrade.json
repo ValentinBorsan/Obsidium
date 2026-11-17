@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " E ",
+    "HVH",
+    " E "
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    },
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_vacuum_upgrade",
+    "count": 1
+  }
+}

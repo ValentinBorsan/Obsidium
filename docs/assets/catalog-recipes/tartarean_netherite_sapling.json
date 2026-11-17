@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "VNV",
+    "CSC",
+    "VNV"
+  ],
+  "key": {
+    "V": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "C": {
+      "item": "obsidium:astral_volcanic_catalyst"
+    },
+    "S": {
+      "item": "obsidium:hephaestus_volcanite_sapling"
+    }
+  },
+  "result": {
+    "id": "obsidium:tartarean_netherite_sapling",
+    "count": 1
+  }
+}

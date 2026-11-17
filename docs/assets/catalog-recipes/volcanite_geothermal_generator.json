@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    },
+    "M": {
+      "item": "minecraft:magma_block"
+    },
+    "S": {
+      "item": "obsidium:volcanite_steam_generator"
+    },
+    "C": {
+      "item": "obsidium:volcanite_casing"
+    }
+  },
+  "pattern": [
+    "OTO",
+    "MSM",
+    "OCO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanite_geothermal_generator"
+  }
+}

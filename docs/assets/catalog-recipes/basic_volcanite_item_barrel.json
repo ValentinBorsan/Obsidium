@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IBI",
+    "VBV",
+    "IBI"
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "V": { "item": "obsidium:volcanite" },
+    "B": { "item": "minecraft:barrel" }
+  },
+  "result": {
+    "id": "obsidium:basic_volcanite_item_barrel",
+    "count": 1
+  }
+}
+

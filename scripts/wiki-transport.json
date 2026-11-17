@@ -1,0 +1,62 @@
+{
+  "hermes_item_pipe": {
+    "group": "Item pipes",
+    "description": "Basic tier. Transfers items between compatible inventories.",
+    "source": "src/main/java/net/valentin/obsidium/block/HermesItemPipeBlockEntity.java"
+  },
+  "naiad_fluid_pipe": {
+    "group": "Fluid pipes",
+    "description": "Basic tier. Transfers fluids between compatible tanks and machines.",
+    "source": "src/main/java/net/valentin/obsidium/block/NaiadFluidPipeBlockEntity.java"
+  },
+  "advanced_hermes_item_pipe": {
+    "group": "Item pipes",
+    "description": "Advanced tier. Transfers items between compatible inventories.",
+    "source": "src/main/java/net/valentin/obsidium/block/HermesItemPipeBlockEntity.java"
+  },
+  "advanced_naiad_fluid_pipe": {
+    "group": "Fluid pipes",
+    "description": "Advanced tier. Transfers fluids between compatible tanks and machines.",
+    "source": "src/main/java/net/valentin/obsidium/block/NaiadFluidPipeBlockEntity.java"
+  },
+  "supreme_hermes_item_pipe": {
+    "group": "Item pipes",
+    "description": "Supreme tier. Transfers items between compatible inventories.",
+    "source": "src/main/java/net/valentin/obsidium/block/HermesItemPipeBlockEntity.java"
+  },
+  "supreme_naiad_fluid_pipe": {
+    "group": "Fluid pipes",
+    "description": "Supreme tier. Transfers fluids between compatible tanks and machines.",
+    "source": "src/main/java/net/valentin/obsidium/block/NaiadFluidPipeBlockEntity.java"
+  },
+  "volcanite_energy_wire": {
+    "group": "Energy wires",
+    "description": "Basic energy wire for connecting generators, storage and powered machines.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteEnergyWireBlockEntity.java"
+  },
+  "advanced_volcanite_energy_wire": {
+    "group": "Energy wires",
+    "description": "Advanced energy wire for connecting generators, storage and powered machines.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteEnergyWireBlockEntity.java"
+  },
+  "supreme_volcanite_energy_wire": {
+    "group": "Energy wires",
+    "description": "Supreme energy wire for connecting generators, storage and powered machines.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteEnergyWireBlockEntity.java"
+  },
+  "singularity_volcanite_energy_wire": {
+    "group": "Energy wires",
+    "description": "Singularity energy wire for connecting generators, storage and powered machines.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteEnergyWireBlockEntity.java"
+  },
+  "volcanite_storage_pipe": {
+    "group": "Storage network",
+    "description": "Connects Obsidium storage-network infrastructure; distinct from dedicated Hermes item pipes.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteStoragePipeBlockEntity.java"
+  },
+  "volcanite_universal_conduit": {
+    "group": "Universal conduits",
+    "description": "Universal conduit (conducta universala), named Magmatic Flux Conduit in-game. Transports items, fluids and RF with per-face Item / Fluid / Energy / Omni channels. Use a wrench to cycle a face mode, or sneak with the wrench to cycle its channel type. Its configuration GUI accepts compatible transfer upgrades.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteUniversalConduitBlockEntity.java"
+  }
+}

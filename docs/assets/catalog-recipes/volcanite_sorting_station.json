@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PCP",
+    "ISI",
+    "PCP"
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanite_storage_pipe"
+    },
+    "C": {
+      "item": "obsidium:volcanite_casing"
+    },
+    "I": {
+      "item": "obsidium:volcanite_logistics_module"
+    },
+    "S": {
+      "item": "obsidium:volcanite_storage_processor"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_sorting_station",
+    "count": 1
+  }
+}

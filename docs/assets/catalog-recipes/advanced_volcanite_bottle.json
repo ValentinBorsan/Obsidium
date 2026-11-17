@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "CBC",
+    " N "
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanite_glass"
+    },
+    "B": {
+      "item": "obsidium:volcanite_bottle"
+    },
+    "C": {
+      "item": "obsidium:volcanite_energy_unit"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "id": "obsidium:advanced_volcanite_bottle",
+    "count": 1
+  }
+}

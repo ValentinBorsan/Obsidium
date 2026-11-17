@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building_blocks",
+  "pattern": [
+    "S#S",
+    "S#S"
+  ],
+  "key": {
+    "#": {
+      "item": "obsidium:artemis_silver_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "obsidium:artemis_silver_fence_gate",
+    "count": 1
+  }
+}

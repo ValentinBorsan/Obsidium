@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "L": {
+      "item": "minecraft:vine"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " A ",
+    "LVL",
+    " / "
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:thyrsus_of_dionysus"
+  }
+}
+

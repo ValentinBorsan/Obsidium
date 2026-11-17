@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SHS",
+    "APA",
+    "SNS"
+  ],
+  "key": {
+    "S": { "item": "obsidium:supreme_volcanic_alloy" },
+    "H": { "item": "minecraft:heart_of_the_sea" },
+    "A": { "item": "obsidium:astral_volcanic_catalyst" },
+    "P": { "item": "obsidium:volcanite_lava_pump" },
+    "N": { "item": "minecraft:netherite_ingot" }
+  },
+  "result": {
+    "id": "obsidium:poseidon_abyssal_pump",
+    "count": 1
+  }
+}

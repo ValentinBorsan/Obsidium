@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "obsidium:hephaestean_axe"
+    },
+    {
+      "item": "obsidium:hephaestean_pickaxe"
+    },
+    {
+      "item": "obsidium:hephaestean_shovel"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:hephaestean_paxel"
+  }
+}

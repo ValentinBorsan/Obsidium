@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:barrel"
+    },
+    "L": {
+      "tag": "minecraft:logs"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    " L ",
+    "IBI",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:demetrian_lumber_depot"
+  }
+}

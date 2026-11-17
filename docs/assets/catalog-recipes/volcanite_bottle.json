@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " O ",
+    "G G",
+    " V "
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "G": {
+      "item": "obsidium:volcanite_glass"
+    },
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_bottle",
+    "count": 1
+  }
+}

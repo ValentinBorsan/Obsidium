@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TDT",
+    "TTT"
+  ],
+  "key": {
+    "T": { "item": "minecraft:terracotta" },
+    "D": { "item": "minecraft:dirt" }
+  },
+  "result": {
+    "id": "obsidium:demetrian_bonsai_planter",
+    "count": 1
+  }
+}
+

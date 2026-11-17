@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CRC",
+    "AMA",
+    "CBC"
+  ],
+  "key": {
+    "C": { "item": "minecraft:copper_ingot" },
+    "R": { "item": "minecraft:lightning_rod" },
+    "A": { "item": "obsidium:advanced_volcanite_casing" },
+    "M": { "item": "obsidium:volcanite_flux_mechanism" },
+    "B": { "item": "obsidium:pyric_bronze_ingot" }
+  },
+  "result": {
+    "count": 2,
+    "id": "obsidium:keraunos_hv_port"
+  }
+}

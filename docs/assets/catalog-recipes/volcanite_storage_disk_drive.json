@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OCO",
+    "RBR",
+    "OCO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "C": {
+      "item": "obsidium:volcanite_chest"
+    },
+    "R": {
+      "item": "obsidium:volcanite_storage_processor"
+    },
+    "B": {
+      "item": "obsidium:volcanite_casing"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_storage_disk_drive",
+    "count": 1
+  }
+}

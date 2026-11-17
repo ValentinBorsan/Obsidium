@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PGP",
+    "RTR",
+    "PCP"
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "G": {
+      "item": "obsidium:volcanite_glass"
+    },
+    "R": {
+      "item": "obsidium:volcanite_storage_processor"
+    },
+    "T": {
+      "item": "obsidium:volcanic_wood_liquid_barrel"
+    },
+    "C": {
+      "item": "obsidium:volcanite_casing"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_liquid_storage_tank",
+    "count": 1
+  }
+}

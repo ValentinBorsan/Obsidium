@@ -1,5 +1,13 @@
 # Machines & Energy
 
+[Pipes & Wires — images and recipes](wiki.html?page=Transport-Catalog)
+
+[Multiblock construction guide — layers, blocks and formation](wiki.html?page=Multiblocks)
+
+[Browse machine images and crafting recipes](wiki.html?page=Machine-Catalog)
+
+The catalog covers processing machines, generators, pumps, botanical automation and craftable multiblock components. Crafting grids show how to build each block; operating recipes and multiblock assembly are separate topics.
+
 Obsidium uses **RF / Team Reborn Energy** (`teamreborn:energy`) for machines, wireless power, and rail integration.
 
 ## Processing & Generation

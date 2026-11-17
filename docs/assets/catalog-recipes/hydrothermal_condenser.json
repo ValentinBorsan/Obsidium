@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SPS",
+    "SGS",
+    "SBS"
+  ],
+  "key": {
+    "S": [
+      {
+        "item": "minecraft:smooth_basalt"
+      },
+      {
+        "item": "minecraft:smooth_stone"
+      },
+      {
+        "item": "minecraft:stone"
+      },
+      {
+        "item": "minecraft:cobblestone"
+      },
+      {
+        "item": "minecraft:deepslate"
+      }
+    ],
+    "P": {
+      "item": "minecraft:copper_ingot"
+    },
+    "G": [
+      {
+        "item": "minecraft:glass"
+      },
+      {
+        "item": "minecraft:glass_bottle"
+      }
+    ],
+    "B": [
+      {
+        "item": "minecraft:bucket"
+      },
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:hydrothermal_condenser"
+  }
+}
+

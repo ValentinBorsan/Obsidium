@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "VVV",
+    "VCV",
+    "OOO"
+  ],
+  "key": {
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "C": {
+      "item": "minecraft:crafting_table"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_worktable",
+    "count": 1
+  }
+}

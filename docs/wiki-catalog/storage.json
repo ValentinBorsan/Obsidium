@@ -1,0 +1,3147 @@
+{
+  "schema": 1,
+  "category": "storage",
+  "title": "Storage & Items",
+  "note": "Images are copied from game textures; machine and block images use a representative face. Crafting recipes may be overridden by modpacks. Machine crafting recipes describe how to build the machine, not its processing recipes.",
+  "scope": "Item and fluid storage, backpacks, disks, storage-network blocks, access components and storage upgrades. Processing barrels, energy storage, creative-only blocks and transport pipes are covered separately.",
+  "count": 45,
+  "items": [
+    {
+      "id": "obsidium:advanced_backpack",
+      "name": "Advanced Volcanite Backpack",
+      "image": "assets/catalog-icons/obsidium/advanced_backpack.png",
+      "imageKind": "item texture",
+      "group": "Chests & backpacks",
+      "description": "An upgraded backpack for portable item storage.",
+      "recipes": [
+        {
+          "id": "obsidium:advanced_backpack",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:advanced_backpack",
+            "name": "Advanced Volcanite Backpack",
+            "image": "assets/catalog-icons/obsidium/advanced_backpack.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/advanced_backpack.json",
+          "json": "assets/catalog-recipes/advanced_backpack.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "SPS",
+            "SBS",
+            "SFS"
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanite_portable_battery",
+                "name": "Basic Volcanite Portable Battery",
+                "image": "assets/catalog-icons/obsidium/volcanite_portable_battery.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:basic_backpack",
+                "name": "Basic Volcanite Backpack",
+                "image": "assets/catalog-icons/obsidium/basic_backpack.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:advanced_volcanite_item_barrel",
+      "name": "Advanced Volcanite Barrel",
+      "image": "assets/catalog-icons/obsidium/advanced_volcanite_item_barrel.png",
+      "imageKind": "block texture",
+      "group": "Item barrels",
+      "description": "Advanced single-item barrel for bulk storage.",
+      "recipes": [
+        {
+          "id": "obsidium:advanced_volcanite_item_barrel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:advanced_volcanite_item_barrel",
+            "name": "Advanced Volcanite Barrel",
+            "image": "assets/catalog-icons/obsidium/advanced_volcanite_item_barrel.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/advanced_volcanite_item_barrel.json",
+          "json": "assets/catalog-recipes/advanced_volcanite_item_barrel.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "DCD",
+            "CBC",
+            "DCD"
+          ],
+          "key": {
+            "D": {
+              "item": {
+                "id": "minecraft:diamond",
+                "name": "Diamond",
+                "image": "assets/catalog-icons/minecraft/diamond.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_casing",
+                "name": "Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:basic_volcanite_item_barrel",
+                "name": "Basic Volcanite Barrel",
+                "image": "assets/catalog-icons/obsidium/basic_volcanite_item_barrel.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:basic_backpack",
+      "name": "Basic Volcanite Backpack",
+      "image": "assets/catalog-icons/obsidium/basic_backpack.png",
+      "imageKind": "item texture",
+      "group": "Chests & backpacks",
+      "description": "Portable item storage carried by the player.",
+      "recipes": [
+        {
+          "id": "obsidium:basic_backpack",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:basic_backpack",
+            "name": "Basic Volcanite Backpack",
+            "image": "assets/catalog-icons/obsidium/basic_backpack.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/basic_backpack.json",
+          "json": "assets/catalog-recipes/basic_backpack.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "LVL",
+            "VCV",
+            "LBL"
+          ],
+          "key": {
+            "L": {
+              "item": {
+                "id": "minecraft:leather",
+                "name": "Leather",
+                "image": "assets/catalog-icons/minecraft/leather.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:chest",
+                "name": "Chest",
+                "image": "assets/catalog-icons/minecraft/chest.png",
+                "imageKind": "block texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:volcanite_binding",
+                "name": "Volcanite Binding",
+                "image": "assets/catalog-icons/obsidium/volcanite_binding.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:basic_volcanite_item_barrel",
+      "name": "Basic Volcanite Barrel",
+      "image": "assets/catalog-icons/obsidium/basic_volcanite_item_barrel.png",
+      "imageKind": "block texture",
+      "group": "Item barrels",
+      "description": "Basic single-item barrel for bulk storage.",
+      "recipes": [
+        {
+          "id": "obsidium:basic_volcanite_item_barrel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:basic_volcanite_item_barrel",
+            "name": "Basic Volcanite Barrel",
+            "image": "assets/catalog-icons/obsidium/basic_volcanite_item_barrel.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/basic_volcanite_item_barrel.json",
+          "json": "assets/catalog-recipes/basic_volcanite_item_barrel.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "IBI",
+            "VBV",
+            "IBI"
+          ],
+          "key": {
+            "I": {
+              "item": {
+                "id": "minecraft:iron_ingot",
+                "name": "Iron Ingot",
+                "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite",
+                "name": "Volcanite",
+                "image": "assets/catalog-icons/obsidium/volcanite.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "minecraft:barrel",
+                "name": "Barrel",
+                "image": "assets/catalog-icons/minecraft/barrel.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:dionysian_barrel_core",
+      "name": "Dionysian Barrel Core",
+      "image": "assets/catalog-icons/obsidium/dionysian_barrel_core.png",
+      "imageKind": "item texture",
+      "group": "Components & access",
+      "description": "Activation component for assembling the Mega Volcanic Barrel.",
+      "recipes": [
+        {
+          "id": "obsidium:dionysian_barrel_core",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:dionysian_barrel_core",
+            "name": "Dionysian Barrel Core",
+            "image": "assets/catalog-icons/obsidium/dionysian_barrel_core.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/dionysian_barrel_core.json",
+          "json": "assets/catalog-recipes/dionysian_barrel_core.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "OBO",
+            "BFB",
+            "OBO"
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:mega_volcanic_barrel",
+      "name": "Dionysian Mega Barrel",
+      "image": "assets/catalog-icons/obsidium/mega_volcanic_barrel.png",
+      "imageKind": "block texture",
+      "group": "Fluid storage",
+      "description": "Large fluid-storage multiblock; see the construction guide for formation.",
+      "recipes": [
+        {
+          "id": "obsidium:mega_volcanic_barrel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:mega_volcanic_barrel",
+            "name": "Dionysian Mega Barrel",
+            "image": "assets/catalog-icons/obsidium/mega_volcanic_barrel.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/mega_volcanic_barrel.json",
+          "json": "assets/catalog-recipes/mega_volcanic_barrel.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "OCO",
+            "CKC",
+            "CRC"
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_casing",
+                "name": "Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            },
+            "K": {
+              "item": {
+                "id": "obsidium:dionysian_barrel_core",
+                "name": "Dionysian Barrel Core",
+                "image": "assets/catalog-icons/obsidium/dionysian_barrel_core.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:reinforced_volcanic_liquid_barrel",
+                "name": "Reinforced Volcanic Liquid Barrel",
+                "image": "assets/catalog-icons/obsidium/reinforced_volcanic_liquid_barrel.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_filtered_compactor_upgrade",
+      "name": "Precision Compactor Module",
+      "image": "assets/catalog-icons/obsidium/volcanite_filtered_compactor_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Filtered compaction upgrade.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_filtered_compactor_upgrade_from_blueprint",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_filtered_compactor_upgrade",
+            "name": "Precision Compactor Module",
+            "image": "assets/catalog-icons/obsidium/volcanite_filtered_compactor_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_filtered_compactor_upgrade_from_blueprint.json",
+          "json": "assets/catalog-recipes/volcanite_filtered_compactor_upgrade_from_blueprint.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_compactor_upgrade",
+                "name": "Volcanite Compactor Module",
+                "image": "assets/catalog-icons/obsidium/volcanite_compactor_upgrade.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:hermes_filter_blueprint",
+                "name": "Hermes Filter Blueprint",
+                "image": "assets/catalog-icons/obsidium/hermes_filter_blueprint.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:volcanite_filtered_compactor_upgrade_from_filter",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_filtered_compactor_upgrade",
+            "name": "Precision Compactor Module",
+            "image": "assets/catalog-icons/obsidium/volcanite_filtered_compactor_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_filtered_compactor_upgrade_from_filter.json",
+          "json": "assets/catalog-recipes/volcanite_filtered_compactor_upgrade_from_filter.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_compactor_upgrade",
+                "name": "Volcanite Compactor Module",
+                "image": "assets/catalog-icons/obsidium/volcanite_compactor_upgrade.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:hermes_filter_upgrade",
+                "name": "Hermes Filter Upgrade",
+                "image": "assets/catalog-icons/obsidium/hermes_filter_upgrade.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:quantum_link_module",
+      "name": "Quantum Link Module",
+      "image": "assets/catalog-icons/obsidium/quantum_link_module.png",
+      "imageKind": "item texture",
+      "group": "Components & access",
+      "description": "Links supported storage blocks to Quantum storage; follow the target block’s installation conditions.",
+      "recipes": [
+        {
+          "id": "obsidium:quantum_link_module",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:quantum_link_module",
+            "name": "Quantum Link Module",
+            "image": "assets/catalog-icons/obsidium/quantum_link_module.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/quantum_link_module.json",
+          "json": "assets/catalog-recipes/quantum_link_module.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "ECE",
+            "PFP",
+            "ENE"
+          ],
+          "key": {
+            "E": {
+              "item": {
+                "id": "minecraft:ender_eye",
+                "name": "Eye of Ender",
+                "image": "assets/catalog-icons/minecraft/ender_eye.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:advanced_volcanite_casing",
+                "name": "Advanced Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/advanced_volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "minecraft:ender_pearl",
+                "name": "Ender Pearl",
+                "image": "assets/catalog-icons/minecraft/ender_pearl.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            },
+            "N": {
+              "item": {
+                "id": "obsidium:volcanite_energy_cell",
+                "name": "Basic Volcanite Energy Cell",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_cell.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:reinforced_volcanic_liquid_barrel",
+      "name": "Reinforced Volcanic Liquid Barrel",
+      "image": "assets/catalog-icons/obsidium/reinforced_volcanic_liquid_barrel.png",
+      "imageKind": "block texture",
+      "group": "Fluid storage",
+      "description": "Reinforced barrel for fluid storage and multiblock construction.",
+      "recipes": [
+        {
+          "id": "obsidium:reinforced_volcanic_liquid_barrel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:reinforced_volcanic_liquid_barrel",
+            "name": "Reinforced Volcanic Liquid Barrel",
+            "image": "assets/catalog-icons/obsidium/reinforced_volcanic_liquid_barrel.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/reinforced_volcanic_liquid_barrel.json",
+          "json": "assets/catalog-recipes/reinforced_volcanic_liquid_barrel.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "OPO",
+            "PBP",
+            "OPO"
+          ],
+          "key": {
+            "B": {
+              "item": {
+                "id": "obsidium:volcanic_wood_liquid_barrel",
+                "name": "Volcanic Wood Liquid Barrel",
+                "image": "assets/catalog-icons/obsidium/volcanic_wood_liquid_barrel.png",
+                "imageKind": "block texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_filtered_void_upgrade",
+      "name": "Selective Void Upgrade",
+      "image": "assets/catalog-icons/obsidium/volcanite_filtered_void_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Filtered voiding upgrade; matching items may be discarded.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_filtered_void_upgrade_from_barrel_blueprint",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_filtered_void_upgrade",
+            "name": "Selective Void Upgrade",
+            "image": "assets/catalog-icons/obsidium/volcanite_filtered_void_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_filtered_void_upgrade_from_barrel_blueprint.json",
+          "json": "assets/catalog-recipes/volcanite_filtered_void_upgrade_from_barrel_blueprint.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_barrel_void_upgrade",
+                "name": "Volcanite Barrel Void Upgrade",
+                "image": "assets/catalog-icons/obsidium/volcanite_barrel_void_upgrade.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:hermes_filter_blueprint",
+                "name": "Hermes Filter Blueprint",
+                "image": "assets/catalog-icons/obsidium/hermes_filter_blueprint.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:volcanite_filtered_void_upgrade_from_barrel_filter",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_filtered_void_upgrade",
+            "name": "Selective Void Upgrade",
+            "image": "assets/catalog-icons/obsidium/volcanite_filtered_void_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_filtered_void_upgrade_from_barrel_filter.json",
+          "json": "assets/catalog-recipes/volcanite_filtered_void_upgrade_from_barrel_filter.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_barrel_void_upgrade",
+                "name": "Volcanite Barrel Void Upgrade",
+                "image": "assets/catalog-icons/obsidium/volcanite_barrel_void_upgrade.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:hermes_filter_upgrade",
+                "name": "Hermes Filter Upgrade",
+                "image": "assets/catalog-icons/obsidium/hermes_filter_upgrade.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:volcanite_filtered_void_upgrade_from_blueprint",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_filtered_void_upgrade",
+            "name": "Selective Void Upgrade",
+            "image": "assets/catalog-icons/obsidium/volcanite_filtered_void_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_filtered_void_upgrade_from_blueprint.json",
+          "json": "assets/catalog-recipes/volcanite_filtered_void_upgrade_from_blueprint.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_void_upgrade",
+                "name": "Volcanite Void Module",
+                "image": "assets/catalog-icons/obsidium/volcanite_void_upgrade.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:hermes_filter_blueprint",
+                "name": "Hermes Filter Blueprint",
+                "image": "assets/catalog-icons/obsidium/hermes_filter_blueprint.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:volcanite_filtered_void_upgrade_from_filter",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_filtered_void_upgrade",
+            "name": "Selective Void Upgrade",
+            "image": "assets/catalog-icons/obsidium/volcanite_filtered_void_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_filtered_void_upgrade_from_filter.json",
+          "json": "assets/catalog-recipes/volcanite_filtered_void_upgrade_from_filter.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_void_upgrade",
+                "name": "Volcanite Void Module",
+                "image": "assets/catalog-icons/obsidium/volcanite_void_upgrade.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:hermes_filter_upgrade",
+                "name": "Hermes Filter Upgrade",
+                "image": "assets/catalog-icons/obsidium/hermes_filter_upgrade.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:supreme_liquid_tank",
+      "name": "Supreme Liquid Tank",
+      "image": "assets/catalog-icons/obsidium/supreme_liquid_tank.png",
+      "imageKind": "block texture",
+      "group": "Fluid storage",
+      "description": "A high-tier fluid tank.",
+      "recipes": [
+        {
+          "id": "obsidium:supreme_liquid_tank",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:supreme_liquid_tank",
+            "name": "Supreme Liquid Tank",
+            "image": "assets/catalog-icons/obsidium/supreme_liquid_tank.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/supreme_liquid_tank.json",
+          "json": "assets/catalog-recipes/supreme_liquid_tank.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "STS",
+            "GAG",
+            "LCL"
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "T": {
+              "item": {
+                "id": "obsidium:volcanite_thermo_core",
+                "name": "Volcanite Thermodynamic Core",
+                "image": "assets/catalog-icons/obsidium/volcanite_thermo_core.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "obsidium:supreme_volcanite_glass",
+                "name": "Supreme Volcanite Glass",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanite_glass.png",
+                "imageKind": "block texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:reinforced_volcanic_liquid_barrel",
+                "name": "Reinforced Volcanic Liquid Barrel",
+                "image": "assets/catalog-icons/obsidium/reinforced_volcanic_liquid_barrel.png",
+                "imageKind": "block texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "obsidium:lead_block",
+                "name": "Block of Lead",
+                "image": "assets/catalog-icons/obsidium/lead_block.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:advanced_volcanite_casing",
+                "name": "Advanced Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/advanced_volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:supreme_volcanite_item_barrel",
+      "name": "Supreme Volcanite Barrel",
+      "image": "assets/catalog-icons/obsidium/supreme_volcanite_item_barrel.png",
+      "imageKind": "block texture",
+      "group": "Item barrels",
+      "description": "Supreme single-item barrel for bulk storage.",
+      "recipes": [
+        {
+          "id": "obsidium:supreme_volcanite_item_barrel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:supreme_volcanite_item_barrel",
+            "name": "Supreme Volcanite Barrel",
+            "image": "assets/catalog-icons/obsidium/supreme_volcanite_item_barrel.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/supreme_volcanite_item_barrel.json",
+          "json": "assets/catalog-recipes/supreme_volcanite_item_barrel.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "OCO",
+            "ABA",
+            "OCO"
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:crying_obsidian",
+                "name": "Crying Obsidian",
+                "image": "assets/catalog-icons/minecraft/crying_obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:advanced_volcanite_casing",
+                "name": "Advanced Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/advanced_volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:astral_volcanic_catalyst",
+                "name": "Astral Volcanic Catalyst",
+                "image": "assets/catalog-icons/obsidium/astral_volcanic_catalyst.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:advanced_volcanite_item_barrel",
+                "name": "Advanced Volcanite Barrel",
+                "image": "assets/catalog-icons/obsidium/advanced_volcanite_item_barrel.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_wood_liquid_barrel",
+      "name": "Volcanic Wood Liquid Barrel",
+      "image": "assets/catalog-icons/obsidium/volcanic_wood_liquid_barrel.png",
+      "imageKind": "block texture",
+      "group": "Fluid storage",
+      "description": "Wooden barrel for storing fluids.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanic_wood_liquid_barrel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanic_wood_liquid_barrel",
+            "name": "Volcanic Wood Liquid Barrel",
+            "image": "assets/catalog-icons/obsidium/volcanic_wood_liquid_barrel.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_wood_liquid_barrel.json",
+          "json": "assets/catalog-recipes/volcanic_wood_liquid_barrel.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "LPL",
+            "LBL",
+            "LPL"
+          ],
+          "key": {
+            "L": {
+              "item": {
+                "id": "obsidium:hephaestus_volcanite_log",
+                "name": "Hephaestus Volcanite Tree Log",
+                "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_log.png",
+                "imageKind": "block texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "minecraft:barrel",
+                "name": "Barrel",
+                "image": "assets/catalog-icons/minecraft/barrel.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_basic_barrel_upgrade",
+      "name": "Volcanite Barrel Upgrade (Tier I)",
+      "image": "assets/catalog-icons/obsidium/volcanite_basic_barrel_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Basic barrel-capacity upgrade.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_basic_barrel_upgrade",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_basic_barrel_upgrade",
+            "name": "Volcanite Barrel Upgrade (Tier I)",
+            "image": "assets/catalog-icons/obsidium/volcanite_basic_barrel_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_basic_barrel_upgrade.json",
+          "json": "assets/catalog-recipes/volcanite_basic_barrel_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "ICI",
+            "CVC",
+            "ICI"
+          ],
+          "key": {
+            "I": {
+              "item": {
+                "id": "minecraft:iron_ingot",
+                "name": "Iron Ingot",
+                "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite",
+                "name": "Volcanite",
+                "image": "assets/catalog-icons/obsidium/volcanite.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_advanced_barrel_upgrade",
+      "name": "Volcanite Barrel Upgrade (Tier II)",
+      "image": "assets/catalog-icons/obsidium/volcanite_advanced_barrel_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Advanced barrel-capacity upgrade.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_advanced_barrel_upgrade",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_advanced_barrel_upgrade",
+            "name": "Volcanite Barrel Upgrade (Tier II)",
+            "image": "assets/catalog-icons/obsidium/volcanite_advanced_barrel_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_advanced_barrel_upgrade.json",
+          "json": "assets/catalog-recipes/volcanite_advanced_barrel_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "GVG",
+            "VUV",
+            "GVG"
+          ],
+          "key": {
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite",
+                "name": "Volcanite",
+                "image": "assets/catalog-icons/obsidium/volcanite.png",
+                "imageKind": "item texture"
+              }
+            },
+            "U": {
+              "item": {
+                "id": "obsidium:volcanite_basic_barrel_upgrade",
+                "name": "Volcanite Barrel Upgrade (Tier I)",
+                "image": "assets/catalog-icons/obsidium/volcanite_basic_barrel_upgrade.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_supreme_barrel_upgrade",
+      "name": "Volcanite Barrel Upgrade (Tier III)",
+      "image": "assets/catalog-icons/obsidium/volcanite_supreme_barrel_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Supreme barrel-capacity upgrade.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_supreme_barrel_upgrade",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_supreme_barrel_upgrade",
+            "name": "Volcanite Barrel Upgrade (Tier III)",
+            "image": "assets/catalog-icons/obsidium/volcanite_supreme_barrel_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_supreme_barrel_upgrade.json",
+          "json": "assets/catalog-recipes/volcanite_supreme_barrel_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "DOD",
+            "OUO",
+            "DOD"
+          ],
+          "key": {
+            "D": {
+              "item": {
+                "id": "minecraft:diamond",
+                "name": "Diamond",
+                "image": "assets/catalog-icons/minecraft/diamond.png",
+                "imageKind": "item texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "U": {
+              "item": {
+                "id": "obsidium:volcanite_advanced_barrel_upgrade",
+                "name": "Volcanite Barrel Upgrade (Tier II)",
+                "image": "assets/catalog-icons/obsidium/volcanite_advanced_barrel_upgrade.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_barrel_void_upgrade",
+      "name": "Volcanite Barrel Void Upgrade",
+      "image": "assets/catalog-icons/obsidium/volcanite_barrel_void_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Voids excess items in a compatible bulk-storage barrel.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_barrel_void_upgrade",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_barrel_void_upgrade",
+            "name": "Volcanite Barrel Void Upgrade",
+            "image": "assets/catalog-icons/obsidium/volcanite_barrel_void_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_barrel_void_upgrade.json",
+          "json": "assets/catalog-recipes/volcanite_barrel_void_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "OOO",
+            "LUL",
+            "OOO"
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:lava_bucket",
+                "name": "Lava Bucket",
+                "image": "assets/catalog-icons/minecraft/lava_bucket.png",
+                "imageKind": "item texture"
+              }
+            },
+            "U": {
+              "item": {
+                "id": "obsidium:volcanite_basic_barrel_upgrade",
+                "name": "Volcanite Barrel Upgrade (Tier I)",
+                "image": "assets/catalog-icons/obsidium/volcanite_basic_barrel_upgrade.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_chest",
+      "name": "Volcanite Chest",
+      "image": "assets/catalog-icons/obsidium/volcanite_chest.png",
+      "imageKind": "block texture",
+      "group": "Chests & backpacks",
+      "description": "A Volcanite chest for local item storage.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_chest",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_chest",
+            "name": "Volcanite Chest",
+            "image": "assets/catalog-icons/obsidium/volcanite_chest.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_chest.json",
+          "json": "assets/catalog-recipes/volcanite_chest.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "AAA",
+            "ACA",
+            "AAA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:chest",
+                "name": "Chest",
+                "image": "assets/catalog-icons/minecraft/chest.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_compactor_upgrade",
+      "name": "Volcanite Compactor Module",
+      "image": "assets/catalog-icons/obsidium/volcanite_compactor_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Compacts matching resources in compatible storage.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_compactor_upgrade",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_compactor_upgrade",
+            "name": "Volcanite Compactor Module",
+            "image": "assets/catalog-icons/obsidium/volcanite_compactor_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_compactor_upgrade.json",
+          "json": "assets/catalog-recipes/volcanite_compactor_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " I ",
+            "PVP",
+            " I "
+          ],
+          "key": {
+            "I": {
+              "item": {
+                "id": "minecraft:iron_block",
+                "name": "Block of Iron",
+                "image": "assets/catalog-icons/minecraft/iron_block.png",
+                "imageKind": "block texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "minecraft:piston",
+                "name": "Piston",
+                "image": "assets/catalog-icons/minecraft/piston.png",
+                "imageKind": "block texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_crafter_interface",
+      "name": "Volcanite Crafter Interface",
+      "image": "assets/catalog-icons/obsidium/volcanite_crafter_interface.png",
+      "imageKind": "block texture",
+      "group": "Storage network",
+      "description": "Supports crafting operations through the storage network.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_crafter_interface",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_crafter_interface",
+            "name": "Volcanite Crafter Interface",
+            "image": "assets/catalog-icons/obsidium/volcanite_crafter_interface.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_crafter_interface.json",
+          "json": "assets/catalog-recipes/volcanite_crafter_interface.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "VBV",
+            "PWP",
+            "VIV"
+          ],
+          "key": {
+            "I": {
+              "item": {
+                "id": "obsidium:volcanite_storage_interface",
+                "name": "Volcanite Storage Interface",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_interface.png",
+                "imageKind": "block texture"
+              }
+            },
+            "W": {
+              "item": {
+                "id": "obsidium:volcanite_worktable",
+                "name": "Basic Volcanite Worktable",
+                "image": "assets/catalog-icons/obsidium/volcanite_worktable.png",
+                "imageKind": "block texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:volcanite_blueprint",
+                "name": "Volcanite Blueprint",
+                "image": "assets/catalog-icons/obsidium/volcanite_blueprint.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_unit",
+      "name": "Volcanite Grand Storage Unit",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_unit.png",
+      "imageKind": "block texture",
+      "group": "Storage network",
+      "description": "A storage unit for the Obsidium item network.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_unit",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_unit",
+            "name": "Volcanite Grand Storage Unit",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_unit.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_unit.json",
+          "json": "assets/catalog-recipes/volcanite_storage_unit.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "CCC",
+            "CBC",
+            "CCC"
+          ],
+          "key": {
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_chest",
+                "name": "Volcanite Chest",
+                "image": "assets/catalog-icons/obsidium/volcanite_chest.png",
+                "imageKind": "block texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:advanced_volcanite_casing",
+                "name": "Advanced Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/advanced_volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_liquid_storage_disk_128",
+      "name": "Volcanite Liquid Storage Disk 128",
+      "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_128.png",
+      "imageKind": "item texture",
+      "group": "Fluid disks",
+      "description": "Fluid-storage disk, 128k tier, for a compatible disk drive.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_liquid_storage_disk_128",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_liquid_storage_disk_128",
+            "name": "Volcanite Liquid Storage Disk 128",
+            "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_128.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_liquid_storage_disk_128.json",
+          "json": "assets/catalog-recipes/volcanite_liquid_storage_disk_128.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PPP",
+            "CDC",
+            "PRP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_capacitor",
+                "name": "Volcanite Storage Capacitor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_capacitor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "obsidium:volcanite_liquid_storage_disk_64",
+                "name": "Volcanite Liquid Storage Disk 64",
+                "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_64.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_liquid_storage_disk_256",
+      "name": "Volcanite Liquid Storage Disk 256",
+      "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_256.png",
+      "imageKind": "item texture",
+      "group": "Fluid disks",
+      "description": "Fluid-storage disk, 256k tier, for a compatible disk drive.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_liquid_storage_disk_256",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_liquid_storage_disk_256",
+            "name": "Volcanite Liquid Storage Disk 256",
+            "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_256.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_liquid_storage_disk_256.json",
+          "json": "assets/catalog-recipes/volcanite_liquid_storage_disk_256.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PSP",
+            "CDC",
+            "PRP"
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_capacitor",
+                "name": "Volcanite Storage Capacitor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_capacitor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "obsidium:volcanite_liquid_storage_disk_128",
+                "name": "Volcanite Liquid Storage Disk 128",
+                "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_128.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_liquid_storage_disk_32",
+      "name": "Volcanite Liquid Storage Disk 32",
+      "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_32.png",
+      "imageKind": "item texture",
+      "group": "Fluid disks",
+      "description": "Fluid-storage disk, 32k tier, for a compatible disk drive.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_liquid_storage_disk_32",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_liquid_storage_disk_32",
+            "name": "Volcanite Liquid Storage Disk 32",
+            "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_32.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_liquid_storage_disk_32.json",
+          "json": "assets/catalog-recipes/volcanite_liquid_storage_disk_32.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PGP",
+            "CBC",
+            "PRP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "obsidium:volcanite_glass",
+                "name": "Volcanite Glass",
+                "image": "assets/catalog-icons/obsidium/volcanite_glass.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_capacitor",
+                "name": "Volcanite Storage Capacitor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_capacitor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:volcanite_bottle",
+                "name": "Volcanite Bottle",
+                "image": "assets/catalog-icons/obsidium/volcanite_bottle.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_liquid_storage_disk_64",
+      "name": "Volcanite Liquid Storage Disk 64",
+      "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_64.png",
+      "imageKind": "item texture",
+      "group": "Fluid disks",
+      "description": "Fluid-storage disk, 64k tier, for a compatible disk drive.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_liquid_storage_disk_64",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_liquid_storage_disk_64",
+            "name": "Volcanite Liquid Storage Disk 64",
+            "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_64.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_liquid_storage_disk_64.json",
+          "json": "assets/catalog-recipes/volcanite_liquid_storage_disk_64.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PPP",
+            "CDC",
+            "PRP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_capacitor",
+                "name": "Volcanite Storage Capacitor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_capacitor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "obsidium:volcanite_liquid_storage_disk_32",
+                "name": "Volcanite Liquid Storage Disk 32",
+                "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_disk_32.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_liquid_storage_tank",
+      "name": "Volcanite Liquid Storage Tank",
+      "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_tank.png",
+      "imageKind": "block texture",
+      "group": "Fluid storage",
+      "description": "Fluid storage tank for the Obsidium storage system.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_liquid_storage_tank",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_liquid_storage_tank",
+            "name": "Volcanite Liquid Storage Tank",
+            "image": "assets/catalog-icons/obsidium/volcanite_liquid_storage_tank.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_liquid_storage_tank.json",
+          "json": "assets/catalog-recipes/volcanite_liquid_storage_tank.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PGP",
+            "RTR",
+            "PCP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "obsidium:volcanite_glass",
+                "name": "Volcanite Glass",
+                "image": "assets/catalog-icons/obsidium/volcanite_glass.png",
+                "imageKind": "block texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "T": {
+              "item": {
+                "id": "obsidium:volcanic_wood_liquid_barrel",
+                "name": "Volcanic Wood Liquid Barrel",
+                "image": "assets/catalog-icons/obsidium/volcanic_wood_liquid_barrel.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_casing",
+                "name": "Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_liquid_upgrade",
+      "name": "Volcanite Liquid Upgrade",
+      "image": "assets/catalog-icons/obsidium/volcanite_liquid_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Fluid-capacity upgrade for compatible storage.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_liquid_upgrade",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_liquid_upgrade",
+            "name": "Volcanite Liquid Upgrade",
+            "image": "assets/catalog-icons/obsidium/volcanite_liquid_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_liquid_upgrade.json",
+          "json": "assets/catalog-recipes/volcanite_liquid_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "BLB",
+            "LCL",
+            "BLB"
+          ],
+          "key": {
+            "B": {
+              "item": {
+                "id": "minecraft:lapis_lazuli",
+                "name": "Lapis Lazuli",
+                "image": "assets/catalog-icons/minecraft/lapis_lazuli.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:bucket",
+                "name": "Bucket",
+                "image": "assets/catalog-icons/minecraft/bucket.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_modular_chest",
+      "name": "Volcanite Modular Chest",
+      "image": "assets/catalog-icons/obsidium/volcanite_modular_chest.png",
+      "imageKind": "block texture",
+      "group": "Chests & backpacks",
+      "description": "A modular chest with configurable storage and upgrade modules.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_modular_chest",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_modular_chest",
+            "name": "Volcanite Modular Chest",
+            "image": "assets/catalog-icons/obsidium/volcanite_modular_chest.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_modular_chest.json",
+          "json": "assets/catalog-recipes/volcanite_modular_chest.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "VOV",
+            "OCO",
+            "VOV"
+          ],
+          "key": {
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_chest",
+                "name": "Volcanite Chest",
+                "image": "assets/catalog-icons/obsidium/volcanite_chest.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_network_node_emitter",
+      "name": "Volcanite Network Node Emitter",
+      "image": "assets/catalog-icons/obsidium/volcanite_network_node_emitter.png",
+      "imageKind": "block texture",
+      "group": "Storage network",
+      "description": "Emitter component for network-node links.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_network_node_emitter",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_network_node_emitter",
+            "name": "Volcanite Network Node Emitter",
+            "image": "assets/catalog-icons/obsidium/volcanite_network_node_emitter.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_network_node_emitter.json",
+          "json": "assets/catalog-recipes/volcanite_network_node_emitter.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " R ",
+            "ECE",
+            "PPP"
+          ],
+          "key": {
+            "R": {
+              "item": {
+                "id": "minecraft:redstone_torch",
+                "name": "Redstone Torch",
+                "image": "assets/catalog-icons/minecraft/redstone_torch.png",
+                "imageKind": "block texture"
+              }
+            },
+            "E": {
+              "item": {
+                "id": "minecraft:ender_eye",
+                "name": "Eye of Ender",
+                "image": "assets/catalog-icons/minecraft/ender_eye.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanite_casing",
+                "name": "Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_network_node_receiver",
+      "name": "Volcanite Network Node Receiver",
+      "image": "assets/catalog-icons/obsidium/volcanite_network_node_receiver.png",
+      "imageKind": "block texture",
+      "group": "Storage network",
+      "description": "Receiver component for network-node links.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_network_node_receiver",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_network_node_receiver",
+            "name": "Volcanite Network Node Receiver",
+            "image": "assets/catalog-icons/obsidium/volcanite_network_node_receiver.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_network_node_receiver.json",
+          "json": "assets/catalog-recipes/volcanite_network_node_receiver.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " I ",
+            "ECE",
+            "PPP"
+          ],
+          "key": {
+            "I": {
+              "item": {
+                "id": "minecraft:iron_ingot",
+                "name": "Iron Ingot",
+                "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "E": {
+              "item": {
+                "id": "minecraft:ender_pearl",
+                "name": "Ender Pearl",
+                "image": "assets/catalog-icons/minecraft/ender_pearl.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanite_casing",
+                "name": "Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_sorting_station",
+      "name": "Volcanite Sorting Station",
+      "image": "assets/catalog-icons/obsidium/volcanite_sorting_station.png",
+      "imageKind": "block texture",
+      "group": "Storage network",
+      "description": "Routes and sorts stored items.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_sorting_station",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_sorting_station",
+            "name": "Volcanite Sorting Station",
+            "image": "assets/catalog-icons/obsidium/volcanite_sorting_station.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_sorting_station.json",
+          "json": "assets/catalog-recipes/volcanite_sorting_station.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PCP",
+            "ISI",
+            "PCP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanite_storage_pipe",
+                "name": "Volcanite Optic Fiber",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_pipe.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_casing",
+                "name": "Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            },
+            "I": {
+              "item": {
+                "id": "obsidium:volcanite_logistics_module",
+                "name": "Universal Pipe Logistics Module",
+                "image": "assets/catalog-icons/obsidium/volcanite_logistics_module.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_stack_upgrade",
+      "name": "Volcanite Stack Upgrade",
+      "image": "assets/catalog-icons/obsidium/volcanite_stack_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Stack-transfer upgrade for compatible systems.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_stack_upgrade",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_stack_upgrade",
+            "name": "Volcanite Stack Upgrade",
+            "image": "assets/catalog-icons/obsidium/volcanite_stack_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_stack_upgrade.json",
+          "json": "assets/catalog-recipes/volcanite_stack_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " G ",
+            "SVS",
+            " R "
+          ],
+          "key": {
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:netherite_scrap",
+                "name": "Netherite Scrap",
+                "image": "assets/catalog-icons/minecraft/netherite_scrap.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_capacitor",
+      "name": "Volcanite Storage Capacitor",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_capacitor.png",
+      "imageKind": "item texture",
+      "group": "Components & access",
+      "description": "Crafting component for storage infrastructure.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_capacitor",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_capacitor",
+            "name": "Volcanite Storage Capacitor",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_capacitor.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_capacitor.json",
+          "json": "assets/catalog-recipes/volcanite_storage_capacitor.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "TVT",
+            "RCR",
+            "TVT"
+          ],
+          "key": {
+            "T": {
+              "item": {
+                "id": "obsidium:tin_ingot",
+                "name": "Tin Ingot",
+                "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_controller",
+      "name": "Volcanite Storage Controller",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_controller.png",
+      "imageKind": "block texture",
+      "group": "Storage network",
+      "description": "The controller and access point for the storage network.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_controller",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_controller",
+            "name": "Volcanite Storage Controller",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_controller.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_controller.json",
+          "json": "assets/catalog-recipes/volcanite_storage_controller.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "OCO",
+            "RER",
+            "OCO"
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_casing",
+                "name": "Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "E": {
+              "item": {
+                "id": "obsidium:volcanite_energy_core",
+                "name": "Volcanite Energy Core (3x3)",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_core.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_disk_128",
+      "name": "Volcanite Storage Disk 128",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_128.png",
+      "imageKind": "item texture",
+      "group": "Item disks",
+      "description": "Item-storage disk, 128k tier, for a compatible disk drive.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_disk_128",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_disk_128",
+            "name": "Volcanite Storage Disk 128",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_128.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_disk_128.json",
+          "json": "assets/catalog-recipes/volcanite_storage_disk_128.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PPP",
+            "CDC",
+            "PRP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_capacitor",
+                "name": "Volcanite Storage Capacitor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_capacitor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "obsidium:volcanite_storage_disk_64",
+                "name": "Volcanite Storage Disk 64",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_64.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_disk_256",
+      "name": "Volcanite Storage Disk 256",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_256.png",
+      "imageKind": "item texture",
+      "group": "Item disks",
+      "description": "Item-storage disk, 256k tier, for a compatible disk drive.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_disk_256",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_disk_256",
+            "name": "Volcanite Storage Disk 256",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_256.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_disk_256.json",
+          "json": "assets/catalog-recipes/volcanite_storage_disk_256.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PSP",
+            "CDC",
+            "PRP"
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_capacitor",
+                "name": "Volcanite Storage Capacitor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_capacitor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "obsidium:volcanite_storage_disk_128",
+                "name": "Volcanite Storage Disk 128",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_128.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_disk_32",
+      "name": "Volcanite Storage Disk 32",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_32.png",
+      "imageKind": "item texture",
+      "group": "Item disks",
+      "description": "Item-storage disk, 32k tier, for a compatible disk drive.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_disk_32",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_disk_32",
+            "name": "Volcanite Storage Disk 32",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_32.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_disk_32.json",
+          "json": "assets/catalog-recipes/volcanite_storage_disk_32.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PPP",
+            "CPC",
+            "PRP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_capacitor",
+                "name": "Volcanite Storage Capacitor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_capacitor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_disk_64",
+      "name": "Volcanite Storage Disk 64",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_64.png",
+      "imageKind": "item texture",
+      "group": "Item disks",
+      "description": "Item-storage disk, 64k tier, for a compatible disk drive.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_disk_64",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_disk_64",
+            "name": "Volcanite Storage Disk 64",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_64.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_disk_64.json",
+          "json": "assets/catalog-recipes/volcanite_storage_disk_64.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PPP",
+            "CDC",
+            "PRP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_capacitor",
+                "name": "Volcanite Storage Capacitor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_capacitor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "obsidium:volcanite_storage_disk_32",
+                "name": "Volcanite Storage Disk 32",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_32.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_disk_drive",
+      "name": "Volcanite Storage Disk Drive",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_drive.png",
+      "imageKind": "block texture",
+      "group": "Storage network",
+      "description": "Houses storage disks for the network.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_disk_drive",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_disk_drive",
+            "name": "Volcanite Storage Disk Drive",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_disk_drive.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_disk_drive.json",
+          "json": "assets/catalog-recipes/volcanite_storage_disk_drive.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "OCO",
+            "RBR",
+            "OCO"
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_chest",
+                "name": "Volcanite Chest",
+                "image": "assets/catalog-icons/obsidium/volcanite_chest.png",
+                "imageKind": "block texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:volcanite_casing",
+                "name": "Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_interface",
+      "name": "Volcanite Storage Interface",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_interface.png",
+      "imageKind": "block texture",
+      "group": "Storage network",
+      "description": "An interface for connecting storage-network operations.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_interface",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_interface",
+            "name": "Volcanite Storage Interface",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_interface.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_interface.json",
+          "json": "assets/catalog-recipes/volcanite_storage_interface.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PCP",
+            "RGR",
+            "PPP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "obsidium:volcanite_glass",
+                "name": "Volcanite Glass",
+                "image": "assets/catalog-icons/obsidium/volcanite_glass.png",
+                "imageKind": "block texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_processor",
+      "name": "Volcanite Storage Processor",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+      "imageKind": "item texture",
+      "group": "Components & access",
+      "description": "Crafting component for storage infrastructure.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_processor",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_processor",
+            "name": "Volcanite Storage Processor",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_processor.json",
+          "json": "assets/catalog-recipes/volcanite_storage_processor.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "TRT",
+            "GBG",
+            "TVT"
+          ],
+          "key": {
+            "T": {
+              "item": {
+                "id": "obsidium:tin_ingot",
+                "name": "Tin Ingot",
+                "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:gold_nugget",
+                "name": "Gold Nugget",
+                "image": "assets/catalog-icons/minecraft/gold_nugget.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:volcanite_binding",
+                "name": "Volcanite Binding",
+                "image": "assets/catalog-icons/obsidium/volcanite_binding.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:volcanite_storage_processor_from_silver",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_processor",
+            "name": "Volcanite Storage Processor",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_processor_from_silver.json",
+          "json": "assets/catalog-recipes/volcanite_storage_processor_from_silver.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "TRT",
+            "SBS",
+            "TVT"
+          ],
+          "key": {
+            "T": {
+              "item": {
+                "id": "obsidium:tin_ingot",
+                "name": "Tin Ingot",
+                "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "obsidium:silver_nugget",
+                "name": "Silver Nugget",
+                "image": "assets/catalog-icons/obsidium/silver_nugget.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:volcanite_binding",
+                "name": "Volcanite Binding",
+                "image": "assets/catalog-icons/obsidium/volcanite_binding.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_remote",
+      "name": "Volcanite Storage Remote",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_remote.png",
+      "imageKind": "item texture",
+      "group": "Components & access",
+      "description": "Portable access tool for a linked storage network.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_remote",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_remote",
+            "name": "Volcanite Storage Remote",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_remote.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_remote.json",
+          "json": "assets/catalog-recipes/volcanite_storage_remote.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " P ",
+            "RER",
+            " B "
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "E": {
+              "item": {
+                "id": "minecraft:ender_pearl",
+                "name": "Ender Pearl",
+                "image": "assets/catalog-icons/minecraft/ender_pearl.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:volcanite_portable_battery",
+                "name": "Basic Volcanite Portable Battery",
+                "image": "assets/catalog-icons/obsidium/volcanite_portable_battery.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_upgrade",
+      "name": "Volcanite Storage Upgrade",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Storage-capacity upgrade for compatible blocks.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_upgrade",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_upgrade",
+            "name": "Volcanite Storage Upgrade",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_upgrade.json",
+          "json": "assets/catalog-recipes/volcanite_storage_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "GRG",
+            "RCR",
+            "GRG"
+          ],
+          "key": {
+            "G": {
+              "item": {
+                "id": "minecraft:emerald",
+                "name": "Emerald",
+                "image": "assets/catalog-icons/minecraft/emerald.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_storage_processor",
+                "name": "Volcanite Storage Processor",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_processor.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_vacuum_upgrade",
+      "name": "Volcanite Vacuum Module",
+      "image": "assets/catalog-icons/obsidium/volcanite_vacuum_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Item-collection upgrade for compatible storage.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_vacuum_upgrade",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_vacuum_upgrade",
+            "name": "Volcanite Vacuum Module",
+            "image": "assets/catalog-icons/obsidium/volcanite_vacuum_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_vacuum_upgrade.json",
+          "json": "assets/catalog-recipes/volcanite_vacuum_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " E ",
+            "HVH",
+            " E "
+          ],
+          "key": {
+            "E": {
+              "item": {
+                "id": "minecraft:ender_pearl",
+                "name": "Ender Pearl",
+                "image": "assets/catalog-icons/minecraft/ender_pearl.png",
+                "imageKind": "item texture"
+              }
+            },
+            "H": {
+              "item": {
+                "id": "minecraft:hopper",
+                "name": "Hopper",
+                "image": "assets/catalog-icons/minecraft/hopper.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_void_upgrade",
+      "name": "Volcanite Void Module",
+      "image": "assets/catalog-icons/obsidium/volcanite_void_upgrade.png",
+      "imageKind": "item texture",
+      "group": "Storage upgrades",
+      "description": "Overflow-voiding upgrade; review settings before enabling it.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_void_upgrade",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_void_upgrade",
+            "name": "Volcanite Void Module",
+            "image": "assets/catalog-icons/obsidium/volcanite_void_upgrade.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_void_upgrade.json",
+          "json": "assets/catalog-recipes/volcanite_void_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " O ",
+            "LVR",
+            " O "
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:lava_bucket",
+                "name": "Lava Bucket",
+                "image": "assets/catalog-icons/minecraft/lava_bucket.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    }
+  ]
+}

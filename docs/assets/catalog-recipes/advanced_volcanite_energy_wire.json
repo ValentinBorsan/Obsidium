@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "WIW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "obsidium:volcanite_energy_wire"
+    },
+    "I": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    }
+  },
+  "result": {
+    "count": 8,
+    "id": "obsidium:advanced_volcanite_energy_wire"
+  }
+}

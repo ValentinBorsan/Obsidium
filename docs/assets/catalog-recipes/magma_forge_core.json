@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    }
+  },
+  "pattern": [
+    "OTO",
+    "FCF",
+    "OTO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:magma_forge_core"
+  }
+}

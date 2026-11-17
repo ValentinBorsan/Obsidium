@@ -1,0 +1,373 @@
+{
+  "title": "Multiblock Construction Guide",
+  "manual": "src/client/java/net/valentin/obsidium/screen/MagmaForgeManualScreen.java",
+  "items": [
+    {
+      "id": "magma-forge",
+      "title": "Magma Forge",
+      "size": "3 \u00d7 3 \u00d7 1",
+      "layers": [
+        {
+          "label": "Single layer \u00b7 Y = 0",
+          "rows": [
+            "ECE",
+            "CFC",
+            "ECE"
+          ]
+        }
+      ],
+      "parts": {
+        "E": "obsidium:volcanite_energy_unit",
+        "C": "obsidium:volcanite_casing",
+        "F": "obsidium:magma_forge_core"
+      },
+      "steps": [
+        "Place the Forge Core at the center of a flat 3\u00d73 platform.",
+        "Place a casing on each of its four cardinal sides and an Energy Unit at each corner.",
+        "Right-click the center core to validate and form the forge."
+      ],
+      "details": [
+        "Use the formed forge for alloy recipes and the tempering minigame. Press Space in the green zone for a Perfect Strike.",
+        "The eight outer blocks become forge dummy blocks when formed."
+      ],
+      "rules": [
+        "Corners also accept Basic Energy Cells or Energy Cores. Edges accept Basic or Advanced Volcanite Casings. The diagram uses a recommended combination."
+      ],
+      "sources": [
+        "src/main/java/net/valentin/obsidium/block/MagmaForgeCoreBlockEntity.java",
+        "src/main/java/net/valentin/obsidium/block/MagmaForgeCoreBlock.java"
+      ]
+    },
+    {
+      "id": "energy-matrix",
+      "title": "Volcanite Energy Matrix",
+      "size": "3 \u00d7 3 \u00d7 1",
+      "layers": [
+        {
+          "label": "Single layer \u00b7 Y = 0",
+          "rows": [
+            "CEC",
+            "EKE",
+            "CEC"
+          ]
+        }
+      ],
+      "parts": {
+        "C": "obsidium:advanced_volcanite_casing",
+        "E": "obsidium:volcanite_energy_unit",
+        "K": "obsidium:volcanite_energy_core"
+      },
+      "steps": [
+        "Place an Energy Core at the center.",
+        "Fill the eight surrounding positions on the same Y level. Use at least four Energy Cells or Units; fill the rest with valid cells, units or casings.",
+        "The matrix evaluates its structure automatically. Open the core to inspect its status and stored energy."
+      ],
+      "details": [
+        "Use the matrix as shared RF storage; additional cells or units increase its capacity."
+      ],
+      "rules": [
+        "All eight ring positions must be occupied by valid blocks. Basic and Advanced Volcanite Casings are accepted. The cells do not have to be on the four sides shown here."
+      ],
+      "sources": [
+        "src/main/java/net/valentin/obsidium/block/VolcaniteEnergyCoreBlockEntity.java"
+      ]
+    },
+    {
+      "id": "keraunos",
+      "title": "Keraunos HV Matrix",
+      "size": "3 \u00d7 3 \u00d7 3",
+      "layers": [
+        {
+          "label": "Bottom \u00b7 Y = \u22121",
+          "rows": [
+            "CGC",
+            "GEG",
+            "CGC"
+          ]
+        },
+        {
+          "label": "Middle \u00b7 Y = 0",
+          "rows": [
+            "CPC",
+            "PKP",
+            "CPC"
+          ]
+        },
+        {
+          "label": "Top \u00b7 Y = +1",
+          "rows": [
+            "CGC",
+            "GEG",
+            "CGC"
+          ]
+        }
+      ],
+      "parts": {
+        "C": "obsidium:advanced_volcanite_casing",
+        "G": "obsidium:volcanite_glass",
+        "E": "obsidium:volcanite_energy_unit",
+        "P": "obsidium:keraunos_hv_port",
+        "K": "obsidium:keraunos_hv_core"
+      },
+      "steps": [
+        "Place the HV Core at the center of a full 3\u00d73\u00d73 cube.",
+        "Fill all 26 surrounding positions with valid shell blocks. Include at least one Keraunos HV Port.",
+        "The structure validates automatically. Connect your network through its ports and inspect the core GUI."
+      ],
+      "details": [
+        "Formed capacity starts at 1 billion RF. Each Basic Cell adds 150 million RF; each Advanced Unit adds 600 million RF.",
+        "Consult the HV Safety chapter before operating the high-voltage system."
+      ],
+      "rules": [
+        "The diagram is one valid example, not a fixed pattern. Shell blocks may be Basic/Advanced Casings, Volcanite/Supreme Volcanite Glass, Reinforced Tinted Glass, Cells, Units or HV Ports. No air gaps are allowed."
+      ],
+      "sources": [
+        "src/main/java/net/valentin/obsidium/block/KeraunosHVCoreBlockEntity.java"
+      ]
+    },
+    {
+      "id": "hadron",
+      "title": "Olympian Hadron Collider",
+      "size": "5 \u00d7 5 \u00d7 1",
+      "layers": [
+        {
+          "label": "Ring \u00b7 top view",
+          "rows": [
+            "CCECC",
+            "C...C",
+            "I...L",
+            "C...C",
+            "CCKCC"
+          ]
+        }
+      ],
+      "parts": {
+        "C": "obsidium:synchrotron_ring_coil",
+        "E": "obsidium:hadron_energy_port",
+        "I": "obsidium:hadron_item_port",
+        "L": "obsidium:hadron_fluid_port",
+        "K": "obsidium:olympian_hadron_collider"
+      },
+      "steps": [
+        "Place the controller at the middle of a side of the 5\u00d75 perimeter.",
+        "Complete the perimeter with 12 coils and one port of each type, as illustrated. Leave the inner 3\u00d73 clear.",
+        "Open the controller GUI. Use Holo 5\u00d75 for guidance or Auto-Build with the required components in your inventory.",
+        "Supply energy, fuel, coolant and collision ingredients through the GUI or ports. Reach at least 30% c before triggering a collision."
+      ],
+      "details": [
+        "Collisions can produce Singularity Hadron Alloy probabilistically. The primary alloy roll has a 10% chance.",
+        "Keep out of the inner region during operation: the controller has a radiation hazard."
+      ],
+      "rules": [
+        "The standard manual layout uses 12 coils. Current validation accepts at least nine coils, at least one Energy/Item/Fluid Port each, and valid ring members in every remaining perimeter position. Keep the interior air for the recommended build."
+      ],
+      "sources": [
+        "src/main/java/net/valentin/obsidium/block/OlympianHadronColliderBlockEntity.java"
+      ]
+    },
+    {
+      "id": "tartarus",
+      "title": "Tartarus Piston Engine",
+      "size": "2 \u00d7 2 \u00d7 2",
+      "layers": [
+        {
+          "label": "Bottom \u00b7 Y = 0",
+          "rows": [
+            "GC",
+            "CC"
+          ]
+        },
+        {
+          "label": "Top \u00b7 Y = +1",
+          "rows": [
+            "CC",
+            "CC"
+          ]
+        }
+      ],
+      "parts": {
+        "G": "obsidium:volcanite_generator",
+        "C": "obsidium:advanced_volcanite_casing"
+      },
+      "steps": [
+        "Build the two full layers shown: one Basic Volcanite Generator and seven Advanced Casings.",
+        "Right-click a structure component with the Volcanite Wrench to assemble it.",
+        "Open the formed engine, supply a supported fuel and cooling, then choose its operating mode."
+      ],
+      "details": [
+        "Cooling controls engine temperature; the manual recommends ice, snow, water or Bio-Ethanol.",
+        "Shift-right-click with the wrench dismantles the formed engine."
+      ],
+      "rules": [
+        "This is the recommended layout. The validator accepts Basic or Advanced Casings and one or more Basic Volcanite Generators, with all eight positions filled."
+      ],
+      "sources": [
+        "src/main/java/net/valentin/obsidium/block/TartarusPistonEngineBlock.java",
+        "src/main/java/net/valentin/obsidium/block/TartarusPistonEngineBlockEntity.java",
+        "src/main/java/net/valentin/obsidium/item/VolcaniteWrenchItem.java"
+      ]
+    },
+    {
+      "id": "bio-caldera",
+      "title": "Dionysian Bio-Caldera",
+      "size": "2 \u00d7 2 \u00d7 2",
+      "layers": [
+        {
+          "label": "Bottom \u00b7 Y = 0",
+          "rows": [
+            "GB",
+            "CC"
+          ]
+        },
+        {
+          "label": "Top \u00b7 Y = +1",
+          "rows": [
+            "CC",
+            "CC"
+          ]
+        }
+      ],
+      "parts": {
+        "G": "obsidium:demetrian_biomass_generator",
+        "B": "obsidium:reinforced_volcanic_liquid_barrel",
+        "C": "obsidium:advanced_volcanite_casing"
+      },
+      "steps": [
+        "Build a full cube with one Demetrian Biomass Generator, one Reinforced Liquid Barrel and six Advanced Casings.",
+        "Right-click a structure component with the Volcanite Wrench to assemble it.",
+        "Open the formed controller and provide inputs for the Bio-Caldera processing chain."
+      ],
+      "details": [
+        "Shift-right-click with the wrench dismantles the formed structure."
+      ],
+      "rules": [
+        "The diagram is the recommended manual build. Current validation is more permissive: all eight blocks must be valid, with at least one Biomass Generator, Reinforced Liquid Barrel or Volcanic Wood Liquid Barrel; the remaining positions may be Basic or Advanced Casings."
+      ],
+      "sources": [
+        "src/main/java/net/valentin/obsidium/block/DionysianBioCalderaBlock.java",
+        "src/main/java/net/valentin/obsidium/block/DionysianBioCalderaBlockEntity.java",
+        "src/main/java/net/valentin/obsidium/item/VolcaniteWrenchItem.java"
+      ]
+    },
+    {
+      "id": "mega-barrel",
+      "title": "Mega Volcanic Barrel",
+      "size": "2 \u00d7 2 \u00d7 2",
+      "layers": [
+        {
+          "label": "Bottom \u00b7 Y = 0",
+          "rows": [
+            "BC",
+            "CC"
+          ]
+        },
+        {
+          "label": "Top \u00b7 Y = +1",
+          "rows": [
+            "CC",
+            "CC"
+          ]
+        }
+      ],
+      "parts": {
+        "B": "obsidium:reinforced_volcanic_liquid_barrel",
+        "C": "obsidium:volcanite_casing"
+      },
+      "steps": [
+        "Build a full 2\u00d72\u00d72 cube from one Reinforced Liquid Barrel and seven Basic Volcanite Casings.",
+        "Right-click a component with a Dionysian Barrel Core. Alternatively, use the wrench while carrying one core in your inventory. The core is consumed in survival.",
+        "Use the formed structure for large fluid storage."
+      ],
+      "details": [
+        "Assembly preserves compatible fluids from the original barrels. Shift-wrench dismantles the structure; empty it first when reorganizing your storage."
+      ],
+      "rules": [
+        "At least one Reinforced Liquid Barrel is required. Additional reinforced barrels are accepted in place of casings. Advanced Casings are not valid for this structure."
+      ],
+      "sources": [
+        "src/main/java/net/valentin/obsidium/block/MegaVolcanicBarrelBlock.java",
+        "src/main/java/net/valentin/obsidium/item/DionysianBarrelCoreItem.java",
+        "src/main/java/net/valentin/obsidium/item/VolcaniteWrenchItem.java"
+      ]
+    },
+    {
+      "id": "poseidon",
+      "title": "Poseidon Abyssal Pump",
+      "size": "2 \u00d7 2 \u00d7 2",
+      "layers": [
+        {
+          "label": "Bottom \u00b7 controller faces north",
+          "rows": [
+            "CP",
+            "CC"
+          ]
+        },
+        {
+          "label": "Top \u00b7 Y = +1",
+          "rows": [
+            "CC",
+            "CC"
+          ]
+        }
+      ],
+      "parts": {
+        "P": "obsidium:poseidon_abyssal_pump",
+        "C": "obsidium:poseidon_abyssal_casing"
+      },
+      "steps": [
+        "Place the pump controller at a bottom corner.",
+        "Facing north, the structure extends west and south from the controller, with a second layer above. Fill the other seven positions with Abyssal Casings. Rotate this footprint with controller facing.",
+        "Open the pump GUI and use its hologram or Auto-Build to place the casings in the exact positions. Auto-Build consumes inventory casings and skips obstructed spaces.",
+        "Supply RF and select the pumping mode and speed."
+      ],
+      "details": [
+        "Available target rates are 1,000 / 4,000 / 16,000 mB per tick. Operation also depends on available fluid, energy and output capacity.",
+        "The structure validates automatically; breaking a required casing unforms it."
+      ],
+      "rules": [
+        "Only Poseidon Abyssal Casings are valid. The footprint is orientation-dependent; do not build an arbitrary cube on the opposite side of the controller."
+      ],
+      "sources": [
+        "src/main/java/net/valentin/obsidium/block/PoseidonAbyssalPumpBlockEntity.java"
+      ]
+    },
+    {
+      "id": "altar",
+      "title": "Olympian Ritual Altar",
+      "size": "Recommended 7 \u00d7 7 footprint",
+      "layers": [
+        {
+          "label": "Top view \u00b7 recommended same-height cross",
+          "rows": [
+            "   O   ",
+            "       ",
+            "       ",
+            "O  A  O",
+            "       ",
+            "       ",
+            "   O   "
+          ]
+        }
+      ],
+      "parts": {
+        "O": "obsidium:astrape_ritual_obelisk",
+        "A": "obsidium:olympian_altar"
+      },
+      "steps": [
+        "Place the altar in the center and four Astrape Ritual Obelisks three blocks away to the north, east, south and west.",
+        "Place the item to bind on the altar and a Mythic Scroll on an obelisk.",
+        "Right-click the altar with an empty hand to attempt the ritual. Meet the selected pact\u2019s weather, time and item conditions."
+      ],
+      "details": [
+        "This ritual structure does not transform into a solid machine shell. Shift-right-click the altar with an empty hand to retrieve its item when no ritual is running."
+      ],
+      "rules": [
+        "The cross is the recommended manual example. Current code searches offsets X/Z \u22124\u2026+4 and Y \u22121\u2026+1, excluding the altar column, and requires at least four obelisks. Diagonals and uneven ground are supported; exactly three blocks and identical Y are not mandatory."
+      ],
+      "sources": [
+        "src/main/java/net/valentin/obsidium/block/OlympianAltarBlockEntity.java",
+        "src/main/java/net/valentin/obsidium/block/OlympianAltarBlock.java"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "obsidium:raw_tin"
+    }
+  },
+  "result": {
+    "id": "obsidium:raw_tin_block",
+    "count": 1
+  }
+}

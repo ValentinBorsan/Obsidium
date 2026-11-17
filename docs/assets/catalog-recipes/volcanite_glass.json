@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "AAA",
+        "AGA",
+        "AAA"
+    ],
+    "key": {
+        "A": {
+            "item": "obsidium:volcanic_alloy"
+        },
+        "G": {
+            "item": "minecraft:glass"
+        }
+    },
+    "result": {
+        "id": "obsidium:volcanite_glass",
+        "count": 1
+    }
+}

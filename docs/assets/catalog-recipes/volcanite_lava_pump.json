@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OPO",
+    "LEL",
+    "OBO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "L": {
+      "item": "obsidium:lead_ingot"
+    },
+    "P": {
+      "item": "obsidium:volcanite_storage_pipe"
+    },
+    "E": {
+      "item": "obsidium:volcanite_energy_cell"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanite_lava_pump"
+  }
+}

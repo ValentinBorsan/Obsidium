@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PGP",
+    "CBC",
+    "PRP"
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "G": {
+      "item": "obsidium:volcanite_glass"
+    },
+    "C": {
+      "item": "obsidium:volcanite_storage_capacitor"
+    },
+    "B": {
+      "item": "obsidium:volcanite_bottle"
+    },
+    "R": {
+      "item": "obsidium:volcanite_storage_processor"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_liquid_storage_disk_32",
+    "count": 1
+  }
+}

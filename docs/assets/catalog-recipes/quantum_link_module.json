@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ECE",
+    "PFP",
+    "ENE"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    },
+    "P": {
+      "item": "minecraft:ender_pearl"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    },
+    "N": {
+      "item": "obsidium:volcanite_energy_cell"
+    }
+  },
+  "result": {
+    "id": "obsidium:quantum_link_module",
+    "count": 1
+  }
+}

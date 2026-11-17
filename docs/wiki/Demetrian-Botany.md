@@ -1,6 +1,8 @@
 # Demetrian Botany
 
-Every sacred tree in **Demetrian Botany** consists of two living halves grafted together to produce renewable ores and mythic resources.
+[Browse Botany items and recipes](wiki.html?page=Botany-Catalog) · [Read the practical botany manual](wiki.html?page=Botany-Manual)
+
+Living ore trees produce renewable resources. Grafting combines a rootstock and a species-bearing scion to create compatible hybrids.
 
 ## Hybrid Sapling Grafting
 - **Ares Iron Sapling** + `2× Hades Coal Scion` ➔ **Astrape Redstone Sapling**

@@ -34,7 +34,7 @@ public class MagmaForgeManualScreen extends Screen {
         {"3×3 Layout", "Tempering", "Recipes"},
         {"3×3 Layout", "Scaling", "HV 3×3×3", "HV Safety"},
         {"Network", "Item Barrels", "Fluid Barrels", "Core", "Build", "Crafter"},
-        {"Items", "Fluids", "Conduits", "Upgrades", "Facades"},
+        {"Items", "Fluids", "Conduits", "Upgrades", "Facades", "Poseidon"},
         {"Caldera Biome", "Volcanite Ore", "Living Trees"},
         {"Ritual", "Relics", "Solar", "Distillery", "Pylons", "Thanatos"},
         {"5×5 Ring", "Cryo & Fuel", "Collisions", "Teleport"}
@@ -299,7 +299,7 @@ public class MagmaForgeManualScreen extends Screen {
         // 1. Selector tabs at top (3 multiblocks)
         int btnW = (w - 24) / 3;
         int btnY = y + 4;
-        String[] labels = {"Tartarus Engine", "Bio-Caldera", "Hadron Ring"};
+        String[] labels = {"Tartarus Piston", "Bio-Caldera", "Hadron Ring"};
         int[] activeBg = {0xFF3D2012, 0xFF12351E, 0xFF102A3A};
         int[] activeBorder = {0xFFFF7700, 0xFF00E577, 0xFF00E5FF};
         int[] activeTxt = {0xFFFFCC44, 0xFF88FF88, 0xFF88F6FF};
@@ -373,7 +373,7 @@ public class MagmaForgeManualScreen extends Screen {
         int rx = x + 108;
         int maxW = w - 114;
         drawSmallString(g, "• 1× Hadron Collider Controller", rx, y + 40, 0xFF73F2FF, maxW);
-        drawSmallString(g, "• 12× Synchrotron Ring Coils", rx, y + 52, 0xFFEEEEEE, maxW);
+        drawSmallString(g, "• 12× Ring Coils (min 9)", rx, y + 52, 0xFFEEEEEE, maxW);
         drawSmallString(g, "• Req: 1 Energy, 1 Item, 1 Fluid Port", rx, y + 64, 0xFFFFCC66, maxW);
         drawSmallString(g, "• 3×3 inner ring stays hollow air", rx, y + 76, 0xFFCCCCCC, maxW);
         drawSmallString(g, "• Output: Up to 328k RF/t + 30M Burst", rx, y + 88, 0xFF55FF77, maxW);
@@ -387,7 +387,7 @@ public class MagmaForgeManualScreen extends Screen {
     }
 
     private void renderTartarusEngineFormation(GuiGraphics g, int x, int y, int w, int mouseX, int mouseY) {
-        drawSmallString(g, "2×2×2 Combustion Multiblock", x + 10, y + 24, 0xFFFFB74D);
+        drawSmallString(g, "2×2×2 Engine · Example Build", x + 10, y + 24, 0xFFFFB74D);
         drawBadge(g, x + w - 10, y + 21, "1,000–1,500 RF/t", 0xFF100A16, 0xFFFF9900, 0xFFFFCC33);
 
         ItemStack gen = new ItemStack(ObsidiumMod.VOLCANITE_GENERATOR_BLOCK);
@@ -421,27 +421,30 @@ public class MagmaForgeManualScreen extends Screen {
         }
 
         // Legend
-        int legY = gridY + gridSize + 7;
+        int legY = gridY + gridSize + 5;
         drawSlotWithItem(g, gen, x + 24, legY, mouseX, mouseY, 0xFFFF9900);
         drawSmallString(g, "1× Generator", x + 48, legY + 7, 0xFFFFCC44);
 
         drawSlotWithItem(g, casing, x + 128, legY, mouseX, mouseY, 0xFF884488);
         drawSmallString(g, "7× Adv. Casing", x + 152, legY + 7, 0xFFFF8833);
 
-        // Activation card
-        int actY = legY + 25;
-        g.fill(x + 10, actY, x + w - 10, actY + 32, 0xFF1B1224);
-        drawBorder(g, x + 10, actY, w - 20, 32, 0xFFFF7700);
+        // Activation & Cryo-Cooling card
+        int actY = legY + 22;
+        int actH = 38;
+        g.fill(x + 10, actY, x + w - 10, actY + actH, 0xFF1B1224);
+        drawBorder(g, x + 10, actY, w - 20, actH, 0xFFFF7700);
 
         ItemStack wrench = new ItemStack(ObsidiumMod.VOLCANITE_WRENCH);
-        drawSlotWithItem(g, wrench, x + 14, actY + 6, mouseX, mouseY, 0xFFFF7700);
+        drawSlotWithItem(g, wrench, x + 14, actY + 9, mouseX, mouseY, 0xFFFF7700);
 
-        drawSmallString(g, "Right-click structure with Wrench to form", x + 40, actY + 7, 0xFFFFDD66);
-        drawSmallString(g, "Shift-Wrench to dismantle back to item", x + 40, actY + 18, 0xFF99AABB);
+        int actMaxW = w - 54;
+        drawSmallString(g, "Wrench forms · Basic/Adv casings accepted · Shift-Wrench unforms", x + 40, actY + 5, 0xFFFFDD66, actMaxW);
+        drawSmallString(g, "Cooling: Ice, Snow, Water or Bio-Ethanol prevents overheat", x + 40, actY + 16, 0xFF73F2FF, actMaxW);
+        drawSmallString(g, "Cryo <= 420°C: +35% RF/t Boost | >= 950°C: -35% Throttle", x + 40, actY + 27, 0xFF55FF77, actMaxW);
     }
 
     private void renderBioCalderaFormation(GuiGraphics g, int x, int y, int w, int mouseX, int mouseY) {
-        drawSmallString(g, "2×2×2 Fermentation Multiblock", x + 10, y + 24, 0xFF88FF88);
+        drawSmallString(g, "2×2×2 Caldera · Example Build", x + 10, y + 24, 0xFF88FF88);
         drawBadge(g, x + w - 10, y + 21, "1,200–1,800 RF/t", 0xFF100A16, 0xFF55DD66, 0xFFAAEEAA);
 
         ItemStack demetrian = new ItemStack(ObsidiumMod.DEMETRIAN_BIOMASS_GENERATOR_ITEM);
@@ -496,8 +499,8 @@ public class MagmaForgeManualScreen extends Screen {
         ItemStack wrench = new ItemStack(ObsidiumMod.VOLCANITE_WRENCH);
         drawSlotWithItem(g, wrench, x + 14, actY + 6, mouseX, mouseY, 0xFF55DD66);
 
-        drawSmallString(g, "Right-click structure with Wrench to form", x + 40, actY + 7, 0xFF88FF88);
-        drawSmallString(g, "Shift-Wrench to dismantle back to item", x + 40, actY + 18, 0xFF99AABB);
+        drawSmallString(g, "Wrench: 1+ Biomass Gen / Wood or Reinf. Barrel", x + 40, actY + 7, 0xFF88FF88);
+        drawSmallString(g, "Rest: Basic/Adv Casings · Shift-Wrench unforms", x + 40, actY + 18, 0xFF99AABB);
     }
 
     // ==================== CHAPTER 1: MAGMA FORGE 3x3 ====================
@@ -529,7 +532,7 @@ public class MagmaForgeManualScreen extends Screen {
             g.drawString(this.font, "4× Casings (sides)", lx + 24, y + 55, 0xFFFF8833, false);
 
             drawSlotWithItem(g, corner, lx, y + 76, mouseX, mouseY, 0xFF00E5FF);
-            g.drawString(this.font, "4× Cells / Units", lx + 24, y + 81, 0xFF00E5FF, false);
+            drawSmallString(g, "4× Cells / Units / Cores", lx + 24, y + 81, 0xFF00E5FF, w - 124);
 
             g.fill(x + 10, y + 110, x + w - 10, y + 148, 0xFF1B1224);
             drawBorder(g, x + 10, y + 110, w - 20, 38, 0xFF44AA55);
@@ -685,7 +688,7 @@ public class MagmaForgeManualScreen extends Screen {
             g.fill(x + 10, y + 98, x + w - 10, y + 150, 0xFF0E1726);
             drawBorder(g, x + 10, y + 98, w - 20, 52, 0xFF38BDF8);
             drawSmallString(g, "• Center = 1× Keraunos HV Core; 26 Shell blocks around it.", x + 16, y + 104, 0xFFFACC15, w - 32);
-            drawSmallString(g, "• Valid Shell: Casings, Glass, Energy Cells/Units & ≥1 HV Port.", x + 16, y + 115, 0xFFE2E8F0, w - 32);
+            drawSmallString(g, "• Valid Shell: Basic/Adv Casings, supported Glass, Cells/Units & ≥1 HV Port.", x + 16, y + 115, 0xFFE2E8F0, w - 32);
             drawSmallString(g, "• Capacity: 1.0 BRF base (+150M Basic Cell / +600M Adv Unit).", x + 16, y + 126, 0xFF34D399, w - 32);
             drawSmallString(g, "• Not replacing 3×3 Core — this is the High-Voltage tier!", x + 16, y + 137, 0xFF38BDF8, w - 32);
         } else {
@@ -865,7 +868,7 @@ public class MagmaForgeManualScreen extends Screen {
     }
 
     private void renderDionysianBarrelFormation(GuiGraphics g, int x, int y, int w, int mouseX, int mouseY) {
-        g.drawString(this.font, "Mega Barrel · 2×2×2", x + 10, y + 6, 0xFFFFB74D, false);
+        g.drawString(this.font, "Mega Barrel · 2×2×2 Example", x + 10, y + 6, 0xFFFFB74D, false);
         drawBadge(g, x + w - 10, y + 4, "1,024k mB", 0xFF100A16, 0xFFFF9900, 0xFFFFBB33);
 
         ItemStack reinf = new ItemStack(ObsidiumMod.REINFORCED_VOLCANIC_LIQUID_BARREL_BLOCK);
@@ -914,8 +917,8 @@ public class MagmaForgeManualScreen extends Screen {
         ItemStack core = new ItemStack(ObsidiumMod.DIONYSIAN_BARREL_CORE);
         drawSlotWithItem(g, core, x + 16, actY + 8, mouseX, mouseY, 0xFFFFCC00);
 
-        g.drawString(this.font, "Click with Barrel Core to form", x + 42, actY + 9, 0xFFFFDD66, false);
-        g.drawString(this.font, "Shift + Wrench to dismantle", x + 42, actY + 21, 0xFF88CC88, false);
+        drawSmallString(g, "Core forms · 1+ Reinf. Barrel", x + 42, actY + 9, 0xFFFFDD66, w - 54);
+        drawSmallString(g, "Rest: Basic Casings · Shift-Wrench unforms", x + 42, actY + 21, 0xFF88CC88, w - 54);
     }
 
     private void drawCenteredLabel(GuiGraphics g, String text, int x, int y, int width, int color) {
@@ -1011,7 +1014,7 @@ public class MagmaForgeManualScreen extends Screen {
             drawBorder(g, x + 6, c2Y, w - 12, c2H, 0xFFFF6622);
 
             drawSlotWithItem(g, new ItemStack(ObsidiumMod.VOLCANITE_STORAGE_PIPE_BLOCK), x + 12, c2Y + 6, mouseX, mouseY, 0xFFFF6622);
-            drawSmallString(g, "Volcanite Storage Pipe", x + 36, c2Y + 6, 0xFFFF8844);
+            drawSmallString(g, "Volcanite Optic Fiber", x + 36, c2Y + 6, 0xFFFF8844);
             drawBadge(g, x + w - 10, c2Y + 4, "Digital Network", 0xFF100A16, 0xFFFF6622, 0xFFFF8844);
 
             drawSmallString(g, "• Connects external chests, barrels & units to grid.", x + 36, c2Y + 18, 0xFFEEEEEE);
@@ -1125,7 +1128,7 @@ public class MagmaForgeManualScreen extends Screen {
 
             drawSmallString(g, "• Right-click in hand to configure filter.", x + 36, c1Y + 18, 0xFFEEEEEE);
             drawSmallString(g, "• Toggle WHITELIST or BLACKLIST mode.", x + 12, c1Y + 28, 0xFF55FF77);
-            drawSmallString(g, "• Fits Hermes Pipe & Volcanite Storage Pipe.", x + 12, c1Y + 38, 0xFFAAAAAA);
+            drawSmallString(g, "• Fits Hermes Pipe & Volcanite Optic Fiber.", x + 12, c1Y + 38, 0xFFAAAAAA);
 
             // Card 2: Conduit Energy Upgrades (Tiers I - III)
             int c2Y = y + 57;
@@ -1193,6 +1196,48 @@ public class MagmaForgeManualScreen extends Screen {
             drawSmallString(g, "• Hermes Item Pipes", tX, c2Y + 36, 0xFFFFAA00);
             drawSmallString(g, "• Naiad Fluid Pipes", tX, c2Y + 46, 0xFF00E5FF);
             drawSmallString(g, "• Volcanite Wires", tX, c2Y + 56, 0xFFFF6666);
+        } else if (this.currentSubTab == 5) {
+            // Sub-tab 5: Poseidon Abyssal Pump (2x2x2 End-Game Multiblock)
+            int c1Y = y + 4;
+            int c1H = 84;
+            g.fill(x + 6, c1Y, x + w - 6, c1Y + c1H, 0xFF0E1A26);
+            drawBorder(g, x + 6, c1Y, w - 12, c1H, 0xFF00D4FF);
+
+            drawSlotWithItem(g, new ItemStack(ObsidiumMod.POSEIDON_ABYSSAL_PUMP_BLOCK), x + 12, c1Y + 6, mouseX, mouseY, 0xFF00D4FF);
+            drawSmallString(g, "Poseidon Abyssal Pump (2×2×2)", x + 36, c1Y + 6, 0xFF67E8F9);
+            drawBadge(g, x + w - 10, c1Y + 4, "16,000 mB/t", 0xFF09121B, 0xFF00D4FF, 0xFF73F2FF);
+
+            drawSmallString(g, "• 1× Controller + 7× Abyssal Casing · oriented footprint (Holo/Auto-Build).", x + 36, c1Y + 18, 0xFFEEEEEE);
+            drawSmallString(g, "• Infinite 2×2 Water (Zero Lag) & Area Drain (8–48r + Auto-Replace).", x + 12, c1Y + 31, 0xFFBAE6FD);
+            drawSmallString(g, "• Speeds: 1k / 4k / 16k mB/t • Integrated Quantum Link & Auto-Eject.", x + 12, c1Y + 41, 0xFF93C5FD);
+
+            int r1Y = c1Y + 56;
+            drawSlotWithItem(g, new ItemStack(ObsidiumMod.SUPREME_VOLCANIC_ALLOY), x + 12, r1Y, mouseX, mouseY, 0xFFD946EF);
+            drawSlotWithItem(g, new ItemStack(Items.HEART_OF_THE_SEA), x + 34, r1Y, mouseX, mouseY, 0xFF00E5FF);
+            drawSlotWithItem(g, new ItemStack(ObsidiumMod.ASTRAL_VOLCANIC_CATALYST), x + 56, r1Y, mouseX, mouseY, 0xFFA855F7);
+            drawSlotWithItem(g, new ItemStack(ObsidiumMod.VOLCANITE_LAVA_PUMP_BLOCK), x + 78, r1Y, mouseX, mouseY, 0xFFFF8800);
+            drawSlotWithItem(g, new ItemStack(Items.NETHERITE_INGOT), x + 100, r1Y, mouseX, mouseY, 0xFF8888AA);
+            g.drawString(this.font, "➔", x + 123, r1Y + 6, 0xFF67E8F9, false);
+            drawSlotWithItem(g, new ItemStack(ObsidiumMod.POSEIDON_ABYSSAL_PUMP_ITEM), x + 136, r1Y, mouseX, mouseY, 0xFF00D4FF);
+
+            // Card 2: Poseidon Abyssal Casing
+            int c2Y = y + 92;
+            int c2H = 68;
+            g.fill(x + 6, c2Y, x + w - 6, c2Y + c2H, 0xFF0E1A26);
+            drawBorder(g, x + 6, c2Y, w - 12, c2H, 0xFF0284C7);
+
+            drawSlotWithItem(g, new ItemStack(ObsidiumMod.POSEIDON_ABYSSAL_CASING_BLOCK), x + 12, c2Y + 6, mouseX, mouseY, 0xFF0284C7);
+            drawSmallString(g, "Poseidon Abyssal Casing (7× Required)", x + 36, c2Y + 6, 0xFF38BDF8);
+            drawBadge(g, x + w - 10, c2Y + 4, "Yields 4×", 0xFF09121B, 0xFF0284C7, 0xFFBAE6FD);
+
+            drawSmallString(g, "• All 8 blocks accept RF input & auto-eject fluids to Naiad Pipes.", x + 36, c2Y + 19, 0xFFEEEEEE);
+            int r2Y = c2Y + 38;
+            drawSlotWithItem(g, new ItemStack(ObsidiumMod.VOLCANIC_ALLOY), x + 12, r2Y, mouseX, mouseY, 0xFFFF6600);
+            drawSlotWithItem(g, new ItemStack(Blocks.PRISMARINE_BRICKS), x + 34, r2Y, mouseX, mouseY, 0xFF2DD4BF);
+            drawSlotWithItem(g, new ItemStack(ObsidiumMod.SUPREME_NAIAD_FLUID_PIPE_BLOCK), x + 56, r2Y, mouseX, mouseY, 0xFF00E5FF);
+            g.drawString(this.font, "➔", x + 79, r2Y + 6, 0xFF38BDF8, false);
+            drawSlotWithItem(g, new ItemStack(ObsidiumMod.POSEIDON_ABYSSAL_CASING_ITEM, 4), x + 92, r2Y, mouseX, mouseY, 0xFF0284C7);
+            drawSmallString(g, "Use Hologram / Auto-Build in GUI", x + 116, r2Y + 6, 0xFF88DD66);
         }
     }
 
@@ -1320,8 +1365,8 @@ public class MagmaForgeManualScreen extends Screen {
             g.fill(x + 6, c1Y, x + w - 6, c1Y + c1H, 0xFF1B1224);
             drawBorder(g, x + 6, c1Y, w - 12, c1H, 0xFFFFB300);
 
-            drawSmallString(g, "1. Olympian Altar Multiblock Layout", x + 10, c1Y + 5, 0xFFFFD54F);
-            drawBadge(g, x + w - 10, c1Y + 3, "3-Block Radius", 0xFF100A16, 0xFFFFB300, 0xFFFFE082);
+            drawSmallString(g, "1. Olympian Altar · Recommended Cross", x + 10, c1Y + 5, 0xFFFFD54F);
+            drawBadge(g, x + w - 10, c1Y + 3, "4-Block Scan", 0xFF100A16, 0xFFFFB300, 0xFFFFE082);
 
             // Multiblock visual top-down representation:
             // Background box for schematic
@@ -1358,11 +1403,11 @@ public class MagmaForgeManualScreen extends Screen {
             int tx = x + 92;
             int maxTw = w - 100;
             drawSmallString(g, "• Center: Olympian Altar (0,0)", tx, c1Y + 17, 0xFFFFD54F, maxTw);
-            drawSmallString(g, "• 4 Obelisks at N, S, E, W", tx, c1Y + 29, 0xFF80EEFF, maxTw);
-            drawSmallString(g, "• Distance: EXACTLY 3 blocks", tx, c1Y + 41, 0xFF55FF77, maxTw);
-            drawSmallString(g, "• Must all be on SAME Y level!", tx, c1Y + 53, 0xFFFFCC44, maxTw);
+            drawSmallString(g, "• 4+ Obelisks within X/Z ±4", tx, c1Y + 29, 0xFF80EEFF, maxTw);
+            drawSmallString(g, "• Example: N/S/E/W at distance 3", tx, c1Y + 41, 0xFF55FF77, maxTw);
+            drawSmallString(g, "• Y offset ±1; diagonals accepted", tx, c1Y + 53, 0xFFFFCC44, maxTw);
             drawSmallString(g, "• Scroll on Obelisk, Item on Altar", tx, c1Y + 65, 0xFFEEEEEE, maxTw);
-            drawSmallString(g, "★ Punch (Left-Click) Altar to retrieve weapon!", tx, c1Y + 77, 0xFFFFCC44, maxTw);
+            drawSmallString(g, "★ Shift + empty-hand right-click retrieves item (idle)", tx, c1Y + 77, 0xFFFFCC44, maxTw);
 
             int c2Y = y + 96;
             int c2H = h - 98;
@@ -1377,11 +1422,11 @@ public class MagmaForgeManualScreen extends Screen {
 
             int t2X = x + 38;
             int maxPactW = w - 46;
-            drawSmallString(g, "• Zeus: Chain Lightning arcs (4.0 dmg to 3 foes)", t2X, c2Y + 18, 0xFFEEEEEE, maxPactW);
-            drawSmallString(g, "• Apollo: Celestial fire (3.5 true dmg ignores armor)", t2X, c2Y + 30, 0xFFFDE68A, maxPactW);
-            drawSmallString(g, "• Artemis: +40% speed/crit | Athena: 35% damage nullify", t2X, c2Y + 42, 0xFF80EEFF, maxPactW);
-            drawSmallString(g, "• Hephaestus: Auto-Smelt | Poseidon: +6.0 water dmg", t2X, c2Y + 54, 0xFF55FF77, maxPactW);
-            drawSmallString(g, "• Thanatos: Soul Siphon (+2.0 hearts heal on kill)", t2X, c2Y + 66, 0xFFFFCC44, maxPactW);
+            drawSmallString(g, "• Zeus: Chain Lightning arcs (4.0 dmg to 3 foes)", t2X, c2Y + 16, 0xFFEEEEEE, maxPactW);
+            drawSmallString(g, "• Apollo: Celestial fire (3.5 true dmg ignores armor)", t2X, c2Y + 26, 0xFFFDE68A, maxPactW);
+            drawSmallString(g, "• Artemis: +40% speed/crit | Athena: 35% damage nullify", t2X, c2Y + 36, 0xFF80EEFF, maxPactW);
+            drawSmallString(g, "• Hephaestus: Auto-Smelt | Poseidon: +6.0 water dmg", t2X, c2Y + 46, 0xFF55FF77, maxPactW);
+            drawSmallString(g, "• Thanatos: Soul Siphon (+2.0 hearts heal on kill)", t2X, c2Y + 56, 0xFFFFCC44, maxPactW);
 
         } else if (this.currentSubTab == 1) {
             // Sub-tab 1: Divine Relics (Bow of Artemis & Aegis of Athena)
@@ -1512,7 +1557,7 @@ public class MagmaForgeManualScreen extends Screen {
 
             int c2Y = y + 82;
             int c2H = 78;
-            g.fill(x + 6, c2Y, x + w - 6, c2Y + c2H, 0xFFEF4444);
+            g.fill(x + 6, c2Y, x + w - 6, c2Y + c2H, 0xFF1B1224);
             drawBorder(g, x + 6, c2Y, w - 12, c2H, 0xFFEF4444);
 
             drawSmallString(g, "2. Hephaestean Charging Plate", x + 10, c2Y + 6, 0xFFF87171);
@@ -1548,7 +1593,7 @@ public class MagmaForgeManualScreen extends Screen {
 
             int c2Y = y + 82;
             int c2H = 78;
-            g.fill(x + 6, c2Y, x + w - 6, c2Y + c2H, 0xFF10B981);
+            g.fill(x + 6, c2Y, x + w - 6, c2Y + c2H, 0xFF1B1224);
             drawBorder(g, x + 6, c2Y, w - 12, c2H, 0xFF10B981);
 
             drawSmallString(g, "2. Soul XP & Automation", x + 10, c2Y + 6, 0xFF34D399);
@@ -1585,7 +1630,7 @@ public class MagmaForgeManualScreen extends Screen {
 
         int c2Y = y + 82;
         int c2H = 78;
-        g.fill(x + 6, c2Y, x + w - 6, c2Y + c2H, 0xFFEAB308);
+        g.fill(x + 6, c2Y, x + w - 6, c2Y + c2H, 0xFF1B1224);
         drawBorder(g, x + 6, c2Y, w - 12, c2H, 0xFFEAB308);
 
         drawSmallString(g, "2. REI & Terminal Sync", x + 10, c2Y + 6, 0xFFFACC15);
@@ -1753,7 +1798,10 @@ public class MagmaForgeManualScreen extends Screen {
             drawBorder(g, x + 10, navY, 42, 14, 0xFF00CCFF);
             drawSmallString(g, "< Prev", x + 16, navY + 4, 0xFF99F0FF);
 
-            drawCenteredLabel(g, "Same=2×RF | >=90%c Cryo=+10%!", x + 54, navY + 4, w - 108, 0xFFFFCC44);
+            String tip = "Same=2×RF | >=90%c Cryo=+10%!";
+            int tipMaxW = w - 116;
+            int tipW = Math.min((int) (this.font.width(tip) * 0.70f), tipMaxW);
+            drawSmallString(g, tip, x + 58 + Math.max(0, (tipMaxW - tipW) / 2), navY + 4, 0xFFFFCC44, tipMaxW);
 
             boolean hNext = mouseX >= x + w - 52 && mouseX < x + w - 10 && mouseY >= navY && mouseY < navY + 14;
             g.fill(x + w - 52, navY, x + w - 10, navY + 14, hNext ? 0xFF283A52 : 0xFF141D2C);

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TRT",
+    "GBG",
+    "TVT"
+  ],
+  "key": {
+    "T": {
+      "item": "obsidium:tin_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "B": {
+      "item": "obsidium:volcanite_binding"
+    },
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanite_storage_processor"
+  }
+}

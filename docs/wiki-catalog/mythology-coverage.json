@@ -1,0 +1,24 @@
+{
+  "category": "mythology",
+  "items": 16,
+  "recipe_variants": 14,
+  "missing_ingredient_icons": [],
+  "ids": [
+    "obsidium:astrape_ritual_obelisk",
+    "obsidium:charon_coin",
+    "obsidium:eternal_coin",
+    "obsidium:hephaestean_armory",
+    "obsidium:olympian_altar",
+    "obsidium:scroll_of_apollo",
+    "obsidium:scroll_of_artemis",
+    "obsidium:scroll_of_athena",
+    "obsidium:scroll_of_hephaestus",
+    "obsidium:scroll_of_poseidon",
+    "obsidium:scroll_of_thanatos",
+    "obsidium:scroll_of_zeus",
+    "obsidium:stygian_cenotaph",
+    "obsidium:stygian_key",
+    "obsidium:thanatos_executioner",
+    "obsidium:volcanic_papyrus"
+  ]
+}

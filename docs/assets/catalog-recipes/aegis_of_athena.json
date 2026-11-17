@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PCP",
+    "VSV",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "C": {
+      "item": "obsidium:cinder_core"
+    },
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "S": {
+      "item": "minecraft:shield"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:aegis_of_athena"
+  }
+}
+

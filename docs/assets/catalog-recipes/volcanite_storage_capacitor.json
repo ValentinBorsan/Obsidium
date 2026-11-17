@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TVT",
+    "RCR",
+    "TVT"
+  ],
+  "key": {
+    "T": {
+      "item": "obsidium:tin_ingot"
+    },
+    "V": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "C": {
+      "item": "obsidium:volcanic_alloy"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanite_storage_capacitor"
+  }
+}

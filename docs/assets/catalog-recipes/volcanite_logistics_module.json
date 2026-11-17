@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    "RHR",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_logistics_module",
+    "count": 2
+  }
+}
+

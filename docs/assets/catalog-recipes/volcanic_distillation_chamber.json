@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    },
+    "G": {
+      "item": "obsidium:volcanite_glass"
+    },
+    "L": {
+      "item": "obsidium:volcanic_wood_liquid_barrel"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    }
+  },
+  "pattern": [
+    "SGS",
+    "TLT",
+    "FCF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanic_distillation_chamber"
+  }
+}

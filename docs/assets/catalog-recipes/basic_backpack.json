@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LVL",
+    "VCV",
+    "LBL"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "B": {
+      "item": "obsidium:volcanite_binding"
+    }
+  },
+  "result": {
+    "id": "obsidium:basic_backpack",
+    "count": 1
+  }
+}
+

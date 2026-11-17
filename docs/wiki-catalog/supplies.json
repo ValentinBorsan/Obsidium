@@ -1,0 +1,840 @@
+{
+  "schema": 1,
+  "category": "supplies",
+  "title": "Fluids, Supplies & Utilities",
+  "note": "Images are copied from game textures; machine and block images use a representative face. Crafting recipes may be overridden by modpacks. Machine crafting recipes describe how to build the machine, not its processing recipes.",
+  "scope": "Fluid containers, consumables, processing byproducts, fuels, teleporters and explicitly labeled Creative/testing items.",
+  "count": 27,
+  "items": [
+    {
+      "id": "obsidium:advanced_volcanite_bottle",
+      "name": "Advanced Volcanite Bottle",
+      "image": "assets/catalog-icons/obsidium/advanced_volcanite_bottle.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [
+        {
+          "id": "obsidium:advanced_volcanite_bottle",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:advanced_volcanite_bottle",
+            "name": "Advanced Volcanite Bottle",
+            "image": "assets/catalog-icons/obsidium/advanced_volcanite_bottle.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/advanced_volcanite_bottle.json",
+          "json": "assets/catalog-recipes/advanced_volcanite_bottle.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " S ",
+            "CBC",
+            " N "
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "obsidium:supreme_volcanite_glass",
+                "name": "Supreme Volcanite Glass",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanite_glass.png",
+                "imageKind": "block texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:volcanite_bottle",
+                "name": "Volcanite Bottle",
+                "image": "assets/catalog-icons/obsidium/volcanite_bottle.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_energy_unit",
+                "name": "Advanced Volcanite Energy Cell",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_unit.png",
+                "imageKind": "block texture"
+              }
+            },
+            "N": {
+              "item": {
+                "id": "minecraft:netherite_ingot",
+                "name": "Netherite Ingot",
+                "image": "assets/catalog-icons/minecraft/netherite_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:basic_volcanic_teleporter",
+      "name": "Basic Volcanic Teleporter",
+      "image": "assets/catalog-icons/obsidium/basic_volcanic_teleporter.png",
+      "imageKind": "block texture",
+      "group": "Teleportation",
+      "description": "A teleporter block for supported linking and travel operations.",
+      "recipes": [
+        {
+          "id": "obsidium:basic_volcanic_teleporter",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:basic_volcanic_teleporter",
+            "name": "Basic Volcanic Teleporter",
+            "image": "assets/catalog-icons/obsidium/basic_volcanic_teleporter.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/basic_volcanic_teleporter.json",
+          "json": "assets/catalog-recipes/basic_volcanic_teleporter.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " E ",
+            "VCV",
+            "OTO"
+          ],
+          "key": {
+            "E": {
+              "item": {
+                "id": "minecraft:ender_pearl",
+                "name": "Ender Pearl",
+                "image": "assets/catalog-icons/minecraft/ender_pearl.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_energy_cell",
+                "name": "Basic Volcanite Energy Cell",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_cell.png",
+                "imageKind": "block texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "T": {
+              "item": {
+                "id": "obsidium:volcanite_thermo_core",
+                "name": "Volcanite Thermodynamic Core",
+                "image": "assets/catalog-icons/obsidium/volcanite_thermo_core.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:bio_ethanol_bucket",
+      "name": "Bio-Ethanol Bucket",
+      "image": "assets/catalog-icons/obsidium/bio_ethanol_bucket.png",
+      "imageKind": "item texture",
+      "group": "Fluid containers",
+      "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Fluid filling",
+          "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+          "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:bio_oil_bucket",
+      "name": "Bio-Oil Bucket",
+      "image": "assets/catalog-icons/obsidium/bio_oil_bucket.png",
+      "imageKind": "item texture",
+      "group": "Fluid containers",
+      "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Fluid filling",
+          "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+          "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:biodiesel_bucket",
+      "name": "Biodiesel Bucket",
+      "image": "assets/catalog-icons/obsidium/biodiesel_bucket.png",
+      "imageKind": "item texture",
+      "group": "Fluid containers",
+      "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Fluid filling",
+          "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+          "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:creative_energy_core",
+      "name": "Creative Energy Core",
+      "image": "assets/catalog-icons/obsidium/creative_energy_core.png",
+      "imageKind": "block texture",
+      "group": "Creative & testing",
+      "description": "A Creative/testing item; not a normal survival crafting target.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Creative inventory",
+          "note": "Available through Creative inventory or commands; no survival recipe is provided.",
+          "source": "src/main/java/net/valentin/obsidium/registry/ModCreativeTabs.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:creative_lava_tank",
+      "name": "Creative Lava Tank",
+      "image": "assets/catalog-icons/obsidium/creative_lava_tank.png",
+      "imageKind": "block texture",
+      "group": "Creative & testing",
+      "description": "A Creative/testing item; not a normal survival crafting target.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Creative inventory",
+          "note": "Available through Creative inventory or commands; no survival recipe is provided.",
+          "source": "src/main/java/net/valentin/obsidium/registry/ModCreativeTabs.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:creative_water_tank",
+      "name": "Creative Water Tank",
+      "image": "assets/catalog-icons/obsidium/creative_water_tank.png",
+      "imageKind": "block texture",
+      "group": "Creative & testing",
+      "description": "A Creative/testing item; not a normal survival crafting target.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Creative inventory",
+          "note": "Available through Creative inventory or commands; no survival recipe is provided.",
+          "source": "src/main/java/net/valentin/obsidium/registry/ModCreativeTabs.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:dew_droplet",
+      "name": "Dew Droplet",
+      "image": "assets/catalog-icons/obsidium/dew_droplet.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Hydrothermal Condenser",
+          "note": "Produced by the Hydrothermal Condenser.",
+          "source": "src/main/java/net/valentin/obsidium/block/HydrothermalCondenserBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:dionysian_pomace",
+      "name": "Dionysian Pomace",
+      "image": "assets/catalog-icons/obsidium/dionysian_pomace.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Dionysian Press",
+          "note": "A byproduct of supported pressing operations.",
+          "source": "src/main/java/net/valentin/obsidium/block/DionysianPressBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:empty_tuica_bottle_1l",
+      "name": "Empty Volcanic Demi-John (1L)",
+      "image": "assets/catalog-icons/obsidium/empty_tuica_bottle_1l.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [
+        {
+          "id": "obsidium:empty_tuica_bottle_1l",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:empty_tuica_bottle_1l",
+            "name": "Empty Volcanic Demi-John (1L)",
+            "image": "assets/catalog-icons/obsidium/empty_tuica_bottle_1l.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/empty_tuica_bottle_1l.json",
+          "json": "assets/catalog-recipes/empty_tuica_bottle_1l.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            " S ",
+            "NGW",
+            "KWK"
+          ],
+          "key": {
+            "S": {
+              "tag": "minecraft:wooden_slabs"
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:glass",
+                "name": "Glass",
+                "image": "assets/catalog-icons/minecraft/glass.png",
+                "imageKind": "block texture"
+              }
+            },
+            "N": {
+              "item": {
+                "id": "minecraft:iron_nugget",
+                "name": "Iron Nugget",
+                "image": "assets/catalog-icons/minecraft/iron_nugget.png",
+                "imageKind": "item texture"
+              }
+            },
+            "W": {
+              "item": {
+                "id": "minecraft:string",
+                "name": "String",
+                "image": "assets/catalog-icons/minecraft/string.png",
+                "imageKind": "item texture"
+              }
+            },
+            "K": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:grand_reserve_tuica",
+      "name": "Grand Reserve Dionysian Țuică",
+      "image": "assets/catalog-icons/obsidium/grand_reserve_tuica.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Aging",
+          "note": "Age Vintage Volcanic Tuica in the Dionysian Aging Barrel.",
+          "source": "src/main/java/net/valentin/obsidium/block/DionysianAgingBarrelBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:steam_bucket",
+      "name": "High-Pressure Steam Bucket",
+      "image": "assets/catalog-icons/obsidium/steam_bucket.png",
+      "imageKind": "item texture",
+      "group": "Fluid containers",
+      "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Steam generation",
+          "note": "Collect steam from the Volcanite Steam Generator.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcaniteSteamGeneratorBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:magma_droplet",
+      "name": "Magma Droplet",
+      "image": "assets/catalog-icons/obsidium/magma_droplet.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Magmatic Crucible",
+          "note": "Produced by the Magmatic Crucible.",
+          "source": "src/main/java/net/valentin/obsidium/block/MagmaticCrucibleBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:pyro_diesel_bucket",
+      "name": "Pyro-Diesel Bucket",
+      "image": "assets/catalog-icons/obsidium/pyro_diesel_bucket.png",
+      "imageKind": "item texture",
+      "group": "Fluid containers",
+      "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Fluid filling",
+          "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+          "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:pyroclastic_distillate_bucket",
+      "name": "Pyroclastic Distillate Bucket",
+      "image": "assets/catalog-icons/obsidium/pyroclastic_distillate_bucket.png",
+      "imageKind": "item texture",
+      "group": "Fluid containers",
+      "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Fluid filling",
+          "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+          "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:pyroclastic_flask",
+      "name": "Pyroclastic Distillate Flask",
+      "image": "assets/catalog-icons/obsidium/pyroclastic_flask.png",
+      "imageKind": "item texture",
+      "group": "Fluid containers",
+      "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Fluid filling",
+          "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+          "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:stick_bundle",
+      "name": "Stick Bundle",
+      "image": "assets/catalog-icons/obsidium/stick_bundle.png",
+      "imageKind": "item texture",
+      "group": "Fuel & materials",
+      "description": "A crafted fuel/material item.",
+      "recipes": [
+        {
+          "id": "obsidium:stick_bundle",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:stick_bundle",
+            "name": "Stick Bundle",
+            "image": "assets/catalog-icons/obsidium/stick_bundle.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/stick_bundle.json",
+          "json": "assets/catalog-recipes/stick_bundle.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "SSS",
+            "SSS",
+            "SSS"
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_hound_spawn_egg",
+      "name": "Tartarean Hound Spawn Egg",
+      "image": "assets/catalog-icons/obsidium/tartarean_hound_spawn_egg.png",
+      "imageKind": "item texture",
+      "group": "Creative & testing",
+      "description": "A Creative/testing item; not a normal survival crafting target.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Creative inventory",
+          "note": "Available through Creative inventory or commands; no survival recipe is provided.",
+          "source": "src/main/java/net/valentin/obsidium/registry/ModCreativeTabs.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:vintage_volcanic_tuica",
+      "name": "Vintage Volcanic Țuică",
+      "image": "assets/catalog-icons/obsidium/vintage_volcanic_tuica.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Aging",
+          "note": "Age Volcanic Tuica in the Dionysian Aging Barrel.",
+          "source": "src/main/java/net/valentin/obsidium/block/DionysianAgingBarrelBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_cider",
+      "name": "Volcanic Apple Cider",
+      "image": "assets/catalog-icons/obsidium/volcanic_cider.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Distillation",
+          "note": "A product of supported Dionysian Distillery inputs.",
+          "source": "src/main/java/net/valentin/obsidium/block/DionysianDistilleryBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:ash_briquette",
+      "name": "Volcanic Ash Briquette",
+      "image": "assets/catalog-icons/obsidium/ash_briquette.png",
+      "imageKind": "item texture",
+      "group": "Fuel & materials",
+      "description": "A crafted fuel/material item.",
+      "recipes": [
+        {
+          "id": "obsidium:ash_briquette",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:ash_briquette",
+            "name": "Volcanic Ash Briquette",
+            "image": "assets/catalog-icons/obsidium/ash_briquette.png",
+            "imageKind": "item texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/ash_briquette.json",
+          "json": "assets/catalog-recipes/ash_briquette.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            " A ",
+            "ACA",
+            " A "
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:coal",
+                "name": "Coal",
+                "image": "assets/catalog-icons/minecraft/coal.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:ash_briquette_from_pomace",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:ash_briquette",
+            "name": "Volcanic Ash Briquette",
+            "image": "assets/catalog-icons/obsidium/ash_briquette.png",
+            "imageKind": "item texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/ash_briquette_from_pomace.json",
+          "json": "assets/catalog-recipes/ash_briquette_from_pomace.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            " P ",
+            "PAP",
+            " P "
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:dionysian_pomace",
+                "name": "Dionysian Pomace",
+                "image": "assets/catalog-icons/obsidium/dionysian_pomace.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_bee_spawn_egg",
+      "name": "Volcanic Bee Spawn Egg",
+      "image": "assets/catalog-icons/obsidium/volcanic_bee_spawn_egg.png",
+      "imageKind": "item texture",
+      "group": "Creative & testing",
+      "description": "A Creative/testing item; not a normal survival crafting target.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Creative inventory",
+          "note": "Available through Creative inventory or commands; no survival recipe is provided.",
+          "source": "src/main/java/net/valentin/obsidium/registry/ModCreativeTabs.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_core_teleporter",
+      "name": "Volcanic Core Teleporter",
+      "image": "assets/catalog-icons/obsidium/volcanic_core_teleporter.png",
+      "imageKind": "block texture",
+      "group": "Teleportation",
+      "description": "A teleporter block for supported linking and travel operations.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanic_core_teleporter",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanic_core_teleporter",
+            "name": "Volcanic Core Teleporter",
+            "image": "assets/catalog-icons/obsidium/volcanic_core_teleporter.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_core_teleporter.json",
+          "json": "assets/catalog-recipes/volcanic_core_teleporter.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "ACA",
+            "SBS",
+            "DFD"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:astral_volcanic_catalyst",
+                "name": "Astral Volcanic Catalyst",
+                "image": "assets/catalog-icons/obsidium/astral_volcanic_catalyst.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:ender_eye",
+                "name": "Eye of Ender",
+                "image": "assets/catalog-icons/minecraft/ender_eye.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "obsidium:basic_volcanic_teleporter",
+                "name": "Basic Volcanic Teleporter",
+                "image": "assets/catalog-icons/obsidium/basic_volcanic_teleporter.png",
+                "imageKind": "block texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "obsidium:volcanite_energy_unit",
+                "name": "Advanced Volcanite Energy Cell",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_unit.png",
+                "imageKind": "block texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_tuica_1l",
+      "name": "Volcanic Spirit Demi-John (1L)",
+      "image": "assets/catalog-icons/obsidium/volcanic_tuica_1l.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Bottling",
+          "note": "Use supported distillery bottling operations and the matching empty bottle.",
+          "source": "src/main/java/net/valentin/obsidium/block/DionysianDistilleryBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_tuica",
+      "name": "Volcanic Țuică",
+      "image": "assets/catalog-icons/obsidium/volcanic_tuica.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Distillation",
+          "note": "Produced through Dionysian Distillery processing.",
+          "source": "src/main/java/net/valentin/obsidium/block/DionysianDistilleryBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_bottle",
+      "name": "Volcanite Bottle",
+      "image": "assets/catalog-icons/obsidium/volcanite_bottle.png",
+      "imageKind": "item texture",
+      "group": "Containers & consumables",
+      "description": "A consumable or container used in Obsidium processing.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_bottle",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_bottle",
+            "name": "Volcanite Bottle",
+            "image": "assets/catalog-icons/obsidium/volcanite_bottle.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_bottle.json",
+          "json": "assets/catalog-recipes/volcanite_bottle.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            " O ",
+            "G G",
+            " V "
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "obsidium:volcanite_glass",
+                "name": "Volcanite Glass",
+                "image": "assets/catalog-icons/obsidium/volcanite_glass.png",
+                "imageKind": "block texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    }
+  ]
+}

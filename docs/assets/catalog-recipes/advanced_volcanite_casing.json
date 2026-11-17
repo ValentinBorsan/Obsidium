@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "L": {
+      "item": "obsidium:lead_ingot"
+    },
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    },
+    "C": {
+      "item": "obsidium:volcanite_casing"
+    }
+  },
+  "pattern": [
+    "OLO",
+    "TCT",
+    "OLO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:advanced_volcanite_casing"
+  }
+}

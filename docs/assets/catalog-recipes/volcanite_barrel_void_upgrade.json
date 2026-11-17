@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OOO",
+    "LUL",
+    "OOO"
+  ],
+  "key": {
+    "O": { "item": "minecraft:obsidian" },
+    "L": { "item": "minecraft:lava_bucket" },
+    "U": { "item": "obsidium:volcanite_basic_barrel_upgrade" }
+  },
+  "result": {
+    "id": "obsidium:volcanite_barrel_void_upgrade",
+    "count": 1
+  }
+}
+

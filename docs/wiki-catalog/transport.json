@@ -1,0 +1,695 @@
+{
+  "schema": 1,
+  "category": "transport",
+  "title": "Pipes & Wires",
+  "note": "Images are copied from game textures; machine and block images use a representative face. Crafting recipes may be overridden by modpacks. Machine crafting recipes describe how to build the machine, not its processing recipes.",
+  "scope": "All registered core item pipes, fluid pipes, storage-network pipes, energy wires and universal conduits. Upgrades and wireless infrastructure are covered separately.",
+  "count": 12,
+  "items": [
+    {
+      "id": "obsidium:advanced_volcanite_energy_wire",
+      "name": "Advanced Astrape Energy Wire",
+      "image": "assets/catalog-icons/obsidium/advanced_volcanite_energy_wire.png",
+      "imageKind": "item texture",
+      "group": "Energy wires",
+      "description": "Advanced energy wire for connecting generators, storage and powered machines.",
+      "recipes": [
+        {
+          "id": "obsidium:advanced_volcanite_energy_wire",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:advanced_volcanite_energy_wire",
+            "name": "Advanced Astrape Energy Wire",
+            "image": "assets/catalog-icons/obsidium/advanced_volcanite_energy_wire.png",
+            "imageKind": "item texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/advanced_volcanite_energy_wire.json",
+          "json": "assets/catalog-recipes/advanced_volcanite_energy_wire.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "WWW",
+            "WIW",
+            "WWW"
+          ],
+          "key": {
+            "W": {
+              "item": {
+                "id": "obsidium:volcanite_energy_wire",
+                "name": "Astrape Energy Wire",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_wire.png",
+                "imageKind": "item texture"
+              }
+            },
+            "I": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:advanced_volcanite_energy_wire_from_silver",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:advanced_volcanite_energy_wire",
+            "name": "Advanced Astrape Energy Wire",
+            "image": "assets/catalog-icons/obsidium/advanced_volcanite_energy_wire.png",
+            "imageKind": "item texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/advanced_volcanite_energy_wire_from_silver.json",
+          "json": "assets/catalog-recipes/advanced_volcanite_energy_wire_from_silver.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "WWW",
+            "WSW",
+            "WWW"
+          ],
+          "key": {
+            "W": {
+              "item": {
+                "id": "obsidium:volcanite_energy_wire",
+                "name": "Astrape Energy Wire",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_wire.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "obsidium:silver_ingot",
+                "name": "Silver Ingot",
+                "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/VolcaniteEnergyWireBlockEntity.java"
+    },
+    {
+      "id": "obsidium:advanced_hermes_item_pipe",
+      "name": "Advanced Hermes Item Pipe",
+      "image": "assets/catalog-icons/obsidium/advanced_hermes_item_pipe.png",
+      "imageKind": "block texture",
+      "group": "Item pipes",
+      "description": "Advanced tier. Transfers items between compatible inventories.",
+      "recipes": [
+        {
+          "id": "obsidium:advanced_hermes_item_pipe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:advanced_hermes_item_pipe",
+            "name": "Advanced Hermes Item Pipe",
+            "image": "assets/catalog-icons/obsidium/advanced_hermes_item_pipe.png",
+            "imageKind": "block texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/advanced_hermes_item_pipe.json",
+          "json": "assets/catalog-recipes/advanced_hermes_item_pipe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PPP",
+            "PCP",
+            "PPP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:hermes_item_pipe",
+                "name": "Hermes Item Pipe",
+                "image": "assets/catalog-icons/obsidium/hermes_item_pipe.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/HermesItemPipeBlockEntity.java"
+    },
+    {
+      "id": "obsidium:advanced_naiad_fluid_pipe",
+      "name": "Advanced Naiad Fluid Pipe",
+      "image": "assets/catalog-icons/obsidium/advanced_naiad_fluid_pipe.png",
+      "imageKind": "block texture",
+      "group": "Fluid pipes",
+      "description": "Advanced tier. Transfers fluids between compatible tanks and machines.",
+      "recipes": [
+        {
+          "id": "obsidium:advanced_naiad_fluid_pipe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:advanced_naiad_fluid_pipe",
+            "name": "Advanced Naiad Fluid Pipe",
+            "image": "assets/catalog-icons/obsidium/advanced_naiad_fluid_pipe.png",
+            "imageKind": "block texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/advanced_naiad_fluid_pipe.json",
+          "json": "assets/catalog-recipes/advanced_naiad_fluid_pipe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PPP",
+            "PCP",
+            "PPP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:naiad_fluid_pipe",
+                "name": "Naiad Fluid Pipe",
+                "image": "assets/catalog-icons/obsidium/naiad_fluid_pipe.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/NaiadFluidPipeBlockEntity.java"
+    },
+    {
+      "id": "obsidium:volcanite_energy_wire",
+      "name": "Astrape Energy Wire",
+      "image": "assets/catalog-icons/obsidium/volcanite_energy_wire.png",
+      "imageKind": "item texture",
+      "group": "Energy wires",
+      "description": "Basic energy wire for connecting generators, storage and powered machines.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_energy_wire",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_energy_wire",
+            "name": "Astrape Energy Wire",
+            "image": "assets/catalog-icons/obsidium/volcanite_energy_wire.png",
+            "imageKind": "item texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_energy_wire.json",
+          "json": "assets/catalog-recipes/volcanite_energy_wire.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            " C ",
+            "RCR",
+            " C "
+          ],
+          "key": {
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/VolcaniteEnergyWireBlockEntity.java"
+    },
+    {
+      "id": "obsidium:hermes_item_pipe",
+      "name": "Hermes Item Pipe",
+      "image": "assets/catalog-icons/obsidium/hermes_item_pipe.png",
+      "imageKind": "block texture",
+      "group": "Item pipes",
+      "description": "Basic tier. Transfers items between compatible inventories.",
+      "recipes": [
+        {
+          "id": "obsidium:hermes_item_pipe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hermes_item_pipe",
+            "name": "Hermes Item Pipe",
+            "image": "assets/catalog-icons/obsidium/hermes_item_pipe.png",
+            "imageKind": "block texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/hermes_item_pipe.json",
+          "json": "assets/catalog-recipes/hermes_item_pipe.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "CCC",
+            "RGR",
+            "CCC"
+          ],
+          "key": {
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:glass",
+                "name": "Glass",
+                "image": "assets/catalog-icons/minecraft/glass.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/HermesItemPipeBlockEntity.java"
+    },
+    {
+      "id": "obsidium:volcanite_universal_conduit",
+      "name": "Magmatic Flux Conduit",
+      "image": "assets/catalog-icons/obsidium/volcanite_universal_conduit.png",
+      "imageKind": "item texture",
+      "group": "Universal conduits",
+      "description": "Universal conduit (conducta universala), named Magmatic Flux Conduit in-game. Transports items, fluids and RF with per-face Item / Fluid / Energy / Omni channels. Use a wrench to cycle a face mode, or sneak with the wrench to cycle its channel type. Its configuration GUI accepts compatible transfer upgrades.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_universal_conduit",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_universal_conduit",
+            "name": "Magmatic Flux Conduit",
+            "image": "assets/catalog-icons/obsidium/volcanite_universal_conduit.png",
+            "imageKind": "item texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_universal_conduit.json",
+          "json": "assets/catalog-recipes/volcanite_universal_conduit.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PWP",
+            "WCW",
+            "PWP"
+          ],
+          "key": {
+            "W": {
+              "item": {
+                "id": "obsidium:volcanite_energy_wire",
+                "name": "Astrape Energy Wire",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_wire.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanite_storage_pipe",
+                "name": "Volcanite Optic Fiber",
+                "image": "assets/catalog-icons/obsidium/volcanite_storage_pipe.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/VolcaniteUniversalConduitBlockEntity.java"
+    },
+    {
+      "id": "obsidium:naiad_fluid_pipe",
+      "name": "Naiad Fluid Pipe",
+      "image": "assets/catalog-icons/obsidium/naiad_fluid_pipe.png",
+      "imageKind": "block texture",
+      "group": "Fluid pipes",
+      "description": "Basic tier. Transfers fluids between compatible tanks and machines.",
+      "recipes": [
+        {
+          "id": "obsidium:naiad_fluid_pipe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:naiad_fluid_pipe",
+            "name": "Naiad Fluid Pipe",
+            "image": "assets/catalog-icons/obsidium/naiad_fluid_pipe.png",
+            "imageKind": "block texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/naiad_fluid_pipe.json",
+          "json": "assets/catalog-recipes/naiad_fluid_pipe.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "CCC",
+            "GGG",
+            "CCC"
+          ],
+          "key": {
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:glass",
+                "name": "Glass",
+                "image": "assets/catalog-icons/minecraft/glass.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/NaiadFluidPipeBlockEntity.java"
+    },
+    {
+      "id": "obsidium:singularity_volcanite_energy_wire",
+      "name": "Singularity Astrape Superconductor Wire",
+      "image": "assets/catalog-icons/obsidium/singularity_volcanite_energy_wire.png",
+      "imageKind": "item texture",
+      "group": "Energy wires",
+      "description": "Singularity energy wire for connecting generators, storage and powered machines.",
+      "recipes": [
+        {
+          "id": "obsidium:singularity_volcanite_energy_wire",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:singularity_volcanite_energy_wire",
+            "name": "Singularity Astrape Superconductor Wire",
+            "image": "assets/catalog-icons/obsidium/singularity_volcanite_energy_wire.png",
+            "imageKind": "item texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/singularity_volcanite_energy_wire.json",
+          "json": "assets/catalog-recipes/singularity_volcanite_energy_wire.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "WWW",
+            "WAW",
+            "WWW"
+          ],
+          "key": {
+            "W": {
+              "item": {
+                "id": "obsidium:supreme_volcanite_energy_wire",
+                "name": "Supreme Astrape Energy Wire",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanite_energy_wire.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:singularity_hadron_alloy",
+                "name": "Singularity Hadron Alloy",
+                "image": "assets/catalog-icons/obsidium/singularity_hadron_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/VolcaniteEnergyWireBlockEntity.java"
+    },
+    {
+      "id": "obsidium:supreme_volcanite_energy_wire",
+      "name": "Supreme Astrape Energy Wire",
+      "image": "assets/catalog-icons/obsidium/supreme_volcanite_energy_wire.png",
+      "imageKind": "item texture",
+      "group": "Energy wires",
+      "description": "Supreme energy wire for connecting generators, storage and powered machines.",
+      "recipes": [
+        {
+          "id": "obsidium:supreme_volcanite_energy_wire",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:supreme_volcanite_energy_wire",
+            "name": "Supreme Astrape Energy Wire",
+            "image": "assets/catalog-icons/obsidium/supreme_volcanite_energy_wire.png",
+            "imageKind": "item texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/supreme_volcanite_energy_wire.json",
+          "json": "assets/catalog-recipes/supreme_volcanite_energy_wire.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "WWW",
+            "WAW",
+            "WWW"
+          ],
+          "key": {
+            "W": {
+              "item": {
+                "id": "obsidium:advanced_volcanite_energy_wire",
+                "name": "Advanced Astrape Energy Wire",
+                "image": "assets/catalog-icons/obsidium/advanced_volcanite_energy_wire.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/VolcaniteEnergyWireBlockEntity.java"
+    },
+    {
+      "id": "obsidium:supreme_hermes_item_pipe",
+      "name": "Supreme Hermes Item Pipe",
+      "image": "assets/catalog-icons/obsidium/supreme_hermes_item_pipe.png",
+      "imageKind": "block texture",
+      "group": "Item pipes",
+      "description": "Supreme tier. Transfers items between compatible inventories.",
+      "recipes": [
+        {
+          "id": "obsidium:supreme_hermes_item_pipe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:supreme_hermes_item_pipe",
+            "name": "Supreme Hermes Item Pipe",
+            "image": "assets/catalog-icons/obsidium/supreme_hermes_item_pipe.png",
+            "imageKind": "block texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/supreme_hermes_item_pipe.json",
+          "json": "assets/catalog-recipes/supreme_hermes_item_pipe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PPP",
+            "PCP",
+            "PPP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:advanced_hermes_item_pipe",
+                "name": "Advanced Hermes Item Pipe",
+                "image": "assets/catalog-icons/obsidium/advanced_hermes_item_pipe.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/HermesItemPipeBlockEntity.java"
+    },
+    {
+      "id": "obsidium:supreme_naiad_fluid_pipe",
+      "name": "Supreme Naiad Fluid Pipe",
+      "image": "assets/catalog-icons/obsidium/supreme_naiad_fluid_pipe.png",
+      "imageKind": "block texture",
+      "group": "Fluid pipes",
+      "description": "Supreme tier. Transfers fluids between compatible tanks and machines.",
+      "recipes": [
+        {
+          "id": "obsidium:supreme_naiad_fluid_pipe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:supreme_naiad_fluid_pipe",
+            "name": "Supreme Naiad Fluid Pipe",
+            "image": "assets/catalog-icons/obsidium/supreme_naiad_fluid_pipe.png",
+            "imageKind": "block texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/supreme_naiad_fluid_pipe.json",
+          "json": "assets/catalog-recipes/supreme_naiad_fluid_pipe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PPP",
+            "PCP",
+            "PPP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:advanced_naiad_fluid_pipe",
+                "name": "Advanced Naiad Fluid Pipe",
+                "image": "assets/catalog-icons/obsidium/advanced_naiad_fluid_pipe.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/NaiadFluidPipeBlockEntity.java"
+    },
+    {
+      "id": "obsidium:volcanite_storage_pipe",
+      "name": "Volcanite Optic Fiber",
+      "image": "assets/catalog-icons/obsidium/volcanite_storage_pipe.png",
+      "imageKind": "item texture",
+      "group": "Storage network",
+      "description": "Connects Obsidium storage-network infrastructure; distinct from dedicated Hermes item pipes.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_storage_pipe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_storage_pipe",
+            "name": "Volcanite Optic Fiber",
+            "image": "assets/catalog-icons/obsidium/volcanite_storage_pipe.png",
+            "imageKind": "item texture"
+          },
+          "count": 6,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_storage_pipe.json",
+          "json": "assets/catalog-recipes/volcanite_storage_pipe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "VVV",
+            "RGR",
+            "VVV"
+          ],
+          "key": {
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "obsidium:volcanite_glass",
+                "name": "Volcanite Glass",
+                "image": "assets/catalog-icons/obsidium/volcanite_glass.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/VolcaniteStoragePipeBlockEntity.java"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "WSW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "obsidium:volcanite_energy_wire"
+    },
+    "S": {
+      "item": "obsidium:silver_ingot"
+    }
+  },
+  "result": {
+    "count": 8,
+    "id": "obsidium:advanced_volcanite_energy_wire"
+  }
+}
+

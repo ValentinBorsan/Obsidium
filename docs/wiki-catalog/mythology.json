@@ -1,0 +1,1042 @@
+{
+  "schema": 1,
+  "category": "mythology",
+  "title": "Mythology & Rituals",
+  "note": "Images are copied from game textures; machine and block images use a representative face. Crafting recipes may be overridden by modpacks. Machine crafting recipes describe how to build the machine, not its processing recipes.",
+  "scope": "Divine scrolls, ritual structures, ritual materials and Stygian recovery items. Mythic weapons and wearables are in Equipment.",
+  "count": 16,
+  "items": [
+    {
+      "id": "obsidium:astrape_ritual_obelisk",
+      "name": "Astrape Ritual Obelisk (Pilon Ritualic)",
+      "image": "assets/catalog-icons/obsidium/astrape_ritual_obelisk.png",
+      "imageKind": "block texture",
+      "group": "Rituals & relics",
+      "description": "A mythological ritual component or recovery-system item.",
+      "recipes": [
+        {
+          "id": "obsidium:astrape_ritual_obelisk",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:astrape_ritual_obelisk",
+            "name": "Astrape Ritual Obelisk (Pilon Ritualic)",
+            "image": "assets/catalog-icons/obsidium/astrape_ritual_obelisk.png",
+            "imageKind": "block texture"
+          },
+          "count": 2,
+          "source": "src/main/resources/data/obsidium/recipe/astrape_ritual_obelisk.json",
+          "json": "assets/catalog-recipes/astrape_ritual_obelisk.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " G ",
+            " V ",
+            "OOO"
+          ],
+          "key": {
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:charon_coin",
+      "name": "Charon's Coin",
+      "image": "assets/catalog-icons/obsidium/charon_coin.png",
+      "imageKind": "item texture",
+      "group": "Rituals & relics",
+      "description": "A mythological ritual component or recovery-system item.",
+      "recipes": [
+        {
+          "id": "obsidium:charon_coin",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:charon_coin",
+            "name": "Charon's Coin",
+            "image": "assets/catalog-icons/obsidium/charon_coin.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/charon_coin.json",
+          "json": "assets/catalog-recipes/charon_coin.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            " G ",
+            "F#F",
+            " C "
+          ],
+          "key": {
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "#": {
+              "tag": "minecraft:coals"
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:eternal_coin",
+      "name": "Eternal Coin",
+      "image": "assets/catalog-icons/obsidium/eternal_coin.png",
+      "imageKind": "item texture",
+      "group": "Rituals & relics",
+      "description": "A mythological ritual component or recovery-system item.",
+      "recipes": [
+        {
+          "id": "obsidium:eternal_coin",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:eternal_coin",
+            "name": "Eternal Coin",
+            "image": "assets/catalog-icons/obsidium/eternal_coin.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/eternal_coin.json",
+          "json": "assets/catalog-recipes/eternal_coin.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " V ",
+            "RCR",
+            " E "
+          ],
+          "key": {
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:charon_coin",
+                "name": "Charon's Coin",
+                "image": "assets/catalog-icons/obsidium/charon_coin.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "E": {
+              "item": {
+                "id": "obsidium:volcanite_energy_core",
+                "name": "Volcanite Energy Core (3x3)",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_core.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_armory",
+      "name": "Hephaestean Armory",
+      "image": "assets/catalog-icons/obsidium/hephaestean_armory.png",
+      "imageKind": "block texture",
+      "group": "Rituals & relics",
+      "description": "A mythological ritual component or recovery-system item.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_armory",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_armory",
+            "name": "Hephaestean Armory",
+            "image": "assets/catalog-icons/obsidium/hephaestean_armory.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_armory.json",
+          "json": "assets/catalog-recipes/hephaestean_armory.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "OPO",
+            "PCP",
+            "OPO"
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:chest",
+                "name": "Chest",
+                "image": "assets/catalog-icons/minecraft/chest.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:olympian_altar",
+      "name": "Olympian Altar",
+      "image": "assets/catalog-icons/obsidium/olympian_altar.png",
+      "imageKind": "block texture",
+      "group": "Rituals & relics",
+      "description": "A mythological ritual component or recovery-system item.",
+      "recipes": [
+        {
+          "id": "obsidium:olympian_altar",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:olympian_altar",
+            "name": "Olympian Altar",
+            "image": "assets/catalog-icons/obsidium/olympian_altar.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/olympian_altar.json",
+          "json": "assets/catalog-recipes/olympian_altar.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " C ",
+            "GVG",
+            "OOO"
+          ],
+          "key": {
+            "C": {
+              "item": {
+                "id": "obsidium:cinder_core",
+                "name": "Cinder Core",
+                "image": "assets/catalog-icons/obsidium/cinder_core.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:scroll_of_apollo",
+      "name": "Scroll of Apollo (Aura Solară)",
+      "image": "assets/catalog-icons/obsidium/scroll_of_apollo.png",
+      "imageKind": "item texture",
+      "group": "Divine scrolls",
+      "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+      "recipes": [
+        {
+          "id": "obsidium:scroll_of_apollo",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:scroll_of_apollo",
+            "name": "Scroll of Apollo (Aura Solară)",
+            "image": "assets/catalog-icons/obsidium/scroll_of_apollo.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/scroll_of_apollo.json",
+          "json": "assets/catalog-recipes/scroll_of_apollo.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " B ",
+            "GPG",
+            " D "
+          ],
+          "key": {
+            "B": {
+              "item": {
+                "id": "minecraft:blaze_powder",
+                "name": "Blaze Powder",
+                "image": "assets/catalog-icons/minecraft/blaze_powder.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_papyrus",
+                "name": "Volcanic Papyrus",
+                "image": "assets/catalog-icons/obsidium/volcanic_papyrus.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "minecraft:glowstone_dust",
+                "name": "Glowstone Dust",
+                "image": "assets/catalog-icons/minecraft/glowstone_dust.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:scroll_of_artemis",
+      "name": "Scroll of Artemis (Grația Lunară)",
+      "image": "assets/catalog-icons/obsidium/scroll_of_artemis.png",
+      "imageKind": "item texture",
+      "group": "Divine scrolls",
+      "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+      "recipes": [
+        {
+          "id": "obsidium:scroll_of_artemis",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:scroll_of_artemis",
+            "name": "Scroll of Artemis (Grația Lunară)",
+            "image": "assets/catalog-icons/obsidium/scroll_of_artemis.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/scroll_of_artemis.json",
+          "json": "assets/catalog-recipes/scroll_of_artemis.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " S ",
+            "FPA",
+            " R "
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "obsidium:silver_ingot",
+                "name": "Silver Ingot",
+                "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_papyrus",
+                "name": "Volcanic Papyrus",
+                "image": "assets/catalog-icons/obsidium/volcanic_papyrus.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "minecraft:feather",
+                "name": "Feather",
+                "image": "assets/catalog-icons/minecraft/feather.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:amethyst_shard",
+                    "name": "Amethyst Shard",
+                    "image": "assets/catalog-icons/minecraft/amethyst_shard.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "item": {
+                    "id": "obsidium:silver_nugget",
+                    "name": "Silver Nugget",
+                    "image": "assets/catalog-icons/obsidium/silver_nugget.png",
+                    "imageKind": "item texture"
+                  }
+                }
+              ]
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:arrow",
+                "name": "Arrow",
+                "image": "assets/catalog-icons/minecraft/arrow.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:scroll_of_athena",
+      "name": "Scroll of Athena (Scutul Înțelepciunii)",
+      "image": "assets/catalog-icons/obsidium/scroll_of_athena.png",
+      "imageKind": "item texture",
+      "group": "Divine scrolls",
+      "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+      "recipes": [
+        {
+          "id": "obsidium:scroll_of_athena",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:scroll_of_athena",
+            "name": "Scroll of Athena (Scutul Înțelepciunii)",
+            "image": "assets/catalog-icons/obsidium/scroll_of_athena.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/scroll_of_athena.json",
+          "json": "assets/catalog-recipes/scroll_of_athena.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " S ",
+            "LPA",
+            " I "
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "minecraft:shield",
+                "name": "Shield",
+                "image": "assets/catalog-icons/minecraft/shield.png",
+                "imageKind": "block texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_papyrus",
+                "name": "Volcanic Papyrus",
+                "image": "assets/catalog-icons/obsidium/volcanic_papyrus.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:lapis_lazuli",
+                "name": "Lapis Lazuli",
+                "image": "assets/catalog-icons/minecraft/lapis_lazuli.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "I": {
+              "item": {
+                "id": "minecraft:iron_ingot",
+                "name": "Iron Ingot",
+                "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:scroll_of_hephaestus",
+      "name": "Scroll of Hephaestus (Miez Magmatic)",
+      "image": "assets/catalog-icons/obsidium/scroll_of_hephaestus.png",
+      "imageKind": "item texture",
+      "group": "Divine scrolls",
+      "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+      "recipes": [
+        {
+          "id": "obsidium:scroll_of_hephaestus",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:scroll_of_hephaestus",
+            "name": "Scroll of Hephaestus (Miez Magmatic)",
+            "image": "assets/catalog-icons/obsidium/scroll_of_hephaestus.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/scroll_of_hephaestus.json",
+          "json": "assets/catalog-recipes/scroll_of_hephaestus.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " C ",
+            "VPB",
+            " L "
+          ],
+          "key": {
+            "C": {
+              "item": {
+                "id": "obsidium:cinder_core",
+                "name": "Cinder Core",
+                "image": "assets/catalog-icons/obsidium/cinder_core.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_papyrus",
+                "name": "Volcanic Papyrus",
+                "image": "assets/catalog-icons/obsidium/volcanic_papyrus.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "minecraft:blaze_powder",
+                "name": "Blaze Powder",
+                "image": "assets/catalog-icons/minecraft/blaze_powder.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:lava_bucket",
+                "name": "Lava Bucket",
+                "image": "assets/catalog-icons/minecraft/lava_bucket.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:scroll_of_poseidon",
+      "name": "Scroll of Poseidon (Furia Furtunii)",
+      "image": "assets/catalog-icons/obsidium/scroll_of_poseidon.png",
+      "imageKind": "item texture",
+      "group": "Divine scrolls",
+      "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+      "recipes": [
+        {
+          "id": "obsidium:scroll_of_poseidon",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:scroll_of_poseidon",
+            "name": "Scroll of Poseidon (Furia Furtunii)",
+            "image": "assets/catalog-icons/obsidium/scroll_of_poseidon.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/scroll_of_poseidon.json",
+          "json": "assets/catalog-recipes/scroll_of_poseidon.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " S ",
+            "LPC",
+            " W "
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "minecraft:prismarine_shard",
+                "name": "Prismarine Shard",
+                "image": "assets/catalog-icons/minecraft/prismarine_shard.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_papyrus",
+                "name": "Volcanic Papyrus",
+                "image": "assets/catalog-icons/obsidium/volcanic_papyrus.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:lapis_lazuli",
+                "name": "Lapis Lazuli",
+                "image": "assets/catalog-icons/minecraft/lapis_lazuli.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "W": {
+              "item": {
+                "id": "minecraft:water_bucket",
+                "name": "Water Bucket",
+                "image": "assets/catalog-icons/minecraft/water_bucket.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:scroll_of_thanatos",
+      "name": "Scroll of Thanatos (Secera Tartarului)",
+      "image": "assets/catalog-icons/obsidium/scroll_of_thanatos.png",
+      "imageKind": "item texture",
+      "group": "Divine scrolls",
+      "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+      "recipes": [
+        {
+          "id": "obsidium:scroll_of_thanatos",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:scroll_of_thanatos",
+            "name": "Scroll of Thanatos (Secera Tartarului)",
+            "image": "assets/catalog-icons/obsidium/scroll_of_thanatos.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/scroll_of_thanatos.json",
+          "json": "assets/catalog-recipes/scroll_of_thanatos.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " S ",
+            "BPA",
+            " O "
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "minecraft:soul_sand",
+                "name": "Soul Sand",
+                "image": "assets/catalog-icons/minecraft/soul_sand.png",
+                "imageKind": "block texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_papyrus",
+                "name": "Volcanic Papyrus",
+                "image": "assets/catalog-icons/obsidium/volcanic_papyrus.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "minecraft:bone",
+                "name": "Bone",
+                "image": "assets/catalog-icons/minecraft/bone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:scroll_of_zeus",
+      "name": "Scroll of Zeus (Mânia Trăsnetului)",
+      "image": "assets/catalog-icons/obsidium/scroll_of_zeus.png",
+      "imageKind": "item texture",
+      "group": "Divine scrolls",
+      "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+      "recipes": [
+        {
+          "id": "obsidium:scroll_of_zeus",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:scroll_of_zeus",
+            "name": "Scroll of Zeus (Mânia Trăsnetului)",
+            "image": "assets/catalog-icons/obsidium/scroll_of_zeus.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/scroll_of_zeus.json",
+          "json": "assets/catalog-recipes/scroll_of_zeus.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " L ",
+            "RPS",
+            " C "
+          ],
+          "key": {
+            "L": {
+              "item": {
+                "id": "minecraft:lightning_rod",
+                "name": "Lightning Rod",
+                "image": "assets/catalog-icons/minecraft/lightning_rod.png",
+                "imageKind": "block texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_papyrus",
+                "name": "Volcanic Papyrus",
+                "image": "assets/catalog-icons/obsidium/volcanic_papyrus.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:glowstone_dust",
+                "name": "Glowstone Dust",
+                "image": "assets/catalog-icons/minecraft/glowstone_dust.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:stygian_cenotaph",
+      "name": "Stygian Cenotaph",
+      "image": "assets/catalog-icons/obsidium/stygian_cenotaph.png",
+      "imageKind": "block texture",
+      "group": "Rituals & relics",
+      "description": "A mythological ritual component or recovery-system item.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Death system",
+          "note": "Created by the Stygian death-handling system under its applicable conditions.",
+          "source": "src/main/java/net/valentin/obsidium/event/StygianDeathHandler.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:stygian_key",
+      "name": "Stygian Key",
+      "image": "assets/catalog-icons/obsidium/stygian_key.png",
+      "imageKind": "item texture",
+      "group": "Rituals & relics",
+      "description": "A mythological ritual component or recovery-system item.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Death system",
+          "note": "A data-bound key created by the Stygian death/recovery system; its target information matters.",
+          "source": "src/main/java/net/valentin/obsidium/item/StygianKeyItem.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:thanatos_executioner",
+      "name": "Thanatos Executioner",
+      "image": "assets/catalog-icons/obsidium/thanatos_executioner.png",
+      "imageKind": "block texture",
+      "group": "Rituals & relics",
+      "description": "A mythological ritual component or recovery-system item.",
+      "recipes": [
+        {
+          "id": "obsidium:thanatos_executioner",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:thanatos_executioner",
+            "name": "Thanatos Executioner",
+            "image": "assets/catalog-icons/obsidium/thanatos_executioner.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/thanatos_executioner.json",
+          "json": "assets/catalog-recipes/thanatos_executioner.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "SCS",
+            "EME",
+            "AHA"
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "minecraft:diamond_sword",
+                "name": "Diamond Sword",
+                "image": "assets/catalog-icons/minecraft/diamond_sword.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:advanced_volcanite_casing",
+                "name": "Advanced Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/advanced_volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            },
+            "E": {
+              "item": {
+                "id": "obsidium:volcanite_energy_cell",
+                "name": "Basic Volcanite Energy Cell",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_cell.png",
+                "imageKind": "block texture"
+              }
+            },
+            "M": {
+              "item": {
+                "id": "obsidium:volcanite_grinder",
+                "name": "Volcanite Grinder",
+                "image": "assets/catalog-icons/obsidium/volcanite_grinder.png",
+                "imageKind": "block texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "H": {
+              "item": {
+                "id": "minecraft:hopper",
+                "name": "Hopper",
+                "image": "assets/catalog-icons/minecraft/hopper.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_papyrus",
+      "name": "Volcanic Papyrus",
+      "image": "assets/catalog-icons/obsidium/volcanic_papyrus.png",
+      "imageKind": "item texture",
+      "group": "Rituals & relics",
+      "description": "A mythological ritual component or recovery-system item.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanic_papyrus",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanic_papyrus",
+            "name": "Volcanic Papyrus",
+            "image": "assets/catalog-icons/obsidium/volcanic_papyrus.png",
+            "imageKind": "item texture"
+          },
+          "count": 2,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_papyrus.json",
+          "json": "assets/catalog-recipes/volcanic_papyrus.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " A ",
+            "PPP",
+            " S "
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "minecraft:paper",
+                "name": "Paper",
+                "image": "assets/catalog-icons/minecraft/paper.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "obsidium:silver_nugget",
+                "name": "Silver Nugget",
+                "image": "assets/catalog-icons/obsidium/silver_nugget.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " C ",
+    "GVG",
+    "OOO"
+  ],
+  "key": {
+    "C": {
+      "item": "obsidium:cinder_core"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:olympian_altar"
+  }
+}
+

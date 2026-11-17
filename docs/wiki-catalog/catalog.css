@@ -15,3 +15,36 @@
 .catalog-route{border-left:2px solid var(--cyan);padding:10px 12px;background:rgba(40,190,185,.05);margin-bottom:14px}.catalog-route>strong{font-size:.8rem;color:var(--cyan)}.wiki-content .catalog-route p{font-size:.78rem;line-height:1.5;margin:7px 0;color:var(--muted)}.catalog-route-inputs{display:grid;gap:7px;font-size:.72rem;color:var(--text)}.catalog-route-inputs>span{display:flex;align-items:center;gap:8px}.catalog-evidence{margin-top:10px;font-size:.7rem;color:var(--muted)}.catalog-evidence summary{cursor:pointer}.catalog-evidence code{display:block;margin-top:7px}
 .catalog-recipe pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.7rem;padding:10px}.catalog-scope{border-top:1px solid var(--border);margin-top:28px;font-size:.8rem}.catalog-empty{grid-column:1/-1;padding:25px 0}
 @media(max-width:1100px){.catalog-grid{grid-template-columns:1fr}}@media(max-width:500px){.wiki-content{padding:18px}.catalog-card{padding:14px}.catalog-recipe-flow{gap:8px}.catalog-recipe-grid{grid-template-columns:repeat(3,36px)}.catalog-single-slot{grid-template-columns:36px}.catalog-cell{width:36px;height:36px}.wiki-content .catalog-cell .catalog-icon{width:28px;height:28px}}
+
+.catalog-categories{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.catalog-categories a{padding:8px 12px;border:1px solid var(--border);border-radius:8px;font-size:.8rem}.catalog-categories a[aria-current=page]{color:var(--gold);border-color:var(--gold)}
+.multiblock-toc{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0}.multiblock-toc a{padding:7px 10px;border:1px solid var(--border);border-radius:6px;font-size:.8rem}.multiblock-guide{border-top:1px solid var(--border);margin-top:35px;padding-top:28px;scroll-margin-top:90px}.multiblock-guide h2{margin-top:6px}.multiblock-layers{display:flex;flex-wrap:wrap;gap:24px;margin:24px 0}.multiblock-layers figure{margin:0;max-width:100%;overflow-x:auto}.multiblock-layers figcaption{font-size:.76rem;color:var(--cyan);margin-bottom:10px}.multiblock-blueprint{display:grid;grid-template-columns:repeat(var(--columns),36px);gap:3px;width:max-content}.multiblock-slot{position:relative;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:#24192f;border:1px solid #604663;border-radius:3px}.wiki-content .multiblock-slot img,.wiki-content .multiblock-parts img{image-rendering:pixelated;width:28px;height:28px;object-fit:contain;margin:0;padding:0;border:0;border-radius:0}.multiblock-slot b{position:absolute;bottom:0;right:1px;background:#0b0812df;color:var(--gold);font-size:.6rem;line-height:1.1}.multiblock-air{color:var(--cyan);background:#0b0812;border-style:dashed}.multiblock-unused{background:transparent;border-color:transparent}.wiki-content .multiblock-parts{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;font-size:.8rem}.multiblock-parts li{display:flex;align-items:center;gap:9px}.multiblock-guide ol{padding-left:24px}.multiblock-guide li{margin-bottom:8px}.multiblock-guide p{font-size:.88rem}.multiblock-guide .catalog-evidence code{overflow-wrap:anywhere}
+/* Larger recipe artwork, centered within each card at every viewport size. */
+.catalog-recipe-flow{--recipe-cell:56px;gap:14px;width:100%;margin:22px auto;justify-content:center}.catalog-recipe-grid{grid-template-columns:repeat(3,var(--recipe-cell));gap:4px;flex-shrink:0}.catalog-single-slot{grid-template-columns:var(--recipe-cell)}.catalog-cell{width:var(--recipe-cell);height:var(--recipe-cell);flex-shrink:0}.wiki-content .catalog-cell .catalog-icon{width:44px;height:44px}.catalog-cell small{font-size:.78rem}.catalog-arrow{font-size:1.6rem}
+.multiblock-layers{justify-content:center}.multiblock-layers figcaption{text-align:center}.multiblock-blueprint{grid-template-columns:repeat(var(--columns),44px);margin-inline:auto}.multiblock-slot{width:44px;height:44px}.wiki-content .multiblock-slot img{width:36px;height:36px}
+@media(max-width:500px){.catalog-recipe-flow{--recipe-cell:44px;gap:9px}.wiki-content .catalog-cell .catalog-icon{width:36px;height:36px}.multiblock-blueprint{grid-template-columns:repeat(var(--columns),32px)}.multiblock-slot{width:32px;height:32px}.wiki-content .multiblock-slot img{width:26px;height:26px}}
+/* Recipe PNGs used by the existing Markdown chapters share the centered layout. */
+.wiki-content img[src*="assets/recipes/"]{display:block;width:480px;max-width:100%;height:auto;margin:24px auto;image-rendering:pixelated}
+/* Reading-size diagrams: prioritize legible ingredients over dense card columns. */
+.catalog-grid{grid-template-columns:minmax(0,1fr)}
+.catalog-card{container-type:inline-size}
+.catalog-recipe-flow{--recipe-cell:clamp(36px,calc((100cqw - 74px)/4),80px);gap:16px;margin:28px auto}
+.wiki-content .catalog-cell .catalog-icon{width:calc(var(--recipe-cell) - 12px);height:calc(var(--recipe-cell) - 12px)}
+.catalog-cell small{font-size:.9rem;padding:1px 4px}.catalog-arrow{font-size:2rem}
+.multiblock-layers{gap:28px;margin:30px 0}
+.multiblock-layers figure{padding:8px;min-width:0;max-width:100%;border:1px solid var(--border);border-radius:8px;background:#100b18;overscroll-behavior-x:contain}
+.multiblock-layers figure:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.multiblock-layers figcaption{font-size:.9rem;margin-bottom:16px;color:var(--text)}
+.multiblock-blueprint{grid-template-columns:repeat(var(--columns),64px);gap:5px}
+.multiblock-slot{width:64px;height:64px}.wiki-content .multiblock-slot img{width:52px;height:52px}.multiblock-slot b{font-size:.85rem;padding:2px 3px}
+.wiki-content .multiblock-parts img{width:40px;height:40px;flex-shrink:0}
+.wiki-content img[src*="assets/recipes/"]{width:720px;margin:30px auto}
+@media(max-width:500px){.catalog-recipe-flow{gap:12px}.catalog-arrow{font-size:1.6rem}.catalog-cell small{font-size:.72rem}.multiblock-blueprint{grid-template-columns:repeat(var(--columns),48px);gap:4px}.multiblock-slot{width:48px;height:48px}.wiki-content .multiblock-slot img{width:40px;height:40px}}
+/* Neutral inventory surfaces keep dark handles and outlines visible. */
+.wiki-content{--item-surface:#b8bec8;--item-edge:#788392}
+.wiki-content .catalog-icon{background:var(--item-surface);border:1px solid var(--item-edge);border-radius:5px;padding:3px}
+.wiki-content .catalog-portrait{background:var(--item-surface);border:1px solid var(--item-edge);padding:8px;border-radius:10px}
+.catalog-cell:not(.catalog-cell-empty),.multiblock-slot:not(.multiblock-air):not(.multiblock-unused){background:var(--item-surface);border-color:var(--item-edge)}
+.catalog-cell.catalog-output{border:2px solid var(--gold)}
+.wiki-content .catalog-cell .catalog-icon,.wiki-content .multiblock-slot img{background:transparent;border:0;padding:0;border-radius:0}
+.wiki-content .multiblock-parts img{background:var(--item-surface);border:1px solid var(--item-edge);padding:3px;border-radius:5px}
+.wiki-content .catalog-station{font-size:.8rem;color:var(--cyan);margin:16px 0 6px;padding:8px 10px;background:#28beb910;border:1px solid #28beb940;border-radius:5px}.wiki-content .catalog-worktable-required{color:var(--gold);border-color:#f4c43860;background:#f4c43810;font-weight:700}

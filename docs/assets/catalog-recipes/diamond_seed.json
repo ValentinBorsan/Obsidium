@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DCD",
+    "SFS",
+    "DCD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+      "item": "obsidium:astral_volcanic_catalyst"
+    },
+    "S": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    }
+  },
+  "result": {
+    "id": "obsidium:diamond_seed",
+    "count": 1
+  }
+}

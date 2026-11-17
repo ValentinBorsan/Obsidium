@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "obsidium:hephaestus_volcanite_log"
+    },
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "B": {
+      "item": "minecraft:barrel"
+    }
+  },
+  "pattern": [
+    "LPL",
+    "LBL",
+    "LPL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanic_wood_liquid_barrel"
+  }
+}
+

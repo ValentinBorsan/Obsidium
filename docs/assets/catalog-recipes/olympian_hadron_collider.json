@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SAS",
+    "UCU",
+    "NTN"
+  ],
+  "key": {
+    "S": { "item": "obsidium:supreme_volcanic_alloy" },
+    "A": { "item": "obsidium:astral_volcanic_catalyst" },
+    "U": { "item": "obsidium:volcanite_energy_unit" },
+    "C": { "item": "obsidium:volcanite_energy_core" },
+    "N": { "item": "minecraft:netherite_ingot" },
+    "T": { "item": "obsidium:volcanite_thermo_core" }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:olympian_hadron_collider"
+  }
+}
+

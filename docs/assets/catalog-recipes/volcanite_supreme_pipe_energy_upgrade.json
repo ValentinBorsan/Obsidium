@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "CUC",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "C": {
+      "item": "obsidium:volcanite_energy_core"
+    },
+    "U": {
+      "item": "obsidium:volcanite_advanced_pipe_energy_upgrade"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_supreme_pipe_energy_upgrade",
+    "count": 1
+  }
+}

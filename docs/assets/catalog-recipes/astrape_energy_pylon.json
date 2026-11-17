@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "WCW",
+    " B "
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "W": {
+      "item": "obsidium:advanced_volcanite_energy_wire"
+    },
+    "C": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    },
+    "B": {
+      "item": "obsidium:volcanite_casing"
+    }
+  },
+  "result": {
+    "id": "obsidium:astrape_energy_pylon",
+    "count": 2
+  }
+}
+

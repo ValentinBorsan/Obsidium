@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "obsidium:volcanite_barrel_void_upgrade"
+    },
+    {
+      "item": "obsidium:hermes_filter_blueprint"
+    }
+  ],
+  "result": {
+    "id": "obsidium:volcanite_filtered_void_upgrade",
+    "count": 1
+  }
+}
+

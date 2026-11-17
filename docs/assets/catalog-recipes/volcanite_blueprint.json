@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_nugget"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "obsidium:volcanic_ash"
+    },
+    {
+      "item": "obsidium:volcanic_ash"
+    },
+    {
+      "item": "obsidium:volcanic_ash"
+    }
+  ],
+  "result": {
+    "id": "obsidium:volcanite_blueprint",
+    "count": 1
+  }
+}
+

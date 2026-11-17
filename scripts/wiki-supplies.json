@@ -1,0 +1,277 @@
+{
+  "advanced_volcanite_bottle": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "ash_briquette": {
+    "group": "Fuel & materials",
+    "description": "A crafted fuel/material item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "basic_volcanic_teleporter": {
+    "group": "Teleportation",
+    "description": "A teleporter block for supported linking and travel operations.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "bio_ethanol_bucket": {
+    "group": "Fluid containers",
+    "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Fluid filling",
+        "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+        "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+      }
+    ]
+  },
+  "bio_oil_bucket": {
+    "group": "Fluid containers",
+    "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Fluid filling",
+        "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+        "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+      }
+    ]
+  },
+  "biodiesel_bucket": {
+    "group": "Fluid containers",
+    "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Fluid filling",
+        "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+        "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+      }
+    ]
+  },
+  "creative_energy_core": {
+    "group": "Creative & testing",
+    "description": "A Creative/testing item; not a normal survival crafting target.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Creative inventory",
+        "note": "Available through Creative inventory or commands; no survival recipe is provided.",
+        "source": "src/main/java/net/valentin/obsidium/registry/ModCreativeTabs.java"
+      }
+    ]
+  },
+  "creative_lava_tank": {
+    "group": "Creative & testing",
+    "description": "A Creative/testing item; not a normal survival crafting target.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Creative inventory",
+        "note": "Available through Creative inventory or commands; no survival recipe is provided.",
+        "source": "src/main/java/net/valentin/obsidium/registry/ModCreativeTabs.java"
+      }
+    ]
+  },
+  "creative_water_tank": {
+    "group": "Creative & testing",
+    "description": "A Creative/testing item; not a normal survival crafting target.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Creative inventory",
+        "note": "Available through Creative inventory or commands; no survival recipe is provided.",
+        "source": "src/main/java/net/valentin/obsidium/registry/ModCreativeTabs.java"
+      }
+    ]
+  },
+  "dew_droplet": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Hydrothermal Condenser",
+        "note": "Produced by the Hydrothermal Condenser.",
+        "source": "src/main/java/net/valentin/obsidium/block/HydrothermalCondenserBlockEntity.java"
+      }
+    ]
+  },
+  "dionysian_pomace": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Dionysian Press",
+        "note": "A byproduct of supported pressing operations.",
+        "source": "src/main/java/net/valentin/obsidium/block/DionysianPressBlockEntity.java"
+      }
+    ]
+  },
+  "empty_tuica_bottle_1l": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "grand_reserve_tuica": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Aging",
+        "note": "Age Vintage Volcanic Tuica in the Dionysian Aging Barrel.",
+        "source": "src/main/java/net/valentin/obsidium/block/DionysianAgingBarrelBlockEntity.java"
+      }
+    ]
+  },
+  "magma_droplet": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Magmatic Crucible",
+        "note": "Produced by the Magmatic Crucible.",
+        "source": "src/main/java/net/valentin/obsidium/block/MagmaticCrucibleBlockEntity.java"
+      }
+    ]
+  },
+  "pyro_diesel_bucket": {
+    "group": "Fluid containers",
+    "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Fluid filling",
+        "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+        "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+      }
+    ]
+  },
+  "pyroclastic_distillate_bucket": {
+    "group": "Fluid containers",
+    "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Fluid filling",
+        "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+        "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+      }
+    ]
+  },
+  "pyroclastic_flask": {
+    "group": "Fluid containers",
+    "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Fluid filling",
+        "note": "Fill the compatible empty container from a tank holding the corresponding fluid. Fluid production is a separate machine operation.",
+        "source": "src/main/java/net/valentin/obsidium/block/LiquidTankBlockEntity.java"
+      }
+    ]
+  },
+  "steam_bucket": {
+    "group": "Fluid containers",
+    "description": "A container for its named fluid; fill it through compatible fluid-handling machinery.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Steam generation",
+        "note": "Collect steam from the Volcanite Steam Generator.",
+        "source": "src/main/java/net/valentin/obsidium/block/VolcaniteSteamGeneratorBlockEntity.java"
+      }
+    ]
+  },
+  "stick_bundle": {
+    "group": "Fuel & materials",
+    "description": "A crafted fuel/material item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_hound_spawn_egg": {
+    "group": "Creative & testing",
+    "description": "A Creative/testing item; not a normal survival crafting target.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Creative inventory",
+        "note": "Available through Creative inventory or commands; no survival recipe is provided.",
+        "source": "src/main/java/net/valentin/obsidium/registry/ModCreativeTabs.java"
+      }
+    ]
+  },
+  "vintage_volcanic_tuica": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Aging",
+        "note": "Age Volcanic Tuica in the Dionysian Aging Barrel.",
+        "source": "src/main/java/net/valentin/obsidium/block/DionysianAgingBarrelBlockEntity.java"
+      }
+    ]
+  },
+  "volcanic_bee_spawn_egg": {
+    "group": "Creative & testing",
+    "description": "A Creative/testing item; not a normal survival crafting target.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Creative inventory",
+        "note": "Available through Creative inventory or commands; no survival recipe is provided.",
+        "source": "src/main/java/net/valentin/obsidium/registry/ModCreativeTabs.java"
+      }
+    ]
+  },
+  "volcanic_cider": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Distillation",
+        "note": "A product of supported Dionysian Distillery inputs.",
+        "source": "src/main/java/net/valentin/obsidium/block/DionysianDistilleryBlockEntity.java"
+      }
+    ]
+  },
+  "volcanic_core_teleporter": {
+    "group": "Teleportation",
+    "description": "A teleporter block for supported linking and travel operations.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanic_tuica": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Distillation",
+        "note": "Produced through Dionysian Distillery processing.",
+        "source": "src/main/java/net/valentin/obsidium/block/DionysianDistilleryBlockEntity.java"
+      }
+    ]
+  },
+  "volcanic_tuica_1l": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Bottling",
+        "note": "Use supported distillery bottling operations and the matching empty bottle.",
+        "source": "src/main/java/net/valentin/obsidium/block/DionysianDistilleryBlockEntity.java"
+      }
+    ]
+  },
+  "volcanite_bottle": {
+    "group": "Containers & consumables",
+    "description": "A consumable or container used in Obsidium processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  }
+}

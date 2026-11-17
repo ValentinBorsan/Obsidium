@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " O ",
+    "LVR",
+    " O "
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_void_upgrade",
+    "count": 1
+  }
+}

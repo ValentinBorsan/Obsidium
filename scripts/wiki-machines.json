@@ -1,0 +1,222 @@
+{
+  "volcanite_furnace": {
+    "group": "Processing",
+    "description": "Smelts items using the basic Volcanite furnace.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteFurnaceBlockEntity.java"
+  },
+  "advanced_volcanite_furnace": {
+    "group": "Processing",
+    "description": "An upgraded furnace for parallel smelting.",
+    "source": "src/main/java/net/valentin/obsidium/block/AdvancedVolcaniteFurnaceBlockEntity.java"
+  },
+  "volcanite_worktable": {
+    "group": "Processing",
+    "description": "A dedicated worktable for Obsidium crafting.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteWorktableBlockEntity.java"
+  },
+  "volcanite_grinder": {
+    "group": "Processing",
+    "description": "Processes ores, raw metals and ingots into dusts.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGrinderBlockEntity.java"
+  },
+  "magma_forge_core": {
+    "group": "Processing",
+    "description": "The controller of the Magma Forge multiblock for alloy forging and tempering.",
+    "source": "src/main/java/net/valentin/obsidium/block/MagmaForgeCoreBlockEntity.java"
+  },
+  "volcanic_distillation_chamber": {
+    "group": "Processing",
+    "description": "Processes volcanic materials through distillation.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcanicDistillationChamberBlockEntity.java"
+  },
+  "magmatic_crucible": {
+    "group": "Processing",
+    "description": "Produces lava through thermal processing.",
+    "source": "src/main/java/net/valentin/obsidium/block/MagmaticCrucibleBlockEntity.java"
+  },
+  "hydrothermal_condenser": {
+    "group": "Processing",
+    "description": "Collects water and supports cold-resource production.",
+    "source": "src/main/java/net/valentin/obsidium/block/HydrothermalCondenserBlockEntity.java"
+  },
+  "hydrothermal_vitrifier": {
+    "group": "Processing",
+    "description": "Produces obsidian through hydrothermal processing.",
+    "source": "src/main/java/net/valentin/obsidium/block/HydrothermalVitrifierBlockEntity.java"
+  },
+  "hydrothermal_lithofier": {
+    "group": "Processing",
+    "description": "Produces stone resources through hydrothermal processing.",
+    "source": "src/main/java/net/valentin/obsidium/block/HydrothermalLithofierBlockEntity.java"
+  },
+  "dionysian_press": {
+    "group": "Processing",
+    "description": "Presses botanical ingredients for the fluid-processing chain.",
+    "source": "src/main/java/net/valentin/obsidium/block/DionysianPressBlockEntity.java"
+  },
+  "advanced_dionysian_press": {
+    "group": "Processing",
+    "description": "An upgraded press for botanical processing.",
+    "source": "src/main/java/net/valentin/obsidium/block/AdvancedDionysianPressBlockEntity.java"
+  },
+  "dionysian_distillery": {
+    "group": "Processing",
+    "description": "Distills ingredients for the botanical fluid and fuel chain.",
+    "source": "src/main/java/net/valentin/obsidium/block/DionysianDistilleryBlockEntity.java"
+  },
+  "dionysian_aging_barrel": {
+    "group": "Processing",
+    "description": "Ages ingredients as part of the Dionysian processing chain.",
+    "source": "src/main/java/net/valentin/obsidium/block/DionysianAgingBarrelBlockEntity.java"
+  },
+  "volcanite_generator": {
+    "group": "Generators",
+    "description": "Burns solid fuels to supply the first powered workshop.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGeneratorBlockEntity.java"
+  },
+  "volcanite_steam_generator": {
+    "group": "Generators",
+    "description": "Generates energy through a steam-based process.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteSteamGeneratorBlockEntity.java"
+  },
+  "volcanite_geothermal_generator": {
+    "group": "Generators",
+    "description": "Generates energy from volcanic heat and lava.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteGeothermalGeneratorBlockEntity.java"
+  },
+  "supreme_volcanic_generator": {
+    "group": "Generators",
+    "description": "A high-tier generator for the volcanic fuel chain.",
+    "source": "src/main/java/net/valentin/obsidium/block/SupremeVolcanicGeneratorBlockEntity.java"
+  },
+  "demetrian_biomass_generator": {
+    "group": "Generators",
+    "description": "Generates energy from botanical biomass.",
+    "source": "src/main/java/net/valentin/obsidium/block/DemetrianBiomassGeneratorBlockEntity.java"
+  },
+  "volcanic_diesel_generator": {
+    "group": "Generators",
+    "description": "Converts liquid fuels into energy.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcanicDieselGeneratorBlockEntity.java"
+  },
+  "apollo_solar_generator": {
+    "group": "Generators",
+    "description": "Generates energy from sunlight.",
+    "source": "src/main/java/net/valentin/obsidium/block/ApolloSolarGeneratorBlockEntity.java"
+  },
+  "aeolus_storm_turbine": {
+    "group": "Generators",
+    "description": "Generates energy from wind and weather conditions.",
+    "source": "src/main/java/net/valentin/obsidium/block/AeolusStormTurbineBlockEntity.java"
+  },
+  "tartarus_piston_engine": {
+    "group": "Industrial multiblocks",
+    "description": "The controller of the piston-engine multiblock.",
+    "source": "src/main/java/net/valentin/obsidium/block/TartarusPistonEngineBlockEntity.java"
+  },
+  "dionysian_bio_caldera": {
+    "group": "Industrial multiblocks",
+    "description": "The controller of the Bio-Caldera processing multiblock.",
+    "source": "src/main/java/net/valentin/obsidium/block/DionysianBioCalderaBlockEntity.java"
+  },
+  "olympian_hadron_collider": {
+    "group": "Industrial multiblocks",
+    "description": "Runs particle collisions for rare late-game materials.",
+    "source": "src/main/java/net/valentin/obsidium/block/OlympianHadronColliderBlockEntity.java"
+  },
+  "keraunos_hv_core": {
+    "group": "Industrial multiblocks",
+    "description": "The core of the Keraunos high-voltage energy structure.",
+    "source": "src/main/java/net/valentin/obsidium/block/KeraunosHVCoreBlockEntity.java"
+  },
+  "volcanite_lava_pump": {
+    "group": "Pumps & utilities",
+    "description": "Collects lava for processing and energy infrastructure.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteLavaPumpBlockEntity.java"
+  },
+  "poseidon_abyssal_pump": {
+    "group": "Pumps & utilities",
+    "description": "The controller of the Poseidon pumping structure.",
+    "source": "src/main/java/net/valentin/obsidium/block/PoseidonAbyssalPumpBlockEntity.java"
+  },
+  "hephaestean_charging_plate": {
+    "group": "Pumps & utilities",
+    "description": "Charges compatible energy-storing items.",
+    "source": "src/main/java/net/valentin/obsidium/block/HephaesteanChargingPlateBlockEntity.java"
+  },
+  "volcanite_chunk_loader": {
+    "group": "Pumps & utilities",
+    "description": "Keeps a configured area loaded while its operating requirements are met.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcaniteChunkLoaderBlockEntity.java"
+  },
+  "geothermal_arborist": {
+    "group": "Botanical automation",
+    "description": "Automates tree harvesting and supports the botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+  },
+  "demetrian_composter": {
+    "group": "Botanical automation",
+    "description": "Processes botanical inputs into compost products.",
+    "source": "src/main/java/net/valentin/obsidium/block/DemetrianComposterBlockEntity.java"
+  },
+  "demetrian_bonsai_planter": {
+    "group": "Botanical automation",
+    "description": "Grows miniature trees for botanical production.",
+    "source": "src/main/java/net/valentin/obsidium/block/DemetrianBonsaiPlanterBlockEntity.java"
+  },
+  "demetrian_sapling_barrel": {
+    "group": "Botanical automation",
+    "description": "Processes saplings in the Demetrian production chain.",
+    "source": "src/main/java/net/valentin/obsidium/block/DemetrianSaplingBarrelBlockEntity.java"
+  },
+  "demetrian_lumber_depot": {
+    "group": "Botanical automation",
+    "description": "Handles timber in the botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/block/DemetrianLumberDepotBlockEntity.java"
+  },
+  "volcanic_beehive": {
+    "group": "Botanical automation",
+    "description": "Supports volcanic beekeeping production.",
+    "source": "src/main/java/net/valentin/obsidium/block/VolcanicBeehiveBlockEntity.java"
+  },
+  "volcanite_casing": {
+    "group": "Multiblock components",
+    "description": "Structural casing used by machinery and multiblocks.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "advanced_volcanite_casing": {
+    "group": "Multiblock components",
+    "description": "An upgraded structural casing for industrial construction.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "synchrotron_ring_coil": {
+    "group": "Multiblock components",
+    "description": "A ring component for the Olympian Hadron Collider.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hadron_energy_port": {
+    "group": "Multiblock components",
+    "description": "An energy port for the Hadron Collider.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hadron_item_port": {
+    "group": "Multiblock components",
+    "description": "An item port for the Hadron Collider.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hadron_fluid_port": {
+    "group": "Multiblock components",
+    "description": "A fluid port for the Hadron Collider.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "keraunos_hv_port": {
+    "group": "Multiblock components",
+    "description": "A port for the Keraunos high-voltage structure.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "poseidon_abyssal_casing": {
+    "group": "Multiblock components",
+    "description": "Structural casing for the Poseidon Abyssal Pump.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  }
+}

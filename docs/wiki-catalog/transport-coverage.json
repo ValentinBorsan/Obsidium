@@ -1,0 +1,20 @@
+{
+  "category": "transport",
+  "items": 12,
+  "recipe_variants": 13,
+  "missing_ingredient_icons": [],
+  "ids": [
+    "obsidium:advanced_volcanite_energy_wire",
+    "obsidium:advanced_hermes_item_pipe",
+    "obsidium:advanced_naiad_fluid_pipe",
+    "obsidium:volcanite_energy_wire",
+    "obsidium:hermes_item_pipe",
+    "obsidium:volcanite_universal_conduit",
+    "obsidium:naiad_fluid_pipe",
+    "obsidium:singularity_volcanite_energy_wire",
+    "obsidium:supreme_volcanite_energy_wire",
+    "obsidium:supreme_hermes_item_pipe",
+    "obsidium:supreme_naiad_fluid_pipe",
+    "obsidium:volcanite_storage_pipe"
+  ]
+}

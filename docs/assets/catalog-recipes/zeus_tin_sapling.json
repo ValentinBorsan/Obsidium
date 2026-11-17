@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AMA",
+    "SFS",
+    "AMA"
+  ],
+  "key": {
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "M": {
+      "item": "obsidium:tin_ingot"
+    },
+    "S": {
+      "tag": "minecraft:saplings"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    }
+  },
+  "result": {
+    "id": "obsidium:zeus_tin_sapling",
+    "count": 1
+  }
+}

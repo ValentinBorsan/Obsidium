@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "G": {
+      "item": "obsidium:volcanite_generator"
+    },
+    "C": {
+      "item": "obsidium:volcanite_casing"
+    }
+  },
+  "pattern": [
+    "OWO",
+    "AGA",
+    "OCO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanite_steam_generator"
+  }
+}

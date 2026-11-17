@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "pattern": [
+    " P ",
+    "PVP",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:dionysian_press"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "/": [
+      {
+        "item": "minecraft:stick"
+      },
+      {
+        "tag": "c:wooden_rods"
+      }
+    ]
+  },
+  "pattern": [
+    "#",
+    "/",
+    "/"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:hephaestean_shovel"
+  }
+}

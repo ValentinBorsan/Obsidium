@@ -1,5 +1,9 @@
 # Power & Generators
 
+[Energy & Upgrades — images and crafting recipes](wiki.html?page=Energy-Catalog)
+
+[Multiblock construction guide — layers, blocks and formation](wiki.html?page=Multiblocks)
+
 ## Generators
 - **Basic Volcanite Generator** — Burns solid/volcanic fuels for early RF generation.
 - **Geothermal Generator** — Consumes Lava (`10 mB/s`) with passive + lava adjacency boost.

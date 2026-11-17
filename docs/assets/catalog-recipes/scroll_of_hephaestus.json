@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " C ",
+    "VPB",
+    " L "
+  ],
+  "key": {
+    "C": {
+      "item": "obsidium:cinder_core"
+    },
+    "P": {
+      "item": "obsidium:volcanic_papyrus"
+    },
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:scroll_of_hephaestus"
+  }
+}

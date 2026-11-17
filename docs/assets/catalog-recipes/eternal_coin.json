@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " V ",
+    "RCR",
+    " E "
+  ],
+  "key": {
+    "V": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "C": {
+      "item": "obsidium:charon_coin"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "E": {
+      "item": "obsidium:volcanite_energy_core"
+    }
+  },
+  "result": {
+    "id": "obsidium:eternal_coin",
+    "count": 1
+  }
+}
+

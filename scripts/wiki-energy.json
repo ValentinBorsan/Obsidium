@@ -1,0 +1,202 @@
+{
+  "volcanite_portable_battery": {
+    "group": "Energy storage",
+    "description": "Portable RF storage with 500,000 RF capacity.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "advanced_volcanite_portable_battery": {
+    "group": "Energy storage",
+    "description": "Advanced portable RF storage with 5,000,000 RF capacity.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_energy_cell": {
+    "group": "Energy storage",
+    "description": "Basic block energy storage; also a valid Energy Matrix ring component.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_energy_unit": {
+    "group": "Energy storage",
+    "description": "Advanced block energy storage; also a valid Energy Matrix ring component.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_energy_core": {
+    "group": "Energy storage",
+    "description": "Controller of the flat 3\u00d73 Energy Matrix.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "keraunos_hv_core": {
+    "group": "Energy storage",
+    "description": "Controller of the 3\u00d73\u00d73 Keraunos high-voltage matrix.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "keraunos_hv_port": {
+    "group": "Energy storage",
+    "description": "Network access port for the Keraunos high-voltage structure.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "astrape_energy_pylon": {
+    "group": "Wireless power",
+    "description": "Wireless RF infrastructure. Configure supported pylon links with the Supreme Link Tool.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_charging_plate": {
+    "group": "Charging",
+    "description": "Charges compatible energy-storing items.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_wrench": {
+    "group": "Configuration tools",
+    "description": "Configures supported pipes and machines, cycles conduit faces and assembles supported multiblocks. Sneak behavior depends on the target block.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "supreme_link_tool": {
+    "group": "Configuration tools",
+    "description": "Links supported network nodes, Astrape Pylons and teleporter pads.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hv_dielectric_hot_stick": {
+    "group": "Configuration tools",
+    "description": "A dielectric tool for high-voltage system operations.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_resonator": {
+    "group": "Configuration tools",
+    "description": "An RF-powered scanning tool with ore and waypoint modes.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "pipe_facade": {
+    "group": "Configuration tools",
+    "description": "A facade used to disguise compatible pipe infrastructure.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_blueprint": {
+    "group": "Configuration tools",
+    "description": "Encodes crafting patterns for compatible crafting infrastructure.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hermes_filter_blueprint": {
+    "group": "Configuration tools",
+    "description": "A blueprint for compatible item-filter configuration.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_logistics_module": {
+    "group": "Logistics & filters",
+    "description": "A configurable export/import controller mounted on supported pipes, wires or adjacent containers.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_import_connector": {
+    "group": "Logistics & filters",
+    "description": "Import connector for compatible cable and storage infrastructure.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_export_connector": {
+    "group": "Logistics & filters",
+    "description": "Export connector for compatible cable and storage infrastructure.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_advanced_filter_module": {
+    "group": "Logistics & filters",
+    "description": "Advanced filtering module for compatible storage or transport systems.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hermes_filter_upgrade": {
+    "group": "Logistics & filters",
+    "description": "Filtering upgrade for compatible Hermes item transport.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_overclock_upgrade": {
+    "group": "Machine upgrades",
+    "description": "Basic overclock upgrade. Increases processing speed and energy demand on compatible machines.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "advanced_volcanite_overclock_upgrade": {
+    "group": "Machine upgrades",
+    "description": "Advanced overclock upgrade. Increases processing speed and energy demand on compatible machines.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "supreme_volcanite_overclock_upgrade": {
+    "group": "Machine upgrades",
+    "description": "Supreme overclock upgrade. Increases processing speed and energy demand on compatible machines.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_basic_pipe_energy_upgrade": {
+    "group": "Conduit upgrades",
+    "description": "Basic transfer upgrade for compatible pipe/conduit faces; inspect the target configuration for supported channels and limits.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_advanced_pipe_energy_upgrade": {
+    "group": "Conduit upgrades",
+    "description": "Advanced transfer upgrade for compatible pipe/conduit faces; inspect the target configuration for supported channels and limits.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_supreme_pipe_energy_upgrade": {
+    "group": "Conduit upgrades",
+    "description": "Supreme transfer upgrade for compatible pipe/conduit faces; inspect the target configuration for supported channels and limits.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "quantum_link_module": {
+    "group": "Components & access",
+    "description": "Links supported storage blocks to Quantum storage; follow the target block\u2019s installation conditions.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Storage-capacity upgrade for compatible blocks.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_liquid_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Fluid-capacity upgrade for compatible storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_stack_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Stack-transfer upgrade for compatible systems.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_vacuum_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Item-collection upgrade for compatible storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_compactor_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Compacts matching resources in compatible storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_filtered_compactor_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Filtered compaction upgrade.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_void_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Overflow-voiding upgrade; review settings before enabling it.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_filtered_void_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Filtered voiding upgrade; matching items may be discarded.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_basic_barrel_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Basic barrel-capacity upgrade.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_advanced_barrel_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Advanced barrel-capacity upgrade.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_supreme_barrel_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Supreme barrel-capacity upgrade.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_barrel_void_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Voids excess items in a compatible bulk-storage barrel.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  }
+}

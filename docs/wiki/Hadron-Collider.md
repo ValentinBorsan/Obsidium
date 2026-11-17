@@ -1,5 +1,7 @@
 # Olympian Hadron Collider (`5×5`)
 
+[Multiblock construction guide — layers, blocks and formation](wiki.html?page=Multiblocks)
+
 ## 1. Ring Assembly
 - `1× Collider Controller`
 - `12× Ring Coils` (minimum `9`)

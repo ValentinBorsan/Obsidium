@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CBC",
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "obsidium:volcanite_chest"
+    },
+    "B": {
+      "item": "obsidium:advanced_volcanite_casing"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_storage_unit",
+    "count": 1
+  }
+}

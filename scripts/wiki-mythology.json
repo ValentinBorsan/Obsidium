@@ -1,0 +1,96 @@
+{
+  "astrape_ritual_obelisk": {
+    "group": "Rituals & relics",
+    "description": "A mythological ritual component or recovery-system item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "charon_coin": {
+    "group": "Rituals & relics",
+    "description": "A mythological ritual component or recovery-system item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "eternal_coin": {
+    "group": "Rituals & relics",
+    "description": "A mythological ritual component or recovery-system item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_armory": {
+    "group": "Rituals & relics",
+    "description": "A mythological ritual component or recovery-system item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "olympian_altar": {
+    "group": "Rituals & relics",
+    "description": "A mythological ritual component or recovery-system item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "scroll_of_apollo": {
+    "group": "Divine scrolls",
+    "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "scroll_of_artemis": {
+    "group": "Divine scrolls",
+    "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "scroll_of_athena": {
+    "group": "Divine scrolls",
+    "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "scroll_of_hephaestus": {
+    "group": "Divine scrolls",
+    "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "scroll_of_poseidon": {
+    "group": "Divine scrolls",
+    "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "scroll_of_thanatos": {
+    "group": "Divine scrolls",
+    "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "scroll_of_zeus": {
+    "group": "Divine scrolls",
+    "description": "A divine scroll used with an Astrape Ritual Obelisk and the Olympian Altar.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "stygian_cenotaph": {
+    "group": "Rituals & relics",
+    "description": "A mythological ritual component or recovery-system item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Death system",
+        "note": "Created by the Stygian death-handling system under its applicable conditions.",
+        "source": "src/main/java/net/valentin/obsidium/event/StygianDeathHandler.java"
+      }
+    ]
+  },
+  "stygian_key": {
+    "group": "Rituals & relics",
+    "description": "A mythological ritual component or recovery-system item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Death system",
+        "note": "A data-bound key created by the Stygian death/recovery system; its target information matters.",
+        "source": "src/main/java/net/valentin/obsidium/item/StygianKeyItem.java"
+      }
+    ]
+  },
+  "thanatos_executioner": {
+    "group": "Rituals & relics",
+    "description": "A mythological ritual component or recovery-system item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanic_papyrus": {
+    "group": "Rituals & relics",
+    "description": "A mythological ritual component or recovery-system item.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  }
+}

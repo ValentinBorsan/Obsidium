@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:barrel"
+    },
+    "S": {
+      "tag": "minecraft:saplings"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    " S ",
+    "GBG",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:demetrian_sapling_barrel"
+  }
+}
+

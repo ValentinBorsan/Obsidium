@@ -1,0 +1,595 @@
+{
+  "adamantine_diamond_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting",
+        "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+        "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+      }
+    ]
+  },
+  "apollo_quartz_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting",
+        "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+        "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+      }
+    ]
+  },
+  "ares_iron_fruit": {
+    "group": "Tree fruit",
+    "description": "A resource fruit produced by the corresponding living ore tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Tree harvest",
+        "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+        "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+      }
+    ]
+  },
+  "ares_iron_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "artemis_silver_fruit": {
+    "group": "Tree fruit",
+    "description": "A resource fruit produced by the corresponding living ore tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Tree harvest",
+        "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+        "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+      }
+    ]
+  },
+  "artemis_silver_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "astrape_redstone_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting",
+        "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+        "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+      }
+    ]
+  },
+  "coal_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/coal_crop.json"
+      }
+    ]
+  },
+  "coal_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "copper_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/copper_crop.json"
+      }
+    ]
+  },
+  "copper_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "cronus_lead_fruit": {
+    "group": "Tree fruit",
+    "description": "A resource fruit produced by the corresponding living ore tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Tree harvest",
+        "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+        "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+      }
+    ]
+  },
+  "cronus_lead_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "demetrian_biomass_generator": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "demetrian_bonsai_planter": {
+    "group": "Botanical automation",
+    "description": "A botanical production block; see the botany guide for its role.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "demetrian_botanist_lens": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "demetrian_botany_book": {
+    "group": "Manuals",
+    "description": "Right-click while holding this book to open the Demetrian Botany guide, including grafting and resource trees.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "demetrian_composter": {
+    "group": "Botanical automation",
+    "description": "A botanical production block; see the botany guide for its role.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "demetrian_grafting_knife": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "demetrian_grafting_tape": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "demetrian_lumber_depot": {
+    "group": "Botanical automation",
+    "description": "A botanical production block; see the botany guide for its role.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "demetrian_sapling_barrel": {
+    "group": "Botanical automation",
+    "description": "A botanical production block; see the botany guide for its role.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "demetrian_scion": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting Knife",
+        "note": "Sneak and right-click supported leaves with the Grafting Knife to harvest a scion cutting. Scions carry species data; the icon represents the generic item.",
+        "source": "src/main/java/net/valentin/obsidium/item/DemetrianGraftingKnifeItem.java"
+      }
+    ]
+  },
+  "diamond_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/diamond_crop.json"
+      }
+    ]
+  },
+  "diamond_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "dionysian_amethyst_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting",
+        "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+        "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+      }
+    ]
+  },
+  "electrum_fruit": {
+    "group": "Tree fruit",
+    "description": "A resource fruit produced by the corresponding living ore tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Tree harvest",
+        "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+        "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+      }
+    ]
+  },
+  "electrum_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "foliage_bale": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "geothermal_arborist": {
+    "group": "Botanical automation",
+    "description": "A botanical production block; see the botany guide for its role.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "gold_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/gold_crop.json"
+      }
+    ]
+  },
+  "gold_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "grafted_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting stage",
+        "note": "An intermediate planted rootstock created by incising a sapling with the Grafting Knife, then used in the scion-grafting workflow.",
+        "source": "src/main/java/net/valentin/obsidium/item/DemetrianGraftingKnifeItem.java"
+      }
+    ]
+  },
+  "hades_coal_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting",
+        "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+        "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+      }
+    ]
+  },
+  "hephaestus_volcanite_fruit": {
+    "group": "Tree fruit",
+    "description": "A resource fruit produced by the corresponding living ore tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Tree harvest",
+        "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+        "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+      }
+    ]
+  },
+  "hephaestus_volcanite_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hermes_copper_fruit": {
+    "group": "Tree fruit",
+    "description": "A resource fruit produced by the corresponding living ore tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Tree harvest",
+        "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+        "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+      }
+    ]
+  },
+  "hermes_copper_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hyperion_glowstone_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting",
+        "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+        "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+      }
+    ]
+  },
+  "iron_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/iron_crop.json"
+      }
+    ]
+  },
+  "iron_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "lapis_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/lapis_crop.json"
+      }
+    ]
+  },
+  "lapis_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "lead_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/lead_crop.json"
+      }
+    ]
+  },
+  "lead_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "magma_forge_manual": {
+    "group": "Manuals",
+    "description": "Right-click while holding this book to open the general Obsidium manual, including multiblocks, energy and machinery.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "midas_gold_fruit": {
+    "group": "Tree fruit",
+    "description": "A resource fruit produced by the corresponding living ore tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Tree harvest",
+        "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+        "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+      }
+    ]
+  },
+  "midas_gold_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "netherite_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/netherite_crop.json"
+      }
+    ]
+  },
+  "netherite_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "plouton_emerald_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting",
+        "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+        "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+      }
+    ]
+  },
+  "pollinating_brush": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "poseidon_lapis_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting",
+        "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+        "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+      }
+    ]
+  },
+  "pyretic_titan_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Grafting mutation",
+        "note": "A 5% mutation roll during grafted-sapling metamorphosis when rootstock or scion is Tartarean Netherite or Adamantine Diamond. Requires an existing rare specimen; common trees cannot bootstrap this mutation.",
+        "source": "src/main/java/net/valentin/obsidium/block/GraftedSaplingBlockEntity.java"
+      }
+    ]
+  },
+  "pyrogenic_bloom_infuser": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "redstone_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/redstone_crop.json"
+      }
+    ]
+  },
+  "redstone_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "silver_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/silver_crop.json"
+      }
+    ]
+  },
+  "silver_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_netherite_fruit": {
+    "group": "Tree fruit",
+    "description": "A resource fruit produced by the corresponding living ore tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Tree harvest",
+        "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+        "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+      }
+    ]
+  },
+  "tartarean_netherite_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "timber_bundle": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tin_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/tin_crop.json"
+      }
+    ]
+  },
+  "tin_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanic_beehive": {
+    "group": "Botanical automation",
+    "description": "A botanical production block; see the botany guide for its role.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanic_honey_bottle": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Beehive harvest",
+        "note": "Use a glass bottle on a full Volcanic Beehive to collect honey. Smoke the hive with a lit campfire below it to avoid angering bees.",
+        "source": "src/main/java/net/valentin/obsidium/block/VolcanicBeehiveBlock.java"
+      }
+    ]
+  },
+  "volcanic_honeycomb": {
+    "group": "Botanical tools & materials",
+    "description": "A component or tool for the Demetrian botanical production chain.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Beehive harvest",
+        "note": "Use shears on a full Volcanic Beehive to collect three honeycombs. Smoke the hive with a lit campfire below it to avoid angering bees.",
+        "source": "src/main/java/net/valentin/obsidium/block/VolcanicBeehiveBlock.java"
+      }
+    ]
+  },
+  "volcanite_petal": {
+    "group": "Crop petals",
+    "description": "A resource petal harvested from the corresponding crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Crop harvest",
+        "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/volcanite_crop.json"
+      }
+    ]
+  },
+  "volcanite_seed": {
+    "group": "Crop seeds",
+    "description": "Plantable seed for the corresponding resource crop.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "zeus_tin_fruit": {
+    "group": "Tree fruit",
+    "description": "A resource fruit produced by the corresponding living ore tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Tree harvest",
+        "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+        "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+      }
+    ]
+  },
+  "zeus_tin_sapling": {
+    "group": "Tree saplings",
+    "description": "A plantable sapling for the corresponding living tree.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  }
+}

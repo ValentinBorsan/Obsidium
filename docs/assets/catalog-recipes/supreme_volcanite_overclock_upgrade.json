@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCW",
+    "NUN",
+    "WCW"
+  ],
+  "key": {
+    "W": {
+      "item": "obsidium:supreme_volcanite_energy_wire"
+    },
+    "C": {
+      "item": "obsidium:astral_volcanic_catalyst"
+    },
+    "U": {
+      "item": "obsidium:advanced_volcanite_overclock_upgrade"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "id": "obsidium:supreme_volcanite_overclock_upgrade",
+    "count": 1
+  }
+}
+

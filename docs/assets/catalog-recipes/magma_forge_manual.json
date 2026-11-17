@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "minecraft:book" },
+    { "item": "obsidium:volcanite_ingot" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:magma_forge_manual"
+  }
+}
+

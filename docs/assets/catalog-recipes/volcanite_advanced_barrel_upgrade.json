@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GVG",
+    "VUV",
+    "GVG"
+  ],
+  "key": {
+    "G": { "item": "minecraft:gold_ingot" },
+    "V": { "item": "obsidium:volcanite" },
+    "U": { "item": "obsidium:volcanite_basic_barrel_upgrade" }
+  },
+  "result": {
+    "id": "obsidium:volcanite_advanced_barrel_upgrade",
+    "count": 1
+  }
+}
+

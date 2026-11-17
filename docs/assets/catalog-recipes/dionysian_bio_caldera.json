@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "obsidium:reinforced_volcanic_liquid_barrel"
+    },
+    "G": {
+      "item": "obsidium:demetrian_biomass_generator"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "F": {
+      "item": "obsidium:cornucopia"
+    },
+    "A": {
+      "item": "obsidium:volcanic_alloy"
+    }
+  },
+  "pattern": [
+    "FAF",
+    "BGB",
+    "OCO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:dionysian_bio_caldera"
+  }
+}

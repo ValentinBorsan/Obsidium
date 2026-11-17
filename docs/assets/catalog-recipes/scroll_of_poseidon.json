@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "LPC",
+    " W "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "P": {
+      "item": "obsidium:volcanic_papyrus"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:scroll_of_poseidon"
+  }
+}

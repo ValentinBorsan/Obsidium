@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GVG",
+    "PCP",
+    "GVG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "V": {
+      "item": "obsidium:volcanite_storage_processor"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "C": {
+      "item": "obsidium:volcanite_storage_upgrade"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_advanced_filter_module",
+    "count": 1
+  }
+}

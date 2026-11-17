@@ -1,0 +1,2982 @@
+{
+  "schema": 1,
+  "category": "equipment",
+  "title": "Equipment & Exploration",
+  "note": "Images are copied from game textures; machine and block images use a representative face. Crafting recipes may be overridden by modpacks. Machine crafting recipes describe how to build the machine, not its processing recipes.",
+  "scope": "Registered tool and armor families, mythic wearable/handheld equipment, exploration instruments and dielectric work tools. Ritual scrolls, coins and ritual structures are covered separately.",
+  "count": 47,
+  "items": [
+    {
+      "id": "obsidium:aegis_of_athena",
+      "name": "Aegis of Athena",
+      "image": "assets/catalog-icons/obsidium/aegis_of_athena.png",
+      "imageKind": "item texture",
+      "group": "Mythic equipment",
+      "description": "A mythic shield associated with Athena.",
+      "recipes": [
+        {
+          "id": "obsidium:aegis_of_athena",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:aegis_of_athena",
+            "name": "Aegis of Athena",
+            "image": "assets/catalog-icons/obsidium/aegis_of_athena.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/aegis_of_athena.json",
+          "json": "assets/catalog-recipes/aegis_of_athena.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PCP",
+            "VSV",
+            " P "
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:cinder_core",
+                "name": "Cinder Core",
+                "image": "assets/catalog-icons/obsidium/cinder_core.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:shield",
+                "name": "Shield",
+                "image": "assets/catalog-icons/minecraft/shield.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:faraday_boots",
+      "name": "Aether-Faraday Dielectric Boots",
+      "image": "assets/catalog-icons/obsidium/faraday_boots.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Faraday boots, part of the Faraday equipment family. Part of the dielectric protection set for high-voltage work.",
+      "recipes": [
+        {
+          "id": "obsidium:faraday_boots",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:faraday_boots",
+            "name": "Aether-Faraday Dielectric Boots",
+            "image": "assets/catalog-icons/obsidium/faraday_boots.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/faraday_boots.json",
+          "json": "assets/catalog-recipes/faraday_boots.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "   ",
+            "C C",
+            "LPL"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:leather",
+                "name": "Leather",
+                "image": "assets/catalog-icons/minecraft/leather.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:faraday_chestplate",
+      "name": "Aether-Faraday Dielectric Chestplate",
+      "image": "assets/catalog-icons/obsidium/faraday_chestplate.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Faraday chestplate, part of the Faraday equipment family. Part of the dielectric protection set for high-voltage work.",
+      "recipes": [
+        {
+          "id": "obsidium:faraday_chestplate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:faraday_chestplate",
+            "name": "Aether-Faraday Dielectric Chestplate",
+            "image": "assets/catalog-icons/obsidium/faraday_chestplate.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/faraday_chestplate.json",
+          "json": "assets/catalog-recipes/faraday_chestplate.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "P P",
+            "LCL",
+            "PLP"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:leather",
+                "name": "Leather",
+                "image": "assets/catalog-icons/minecraft/leather.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:faraday_helmet",
+      "name": "Aether-Faraday Dielectric Helmet",
+      "image": "assets/catalog-icons/obsidium/faraday_helmet.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Faraday helmet, part of the Faraday equipment family. Part of the dielectric protection set for high-voltage work.",
+      "recipes": [
+        {
+          "id": "obsidium:faraday_helmet",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:faraday_helmet",
+            "name": "Aether-Faraday Dielectric Helmet",
+            "image": "assets/catalog-icons/obsidium/faraday_helmet.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/faraday_helmet.json",
+          "json": "assets/catalog-recipes/faraday_helmet.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PCP",
+            "LAL",
+            "   "
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:leather",
+                "name": "Leather",
+                "image": "assets/catalog-icons/minecraft/leather.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "minecraft:amethyst_shard",
+                "name": "Amethyst Shard",
+                "image": "assets/catalog-icons/minecraft/amethyst_shard.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:faraday_leggings",
+      "name": "Aether-Faraday Dielectric Leggings",
+      "image": "assets/catalog-icons/obsidium/faraday_leggings.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Faraday leggings, part of the Faraday equipment family. Part of the dielectric protection set for high-voltage work.",
+      "recipes": [
+        {
+          "id": "obsidium:faraday_leggings",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:faraday_leggings",
+            "name": "Aether-Faraday Dielectric Leggings",
+            "image": "assets/catalog-icons/obsidium/faraday_leggings.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/faraday_leggings.json",
+          "json": "assets/catalog-recipes/faraday_leggings.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "PCP",
+            "L L",
+            "P P"
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:leather",
+                "name": "Leather",
+                "image": "assets/catalog-icons/minecraft/leather.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:bow_of_artemis",
+      "name": "Bow of Artemis",
+      "image": "assets/catalog-icons/obsidium/bow_of_artemis.png",
+      "imageKind": "item texture",
+      "group": "Mythic equipment",
+      "description": "A mythic bow associated with Artemis.",
+      "recipes": [
+        {
+          "id": "obsidium:bow_of_artemis",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:bow_of_artemis",
+            "name": "Bow of Artemis",
+            "image": "assets/catalog-icons/obsidium/bow_of_artemis.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/bow_of_artemis.json",
+          "json": "assets/catalog-recipes/bow_of_artemis.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " SF",
+            "VBC",
+            " SF"
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "obsidium:silver_ingot",
+                "name": "Silver Ingot",
+                "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:artemis_silver_fruit",
+                "name": "Artemis Silver Fruit",
+                "image": "assets/catalog-icons/obsidium/artemis_silver_fruit.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:cinder_core",
+                "name": "Cinder Core",
+                "image": "assets/catalog-icons/obsidium/cinder_core.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "minecraft:bow",
+                "name": "Bow",
+                "image": "assets/catalog-icons/minecraft/bow.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:cornucopia",
+      "name": "Cornucopia of Demeter",
+      "image": "assets/catalog-icons/obsidium/cornucopia.png",
+      "imageKind": "item texture",
+      "group": "Mythic equipment",
+      "description": "A mythic utility item; inspect its in-game tooltip for use conditions.",
+      "recipes": [
+        {
+          "id": "obsidium:cornucopia",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:cornucopia",
+            "name": "Cornucopia of Demeter",
+            "image": "assets/catalog-icons/obsidium/cornucopia.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/cornucopia.json",
+          "json": "assets/catalog-recipes/cornucopia.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "CGC",
+            " V ",
+            " H "
+          ],
+          "key": {
+            "H": {
+              "item": {
+                "id": "minecraft:goat_horn",
+                "name": "Goat Horn",
+                "image": "assets/catalog-icons/minecraft/goat_horn.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:hermes_copper_fruit",
+                "name": "Hermes Copper Fruit",
+                "image": "assets/catalog-icons/obsidium/hermes_copper_fruit.png",
+                "imageKind": "block texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "obsidium:midas_gold_fruit",
+                "name": "Midas Gold Fruit",
+                "image": "assets/catalog-icons/obsidium/midas_gold_fruit.png",
+                "imageKind": "block texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_axe",
+      "name": "Hephaestean Axe",
+      "image": "assets/catalog-icons/obsidium/hephaestean_axe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Hephaestean axe, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_axe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_axe",
+            "name": "Hephaestean Axe",
+            "image": "assets/catalog-icons/obsidium/hephaestean_axe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_axe.json",
+          "json": "assets/catalog-recipes/hephaestean_axe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "##",
+            "#/",
+            " /"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "obsidium:hephaestean_axe_upgrade",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestean_axe",
+            "name": "Hephaestean Axe",
+            "image": "assets/catalog-icons/obsidium/hephaestean_axe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_axe_upgrade.json",
+          "json": "assets/catalog-recipes/hephaestean_axe_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:typhonic_axe",
+                "name": "Typhonic Axe",
+                "image": "assets/catalog-icons/obsidium/typhonic_axe.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_boots",
+      "name": "Hephaestean Boots",
+      "image": "assets/catalog-icons/obsidium/hephaestean_boots.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Hephaestean boots, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_boots",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_boots",
+            "name": "Hephaestean Boots",
+            "image": "assets/catalog-icons/obsidium/hephaestean_boots.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_boots.json",
+          "json": "assets/catalog-recipes/hephaestean_boots.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "# #",
+            "# #"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:hephaestean_boots_upgrade",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestean_boots",
+            "name": "Hephaestean Boots",
+            "image": "assets/catalog-icons/obsidium/hephaestean_boots.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_boots_upgrade.json",
+          "json": "assets/catalog-recipes/hephaestean_boots_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:typhonic_boots",
+                "name": "Typhonic Boots",
+                "image": "assets/catalog-icons/obsidium/typhonic_boots.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_chestplate",
+      "name": "Hephaestean Chestplate",
+      "image": "assets/catalog-icons/obsidium/hephaestean_chestplate.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Hephaestean chestplate, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_chestplate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_chestplate",
+            "name": "Hephaestean Chestplate",
+            "image": "assets/catalog-icons/obsidium/hephaestean_chestplate.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_chestplate.json",
+          "json": "assets/catalog-recipes/hephaestean_chestplate.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "# #",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:hephaestean_chestplate_upgrade",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestean_chestplate",
+            "name": "Hephaestean Chestplate",
+            "image": "assets/catalog-icons/obsidium/hephaestean_chestplate.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_chestplate_upgrade.json",
+          "json": "assets/catalog-recipes/hephaestean_chestplate_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:typhonic_chestplate",
+                "name": "Typhonic Chestplate",
+                "image": "assets/catalog-icons/obsidium/typhonic_chestplate.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_helmet",
+      "name": "Hephaestean Helmet",
+      "image": "assets/catalog-icons/obsidium/hephaestean_helmet.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Hephaestean helmet, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_helmet",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_helmet",
+            "name": "Hephaestean Helmet",
+            "image": "assets/catalog-icons/obsidium/hephaestean_helmet.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_helmet.json",
+          "json": "assets/catalog-recipes/hephaestean_helmet.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "###",
+            "# #"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:hephaestean_helmet_upgrade",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestean_helmet",
+            "name": "Hephaestean Helmet",
+            "image": "assets/catalog-icons/obsidium/hephaestean_helmet.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_helmet_upgrade.json",
+          "json": "assets/catalog-recipes/hephaestean_helmet_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:typhonic_helmet",
+                "name": "Typhonic Helmet",
+                "image": "assets/catalog-icons/obsidium/typhonic_helmet.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_hoe",
+      "name": "Hephaestean Hoe",
+      "image": "assets/catalog-icons/obsidium/hephaestean_hoe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Hephaestean hoe, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_hoe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_hoe",
+            "name": "Hephaestean Hoe",
+            "image": "assets/catalog-icons/obsidium/hephaestean_hoe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_hoe.json",
+          "json": "assets/catalog-recipes/hephaestean_hoe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "##",
+            " /",
+            " /"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "obsidium:hephaestean_hoe_upgrade",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestean_hoe",
+            "name": "Hephaestean Hoe",
+            "image": "assets/catalog-icons/obsidium/hephaestean_hoe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_hoe_upgrade.json",
+          "json": "assets/catalog-recipes/hephaestean_hoe_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:typhonic_hoe",
+                "name": "Typhonic Hoe",
+                "image": "assets/catalog-icons/obsidium/typhonic_hoe.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_leggings",
+      "name": "Hephaestean Leggings",
+      "image": "assets/catalog-icons/obsidium/hephaestean_leggings.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Hephaestean leggings, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_leggings",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_leggings",
+            "name": "Hephaestean Leggings",
+            "image": "assets/catalog-icons/obsidium/hephaestean_leggings.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_leggings.json",
+          "json": "assets/catalog-recipes/hephaestean_leggings.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "###",
+            "# #",
+            "# #"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:hephaestean_leggings_upgrade",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestean_leggings",
+            "name": "Hephaestean Leggings",
+            "image": "assets/catalog-icons/obsidium/hephaestean_leggings.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_leggings_upgrade.json",
+          "json": "assets/catalog-recipes/hephaestean_leggings_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:typhonic_leggings",
+                "name": "Typhonic Leggings",
+                "image": "assets/catalog-icons/obsidium/typhonic_leggings.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_paxel",
+      "name": "Hephaestean Paxel",
+      "image": "assets/catalog-icons/obsidium/hephaestean_paxel.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Hephaestean paxel, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_paxel",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestean_paxel",
+            "name": "Hephaestean Paxel",
+            "image": "assets/catalog-icons/obsidium/hephaestean_paxel.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_paxel.json",
+          "json": "assets/catalog-recipes/hephaestean_paxel.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:hephaestean_axe",
+                "name": "Hephaestean Axe",
+                "image": "assets/catalog-icons/obsidium/hephaestean_axe.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:hephaestean_pickaxe",
+                "name": "Hephaestean Pickaxe",
+                "image": "assets/catalog-icons/obsidium/hephaestean_pickaxe.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:hephaestean_shovel",
+                "name": "Hephaestean Shovel",
+                "image": "assets/catalog-icons/obsidium/hephaestean_shovel.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_pickaxe",
+      "name": "Hephaestean Pickaxe",
+      "image": "assets/catalog-icons/obsidium/hephaestean_pickaxe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Hephaestean pickaxe, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_pickaxe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_pickaxe",
+            "name": "Hephaestean Pickaxe",
+            "image": "assets/catalog-icons/obsidium/hephaestean_pickaxe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_pickaxe.json",
+          "json": "assets/catalog-recipes/hephaestean_pickaxe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "###",
+            " / ",
+            " / "
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "obsidium:hephaestean_pickaxe_upgrade",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestean_pickaxe",
+            "name": "Hephaestean Pickaxe",
+            "image": "assets/catalog-icons/obsidium/hephaestean_pickaxe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_pickaxe_upgrade.json",
+          "json": "assets/catalog-recipes/hephaestean_pickaxe_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:typhonic_pickaxe",
+                "name": "Typhonic Pickaxe",
+                "image": "assets/catalog-icons/obsidium/typhonic_pickaxe.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_resonator",
+      "name": "Hephaestean Resonator",
+      "image": "assets/catalog-icons/obsidium/hephaestean_resonator.png",
+      "imageKind": "item texture",
+      "group": "Exploration & safety",
+      "description": "An RF-powered scanning tool with ore and waypoint modes.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_resonator",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_resonator",
+            "name": "Hephaestean Resonator",
+            "image": "assets/catalog-icons/obsidium/hephaestean_resonator.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_resonator.json",
+          "json": "assets/catalog-recipes/hephaestean_resonator.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " V ",
+            "RPR",
+            " E "
+          ],
+          "key": {
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:plouton_rod",
+                "name": "Plouton's Rod",
+                "image": "assets/catalog-icons/obsidium/plouton_rod.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "E": {
+              "item": {
+                "id": "obsidium:volcanite_energy_core",
+                "name": "Volcanite Energy Core (3x3)",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_core.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_shovel",
+      "name": "Hephaestean Shovel",
+      "image": "assets/catalog-icons/obsidium/hephaestean_shovel.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Hephaestean shovel, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_shovel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_shovel",
+            "name": "Hephaestean Shovel",
+            "image": "assets/catalog-icons/obsidium/hephaestean_shovel.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_shovel.json",
+          "json": "assets/catalog-recipes/hephaestean_shovel.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "#",
+            "/",
+            "/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "obsidium:hephaestean_shovel_upgrade",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestean_shovel",
+            "name": "Hephaestean Shovel",
+            "image": "assets/catalog-icons/obsidium/hephaestean_shovel.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_shovel_upgrade.json",
+          "json": "assets/catalog-recipes/hephaestean_shovel_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:typhonic_shovel",
+                "name": "Typhonic Shovel",
+                "image": "assets/catalog-icons/obsidium/typhonic_shovel.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestean_sword",
+      "name": "Hephaestean Sword",
+      "image": "assets/catalog-icons/obsidium/hephaestean_sword.png",
+      "imageKind": "item texture",
+      "group": "Weapons",
+      "description": "Hephaestean sword, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestean_sword",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestean_sword",
+            "name": "Hephaestean Sword",
+            "image": "assets/catalog-icons/obsidium/hephaestean_sword.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_sword.json",
+          "json": "assets/catalog-recipes/hephaestean_sword.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "#",
+            "#",
+            "/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "obsidium:hephaestean_sword_upgrade",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestean_sword",
+            "name": "Hephaestean Sword",
+            "image": "assets/catalog-icons/obsidium/hephaestean_sword.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestean_sword_upgrade.json",
+          "json": "assets/catalog-recipes/hephaestean_sword_upgrade.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:typhonic_sword",
+                "name": "Typhonic Sword",
+                "image": "assets/catalog-icons/obsidium/typhonic_sword.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hv_dielectric_hot_stick",
+      "name": "HV Dielectric Hot-Stick",
+      "image": "assets/catalog-icons/obsidium/hv_dielectric_hot_stick.png",
+      "imageKind": "item texture",
+      "group": "Exploration & safety",
+      "description": "A dielectric tool used with high-voltage infrastructure.",
+      "recipes": [
+        {
+          "id": "obsidium:hv_dielectric_hot_stick",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hv_dielectric_hot_stick",
+            "name": "HV Dielectric Hot-Stick",
+            "image": "assets/catalog-icons/obsidium/hv_dielectric_hot_stick.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hv_dielectric_hot_stick.json",
+          "json": "assets/catalog-recipes/hv_dielectric_hot_stick.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " AC",
+            " BA",
+            "R  "
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "minecraft:amethyst_shard",
+                "name": "Amethyst Shard",
+                "image": "assets/catalog-icons/minecraft/amethyst_shard.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "minecraft:blaze_rod",
+                "name": "Blaze Rod",
+                "image": "assets/catalog-icons/minecraft/blaze_rod.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:leather",
+                "name": "Leather",
+                "image": "assets/catalog-icons/minecraft/leather.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:plouton_rod",
+      "name": "Plouton's Rod",
+      "image": "assets/catalog-icons/obsidium/plouton_rod.png",
+      "imageKind": "item texture",
+      "group": "Exploration & safety",
+      "description": "An ore-detection tool for exploration.",
+      "recipes": [
+        {
+          "id": "obsidium:plouton_rod",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:plouton_rod",
+            "name": "Plouton's Rod",
+            "image": "assets/catalog-icons/obsidium/plouton_rod.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/plouton_rod.json",
+          "json": "assets/catalog-recipes/plouton_rod.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:iron_ingot",
+                "name": "Iron Ingot",
+                "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        },
+        {
+          "id": "obsidium:plouton_rod_shaped",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:plouton_rod",
+            "name": "Plouton's Rod",
+            "image": "assets/catalog-icons/obsidium/plouton_rod.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/plouton_rod_shaped.json",
+          "json": "assets/catalog-recipes/plouton_rod_shaped.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "C",
+            "I",
+            "/"
+          ],
+          "key": {
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "I": {
+              "item": {
+                "id": "minecraft:iron_ingot",
+                "name": "Iron Ingot",
+                "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:promethean_axe",
+      "name": "Promethean Axe",
+      "image": "assets/catalog-icons/obsidium/promethean_axe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Promethean axe, part of the Promethean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:promethean_axe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:promethean_axe",
+            "name": "Promethean Axe",
+            "image": "assets/catalog-icons/obsidium/promethean_axe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/promethean_axe.json",
+          "json": "assets/catalog-recipes/promethean_axe.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "##",
+            "#/",
+            " /"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:promethean_hoe",
+      "name": "Promethean Hoe",
+      "image": "assets/catalog-icons/obsidium/promethean_hoe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Promethean hoe, part of the Promethean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:promethean_hoe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:promethean_hoe",
+            "name": "Promethean Hoe",
+            "image": "assets/catalog-icons/obsidium/promethean_hoe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/promethean_hoe.json",
+          "json": "assets/catalog-recipes/promethean_hoe.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "##",
+            " /",
+            " /"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:promethean_pickaxe",
+      "name": "Promethean Pickaxe",
+      "image": "assets/catalog-icons/obsidium/promethean_pickaxe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Promethean pickaxe, part of the Promethean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:promethean_pickaxe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:promethean_pickaxe",
+            "name": "Promethean Pickaxe",
+            "image": "assets/catalog-icons/obsidium/promethean_pickaxe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/promethean_pickaxe.json",
+          "json": "assets/catalog-recipes/promethean_pickaxe.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            " / ",
+            " / "
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:promethean_shovel",
+      "name": "Promethean Shovel",
+      "image": "assets/catalog-icons/obsidium/promethean_shovel.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Promethean shovel, part of the Promethean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:promethean_shovel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:promethean_shovel",
+            "name": "Promethean Shovel",
+            "image": "assets/catalog-icons/obsidium/promethean_shovel.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/promethean_shovel.json",
+          "json": "assets/catalog-recipes/promethean_shovel.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#",
+            "/",
+            "/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:promethean_sword",
+      "name": "Promethean Sword",
+      "image": "assets/catalog-icons/obsidium/promethean_sword.png",
+      "imageKind": "item texture",
+      "group": "Weapons",
+      "description": "Promethean sword, part of the Promethean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:promethean_sword",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:promethean_sword",
+            "name": "Promethean Sword",
+            "image": "assets/catalog-icons/obsidium/promethean_sword.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/promethean_sword.json",
+          "json": "assets/catalog-recipes/promethean_sword.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#",
+            "#",
+            "/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:talaria_of_hermes",
+      "name": "Talaria of Hermes",
+      "image": "assets/catalog-icons/obsidium/talaria_of_hermes.png",
+      "imageKind": "item texture",
+      "group": "Mythic equipment",
+      "description": "Mythic footwear associated with Hermes.",
+      "recipes": [
+        {
+          "id": "obsidium:talaria_of_hermes",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:talaria_of_hermes",
+            "name": "Talaria of Hermes",
+            "image": "assets/catalog-icons/obsidium/talaria_of_hermes.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/talaria_of_hermes.json",
+          "json": "assets/catalog-recipes/talaria_of_hermes.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "HNH",
+            "SES",
+            "PCP"
+          ],
+          "key": {
+            "H": {
+              "item": {
+                "id": "obsidium:hermes_copper_fruit",
+                "name": "Hermes Copper Fruit",
+                "image": "assets/catalog-icons/obsidium/hermes_copper_fruit.png",
+                "imageKind": "block texture"
+              }
+            },
+            "N": {
+              "item": {
+                "id": "minecraft:nether_star",
+                "name": "Nether Star",
+                "image": "assets/catalog-icons/minecraft/nether_star.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "E": {
+              "item": {
+                "id": "minecraft:elytra",
+                "name": "Elytra",
+                "image": "assets/catalog-icons/minecraft/elytra.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:cinder_stalker_skull",
+                "name": "Cinder Stalker Skull",
+                "image": "assets/catalog-icons/obsidium/cinder_stalker_skull.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_axe",
+      "name": "Tartarean Axe",
+      "image": "assets/catalog-icons/obsidium/tartarean_axe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Tartarean axe, part of the Tartarean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_axe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_axe",
+            "name": "Tartarean Axe",
+            "image": "assets/catalog-icons/obsidium/tartarean_axe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_axe.json",
+          "json": "assets/catalog-recipes/tartarean_axe.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "##",
+            "#/",
+            " /"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_boots",
+      "name": "Tartarean Boots",
+      "image": "assets/catalog-icons/obsidium/tartarean_boots.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Tartarean boots, part of the Tartarean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_boots",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_boots",
+            "name": "Tartarean Boots",
+            "image": "assets/catalog-icons/obsidium/tartarean_boots.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_boots.json",
+          "json": "assets/catalog-recipes/tartarean_boots.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "# #",
+            "# #"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_chestplate",
+      "name": "Tartarean Chestplate",
+      "image": "assets/catalog-icons/obsidium/tartarean_chestplate.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Tartarean chestplate, part of the Tartarean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_chestplate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_chestplate",
+            "name": "Tartarean Chestplate",
+            "image": "assets/catalog-icons/obsidium/tartarean_chestplate.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_chestplate.json",
+          "json": "assets/catalog-recipes/tartarean_chestplate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "# #",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_helmet",
+      "name": "Tartarean Helmet",
+      "image": "assets/catalog-icons/obsidium/tartarean_helmet.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Tartarean helmet, part of the Tartarean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_helmet",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_helmet",
+            "name": "Tartarean Helmet",
+            "image": "assets/catalog-icons/obsidium/tartarean_helmet.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_helmet.json",
+          "json": "assets/catalog-recipes/tartarean_helmet.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            "# #"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_hoe",
+      "name": "Tartarean Hoe",
+      "image": "assets/catalog-icons/obsidium/tartarean_hoe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Tartarean hoe, part of the Tartarean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_hoe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_hoe",
+            "name": "Tartarean Hoe",
+            "image": "assets/catalog-icons/obsidium/tartarean_hoe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_hoe.json",
+          "json": "assets/catalog-recipes/tartarean_hoe.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "##",
+            " /",
+            " /"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_leggings",
+      "name": "Tartarean Leggings",
+      "image": "assets/catalog-icons/obsidium/tartarean_leggings.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Tartarean leggings, part of the Tartarean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_leggings",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_leggings",
+            "name": "Tartarean Leggings",
+            "image": "assets/catalog-icons/obsidium/tartarean_leggings.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_leggings.json",
+          "json": "assets/catalog-recipes/tartarean_leggings.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            "# #",
+            "# #"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_pickaxe",
+      "name": "Tartarean Pickaxe",
+      "image": "assets/catalog-icons/obsidium/tartarean_pickaxe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Tartarean pickaxe, part of the Tartarean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_pickaxe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_pickaxe",
+            "name": "Tartarean Pickaxe",
+            "image": "assets/catalog-icons/obsidium/tartarean_pickaxe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_pickaxe.json",
+          "json": "assets/catalog-recipes/tartarean_pickaxe.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            " / ",
+            " / "
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_shovel",
+      "name": "Tartarean Shovel",
+      "image": "assets/catalog-icons/obsidium/tartarean_shovel.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Tartarean shovel, part of the Tartarean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_shovel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_shovel",
+            "name": "Tartarean Shovel",
+            "image": "assets/catalog-icons/obsidium/tartarean_shovel.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_shovel.json",
+          "json": "assets/catalog-recipes/tartarean_shovel.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#",
+            "/",
+            "/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_sword",
+      "name": "Tartarean Sword",
+      "image": "assets/catalog-icons/obsidium/tartarean_sword.png",
+      "imageKind": "item texture",
+      "group": "Weapons",
+      "description": "Tartarean sword, part of the Tartarean equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_sword",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_sword",
+            "name": "Tartarean Sword",
+            "image": "assets/catalog-icons/obsidium/tartarean_sword.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_sword.json",
+          "json": "assets/catalog-recipes/tartarean_sword.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#",
+            "#",
+            "/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:feroplumb_ingot",
+                "name": "Feroplumb Ingot",
+                "image": "assets/catalog-icons/obsidium/feroplumb_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:telluric_astrolabe",
+      "name": "Telluric Astrolabe",
+      "image": "assets/catalog-icons/obsidium/telluric_astrolabe.png",
+      "imageKind": "item texture",
+      "group": "Exploration & safety",
+      "description": "An exploration instrument for locating geological features.",
+      "recipes": [
+        {
+          "id": "obsidium:telluric_astrolabe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:telluric_astrolabe",
+            "name": "Telluric Astrolabe",
+            "image": "assets/catalog-icons/obsidium/telluric_astrolabe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/telluric_astrolabe.json",
+          "json": "assets/catalog-recipes/telluric_astrolabe.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            " P ",
+            "PCP",
+            " P "
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:pyric_bronze_ingot",
+                "name": "Pyric Bronze Ingot",
+                "image": "assets/catalog-icons/obsidium/pyric_bronze_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:compass",
+                "name": "Compass",
+                "image": "assets/catalog-icons/minecraft/compass.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:thyrsus_of_dionysus",
+      "name": "Thyrsus of Dionysus",
+      "image": "assets/catalog-icons/obsidium/thyrsus_of_dionysus.png",
+      "imageKind": "item texture",
+      "group": "Mythic equipment",
+      "description": "A mythic staff associated with Dionysus.",
+      "recipes": [
+        {
+          "id": "obsidium:thyrsus_of_dionysus",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:thyrsus_of_dionysus",
+            "name": "Thyrsus of Dionysus",
+            "image": "assets/catalog-icons/obsidium/thyrsus_of_dionysus.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/thyrsus_of_dionysus.json",
+          "json": "assets/catalog-recipes/thyrsus_of_dionysus.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            " A ",
+            "LVL",
+            " / "
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "minecraft:amethyst_shard",
+                "name": "Amethyst Shard",
+                "image": "assets/catalog-icons/minecraft/amethyst_shard.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "minecraft:vine",
+                "name": "Vines",
+                "image": "assets/catalog-icons/minecraft/vine.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:typhonic_axe",
+      "name": "Typhonic Axe",
+      "image": "assets/catalog-icons/obsidium/typhonic_axe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Typhonic axe, part of the Typhonic equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:typhonic_axe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:typhonic_axe",
+            "name": "Typhonic Axe",
+            "image": "assets/catalog-icons/obsidium/typhonic_axe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/typhonic_axe.json",
+          "json": "assets/catalog-recipes/typhonic_axe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "##",
+            "#/",
+            " /"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:typhonic_boots",
+      "name": "Typhonic Boots",
+      "image": "assets/catalog-icons/obsidium/typhonic_boots.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Typhonic boots, part of the Typhonic equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:typhonic_boots",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:typhonic_boots",
+            "name": "Typhonic Boots",
+            "image": "assets/catalog-icons/obsidium/typhonic_boots.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/typhonic_boots.json",
+          "json": "assets/catalog-recipes/typhonic_boots.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "# #",
+            "# #"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:typhonic_chestplate",
+      "name": "Typhonic Chestplate",
+      "image": "assets/catalog-icons/obsidium/typhonic_chestplate.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Typhonic chestplate, part of the Typhonic equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:typhonic_chestplate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:typhonic_chestplate",
+            "name": "Typhonic Chestplate",
+            "image": "assets/catalog-icons/obsidium/typhonic_chestplate.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/typhonic_chestplate.json",
+          "json": "assets/catalog-recipes/typhonic_chestplate.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "# #",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:typhonic_helmet",
+      "name": "Typhonic Helmet",
+      "image": "assets/catalog-icons/obsidium/typhonic_helmet.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Typhonic helmet, part of the Typhonic equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:typhonic_helmet",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:typhonic_helmet",
+            "name": "Typhonic Helmet",
+            "image": "assets/catalog-icons/obsidium/typhonic_helmet.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/typhonic_helmet.json",
+          "json": "assets/catalog-recipes/typhonic_helmet.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "###",
+            "# #"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:typhonic_hoe",
+      "name": "Typhonic Hoe",
+      "image": "assets/catalog-icons/obsidium/typhonic_hoe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Typhonic hoe, part of the Typhonic equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:typhonic_hoe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:typhonic_hoe",
+            "name": "Typhonic Hoe",
+            "image": "assets/catalog-icons/obsidium/typhonic_hoe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/typhonic_hoe.json",
+          "json": "assets/catalog-recipes/typhonic_hoe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "##",
+            " /",
+            " /"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:typhonic_leggings",
+      "name": "Typhonic Leggings",
+      "image": "assets/catalog-icons/obsidium/typhonic_leggings.png",
+      "imageKind": "item texture",
+      "group": "Armor",
+      "description": "Typhonic leggings, part of the Typhonic equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:typhonic_leggings",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:typhonic_leggings",
+            "name": "Typhonic Leggings",
+            "image": "assets/catalog-icons/obsidium/typhonic_leggings.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/typhonic_leggings.json",
+          "json": "assets/catalog-recipes/typhonic_leggings.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "###",
+            "# #",
+            "# #"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:typhonic_pickaxe",
+      "name": "Typhonic Pickaxe",
+      "image": "assets/catalog-icons/obsidium/typhonic_pickaxe.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Typhonic pickaxe, part of the Typhonic equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:typhonic_pickaxe",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:typhonic_pickaxe",
+            "name": "Typhonic Pickaxe",
+            "image": "assets/catalog-icons/obsidium/typhonic_pickaxe.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/typhonic_pickaxe.json",
+          "json": "assets/catalog-recipes/typhonic_pickaxe.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "###",
+            " / ",
+            " / "
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:typhonic_shovel",
+      "name": "Typhonic Shovel",
+      "image": "assets/catalog-icons/obsidium/typhonic_shovel.png",
+      "imageKind": "item texture",
+      "group": "Tools",
+      "description": "Typhonic shovel, part of the Typhonic equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:typhonic_shovel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:typhonic_shovel",
+            "name": "Typhonic Shovel",
+            "image": "assets/catalog-icons/obsidium/typhonic_shovel.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/typhonic_shovel.json",
+          "json": "assets/catalog-recipes/typhonic_shovel.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "#",
+            "/",
+            "/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:typhonic_sword",
+      "name": "Typhonic Sword",
+      "image": "assets/catalog-icons/obsidium/typhonic_sword.png",
+      "imageKind": "item texture",
+      "group": "Weapons",
+      "description": "Typhonic sword, part of the Typhonic equipment family.",
+      "recipes": [
+        {
+          "id": "obsidium:typhonic_sword",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:typhonic_sword",
+            "name": "Typhonic Sword",
+            "image": "assets/catalog-icons/obsidium/typhonic_sword.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/typhonic_sword.json",
+          "json": "assets/catalog-recipes/typhonic_sword.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "#",
+            "#",
+            "/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "/": {
+              "alternatives": [
+                {
+                  "item": {
+                    "id": "minecraft:stick",
+                    "name": "Stick",
+                    "image": "assets/catalog-icons/minecraft/stick.png",
+                    "imageKind": "item texture"
+                  }
+                },
+                {
+                  "tag": "c:wooden_rods"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_warp_gauntlet",
+      "name": "Volcanite Warp Gauntlet",
+      "image": "assets/catalog-icons/obsidium/volcanite_warp_gauntlet.png",
+      "imageKind": "item texture",
+      "group": "Mythic equipment",
+      "description": "A teleportation utility gauntlet.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_warp_gauntlet",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_warp_gauntlet",
+            "name": "Volcanite Warp Gauntlet",
+            "image": "assets/catalog-icons/obsidium/volcanite_warp_gauntlet.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_warp_gauntlet.json",
+          "json": "assets/catalog-recipes/volcanite_warp_gauntlet.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " V ",
+            "VNV",
+            " V "
+          ],
+          "key": {
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "N": {
+              "item": {
+                "id": "minecraft:nether_star",
+                "name": "Nether Star",
+                "image": "assets/catalog-icons/minecraft/nether_star.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    }
+  ]
+}

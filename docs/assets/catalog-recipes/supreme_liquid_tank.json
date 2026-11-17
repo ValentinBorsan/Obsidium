@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "STS",
+    "GAG",
+    "LCL"
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    },
+    "G": {
+      "item": "obsidium:supreme_volcanite_glass"
+    },
+    "A": {
+      "item": "obsidium:reinforced_volcanic_liquid_barrel"
+    },
+    "L": {
+      "item": "obsidium:lead_block"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:supreme_liquid_tank"
+  }
+}

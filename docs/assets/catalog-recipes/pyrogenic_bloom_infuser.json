@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    },
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    },
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    }
+  },
+  "pattern": [
+    "APA",
+    "FTF",
+    "APA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:pyrogenic_bloom_infuser"
+  }
+}

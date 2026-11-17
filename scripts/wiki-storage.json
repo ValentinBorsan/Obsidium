@@ -1,0 +1,227 @@
+{
+  "volcanite_chest": {
+    "group": "Chests & backpacks",
+    "description": "A Volcanite chest for local item storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_modular_chest": {
+    "group": "Chests & backpacks",
+    "description": "A modular chest with configurable storage and upgrade modules.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "basic_backpack": {
+    "group": "Chests & backpacks",
+    "description": "Portable item storage carried by the player.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "advanced_backpack": {
+    "group": "Chests & backpacks",
+    "description": "An upgraded backpack for portable item storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "basic_volcanite_item_barrel": {
+    "group": "Item barrels",
+    "description": "Basic single-item barrel for bulk storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "advanced_volcanite_item_barrel": {
+    "group": "Item barrels",
+    "description": "Advanced single-item barrel for bulk storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "supreme_volcanite_item_barrel": {
+    "group": "Item barrels",
+    "description": "Supreme single-item barrel for bulk storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanic_wood_liquid_barrel": {
+    "group": "Fluid storage",
+    "description": "Wooden barrel for storing fluids.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "reinforced_volcanic_liquid_barrel": {
+    "group": "Fluid storage",
+    "description": "Reinforced barrel for fluid storage and multiblock construction.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_liquid_storage_tank": {
+    "group": "Fluid storage",
+    "description": "Fluid storage tank for the Obsidium storage system.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "supreme_liquid_tank": {
+    "group": "Fluid storage",
+    "description": "A high-tier fluid tank.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "mega_volcanic_barrel": {
+    "group": "Fluid storage",
+    "description": "Large fluid-storage multiblock; see the construction guide for formation.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_unit": {
+    "group": "Storage network",
+    "description": "A storage unit for the Obsidium item network.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_controller": {
+    "group": "Storage network",
+    "description": "The controller and access point for the storage network.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_interface": {
+    "group": "Storage network",
+    "description": "An interface for connecting storage-network operations.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_disk_drive": {
+    "group": "Storage network",
+    "description": "Houses storage disks for the network.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_crafter_interface": {
+    "group": "Storage network",
+    "description": "Supports crafting operations through the storage network.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_sorting_station": {
+    "group": "Storage network",
+    "description": "Routes and sorts stored items.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_network_node_emitter": {
+    "group": "Storage network",
+    "description": "Emitter component for network-node links.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_network_node_receiver": {
+    "group": "Storage network",
+    "description": "Receiver component for network-node links.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_disk_32": {
+    "group": "Item disks",
+    "description": "Item-storage disk, 32k tier, for a compatible disk drive.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_liquid_storage_disk_32": {
+    "group": "Fluid disks",
+    "description": "Fluid-storage disk, 32k tier, for a compatible disk drive.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_disk_64": {
+    "group": "Item disks",
+    "description": "Item-storage disk, 64k tier, for a compatible disk drive.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_liquid_storage_disk_64": {
+    "group": "Fluid disks",
+    "description": "Fluid-storage disk, 64k tier, for a compatible disk drive.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_disk_128": {
+    "group": "Item disks",
+    "description": "Item-storage disk, 128k tier, for a compatible disk drive.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_liquid_storage_disk_128": {
+    "group": "Fluid disks",
+    "description": "Fluid-storage disk, 128k tier, for a compatible disk drive.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_disk_256": {
+    "group": "Item disks",
+    "description": "Item-storage disk, 256k tier, for a compatible disk drive.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_liquid_storage_disk_256": {
+    "group": "Fluid disks",
+    "description": "Fluid-storage disk, 256k tier, for a compatible disk drive.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_processor": {
+    "group": "Components & access",
+    "description": "Crafting component for storage infrastructure.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_capacitor": {
+    "group": "Components & access",
+    "description": "Crafting component for storage infrastructure.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_remote": {
+    "group": "Components & access",
+    "description": "Portable access tool for a linked storage network.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "quantum_link_module": {
+    "group": "Components & access",
+    "description": "Links supported storage blocks to Quantum storage; follow the target block\u2019s installation conditions.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "dionysian_barrel_core": {
+    "group": "Components & access",
+    "description": "Activation component for assembling the Mega Volcanic Barrel.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_storage_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Storage-capacity upgrade for compatible blocks.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_liquid_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Fluid-capacity upgrade for compatible storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_stack_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Stack-transfer upgrade for compatible systems.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_vacuum_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Item-collection upgrade for compatible storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_compactor_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Compacts matching resources in compatible storage.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_filtered_compactor_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Filtered compaction upgrade.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_void_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Overflow-voiding upgrade; review settings before enabling it.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_filtered_void_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Filtered voiding upgrade; matching items may be discarded.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_basic_barrel_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Basic barrel-capacity upgrade.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_advanced_barrel_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Advanced barrel-capacity upgrade.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_supreme_barrel_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Supreme barrel-capacity upgrade.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_barrel_void_upgrade": {
+    "group": "Storage upgrades",
+    "description": "Voids excess items in a compatible bulk-storage barrel.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  }
+}

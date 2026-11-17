@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "WCW",
+        "PWP"
+    ],
+    "key": {
+        "W": {
+            "item": "obsidium:volcanite_energy_wire"
+        },
+        "P": {
+            "item": "obsidium:volcanite_storage_pipe"
+        },
+        "C": {
+            "item": "obsidium:volcanic_plate"
+        }
+    },
+    "result": {
+        "id": "obsidium:volcanite_universal_conduit",
+        "count": 4
+    }
+}

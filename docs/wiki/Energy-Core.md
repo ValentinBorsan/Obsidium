@@ -1,5 +1,9 @@
 # Energy Core & High-Voltage (HV)
 
+[Energy & Upgrades — images and crafting recipes](wiki.html?page=Energy-Catalog)
+
+[Multiblock construction guide — layers, blocks and formation](wiki.html?page=Multiblocks)
+
 ![Volcanite Energy Cell](assets/icons/volcanite_energy_cell.png) ![Volcanite Energy Cell Recipe](assets/recipes/volcanite_energy_cell.png)
 
 ## 1. 3×3 Energy Core Matrix

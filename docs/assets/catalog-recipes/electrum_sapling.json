@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AGA",
+    "SFS",
+    "ALA"
+  ],
+  "key": {
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "L": {
+      "item": "obsidium:silver_ingot"
+    },
+    "S": {
+      "tag": "minecraft:saplings"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    }
+  },
+  "result": {
+    "id": "obsidium:electrum_sapling",
+    "count": 1
+  }
+}

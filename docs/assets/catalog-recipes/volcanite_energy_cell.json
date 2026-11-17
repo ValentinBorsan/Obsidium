@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PWP",
+    "ACA",
+    "PRP"
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "W": {
+      "item": "obsidium:volcanite_energy_wire"
+    },
+    "A": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "C": {
+      "item": "minecraft:copper_block"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_energy_cell",
+    "count": 1
+  }
+}

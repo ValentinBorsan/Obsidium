@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "NAN",
+    "CSC",
+    "NAN"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "A": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "C": {
+      "item": "obsidium:astral_volcanic_catalyst"
+    },
+    "S": {
+      "item": "obsidium:diamond_seed"
+    }
+  },
+  "result": {
+    "id": "obsidium:netherite_seed",
+    "count": 1
+  }
+}

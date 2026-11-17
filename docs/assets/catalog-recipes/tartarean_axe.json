@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "obsidium:feroplumb_ingot"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "##",
+    "#/",
+    " /"
+  ],
+  "result": {
+    "id": "obsidium:tartarean_axe",
+    "count": 1
+  }
+}

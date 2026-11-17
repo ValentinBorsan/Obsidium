@@ -1,0 +1,3139 @@
+{
+  "schema": 1,
+  "category": "building",
+  "title": "Building Blocks",
+  "note": "Images are copied from game textures; machine and block images use a representative face. Crafting recipes may be overridden by modpacks. Machine crafting recipes describe how to build the machine, not its processing recipes.",
+  "scope": "Registered tree logs, planks, leaves and wooden shapes, ore blocks, compact metal/raw-resource blocks, glass, cement and lighting. Machines and functional storage blocks have dedicated categories.",
+  "count": 85,
+  "items": [
+    {
+      "id": "obsidium:ares_iron_fence",
+      "name": "Ares Iron Fence",
+      "image": "assets/catalog-icons/obsidium/ares_iron_fence.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:ares_iron_fence",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:ares_iron_fence",
+            "name": "Ares Iron Fence",
+            "image": "assets/catalog-icons/obsidium/ares_iron_fence.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 3,
+          "source": "src/main/resources/data/obsidium/recipe/ares_iron_fence.json",
+          "json": "assets/catalog-recipes/ares_iron_fence.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#/#",
+            "#/#"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:ares_iron_planks",
+                "name": "Ares Iron Planks",
+                "image": "assets/catalog-icons/obsidium/ares_iron_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:ares_iron_fence_gate",
+      "name": "Ares Iron Fence Gate",
+      "image": "assets/catalog-icons/obsidium/ares_iron_fence_gate.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:ares_iron_fence_gate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:ares_iron_fence_gate",
+            "name": "Ares Iron Fence Gate",
+            "image": "assets/catalog-icons/obsidium/ares_iron_fence_gate.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/ares_iron_fence_gate.json",
+          "json": "assets/catalog-recipes/ares_iron_fence_gate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "/#/",
+            "/#/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:ares_iron_planks",
+                "name": "Ares Iron Planks",
+                "image": "assets/catalog-icons/obsidium/ares_iron_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:ares_iron_planks",
+      "name": "Ares Iron Planks",
+      "image": "assets/catalog-icons/obsidium/ares_iron_planks.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "Planks crafted from the corresponding tree wood.",
+      "recipes": [
+        {
+          "id": "obsidium:ares_iron_planks",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:ares_iron_planks",
+            "name": "Ares Iron Planks",
+            "image": "assets/catalog-icons/obsidium/ares_iron_planks.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/ares_iron_planks.json",
+          "json": "assets/catalog-recipes/ares_iron_planks.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:ares_iron_log",
+                "name": "Ares Iron Tree Log",
+                "image": "assets/catalog-icons/obsidium/ares_iron_log.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:ares_iron_slab",
+      "name": "Ares Iron Slab",
+      "image": "assets/catalog-icons/obsidium/ares_iron_slab.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:ares_iron_slab",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:ares_iron_slab",
+            "name": "Ares Iron Slab",
+            "image": "assets/catalog-icons/obsidium/ares_iron_slab.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 6,
+          "source": "src/main/resources/data/obsidium/recipe/ares_iron_slab.json",
+          "json": "assets/catalog-recipes/ares_iron_slab.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:ares_iron_planks",
+                "name": "Ares Iron Planks",
+                "image": "assets/catalog-icons/obsidium/ares_iron_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:ares_iron_stairs",
+      "name": "Ares Iron Stairs",
+      "image": "assets/catalog-icons/obsidium/ares_iron_stairs.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:ares_iron_stairs",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:ares_iron_stairs",
+            "name": "Ares Iron Stairs",
+            "image": "assets/catalog-icons/obsidium/ares_iron_stairs.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/ares_iron_stairs.json",
+          "json": "assets/catalog-recipes/ares_iron_stairs.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:ares_iron_planks",
+                "name": "Ares Iron Planks",
+                "image": "assets/catalog-icons/obsidium/ares_iron_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:ares_iron_leaves",
+      "name": "Ares Iron Tree Leaves",
+      "image": "assets/catalog-icons/obsidium/ares_iron_leaves.png",
+      "imageKind": "block texture",
+      "group": "Leaves",
+      "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/ares_iron_leaves.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:ares_iron_log",
+      "name": "Ares Iron Tree Log",
+      "image": "assets/catalog-icons/obsidium/ares_iron_log.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/ares_iron_log.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:artemis_silver_fence",
+      "name": "Artemis Silver Fence",
+      "image": "assets/catalog-icons/obsidium/artemis_silver_fence.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:artemis_silver_fence",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:artemis_silver_fence",
+            "name": "Artemis Silver Fence",
+            "image": "assets/catalog-icons/obsidium/artemis_silver_fence.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 3,
+          "source": "src/main/resources/data/obsidium/recipe/artemis_silver_fence.json",
+          "json": "assets/catalog-recipes/artemis_silver_fence.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#S#",
+            "#S#"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:artemis_silver_planks",
+                "name": "Artemis Silver Planks",
+                "image": "assets/catalog-icons/obsidium/artemis_silver_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:artemis_silver_fence_gate",
+      "name": "Artemis Silver Fence Gate",
+      "image": "assets/catalog-icons/obsidium/artemis_silver_fence_gate.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:artemis_silver_fence_gate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:artemis_silver_fence_gate",
+            "name": "Artemis Silver Fence Gate",
+            "image": "assets/catalog-icons/obsidium/artemis_silver_fence_gate.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/artemis_silver_fence_gate.json",
+          "json": "assets/catalog-recipes/artemis_silver_fence_gate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "S#S",
+            "S#S"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:artemis_silver_planks",
+                "name": "Artemis Silver Planks",
+                "image": "assets/catalog-icons/obsidium/artemis_silver_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:artemis_silver_leaves",
+      "name": "Artemis Silver Leaves",
+      "image": "assets/catalog-icons/obsidium/artemis_silver_leaves.png",
+      "imageKind": "block texture",
+      "group": "Leaves",
+      "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/artemis_silver_leaves.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:artemis_silver_log",
+      "name": "Artemis Silver Log",
+      "image": "assets/catalog-icons/obsidium/artemis_silver_log.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/artemis_silver_log.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:artemis_silver_planks",
+      "name": "Artemis Silver Planks",
+      "image": "assets/catalog-icons/obsidium/artemis_silver_planks.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "Planks crafted from the corresponding tree wood.",
+      "recipes": [
+        {
+          "id": "obsidium:artemis_silver_planks",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:artemis_silver_planks",
+            "name": "Artemis Silver Planks",
+            "image": "assets/catalog-icons/obsidium/artemis_silver_planks.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/artemis_silver_planks.json",
+          "json": "assets/catalog-recipes/artemis_silver_planks.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:artemis_silver_log",
+                "name": "Artemis Silver Log",
+                "image": "assets/catalog-icons/obsidium/artemis_silver_log.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:artemis_silver_slab",
+      "name": "Artemis Silver Slab",
+      "image": "assets/catalog-icons/obsidium/artemis_silver_slab.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:artemis_silver_slab",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:artemis_silver_slab",
+            "name": "Artemis Silver Slab",
+            "image": "assets/catalog-icons/obsidium/artemis_silver_slab.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 6,
+          "source": "src/main/resources/data/obsidium/recipe/artemis_silver_slab.json",
+          "json": "assets/catalog-recipes/artemis_silver_slab.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:artemis_silver_planks",
+                "name": "Artemis Silver Planks",
+                "image": "assets/catalog-icons/obsidium/artemis_silver_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:artemis_silver_stairs",
+      "name": "Artemis Silver Stairs",
+      "image": "assets/catalog-icons/obsidium/artemis_silver_stairs.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:artemis_silver_stairs",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:artemis_silver_stairs",
+            "name": "Artemis Silver Stairs",
+            "image": "assets/catalog-icons/obsidium/artemis_silver_stairs.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/artemis_silver_stairs.json",
+          "json": "assets/catalog-recipes/artemis_silver_stairs.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:artemis_silver_planks",
+                "name": "Artemis Silver Planks",
+                "image": "assets/catalog-icons/obsidium/artemis_silver_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:lead_block",
+      "name": "Block of Lead",
+      "image": "assets/catalog-icons/obsidium/lead_block.png",
+      "imageKind": "block texture",
+      "group": "Material blocks",
+      "description": "A compact material block for construction and resource conversion.",
+      "recipes": [
+        {
+          "id": "obsidium:lead_block",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:lead_block",
+            "name": "Block of Lead",
+            "image": "assets/catalog-icons/obsidium/lead_block.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_block.json",
+          "json": "assets/catalog-recipes/lead_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:lead_ingot",
+                "name": "Lead Ingot",
+                "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:raw_lead_block",
+      "name": "Block of Raw Lead",
+      "image": "assets/catalog-icons/obsidium/raw_lead_block.png",
+      "imageKind": "block texture",
+      "group": "Material blocks",
+      "description": "A compact material block for construction and resource conversion.",
+      "recipes": [
+        {
+          "id": "obsidium:raw_lead_block",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:raw_lead_block",
+            "name": "Block of Raw Lead",
+            "image": "assets/catalog-icons/obsidium/raw_lead_block.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/raw_lead_block.json",
+          "json": "assets/catalog-recipes/raw_lead_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:raw_lead",
+                "name": "Raw Lead",
+                "image": "assets/catalog-icons/obsidium/raw_lead.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:raw_silver_block",
+      "name": "Block of Raw Silver",
+      "image": "assets/catalog-icons/obsidium/raw_silver_block.png",
+      "imageKind": "block texture",
+      "group": "Material blocks",
+      "description": "A compact material block for construction and resource conversion.",
+      "recipes": [
+        {
+          "id": "obsidium:raw_silver_block",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:raw_silver_block",
+            "name": "Block of Raw Silver",
+            "image": "assets/catalog-icons/obsidium/raw_silver_block.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/raw_silver_block.json",
+          "json": "assets/catalog-recipes/raw_silver_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:raw_silver",
+                "name": "Raw Silver",
+                "image": "assets/catalog-icons/obsidium/raw_silver.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:raw_tin_block",
+      "name": "Block of Raw Tin",
+      "image": "assets/catalog-icons/obsidium/raw_tin_block.png",
+      "imageKind": "block texture",
+      "group": "Material blocks",
+      "description": "A compact material block for construction and resource conversion.",
+      "recipes": [
+        {
+          "id": "obsidium:raw_tin_block",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:raw_tin_block",
+            "name": "Block of Raw Tin",
+            "image": "assets/catalog-icons/obsidium/raw_tin_block.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/raw_tin_block.json",
+          "json": "assets/catalog-recipes/raw_tin_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:raw_tin",
+                "name": "Raw Tin",
+                "image": "assets/catalog-icons/obsidium/raw_tin.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:silver_block",
+      "name": "Block of Silver",
+      "image": "assets/catalog-icons/obsidium/silver_block.png",
+      "imageKind": "block texture",
+      "group": "Material blocks",
+      "description": "A compact material block for construction and resource conversion.",
+      "recipes": [
+        {
+          "id": "obsidium:silver_block",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:silver_block",
+            "name": "Block of Silver",
+            "image": "assets/catalog-icons/obsidium/silver_block.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_block.json",
+          "json": "assets/catalog-recipes/silver_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:silver_ingot",
+                "name": "Silver Ingot",
+                "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tin_block",
+      "name": "Block of Tin",
+      "image": "assets/catalog-icons/obsidium/tin_block.png",
+      "imageKind": "block texture",
+      "group": "Material blocks",
+      "description": "A compact material block for construction and resource conversion.",
+      "recipes": [
+        {
+          "id": "obsidium:tin_block",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tin_block",
+            "name": "Block of Tin",
+            "image": "assets/catalog-icons/obsidium/tin_block.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_block.json",
+          "json": "assets/catalog-recipes/tin_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:tin_ingot",
+                "name": "Tin Ingot",
+                "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_block",
+      "name": "Block of Volcanite",
+      "image": "assets/catalog-icons/obsidium/volcanite_block.png",
+      "imageKind": "block texture",
+      "group": "Material blocks",
+      "description": "A compact material block for construction and resource conversion.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_block",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_block",
+            "name": "Block of Volcanite",
+            "image": "assets/catalog-icons/obsidium/volcanite_block.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_block.json",
+          "json": "assets/catalog-recipes/volcanite_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:volcanite_block_from_ingots",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_block",
+            "name": "Block of Volcanite",
+            "image": "assets/catalog-icons/obsidium/volcanite_block.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_block_from_ingots.json",
+          "json": "assets/catalog-recipes/volcanite_block_from_ingots.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###",
+            "###",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:cronus_lead_fence",
+      "name": "Cronus Lead Fence",
+      "image": "assets/catalog-icons/obsidium/cronus_lead_fence.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:cronus_lead_fence",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:cronus_lead_fence",
+            "name": "Cronus Lead Fence",
+            "image": "assets/catalog-icons/obsidium/cronus_lead_fence.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 3,
+          "source": "src/main/resources/data/obsidium/recipe/cronus_lead_fence.json",
+          "json": "assets/catalog-recipes/cronus_lead_fence.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "W#W",
+            "W#W"
+          ],
+          "key": {
+            "W": {
+              "item": {
+                "id": "obsidium:cronus_lead_planks",
+                "name": "Cronus Lead Planks",
+                "image": "assets/catalog-icons/obsidium/cronus_lead_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "#": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:cronus_lead_fence_gate",
+      "name": "Cronus Lead Fence Gate",
+      "image": "assets/catalog-icons/obsidium/cronus_lead_fence_gate.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:cronus_lead_fence_gate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:cronus_lead_fence_gate",
+            "name": "Cronus Lead Fence Gate",
+            "image": "assets/catalog-icons/obsidium/cronus_lead_fence_gate.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/cronus_lead_fence_gate.json",
+          "json": "assets/catalog-recipes/cronus_lead_fence_gate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#W#",
+            "#W#"
+          ],
+          "key": {
+            "W": {
+              "item": {
+                "id": "obsidium:cronus_lead_planks",
+                "name": "Cronus Lead Planks",
+                "image": "assets/catalog-icons/obsidium/cronus_lead_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "#": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:cronus_lead_leaves",
+      "name": "Cronus Lead Leaves",
+      "image": "assets/catalog-icons/obsidium/cronus_lead_leaves.png",
+      "imageKind": "block texture",
+      "group": "Leaves",
+      "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/cronus_lead_leaves.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:cronus_lead_log",
+      "name": "Cronus Lead Log",
+      "image": "assets/catalog-icons/obsidium/cronus_lead_log.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/cronus_lead_log.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:cronus_lead_planks",
+      "name": "Cronus Lead Planks",
+      "image": "assets/catalog-icons/obsidium/cronus_lead_planks.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "Planks crafted from the corresponding tree wood.",
+      "recipes": [
+        {
+          "id": "obsidium:cronus_lead_planks",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:cronus_lead_planks",
+            "name": "Cronus Lead Planks",
+            "image": "assets/catalog-icons/obsidium/cronus_lead_planks.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/cronus_lead_planks.json",
+          "json": "assets/catalog-recipes/cronus_lead_planks.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:cronus_lead_log",
+                "name": "Cronus Lead Log",
+                "image": "assets/catalog-icons/obsidium/cronus_lead_log.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:cronus_lead_slab",
+      "name": "Cronus Lead Slab",
+      "image": "assets/catalog-icons/obsidium/cronus_lead_slab.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:cronus_lead_slab",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:cronus_lead_slab",
+            "name": "Cronus Lead Slab",
+            "image": "assets/catalog-icons/obsidium/cronus_lead_slab.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 6,
+          "source": "src/main/resources/data/obsidium/recipe/cronus_lead_slab.json",
+          "json": "assets/catalog-recipes/cronus_lead_slab.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:cronus_lead_planks",
+                "name": "Cronus Lead Planks",
+                "image": "assets/catalog-icons/obsidium/cronus_lead_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:cronus_lead_stairs",
+      "name": "Cronus Lead Stairs",
+      "image": "assets/catalog-icons/obsidium/cronus_lead_stairs.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:cronus_lead_stairs",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:cronus_lead_stairs",
+            "name": "Cronus Lead Stairs",
+            "image": "assets/catalog-icons/obsidium/cronus_lead_stairs.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/cronus_lead_stairs.json",
+          "json": "assets/catalog-recipes/cronus_lead_stairs.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:cronus_lead_planks",
+                "name": "Cronus Lead Planks",
+                "image": "assets/catalog-icons/obsidium/cronus_lead_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:deepslate_lead_ore",
+      "name": "Deepslate Lead Ore",
+      "image": "assets/catalog-icons/obsidium/deepslate_lead_ore.png",
+      "imageKind": "block texture",
+      "group": "Ore blocks",
+      "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/deepslate_lead_ore.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:deepslate_silver_ore",
+      "name": "Deepslate Silver Ore",
+      "image": "assets/catalog-icons/obsidium/deepslate_silver_ore.png",
+      "imageKind": "block texture",
+      "group": "Ore blocks",
+      "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/deepslate_silver_ore.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:deepslate_tin_ore",
+      "name": "Deepslate Tin Ore",
+      "image": "assets/catalog-icons/obsidium/deepslate_tin_ore.png",
+      "imageKind": "block texture",
+      "group": "Ore blocks",
+      "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/deepslate_tin_ore.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:electrum_fence",
+      "name": "Electrum Fence",
+      "image": "assets/catalog-icons/obsidium/electrum_fence.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:electrum_fence",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:electrum_fence",
+            "name": "Electrum Fence",
+            "image": "assets/catalog-icons/obsidium/electrum_fence.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 3,
+          "source": "src/main/resources/data/obsidium/recipe/electrum_fence.json",
+          "json": "assets/catalog-recipes/electrum_fence.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#/#",
+            "#/#"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:electrum_planks",
+                "name": "Electrum Planks",
+                "image": "assets/catalog-icons/obsidium/electrum_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:electrum_fence_gate",
+      "name": "Electrum Fence Gate",
+      "image": "assets/catalog-icons/obsidium/electrum_fence_gate.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:electrum_fence_gate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:electrum_fence_gate",
+            "name": "Electrum Fence Gate",
+            "image": "assets/catalog-icons/obsidium/electrum_fence_gate.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/electrum_fence_gate.json",
+          "json": "assets/catalog-recipes/electrum_fence_gate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "/#/",
+            "/#/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:electrum_planks",
+                "name": "Electrum Planks",
+                "image": "assets/catalog-icons/obsidium/electrum_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:electrum_planks",
+      "name": "Electrum Planks",
+      "image": "assets/catalog-icons/obsidium/electrum_planks.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "Planks crafted from the corresponding tree wood.",
+      "recipes": [
+        {
+          "id": "obsidium:electrum_planks",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:electrum_planks",
+            "name": "Electrum Planks",
+            "image": "assets/catalog-icons/obsidium/electrum_planks.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/electrum_planks.json",
+          "json": "assets/catalog-recipes/electrum_planks.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:electrum_log",
+                "name": "Electrum Tree Log",
+                "image": "assets/catalog-icons/obsidium/electrum_log.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:electrum_slab",
+      "name": "Electrum Slab",
+      "image": "assets/catalog-icons/obsidium/electrum_slab.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:electrum_slab",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:electrum_slab",
+            "name": "Electrum Slab",
+            "image": "assets/catalog-icons/obsidium/electrum_slab.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 6,
+          "source": "src/main/resources/data/obsidium/recipe/electrum_slab.json",
+          "json": "assets/catalog-recipes/electrum_slab.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:electrum_planks",
+                "name": "Electrum Planks",
+                "image": "assets/catalog-icons/obsidium/electrum_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:electrum_stairs",
+      "name": "Electrum Stairs",
+      "image": "assets/catalog-icons/obsidium/electrum_stairs.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:electrum_stairs",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:electrum_stairs",
+            "name": "Electrum Stairs",
+            "image": "assets/catalog-icons/obsidium/electrum_stairs.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/electrum_stairs.json",
+          "json": "assets/catalog-recipes/electrum_stairs.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:electrum_planks",
+                "name": "Electrum Planks",
+                "image": "assets/catalog-icons/obsidium/electrum_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:electrum_leaves",
+      "name": "Electrum Tree Leaves",
+      "image": "assets/catalog-icons/obsidium/electrum_leaves.png",
+      "imageKind": "block texture",
+      "group": "Leaves",
+      "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/electrum_leaves.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:electrum_log",
+      "name": "Electrum Tree Log",
+      "image": "assets/catalog-icons/obsidium/electrum_log.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/electrum_log.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestus_volcanite_fence",
+      "name": "Hephaestus Volcanite Fence",
+      "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_fence.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestus_volcanite_fence",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestus_volcanite_fence",
+            "name": "Hephaestus Volcanite Fence",
+            "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_fence.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 3,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestus_volcanite_fence.json",
+          "json": "assets/catalog-recipes/hephaestus_volcanite_fence.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#/#",
+            "#/#"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:hephaestus_volcanite_planks",
+                "name": "Hephaestus Volcanite Planks",
+                "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestus_volcanite_fence_gate",
+      "name": "Hephaestus Volcanite Fence Gate",
+      "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_fence_gate.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestus_volcanite_fence_gate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestus_volcanite_fence_gate",
+            "name": "Hephaestus Volcanite Fence Gate",
+            "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_fence_gate.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestus_volcanite_fence_gate.json",
+          "json": "assets/catalog-recipes/hephaestus_volcanite_fence_gate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "/#/",
+            "/#/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:hephaestus_volcanite_planks",
+                "name": "Hephaestus Volcanite Planks",
+                "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestus_volcanite_planks",
+      "name": "Hephaestus Volcanite Planks",
+      "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_planks.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "Planks crafted from the corresponding tree wood.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestus_volcanite_planks",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hephaestus_volcanite_planks",
+            "name": "Hephaestus Volcanite Planks",
+            "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_planks.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestus_volcanite_planks.json",
+          "json": "assets/catalog-recipes/hephaestus_volcanite_planks.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:hephaestus_volcanite_log",
+                "name": "Hephaestus Volcanite Tree Log",
+                "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_log.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestus_volcanite_slab",
+      "name": "Hephaestus Volcanite Slab",
+      "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_slab.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestus_volcanite_slab",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestus_volcanite_slab",
+            "name": "Hephaestus Volcanite Slab",
+            "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_slab.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 6,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestus_volcanite_slab.json",
+          "json": "assets/catalog-recipes/hephaestus_volcanite_slab.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:hephaestus_volcanite_planks",
+                "name": "Hephaestus Volcanite Planks",
+                "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestus_volcanite_stairs",
+      "name": "Hephaestus Volcanite Stairs",
+      "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_stairs.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestus_volcanite_stairs",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestus_volcanite_stairs",
+            "name": "Hephaestus Volcanite Stairs",
+            "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_stairs.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestus_volcanite_stairs.json",
+          "json": "assets/catalog-recipes/hephaestus_volcanite_stairs.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:hephaestus_volcanite_planks",
+                "name": "Hephaestus Volcanite Planks",
+                "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestus_volcanite_leaves",
+      "name": "Hephaestus Volcanite Tree Leaves",
+      "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_leaves.png",
+      "imageKind": "block texture",
+      "group": "Leaves",
+      "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/hephaestus_volcanite_leaves.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestus_volcanite_log",
+      "name": "Hephaestus Volcanite Tree Log",
+      "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_log.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/hephaestus_volcanite_log.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hermes_copper_fence",
+      "name": "Hermes Copper Fence",
+      "image": "assets/catalog-icons/obsidium/hermes_copper_fence.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:hermes_copper_fence",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hermes_copper_fence",
+            "name": "Hermes Copper Fence",
+            "image": "assets/catalog-icons/obsidium/hermes_copper_fence.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 3,
+          "source": "src/main/resources/data/obsidium/recipe/hermes_copper_fence.json",
+          "json": "assets/catalog-recipes/hermes_copper_fence.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#/#",
+            "#/#"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:hermes_copper_planks",
+                "name": "Hermes Copper Planks",
+                "image": "assets/catalog-icons/obsidium/hermes_copper_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hermes_copper_fence_gate",
+      "name": "Hermes Copper Fence Gate",
+      "image": "assets/catalog-icons/obsidium/hermes_copper_fence_gate.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:hermes_copper_fence_gate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hermes_copper_fence_gate",
+            "name": "Hermes Copper Fence Gate",
+            "image": "assets/catalog-icons/obsidium/hermes_copper_fence_gate.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hermes_copper_fence_gate.json",
+          "json": "assets/catalog-recipes/hermes_copper_fence_gate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "/#/",
+            "/#/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:hermes_copper_planks",
+                "name": "Hermes Copper Planks",
+                "image": "assets/catalog-icons/obsidium/hermes_copper_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hermes_copper_planks",
+      "name": "Hermes Copper Planks",
+      "image": "assets/catalog-icons/obsidium/hermes_copper_planks.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "Planks crafted from the corresponding tree wood.",
+      "recipes": [
+        {
+          "id": "obsidium:hermes_copper_planks",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:hermes_copper_planks",
+            "name": "Hermes Copper Planks",
+            "image": "assets/catalog-icons/obsidium/hermes_copper_planks.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/hermes_copper_planks.json",
+          "json": "assets/catalog-recipes/hermes_copper_planks.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:hermes_copper_log",
+                "name": "Hermes Copper Tree Log",
+                "image": "assets/catalog-icons/obsidium/hermes_copper_log.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hermes_copper_slab",
+      "name": "Hermes Copper Slab",
+      "image": "assets/catalog-icons/obsidium/hermes_copper_slab.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:hermes_copper_slab",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hermes_copper_slab",
+            "name": "Hermes Copper Slab",
+            "image": "assets/catalog-icons/obsidium/hermes_copper_slab.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 6,
+          "source": "src/main/resources/data/obsidium/recipe/hermes_copper_slab.json",
+          "json": "assets/catalog-recipes/hermes_copper_slab.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:hermes_copper_planks",
+                "name": "Hermes Copper Planks",
+                "image": "assets/catalog-icons/obsidium/hermes_copper_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hermes_copper_stairs",
+      "name": "Hermes Copper Stairs",
+      "image": "assets/catalog-icons/obsidium/hermes_copper_stairs.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:hermes_copper_stairs",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hermes_copper_stairs",
+            "name": "Hermes Copper Stairs",
+            "image": "assets/catalog-icons/obsidium/hermes_copper_stairs.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/hermes_copper_stairs.json",
+          "json": "assets/catalog-recipes/hermes_copper_stairs.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:hermes_copper_planks",
+                "name": "Hermes Copper Planks",
+                "image": "assets/catalog-icons/obsidium/hermes_copper_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hermes_copper_leaves",
+      "name": "Hermes Copper Tree Leaves",
+      "image": "assets/catalog-icons/obsidium/hermes_copper_leaves.png",
+      "imageKind": "block texture",
+      "group": "Leaves",
+      "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/hermes_copper_leaves.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hermes_copper_log",
+      "name": "Hermes Copper Tree Log",
+      "image": "assets/catalog-icons/obsidium/hermes_copper_log.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/hermes_copper_log.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:lead_ore",
+      "name": "Lead Ore",
+      "image": "assets/catalog-icons/obsidium/lead_ore.png",
+      "imageKind": "block texture",
+      "group": "Ore blocks",
+      "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/lead_ore.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:midas_gold_fence",
+      "name": "Midas Gold Fence",
+      "image": "assets/catalog-icons/obsidium/midas_gold_fence.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:midas_gold_fence",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:midas_gold_fence",
+            "name": "Midas Gold Fence",
+            "image": "assets/catalog-icons/obsidium/midas_gold_fence.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 3,
+          "source": "src/main/resources/data/obsidium/recipe/midas_gold_fence.json",
+          "json": "assets/catalog-recipes/midas_gold_fence.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#/#",
+            "#/#"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:midas_gold_planks",
+                "name": "Midas Gold Planks",
+                "image": "assets/catalog-icons/obsidium/midas_gold_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:midas_gold_fence_gate",
+      "name": "Midas Gold Fence Gate",
+      "image": "assets/catalog-icons/obsidium/midas_gold_fence_gate.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:midas_gold_fence_gate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:midas_gold_fence_gate",
+            "name": "Midas Gold Fence Gate",
+            "image": "assets/catalog-icons/obsidium/midas_gold_fence_gate.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/midas_gold_fence_gate.json",
+          "json": "assets/catalog-recipes/midas_gold_fence_gate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "/#/",
+            "/#/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:midas_gold_planks",
+                "name": "Midas Gold Planks",
+                "image": "assets/catalog-icons/obsidium/midas_gold_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:midas_gold_planks",
+      "name": "Midas Gold Planks",
+      "image": "assets/catalog-icons/obsidium/midas_gold_planks.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "Planks crafted from the corresponding tree wood.",
+      "recipes": [
+        {
+          "id": "obsidium:midas_gold_planks",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:midas_gold_planks",
+            "name": "Midas Gold Planks",
+            "image": "assets/catalog-icons/obsidium/midas_gold_planks.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/midas_gold_planks.json",
+          "json": "assets/catalog-recipes/midas_gold_planks.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:midas_gold_log",
+                "name": "Midas Gold Tree Log",
+                "image": "assets/catalog-icons/obsidium/midas_gold_log.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:midas_gold_slab",
+      "name": "Midas Gold Slab",
+      "image": "assets/catalog-icons/obsidium/midas_gold_slab.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:midas_gold_slab",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:midas_gold_slab",
+            "name": "Midas Gold Slab",
+            "image": "assets/catalog-icons/obsidium/midas_gold_slab.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 6,
+          "source": "src/main/resources/data/obsidium/recipe/midas_gold_slab.json",
+          "json": "assets/catalog-recipes/midas_gold_slab.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:midas_gold_planks",
+                "name": "Midas Gold Planks",
+                "image": "assets/catalog-icons/obsidium/midas_gold_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:midas_gold_stairs",
+      "name": "Midas Gold Stairs",
+      "image": "assets/catalog-icons/obsidium/midas_gold_stairs.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:midas_gold_stairs",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:midas_gold_stairs",
+            "name": "Midas Gold Stairs",
+            "image": "assets/catalog-icons/obsidium/midas_gold_stairs.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/midas_gold_stairs.json",
+          "json": "assets/catalog-recipes/midas_gold_stairs.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:midas_gold_planks",
+                "name": "Midas Gold Planks",
+                "image": "assets/catalog-icons/obsidium/midas_gold_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:midas_gold_leaves",
+      "name": "Midas Gold Tree Leaves",
+      "image": "assets/catalog-icons/obsidium/midas_gold_leaves.png",
+      "imageKind": "block texture",
+      "group": "Leaves",
+      "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/midas_gold_leaves.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:midas_gold_log",
+      "name": "Midas Gold Tree Log",
+      "image": "assets/catalog-icons/obsidium/midas_gold_log.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/midas_gold_log.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:pyretic_titan_leaves",
+      "name": "Pyretic Titan Volcanite Leaves",
+      "image": "assets/catalog-icons/obsidium/pyretic_titan_leaves.png",
+      "imageKind": "block texture",
+      "group": "Leaves",
+      "description": "A Pyretic Titan building resource produced by growing its rare sapling in the Demetrian Bonsai Planter.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Bonsai production",
+          "note": "Obtain a Pyretic Titan Sapling through the rare grafting mutation (5% with eligible Tartarean Netherite or Adamantine Diamond species), then grow it in the Demetrian Bonsai Planter to produce Pyretic Titan logs and leaves.",
+          "source": "src/main/java/net/valentin/obsidium/block/DemetrianBonsaiPlanterBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:pyretic_titan_log",
+      "name": "Pyretic Titan Volcanite Log",
+      "image": "assets/catalog-icons/obsidium/pyretic_titan_log.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "A Pyretic Titan building resource produced by growing its rare sapling in the Demetrian Bonsai Planter.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Bonsai production",
+          "note": "Obtain a Pyretic Titan Sapling through the rare grafting mutation (5% with eligible Tartarean Netherite or Adamantine Diamond species), then grow it in the Demetrian Bonsai Planter to produce Pyretic Titan logs and leaves.",
+          "source": "src/main/java/net/valentin/obsidium/block/DemetrianBonsaiPlanterBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:reinforced_tinted_glass",
+      "name": "Reinforced Tinted Glass",
+      "image": "assets/catalog-icons/obsidium/reinforced_tinted_glass.png",
+      "imageKind": "block texture",
+      "group": "Glass & lighting",
+      "description": "A glass block for building and compatible industrial structures.",
+      "recipes": [
+        {
+          "id": "obsidium:reinforced_tinted_glass",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:reinforced_tinted_glass",
+            "name": "Reinforced Tinted Glass",
+            "image": "assets/catalog-icons/obsidium/reinforced_tinted_glass.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/reinforced_tinted_glass.json",
+          "json": "assets/catalog-recipes/reinforced_tinted_glass.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "AVA",
+            "VTV",
+            "AVA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_glass",
+                "name": "Volcanite Glass",
+                "image": "assets/catalog-icons/obsidium/volcanite_glass.png",
+                "imageKind": "block texture"
+              }
+            },
+            "T": {
+              "item": {
+                "id": "minecraft:amethyst_shard",
+                "name": "Amethyst Shard",
+                "image": "assets/catalog-icons/minecraft/amethyst_shard.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:silver_ore",
+      "name": "Silver Ore",
+      "image": "assets/catalog-icons/obsidium/silver_ore.png",
+      "imageKind": "block texture",
+      "group": "Ore blocks",
+      "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/silver_ore.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:supreme_volcanite_glass",
+      "name": "Supreme Volcanite Glass",
+      "image": "assets/catalog-icons/obsidium/supreme_volcanite_glass.png",
+      "imageKind": "block texture",
+      "group": "Glass & lighting",
+      "description": "A glass block for building and compatible industrial structures.",
+      "recipes": [
+        {
+          "id": "obsidium:supreme_volcanite_glass",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:supreme_volcanite_glass",
+            "name": "Supreme Volcanite Glass",
+            "image": "assets/catalog-icons/obsidium/supreme_volcanite_glass.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/supreme_volcanite_glass.json",
+          "json": "assets/catalog-recipes/supreme_volcanite_glass.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "GDG",
+            "DSD",
+            "GDG"
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "obsidium:volcanite_dust",
+                "name": "Volcanite Dust",
+                "image": "assets/catalog-icons/obsidium/volcanite_dust.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "obsidium:volcanite_glass",
+                "name": "Volcanite Glass",
+                "image": "assets/catalog-icons/obsidium/volcanite_glass.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_netherite_fence",
+      "name": "Tartarean Netherite Fence",
+      "image": "assets/catalog-icons/obsidium/tartarean_netherite_fence.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_netherite_fence",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_netherite_fence",
+            "name": "Tartarean Netherite Fence",
+            "image": "assets/catalog-icons/obsidium/tartarean_netherite_fence.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 3,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_netherite_fence.json",
+          "json": "assets/catalog-recipes/tartarean_netherite_fence.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#/#",
+            "#/#"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:tartarean_netherite_planks",
+                "name": "Tartarean Netherite Planks",
+                "image": "assets/catalog-icons/obsidium/tartarean_netherite_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_netherite_fence_gate",
+      "name": "Tartarean Netherite Fence Gate",
+      "image": "assets/catalog-icons/obsidium/tartarean_netherite_fence_gate.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_netherite_fence_gate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_netherite_fence_gate",
+            "name": "Tartarean Netherite Fence Gate",
+            "image": "assets/catalog-icons/obsidium/tartarean_netherite_fence_gate.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_netherite_fence_gate.json",
+          "json": "assets/catalog-recipes/tartarean_netherite_fence_gate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "/#/",
+            "/#/"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:tartarean_netherite_planks",
+                "name": "Tartarean Netherite Planks",
+                "image": "assets/catalog-icons/obsidium/tartarean_netherite_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "/": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_netherite_leaves",
+      "name": "Tartarean Netherite Leaves",
+      "image": "assets/catalog-icons/obsidium/tartarean_netherite_leaves.png",
+      "imageKind": "block texture",
+      "group": "Leaves",
+      "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/tartarean_netherite_leaves.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_netherite_log",
+      "name": "Tartarean Netherite Mega Log",
+      "image": "assets/catalog-icons/obsidium/tartarean_netherite_log.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/tartarean_netherite_log.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_netherite_planks",
+      "name": "Tartarean Netherite Planks",
+      "image": "assets/catalog-icons/obsidium/tartarean_netherite_planks.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "Planks crafted from the corresponding tree wood.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_netherite_planks",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:tartarean_netherite_planks",
+            "name": "Tartarean Netherite Planks",
+            "image": "assets/catalog-icons/obsidium/tartarean_netherite_planks.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_netherite_planks.json",
+          "json": "assets/catalog-recipes/tartarean_netherite_planks.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:tartarean_netherite_log",
+                "name": "Tartarean Netherite Mega Log",
+                "image": "assets/catalog-icons/obsidium/tartarean_netherite_log.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_netherite_slab",
+      "name": "Tartarean Netherite Slab",
+      "image": "assets/catalog-icons/obsidium/tartarean_netherite_slab.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_netherite_slab",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_netherite_slab",
+            "name": "Tartarean Netherite Slab",
+            "image": "assets/catalog-icons/obsidium/tartarean_netherite_slab.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 6,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_netherite_slab.json",
+          "json": "assets/catalog-recipes/tartarean_netherite_slab.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:tartarean_netherite_planks",
+                "name": "Tartarean Netherite Planks",
+                "image": "assets/catalog-icons/obsidium/tartarean_netherite_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_netherite_stairs",
+      "name": "Tartarean Netherite Stairs",
+      "image": "assets/catalog-icons/obsidium/tartarean_netherite_stairs.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_netherite_stairs",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_netherite_stairs",
+            "name": "Tartarean Netherite Stairs",
+            "image": "assets/catalog-icons/obsidium/tartarean_netherite_stairs.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_netherite_stairs.json",
+          "json": "assets/catalog-recipes/tartarean_netherite_stairs.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:tartarean_netherite_planks",
+                "name": "Tartarean Netherite Planks",
+                "image": "assets/catalog-icons/obsidium/tartarean_netherite_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tin_ore",
+      "name": "Tin Ore",
+      "image": "assets/catalog-icons/obsidium/tin_ore.png",
+      "imageKind": "block texture",
+      "group": "Ore blocks",
+      "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/tin_ore.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_cement_block",
+      "name": "Volcanic Cement",
+      "image": "assets/catalog-icons/obsidium/volcanic_cement_block.png",
+      "imageKind": "block texture",
+      "group": "Cement",
+      "description": "A volcanic construction material for industrial builds.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanic_cement_block",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanic_cement_block",
+            "name": "Volcanic Cement",
+            "image": "assets/catalog-icons/obsidium/volcanic_cement_block.png",
+            "imageKind": "block texture"
+          },
+          "count": 8,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_cement_block.json",
+          "json": "assets/catalog-recipes/volcanic_cement_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ASA",
+            "SWS",
+            "ASA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:stone",
+                "name": "Stone",
+                "image": "assets/catalog-icons/minecraft/stone.png",
+                "imageKind": "block texture"
+              }
+            },
+            "W": {
+              "item": {
+                "id": "minecraft:water_bucket",
+                "name": "Water Bucket",
+                "image": "assets/catalog-icons/minecraft/water_bucket.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_cement_bricks",
+      "name": "Volcanic Cement Bricks",
+      "image": "assets/catalog-icons/obsidium/volcanic_cement_bricks.png",
+      "imageKind": "block texture",
+      "group": "Cement",
+      "description": "A volcanic construction material for industrial builds.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanic_cement_bricks",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanic_cement_bricks",
+            "name": "Volcanic Cement Bricks",
+            "image": "assets/catalog-icons/obsidium/volcanic_cement_bricks.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_cement_bricks.json",
+          "json": "assets/catalog-recipes/volcanic_cement_bricks.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "CC",
+            "CC"
+          ],
+          "key": {
+            "C": {
+              "item": {
+                "id": "obsidium:volcanic_cement_block",
+                "name": "Volcanic Cement",
+                "image": "assets/catalog-icons/obsidium/volcanic_cement_block.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_glass",
+      "name": "Volcanite Glass",
+      "image": "assets/catalog-icons/obsidium/volcanite_glass.png",
+      "imageKind": "block texture",
+      "group": "Glass & lighting",
+      "description": "A glass block for building and compatible industrial structures.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_glass",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_glass",
+            "name": "Volcanite Glass",
+            "image": "assets/catalog-icons/obsidium/volcanite_glass.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_glass.json",
+          "json": "assets/catalog-recipes/volcanite_glass.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "AAA",
+            "AGA",
+            "AAA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:glass",
+                "name": "Glass",
+                "image": "assets/catalog-icons/minecraft/glass.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_lamp",
+      "name": "Volcanite Lamp",
+      "image": "assets/catalog-icons/obsidium/volcanite_lamp.png",
+      "imageKind": "block texture",
+      "group": "Glass & lighting",
+      "description": "A Volcanite lighting block for buildings and workshops.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_lamp",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_lamp",
+            "name": "Volcanite Lamp",
+            "image": "assets/catalog-icons/obsidium/volcanite_lamp.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_lamp.json",
+          "json": "assets/catalog-recipes/volcanite_lamp.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "OGO",
+            "GMG",
+            "OVO"
+          ],
+          "key": {
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:glass",
+                "name": "Glass",
+                "image": "assets/catalog-icons/minecraft/glass.png",
+                "imageKind": "block texture"
+              }
+            },
+            "M": {
+              "item": {
+                "id": "minecraft:magma_block",
+                "name": "Magma Block",
+                "image": "assets/catalog-icons/minecraft/magma_block.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_ore",
+      "name": "Volcanite Ore",
+      "image": "assets/catalog-icons/obsidium/volcanite_ore.png",
+      "imageKind": "block texture",
+      "group": "Ore blocks",
+      "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/volcanite_ore.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:zeus_tin_fence",
+      "name": "Zeus Tin Fence",
+      "image": "assets/catalog-icons/obsidium/zeus_tin_fence.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:zeus_tin_fence",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:zeus_tin_fence",
+            "name": "Zeus Tin Fence",
+            "image": "assets/catalog-icons/obsidium/zeus_tin_fence.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 3,
+          "source": "src/main/resources/data/obsidium/recipe/zeus_tin_fence.json",
+          "json": "assets/catalog-recipes/zeus_tin_fence.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "W#W",
+            "W#W"
+          ],
+          "key": {
+            "W": {
+              "item": {
+                "id": "obsidium:zeus_tin_planks",
+                "name": "Zeus Tin Planks",
+                "image": "assets/catalog-icons/obsidium/zeus_tin_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "#": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:zeus_tin_fence_gate",
+      "name": "Zeus Tin Fence Gate",
+      "image": "assets/catalog-icons/obsidium/zeus_tin_fence_gate.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:zeus_tin_fence_gate",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:zeus_tin_fence_gate",
+            "name": "Zeus Tin Fence Gate",
+            "image": "assets/catalog-icons/obsidium/zeus_tin_fence_gate.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/zeus_tin_fence_gate.json",
+          "json": "assets/catalog-recipes/zeus_tin_fence_gate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#W#",
+            "#W#"
+          ],
+          "key": {
+            "W": {
+              "item": {
+                "id": "obsidium:zeus_tin_planks",
+                "name": "Zeus Tin Planks",
+                "image": "assets/catalog-icons/obsidium/zeus_tin_planks.png",
+                "imageKind": "block texture"
+              }
+            },
+            "#": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:zeus_tin_leaves",
+      "name": "Zeus Tin Leaves",
+      "image": "assets/catalog-icons/obsidium/zeus_tin_leaves.png",
+      "imageKind": "block texture",
+      "group": "Leaves",
+      "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/zeus_tin_leaves.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:zeus_tin_log",
+      "name": "Zeus Tin Log",
+      "image": "assets/catalog-icons/obsidium/zeus_tin_log.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Harvesting",
+          "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/zeus_tin_log.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:zeus_tin_planks",
+      "name": "Zeus Tin Planks",
+      "image": "assets/catalog-icons/obsidium/zeus_tin_planks.png",
+      "imageKind": "block texture",
+      "group": "Logs & planks",
+      "description": "Planks crafted from the corresponding tree wood.",
+      "recipes": [
+        {
+          "id": "obsidium:zeus_tin_planks",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:zeus_tin_planks",
+            "name": "Zeus Tin Planks",
+            "image": "assets/catalog-icons/obsidium/zeus_tin_planks.png",
+            "imageKind": "block texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/zeus_tin_planks.json",
+          "json": "assets/catalog-recipes/zeus_tin_planks.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:zeus_tin_log",
+                "name": "Zeus Tin Log",
+                "image": "assets/catalog-icons/obsidium/zeus_tin_log.png",
+                "imageKind": "block texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:zeus_tin_slab",
+      "name": "Zeus Tin Slab",
+      "image": "assets/catalog-icons/obsidium/zeus_tin_slab.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:zeus_tin_slab",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:zeus_tin_slab",
+            "name": "Zeus Tin Slab",
+            "image": "assets/catalog-icons/obsidium/zeus_tin_slab.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 6,
+          "source": "src/main/resources/data/obsidium/recipe/zeus_tin_slab.json",
+          "json": "assets/catalog-recipes/zeus_tin_slab.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:zeus_tin_planks",
+                "name": "Zeus Tin Planks",
+                "image": "assets/catalog-icons/obsidium/zeus_tin_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:zeus_tin_stairs",
+      "name": "Zeus Tin Stairs",
+      "image": "assets/catalog-icons/obsidium/zeus_tin_stairs.svg",
+      "imageKind": "rendered block model",
+      "group": "Wood shapes",
+      "description": "A building shape crafted from its corresponding wood family.",
+      "recipes": [
+        {
+          "id": "obsidium:zeus_tin_stairs",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:zeus_tin_stairs",
+            "name": "Zeus Tin Stairs",
+            "image": "assets/catalog-icons/obsidium/zeus_tin_stairs.svg",
+            "imageKind": "rendered block model"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/zeus_tin_stairs.json",
+          "json": "assets/catalog-recipes/zeus_tin_stairs.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "key": {
+            "#": {
+              "item": {
+                "id": "obsidium:zeus_tin_planks",
+                "name": "Zeus Tin Planks",
+                "image": "assets/catalog-icons/obsidium/zeus_tin_planks.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    }
+  ]
+}

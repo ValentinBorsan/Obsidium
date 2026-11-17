@@ -1,5 +1,15 @@
 # Obsidium Official Wiki
 
+[Energy & Upgrades — images and crafting recipes](wiki.html?page=Energy-Catalog)
+
+[Botany catalog and book recipes](wiki.html?page=Botany-Catalog) · [Botany manual](wiki.html?page=Botany-Manual)
+
+[Storage & Items — images and crafting recipes](wiki.html?page=Storage-Catalog)
+
+[Pipes & Wires — images and recipes](wiki.html?page=Transport-Catalog)
+
+[Multiblock construction guide — layers, blocks and formation](wiki.html?page=Multiblocks)
+
 **Obsidium** is a Greek-mythology-inspired industrial, energy, and progression mod for **Minecraft 1.21 (Fabric)**, created by **SAPIRA MODS**.
 
 - **Main Mod**: `Obsidium` (`v1.1.0`)
@@ -9,6 +19,9 @@
 ---
 
 ## Item Catalog
+
+[Machines & Generators — images and building recipes](wiki.html?page=Machine-Catalog)
+
 
 [Materials & Components — images and recipes](wiki.html?page=Item-Catalog)
 

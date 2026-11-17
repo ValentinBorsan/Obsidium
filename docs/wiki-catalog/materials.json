@@ -2,8 +2,8 @@
   "schema": 1,
   "category": "materials",
   "title": "Materials & Components",
-  "note": "First documented category. Images are copied from game textures; block ingredients use a representative block face. Recipes reflect the checked-in source and may be overridden by modpacks.",
-  "scope": "All registered ingots, dusts, nuggets and raw metal items (excluding storage blocks), plus the explicitly listed core components. Other wiki categories are added in later batches.",
+  "note": "Images are copied from game textures; machine and block images use a representative face. Crafting recipes may be overridden by modpacks. Machine crafting recipes describe how to build the machine, not its processing recipes.",
+  "scope": "Registered ingots, dusts, nuggets and raw metal items, plus core components. Storage blocks are covered separately.",
   "count": 43,
   "items": [
     {
@@ -26,6 +26,10 @@
           "count": 2,
           "source": "src/main/resources/data/obsidium/recipe/astral_volcanic_catalyst.json",
           "json": "assets/catalog-recipes/astral_volcanic_catalyst.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
           "pattern": [
             "AVA",
             "BSB",
@@ -121,6 +125,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/coal_nugget_from_petal.json",
           "json": "assets/catalog-recipes/coal_nugget_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -144,6 +151,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/coal_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/coal_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -216,6 +226,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/copper_nugget_from_petal.json",
           "json": "assets/catalog-recipes/copper_nugget_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -239,6 +252,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/copper_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/copper_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -273,6 +289,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/diamond_nugget_from_petal.json",
           "json": "assets/catalog-recipes/diamond_nugget_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -296,6 +315,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/diamond_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/diamond_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -354,6 +376,9 @@
           "count": 2,
           "source": "src/main/resources/data/obsidium/recipe/feroplumb_ingot_from_crafting.json",
           "json": "assets/catalog-recipes/feroplumb_ingot_from_crafting.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "alternatives": [
@@ -408,6 +433,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/feroplumb_ingot_from_nuggets.json",
           "json": "assets/catalog-recipes/feroplumb_ingot_from_nuggets.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "###",
             "###",
@@ -447,6 +475,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/feroplumb_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/feroplumb_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -557,6 +588,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/lapis_nugget_from_petal.json",
           "json": "assets/catalog-recipes/lapis_nugget_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -580,6 +614,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/lapis_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/lapis_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -758,6 +795,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_lead_block.json",
           "json": "assets/catalog-recipes/lead_ingot_from_lead_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -781,6 +821,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_nuggets.json",
           "json": "assets/catalog-recipes/lead_ingot_from_nuggets.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "NNN",
             "NNN",
@@ -809,6 +852,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/lead_ingot_from_petals.json",
           "json": "assets/catalog-recipes/lead_ingot_from_petals.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "PPP",
             "PPP",
@@ -954,6 +1000,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/lead_nugget_from_petal.json",
           "json": "assets/catalog-recipes/lead_nugget_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -977,6 +1026,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/lead_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/lead_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1011,6 +1063,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/netherite_nugget_from_petal.json",
           "json": "assets/catalog-recipes/netherite_nugget_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1034,6 +1089,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/netherite_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/netherite_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1068,6 +1126,9 @@
           "count": 4,
           "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_dust_from_crafting.json",
           "json": "assets/catalog-recipes/pyric_bronze_dust_from_crafting.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1163,6 +1224,9 @@
           "count": 4,
           "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_ingot_from_crafting.json",
           "json": "assets/catalog-recipes/pyric_bronze_ingot_from_crafting.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "alternatives": [
@@ -1250,6 +1314,9 @@
           "count": 3,
           "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_ingot_from_crafting_fuel.json",
           "json": "assets/catalog-recipes/pyric_bronze_ingot_from_crafting_fuel.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "alternatives": [
@@ -1313,6 +1380,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_ingot_from_nuggets.json",
           "json": "assets/catalog-recipes/pyric_bronze_ingot_from_nuggets.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "###",
             "###",
@@ -1375,6 +1445,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/pyric_bronze_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/pyric_bronze_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1409,6 +1482,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/raw_lead_from_raw_lead_block.json",
           "json": "assets/catalog-recipes/raw_lead_from_raw_lead_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1449,6 +1525,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/raw_silver_from_block.json",
           "json": "assets/catalog-recipes/raw_silver_from_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1489,6 +1568,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/raw_tin_from_raw_tin_block.json",
           "json": "assets/catalog-recipes/raw_tin_from_raw_tin_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1529,6 +1611,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/redstone_nugget_from_petal.json",
           "json": "assets/catalog-recipes/redstone_nugget_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1552,6 +1637,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/redstone_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/redstone_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1705,6 +1793,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/silver_ingot_from_nuggets.json",
           "json": "assets/catalog-recipes/silver_ingot_from_nuggets.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "###",
             "###",
@@ -1733,6 +1824,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/silver_ingot_from_petals.json",
           "json": "assets/catalog-recipes/silver_ingot_from_petals.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "##",
             "##"
@@ -1841,6 +1935,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/silver_ingots_from_block.json",
           "json": "assets/catalog-recipes/silver_ingots_from_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1875,6 +1972,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/silver_nugget_from_petal.json",
           "json": "assets/catalog-recipes/silver_nugget_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1898,6 +1998,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/silver_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/silver_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -1962,6 +2065,10 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/supreme_volcanic_alloy.json",
           "json": "assets/catalog-recipes/supreme_volcanic_alloy.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
           "pattern": [
             "VTV",
             "DSD",
@@ -2185,6 +2292,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_nuggets.json",
           "json": "assets/catalog-recipes/tin_ingot_from_nuggets.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "NNN",
             "NNN",
@@ -2213,6 +2323,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_petals.json",
           "json": "assets/catalog-recipes/tin_ingot_from_petals.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "PPP",
             "PPP",
@@ -2347,6 +2460,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/tin_ingot_from_tin_block.json",
           "json": "assets/catalog-recipes/tin_ingot_from_tin_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -2381,6 +2497,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/tin_nugget_from_petal.json",
           "json": "assets/catalog-recipes/tin_nugget_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -2404,6 +2523,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/tin_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/tin_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -2438,6 +2560,9 @@
           "count": 2,
           "source": "src/main/resources/data/obsidium/recipe/volcanic_alloy.json",
           "json": "assets/catalog-recipes/volcanic_alloy.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "OGO",
             "VAV",
@@ -2580,6 +2705,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/volcanic_ash_from_charcoal_flint.json",
           "json": "assets/catalog-recipes/volcanic_ash_from_charcoal_flint.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "alternatives": [
@@ -2623,6 +2751,9 @@
           "count": 2,
           "source": "src/main/resources/data/obsidium/recipe/volcanic_ash_from_charcoal_gunpowder.json",
           "json": "assets/catalog-recipes/volcanic_ash_from_charcoal_gunpowder.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "alternatives": [
@@ -2712,6 +2843,9 @@
           "count": 2,
           "source": "src/main/resources/data/obsidium/recipe/volcanic_plate.json",
           "json": "assets/catalog-recipes/volcanic_plate.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "TAT",
             "AOA",
@@ -2783,6 +2917,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/volcanite_binding.json",
           "json": "assets/catalog-recipes/volcanite_binding.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "RAR",
             "A A",
@@ -2868,6 +3005,10 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/volcanite_flux_mechanism.json",
           "json": "assets/catalog-recipes/volcanite_flux_mechanism.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
           "pattern": [
             "DAD",
             "ABA",
@@ -2928,6 +3069,10 @@
           "count": 2,
           "source": "src/main/resources/data/obsidium/recipe/volcanite_flux_mechanism_from_silver.json",
           "json": "assets/catalog-recipes/volcanite_flux_mechanism_from_silver.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
           "pattern": [
             "DAD",
             "ABA",
@@ -2999,6 +3144,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/volcanite_from_block.json",
           "json": "assets/catalog-recipes/volcanite_from_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -3091,6 +3239,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/volcanite_ingot_from_nuggets.json",
           "json": "assets/catalog-recipes/volcanite_ingot_from_nuggets.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "NNN",
             "NNN",
@@ -3119,6 +3270,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/volcanite_ingot_from_petals.json",
           "json": "assets/catalog-recipes/volcanite_ingot_from_petals.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "pattern": [
             "PPP",
             "PPP",
@@ -3216,6 +3370,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/volcanite_ingots_from_block.json",
           "json": "assets/catalog-recipes/volcanite_ingots_from_block.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -3250,6 +3407,9 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/volcanite_nugget_from_petal.json",
           "json": "assets/catalog-recipes/volcanite_nugget_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -3273,6 +3433,9 @@
           "count": 9,
           "source": "src/main/resources/data/obsidium/recipe/volcanite_nuggets_from_ingot.json",
           "json": "assets/catalog-recipes/volcanite_nuggets_from_ingot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
           "ingredients": [
             {
               "item": {
@@ -3307,6 +3470,10 @@
           "count": 1,
           "source": "src/main/resources/data/obsidium/recipe/volcanite_thermo_core.json",
           "json": "assets/catalog-recipes/volcanite_thermo_core.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
           "pattern": [
             "OCO",
             "BLB",

@@ -1,0 +1,3337 @@
+{
+  "schema": 1,
+  "category": "botany",
+  "title": "Botany & Manuals",
+  "note": "Images are copied from game textures; machine and block images use a representative face. Crafting recipes may be overridden by modpacks. Machine crafting recipes describe how to build the machine, not its processing recipes.",
+  "scope": "Resource crop seeds and petals, living-tree saplings and fruit, grafting tools, beekeeping, botanical automation and both in-game manuals. Decorative tree wood blocks are covered separately.",
+  "count": 71,
+  "items": [
+    {
+      "id": "obsidium:netherite_seed",
+      "name": "Abyssal Rose Seed",
+      "image": "assets/catalog-icons/obsidium/netherite_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:netherite_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:netherite_seed",
+            "name": "Abyssal Rose Seed",
+            "image": "assets/catalog-icons/obsidium/netherite_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/netherite_seed.json",
+          "json": "assets/catalog-recipes/netherite_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "NAN",
+            "CSC",
+            "NAN"
+          ],
+          "key": {
+            "N": {
+              "item": {
+                "id": "minecraft:netherite_ingot",
+                "name": "Netherite Ingot",
+                "image": "assets/catalog-icons/minecraft/netherite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:astral_volcanic_catalyst",
+                "name": "Astral Volcanic Catalyst",
+                "image": "assets/catalog-icons/obsidium/astral_volcanic_catalyst.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "obsidium:diamond_seed",
+                "name": "Diamond Orchid Seed",
+                "image": "assets/catalog-icons/obsidium/diamond_seed.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:netherite_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:netherite_seed",
+            "name": "Abyssal Rose Seed",
+            "image": "assets/catalog-icons/obsidium/netherite_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/netherite_seed_from_petal.json",
+          "json": "assets/catalog-recipes/netherite_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:netherite_petal",
+                "name": "Netherite Petal",
+                "image": "assets/catalog-icons/obsidium/netherite_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:adamantine_diamond_sapling",
+      "name": "Adamantine Diamond Sapling",
+      "image": "assets/catalog-icons/obsidium/adamantine_diamond_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting",
+          "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+          "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:apollo_quartz_sapling",
+      "name": "Apollo Quartz Sapling",
+      "image": "assets/catalog-icons/obsidium/apollo_quartz_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting",
+          "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+          "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:ares_iron_fruit",
+      "name": "Ares Iron Fruit",
+      "image": "assets/catalog-icons/obsidium/ares_iron_fruit.png",
+      "imageKind": "block texture",
+      "group": "Tree fruit",
+      "description": "A resource fruit produced by the corresponding living ore tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Tree harvest",
+          "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+          "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:ares_iron_sapling",
+      "name": "Ares Iron Tree Sapling",
+      "image": "assets/catalog-icons/obsidium/ares_iron_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [
+        {
+          "id": "obsidium:ares_iron_sapling",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:ares_iron_sapling",
+            "name": "Ares Iron Tree Sapling",
+            "image": "assets/catalog-icons/obsidium/ares_iron_sapling.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/ares_iron_sapling.json",
+          "json": "assets/catalog-recipes/ares_iron_sapling.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "AMA",
+            "SFS",
+            "AMA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "M": {
+              "item": {
+                "id": "minecraft:iron_ingot",
+                "name": "Iron Ingot",
+                "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "tag": "minecraft:saplings"
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:artemis_silver_fruit",
+      "name": "Artemis Silver Fruit",
+      "image": "assets/catalog-icons/obsidium/artemis_silver_fruit.png",
+      "imageKind": "item texture",
+      "group": "Tree fruit",
+      "description": "A resource fruit produced by the corresponding living ore tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Tree harvest",
+          "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+          "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:artemis_silver_sapling",
+      "name": "Artemis Silver Sapling",
+      "image": "assets/catalog-icons/obsidium/artemis_silver_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [
+        {
+          "id": "obsidium:artemis_silver_sapling",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:artemis_silver_sapling",
+            "name": "Artemis Silver Sapling",
+            "image": "assets/catalog-icons/obsidium/artemis_silver_sapling.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/artemis_silver_sapling.json",
+          "json": "assets/catalog-recipes/artemis_silver_sapling.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "AMA",
+            "SFS",
+            "AMA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "M": {
+              "item": {
+                "id": "obsidium:silver_ingot",
+                "name": "Silver Ingot",
+                "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "tag": "minecraft:saplings"
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:astrape_redstone_sapling",
+      "name": "Astrape Redstone Sapling",
+      "image": "assets/catalog-icons/obsidium/astrape_redstone_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting",
+          "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+          "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:lapis_seed",
+      "name": "Azure Lotus Seed",
+      "image": "assets/catalog-icons/obsidium/lapis_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:lapis_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:lapis_seed",
+            "name": "Azure Lotus Seed",
+            "image": "assets/catalog-icons/obsidium/lapis_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lapis_seed.json",
+          "json": "assets/catalog-recipes/lapis_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ARA",
+            "SFS",
+            "ARA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:lapis_lazuli",
+                "name": "Lapis Lazuli",
+                "image": "assets/catalog-icons/minecraft/lapis_lazuli.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:lapis_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:lapis_seed",
+            "name": "Azure Lotus Seed",
+            "image": "assets/catalog-icons/obsidium/lapis_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lapis_seed_from_petal.json",
+          "json": "assets/catalog-recipes/lapis_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:lapis_petal",
+                "name": "Lapis Petal",
+                "image": "assets/catalog-icons/obsidium/lapis_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:coal_seed",
+      "name": "Cinder Rose Seed",
+      "image": "assets/catalog-icons/obsidium/coal_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:coal_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:coal_seed",
+            "name": "Cinder Rose Seed",
+            "image": "assets/catalog-icons/obsidium/coal_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/coal_seed.json",
+          "json": "assets/catalog-recipes/coal_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ARA",
+            "SFS",
+            "ARA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:coal",
+                "name": "Coal",
+                "image": "assets/catalog-icons/minecraft/coal.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:coal_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:coal_seed",
+            "name": "Cinder Rose Seed",
+            "image": "assets/catalog-icons/obsidium/coal_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/coal_seed_from_petal.json",
+          "json": "assets/catalog-recipes/coal_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:coal_petal",
+                "name": "Coal Petal",
+                "image": "assets/catalog-icons/obsidium/coal_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:coal_petal",
+      "name": "Coal Petal",
+      "image": "assets/catalog-icons/obsidium/coal_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/coal_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:copper_seed",
+      "name": "Copper Orchid Seed",
+      "image": "assets/catalog-icons/obsidium/copper_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:copper_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:copper_seed",
+            "name": "Copper Orchid Seed",
+            "image": "assets/catalog-icons/obsidium/copper_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/copper_seed.json",
+          "json": "assets/catalog-recipes/copper_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ARA",
+            "SFS",
+            "ARA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:copper_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:copper_seed",
+            "name": "Copper Orchid Seed",
+            "image": "assets/catalog-icons/obsidium/copper_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/copper_seed_from_petal.json",
+          "json": "assets/catalog-recipes/copper_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:copper_petal",
+                "name": "Copper Petal",
+                "image": "assets/catalog-icons/obsidium/copper_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:copper_petal",
+      "name": "Copper Petal",
+      "image": "assets/catalog-icons/obsidium/copper_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/copper_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:cronus_lead_fruit",
+      "name": "Cronus Lead Fruit",
+      "image": "assets/catalog-icons/obsidium/cronus_lead_fruit.png",
+      "imageKind": "item texture",
+      "group": "Tree fruit",
+      "description": "A resource fruit produced by the corresponding living ore tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Tree harvest",
+          "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+          "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:cronus_lead_sapling",
+      "name": "Cronus Lead Sapling",
+      "image": "assets/catalog-icons/obsidium/cronus_lead_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [
+        {
+          "id": "obsidium:cronus_lead_sapling",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:cronus_lead_sapling",
+            "name": "Cronus Lead Sapling",
+            "image": "assets/catalog-icons/obsidium/cronus_lead_sapling.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/cronus_lead_sapling.json",
+          "json": "assets/catalog-recipes/cronus_lead_sapling.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "AMA",
+            "SFS",
+            "AMA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "M": {
+              "item": {
+                "id": "obsidium:lead_ingot",
+                "name": "Lead Ingot",
+                "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "tag": "minecraft:saplings"
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:demetrian_biomass_generator",
+      "name": "Demetrian Biogas Generator",
+      "image": "assets/catalog-icons/obsidium/demetrian_biomass_generator.png",
+      "imageKind": "block texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [
+        {
+          "id": "obsidium:demetrian_biomass_generator",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:demetrian_biomass_generator",
+            "name": "Demetrian Biogas Generator",
+            "image": "assets/catalog-icons/obsidium/demetrian_biomass_generator.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/demetrian_biomass_generator.json",
+          "json": "assets/catalog-recipes/demetrian_biomass_generator.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "FOF",
+            "AGA",
+            "OCO"
+          ],
+          "key": {
+            "F": {
+              "item": {
+                "id": "obsidium:hermes_copper_fruit",
+                "name": "Hermes Copper Fruit",
+                "image": "assets/catalog-icons/obsidium/hermes_copper_fruit.png",
+                "imageKind": "block texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_alloy",
+                "name": "Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "obsidium:volcanite_generator",
+                "name": "Volcanite Basic Generator",
+                "image": "assets/catalog-icons/obsidium/volcanite_generator.png",
+                "imageKind": "block texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_casing",
+                "name": "Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:demetrian_bonsai_planter",
+      "name": "Demetrian Bonsai Planter",
+      "image": "assets/catalog-icons/obsidium/demetrian_bonsai_planter.png",
+      "imageKind": "block texture",
+      "group": "Botanical automation",
+      "description": "A botanical production block; see the botany guide for its role.",
+      "recipes": [
+        {
+          "id": "obsidium:demetrian_bonsai_planter",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:demetrian_bonsai_planter",
+            "name": "Demetrian Bonsai Planter",
+            "image": "assets/catalog-icons/obsidium/demetrian_bonsai_planter.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/demetrian_bonsai_planter.json",
+          "json": "assets/catalog-recipes/demetrian_bonsai_planter.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "TDT",
+            "TTT"
+          ],
+          "key": {
+            "T": {
+              "item": {
+                "id": "minecraft:terracotta",
+                "name": "Terracotta",
+                "image": "assets/catalog-icons/minecraft/terracotta.png",
+                "imageKind": "block texture"
+              }
+            },
+            "D": {
+              "item": {
+                "id": "minecraft:dirt",
+                "name": "Dirt",
+                "image": "assets/catalog-icons/minecraft/dirt.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:demetrian_botanist_lens",
+      "name": "Demetrian Botanist Lens",
+      "image": "assets/catalog-icons/obsidium/demetrian_botanist_lens.png",
+      "imageKind": "item texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [
+        {
+          "id": "obsidium:demetrian_botanist_lens",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:demetrian_botanist_lens",
+            "name": "Demetrian Botanist Lens",
+            "image": "assets/catalog-icons/obsidium/demetrian_botanist_lens.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/demetrian_botanist_lens.json",
+          "json": "assets/catalog-recipes/demetrian_botanist_lens.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " G ",
+            "GEG",
+            " S "
+          ],
+          "key": {
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            },
+            "E": {
+              "item": {
+                "id": "minecraft:emerald",
+                "name": "Emerald",
+                "image": "assets/catalog-icons/minecraft/emerald.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:demetrian_composter",
+      "name": "Demetrian Composter",
+      "image": "assets/catalog-icons/obsidium/demetrian_composter.png",
+      "imageKind": "block texture",
+      "group": "Botanical automation",
+      "description": "A botanical production block; see the botany guide for its role.",
+      "recipes": [
+        {
+          "id": "obsidium:demetrian_composter",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:demetrian_composter",
+            "name": "Demetrian Composter",
+            "image": "assets/catalog-icons/obsidium/demetrian_composter.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/demetrian_composter.json",
+          "json": "assets/catalog-recipes/demetrian_composter.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "VAB",
+            "SCD",
+            "   "
+          ],
+          "key": {
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "minecraft:bone_meal",
+                "name": "Bone Meal",
+                "image": "assets/catalog-icons/minecraft/bone_meal.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:chest",
+                "name": "Chest",
+                "image": "assets/catalog-icons/minecraft/chest.png",
+                "imageKind": "block texture"
+              }
+            },
+            "S": {
+              "tag": "minecraft:saplings"
+            },
+            "D": {
+              "tag": "minecraft:seeds"
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:demetrian_grafting_knife",
+      "name": "Demetrian Grafting Knife",
+      "image": "assets/catalog-icons/obsidium/demetrian_grafting_knife.png",
+      "imageKind": "item texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [
+        {
+          "id": "obsidium:demetrian_grafting_knife",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:demetrian_grafting_knife",
+            "name": "Demetrian Grafting Knife",
+            "image": "assets/catalog-icons/obsidium/demetrian_grafting_knife.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/demetrian_grafting_knife.json",
+          "json": "assets/catalog-recipes/demetrian_grafting_knife.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "  P",
+            " GM",
+            "S  "
+          ],
+          "key": {
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "M": {
+              "item": {
+                "id": "obsidium:dionysian_pomace",
+                "name": "Dionysian Pomace",
+                "image": "assets/catalog-icons/obsidium/dionysian_pomace.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:demetrian_grafting_tape",
+      "name": "Demetrian Grafting Tape",
+      "image": "assets/catalog-icons/obsidium/demetrian_grafting_tape.png",
+      "imageKind": "item texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [
+        {
+          "id": "obsidium:demetrian_grafting_tape",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:demetrian_grafting_tape",
+            "name": "Demetrian Grafting Tape",
+            "image": "assets/catalog-icons/obsidium/demetrian_grafting_tape.png",
+            "imageKind": "item texture"
+          },
+          "count": 4,
+          "source": "src/main/resources/data/obsidium/recipe/demetrian_grafting_tape.json",
+          "json": "assets/catalog-recipes/demetrian_grafting_tape.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " S ",
+            "SBS",
+            " A "
+          ],
+          "key": {
+            "S": {
+              "item": {
+                "id": "minecraft:string",
+                "name": "String",
+                "image": "assets/catalog-icons/minecraft/string.png",
+                "imageKind": "item texture"
+              }
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "B": {
+              "item": {
+                "id": "minecraft:slime_ball",
+                "name": "Slimeball",
+                "image": "assets/catalog-icons/minecraft/slime_ball.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:demetrian_lumber_depot",
+      "name": "Demetrian Lumber Depot",
+      "image": "assets/catalog-icons/obsidium/demetrian_lumber_depot.png",
+      "imageKind": "block texture",
+      "group": "Botanical automation",
+      "description": "A botanical production block; see the botany guide for its role.",
+      "recipes": [
+        {
+          "id": "obsidium:demetrian_lumber_depot",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:demetrian_lumber_depot",
+            "name": "Demetrian Lumber Depot",
+            "image": "assets/catalog-icons/obsidium/demetrian_lumber_depot.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/demetrian_lumber_depot.json",
+          "json": "assets/catalog-recipes/demetrian_lumber_depot.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " L ",
+            "IBI",
+            " C "
+          ],
+          "key": {
+            "B": {
+              "item": {
+                "id": "minecraft:barrel",
+                "name": "Barrel",
+                "image": "assets/catalog-icons/minecraft/barrel.png",
+                "imageKind": "block texture"
+              }
+            },
+            "L": {
+              "tag": "minecraft:logs"
+            },
+            "I": {
+              "item": {
+                "id": "minecraft:iron_ingot",
+                "name": "Iron Ingot",
+                "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:demetrian_sapling_barrel",
+      "name": "Demetrian Nursery Barrel",
+      "image": "assets/catalog-icons/obsidium/demetrian_sapling_barrel.png",
+      "imageKind": "block texture",
+      "group": "Botanical automation",
+      "description": "A botanical production block; see the botany guide for its role.",
+      "recipes": [
+        {
+          "id": "obsidium:demetrian_sapling_barrel",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:demetrian_sapling_barrel",
+            "name": "Demetrian Nursery Barrel",
+            "image": "assets/catalog-icons/obsidium/demetrian_sapling_barrel.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/demetrian_sapling_barrel.json",
+          "json": "assets/catalog-recipes/demetrian_sapling_barrel.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            " S ",
+            "GBG",
+            " A "
+          ],
+          "key": {
+            "B": {
+              "item": {
+                "id": "minecraft:barrel",
+                "name": "Barrel",
+                "image": "assets/catalog-icons/minecraft/barrel.png",
+                "imageKind": "block texture"
+              }
+            },
+            "S": {
+              "tag": "minecraft:saplings"
+            },
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:pollinating_brush",
+      "name": "Demetrian Pollinating Brush",
+      "image": "assets/catalog-icons/obsidium/pollinating_brush.png",
+      "imageKind": "item texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [
+        {
+          "id": "obsidium:pollinating_brush",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:pollinating_brush",
+            "name": "Demetrian Pollinating Brush",
+            "image": "assets/catalog-icons/obsidium/pollinating_brush.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/pollinating_brush.json",
+          "json": "assets/catalog-recipes/pollinating_brush.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "F",
+            "G",
+            "S"
+          ],
+          "key": {
+            "F": {
+              "item": {
+                "id": "minecraft:feather",
+                "name": "Feather",
+                "image": "assets/catalog-icons/minecraft/feather.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:stick",
+                "name": "Stick",
+                "image": "assets/catalog-icons/minecraft/stick.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:demetrian_scion",
+      "name": "Demetrian Scion",
+      "image": "assets/catalog-icons/obsidium/demetrian_scion.png",
+      "imageKind": "item texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting Knife",
+          "note": "Sneak and right-click supported leaves with the Grafting Knife to harvest a scion cutting. Scions carry species data; the icon represents the generic item.",
+          "source": "src/main/java/net/valentin/obsidium/item/DemetrianGraftingKnifeItem.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:timber_bundle",
+      "name": "Demetrian Timber Bundle",
+      "image": "assets/catalog-icons/obsidium/timber_bundle.png",
+      "imageKind": "block texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [
+        {
+          "id": "obsidium:timber_bundle",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:timber_bundle",
+            "name": "Demetrian Timber Bundle",
+            "image": "assets/catalog-icons/obsidium/timber_bundle.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/timber_bundle.json",
+          "json": "assets/catalog-recipes/timber_bundle.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "LLL",
+            "LLL",
+            "LLL"
+          ],
+          "key": {
+            "L": {
+              "tag": "minecraft:logs"
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:diamond_seed",
+      "name": "Diamond Orchid Seed",
+      "image": "assets/catalog-icons/obsidium/diamond_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:diamond_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:diamond_seed",
+            "name": "Diamond Orchid Seed",
+            "image": "assets/catalog-icons/obsidium/diamond_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/diamond_seed.json",
+          "json": "assets/catalog-recipes/diamond_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "DCD",
+            "SFS",
+            "DCD"
+          ],
+          "key": {
+            "D": {
+              "item": {
+                "id": "minecraft:diamond",
+                "name": "Diamond",
+                "image": "assets/catalog-icons/minecraft/diamond.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:astral_volcanic_catalyst",
+                "name": "Astral Volcanic Catalyst",
+                "image": "assets/catalog-icons/obsidium/astral_volcanic_catalyst.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:diamond_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:diamond_seed",
+            "name": "Diamond Orchid Seed",
+            "image": "assets/catalog-icons/obsidium/diamond_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/diamond_seed_from_petal.json",
+          "json": "assets/catalog-recipes/diamond_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:diamond_petal",
+                "name": "Diamond Petal",
+                "image": "assets/catalog-icons/obsidium/diamond_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:diamond_petal",
+      "name": "Diamond Petal",
+      "image": "assets/catalog-icons/obsidium/diamond_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/diamond_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:dionysian_amethyst_sapling",
+      "name": "Dionysian Amethyst Sapling",
+      "image": "assets/catalog-icons/obsidium/dionysian_amethyst_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting",
+          "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+          "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:electrum_fruit",
+      "name": "Electrum Fruit",
+      "image": "assets/catalog-icons/obsidium/electrum_fruit.png",
+      "imageKind": "block texture",
+      "group": "Tree fruit",
+      "description": "A resource fruit produced by the corresponding living ore tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Tree harvest",
+          "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+          "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:electrum_sapling",
+      "name": "Electrum Tree Sapling",
+      "image": "assets/catalog-icons/obsidium/electrum_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [
+        {
+          "id": "obsidium:electrum_sapling",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:electrum_sapling",
+            "name": "Electrum Tree Sapling",
+            "image": "assets/catalog-icons/obsidium/electrum_sapling.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/electrum_sapling.json",
+          "json": "assets/catalog-recipes/electrum_sapling.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "AGA",
+            "SFS",
+            "ALA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "L": {
+              "item": {
+                "id": "obsidium:silver_ingot",
+                "name": "Silver Ingot",
+                "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "tag": "minecraft:saplings"
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:electrum_sapling_from_hybrid",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:electrum_sapling",
+            "name": "Electrum Tree Sapling",
+            "image": "assets/catalog-icons/obsidium/electrum_sapling.png",
+            "imageKind": "block texture"
+          },
+          "count": 2,
+          "source": "src/main/resources/data/obsidium/recipe/electrum_sapling_from_hybrid.json",
+          "json": "assets/catalog-recipes/electrum_sapling_from_hybrid.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:midas_gold_sapling",
+                "name": "Midas Gold Tree Sapling",
+                "image": "assets/catalog-icons/obsidium/midas_gold_sapling.png",
+                "imageKind": "block texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:artemis_silver_sapling",
+                "name": "Artemis Silver Sapling",
+                "image": "assets/catalog-icons/obsidium/artemis_silver_sapling.png",
+                "imageKind": "block texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_seed",
+      "name": "Ember Lily Seed",
+      "image": "assets/catalog-icons/obsidium/volcanite_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanite_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanite_seed",
+            "name": "Ember Lily Seed",
+            "image": "assets/catalog-icons/obsidium/volcanite_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_seed.json",
+          "json": "assets/catalog-recipes/volcanite_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ARA",
+            "SFS",
+            "ARA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:volcanite_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:volcanite_seed",
+            "name": "Ember Lily Seed",
+            "image": "assets/catalog-icons/obsidium/volcanite_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanite_seed_from_petal.json",
+          "json": "assets/catalog-recipes/volcanite_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:volcanite_petal",
+                "name": "Volcanite Petal",
+                "image": "assets/catalog-icons/obsidium/volcanite_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:foliage_bale",
+      "name": "Foliage Biomass Bale",
+      "image": "assets/catalog-icons/obsidium/foliage_bale.png",
+      "imageKind": "block texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [
+        {
+          "id": "obsidium:foliage_bale",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:foliage_bale",
+            "name": "Foliage Biomass Bale",
+            "image": "assets/catalog-icons/obsidium/foliage_bale.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/foliage_bale.json",
+          "json": "assets/catalog-recipes/foliage_bale.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "LLL",
+            "LLL",
+            "LLL"
+          ],
+          "key": {
+            "L": {
+              "tag": "minecraft:leaves"
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:geothermal_arborist",
+      "name": "Geothermal Arborist & Cultivator",
+      "image": "assets/catalog-icons/obsidium/geothermal_arborist.png",
+      "imageKind": "block texture",
+      "group": "Botanical automation",
+      "description": "A botanical production block; see the botany guide for its role.",
+      "recipes": [
+        {
+          "id": "obsidium:geothermal_arborist",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:geothermal_arborist",
+            "name": "Geothermal Arborist & Cultivator",
+            "image": "assets/catalog-icons/obsidium/geothermal_arborist.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/geothermal_arborist.json",
+          "json": "assets/catalog-recipes/geothermal_arborist.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            " P ",
+            "CTC",
+            " P "
+          ],
+          "key": {
+            "T": {
+              "item": {
+                "id": "obsidium:volcanite_thermo_core",
+                "name": "Volcanite Thermodynamic Core",
+                "image": "assets/catalog-icons/obsidium/volcanite_thermo_core.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:advanced_volcanite_casing",
+                "name": "Advanced Volcanite Casing",
+                "image": "assets/catalog-icons/obsidium/advanced_volcanite_casing.png",
+                "imageKind": "block texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:gold_petal",
+      "name": "Gold Petal",
+      "image": "assets/catalog-icons/obsidium/gold_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/gold_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:gold_seed",
+      "name": "Golden Poppy Seed",
+      "image": "assets/catalog-icons/obsidium/gold_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:gold_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:gold_seed",
+            "name": "Golden Poppy Seed",
+            "image": "assets/catalog-icons/obsidium/gold_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/gold_seed.json",
+          "json": "assets/catalog-recipes/gold_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ARA",
+            "SFS",
+            "ARA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:gold_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:gold_seed",
+            "name": "Golden Poppy Seed",
+            "image": "assets/catalog-icons/obsidium/gold_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/gold_seed_from_petal.json",
+          "json": "assets/catalog-recipes/gold_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:gold_petal",
+                "name": "Gold Petal",
+                "image": "assets/catalog-icons/obsidium/gold_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:grafted_sapling",
+      "name": "Grafted Rootstock",
+      "image": "assets/catalog-icons/obsidium/grafted_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting stage",
+          "note": "An intermediate planted rootstock created by incising a sapling with the Grafting Knife, then used in the scion-grafting workflow.",
+          "source": "src/main/java/net/valentin/obsidium/item/DemetrianGraftingKnifeItem.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hades_coal_sapling",
+      "name": "Hades Coal Sapling",
+      "image": "assets/catalog-icons/obsidium/hades_coal_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting",
+          "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+          "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestus_volcanite_fruit",
+      "name": "Hephaestus Volcanite Fruit",
+      "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_fruit.png",
+      "imageKind": "block texture",
+      "group": "Tree fruit",
+      "description": "A resource fruit produced by the corresponding living ore tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Tree harvest",
+          "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+          "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hephaestus_volcanite_sapling",
+      "name": "Hephaestus Volcanite Tree Sapling",
+      "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [
+        {
+          "id": "obsidium:hephaestus_volcanite_sapling",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hephaestus_volcanite_sapling",
+            "name": "Hephaestus Volcanite Tree Sapling",
+            "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_sapling.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hephaestus_volcanite_sapling.json",
+          "json": "assets/catalog-recipes/hephaestus_volcanite_sapling.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "AMA",
+            "SFS",
+            "AMA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "M": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "tag": "minecraft:saplings"
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hermes_copper_fruit",
+      "name": "Hermes Copper Fruit",
+      "image": "assets/catalog-icons/obsidium/hermes_copper_fruit.png",
+      "imageKind": "block texture",
+      "group": "Tree fruit",
+      "description": "A resource fruit produced by the corresponding living ore tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Tree harvest",
+          "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+          "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hermes_copper_sapling",
+      "name": "Hermes Copper Tree Sapling",
+      "image": "assets/catalog-icons/obsidium/hermes_copper_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [
+        {
+          "id": "obsidium:hermes_copper_sapling",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:hermes_copper_sapling",
+            "name": "Hermes Copper Tree Sapling",
+            "image": "assets/catalog-icons/obsidium/hermes_copper_sapling.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/hermes_copper_sapling.json",
+          "json": "assets/catalog-recipes/hermes_copper_sapling.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "AMA",
+            "SFS",
+            "AMA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "M": {
+              "item": {
+                "id": "minecraft:copper_ingot",
+                "name": "Copper Ingot",
+                "image": "assets/catalog-icons/minecraft/copper_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "tag": "minecraft:saplings"
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:hyperion_glowstone_sapling",
+      "name": "Hyperion Glowstone Sapling",
+      "image": "assets/catalog-icons/obsidium/hyperion_glowstone_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting",
+          "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+          "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:iron_petal",
+      "name": "Iron Petal",
+      "image": "assets/catalog-icons/obsidium/iron_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/iron_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:iron_seed",
+      "name": "Ironbell Seed",
+      "image": "assets/catalog-icons/obsidium/iron_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:iron_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:iron_seed",
+            "name": "Ironbell Seed",
+            "image": "assets/catalog-icons/obsidium/iron_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/iron_seed.json",
+          "json": "assets/catalog-recipes/iron_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ARA",
+            "SFS",
+            "ARA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:iron_ingot",
+                "name": "Iron Ingot",
+                "image": "assets/catalog-icons/minecraft/iron_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:iron_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:iron_seed",
+            "name": "Ironbell Seed",
+            "image": "assets/catalog-icons/obsidium/iron_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/iron_seed_from_petal.json",
+          "json": "assets/catalog-recipes/iron_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:iron_petal",
+                "name": "Iron Petal",
+                "image": "assets/catalog-icons/obsidium/iron_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:lapis_petal",
+      "name": "Lapis Petal",
+      "image": "assets/catalog-icons/obsidium/lapis_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/lapis_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:lead_petal",
+      "name": "Lead Petal",
+      "image": "assets/catalog-icons/obsidium/lead_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/lead_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:midas_gold_fruit",
+      "name": "Midas Gold Fruit",
+      "image": "assets/catalog-icons/obsidium/midas_gold_fruit.png",
+      "imageKind": "block texture",
+      "group": "Tree fruit",
+      "description": "A resource fruit produced by the corresponding living ore tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Tree harvest",
+          "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+          "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:midas_gold_sapling",
+      "name": "Midas Gold Tree Sapling",
+      "image": "assets/catalog-icons/obsidium/midas_gold_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [
+        {
+          "id": "obsidium:midas_gold_sapling",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:midas_gold_sapling",
+            "name": "Midas Gold Tree Sapling",
+            "image": "assets/catalog-icons/obsidium/midas_gold_sapling.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/midas_gold_sapling.json",
+          "json": "assets/catalog-recipes/midas_gold_sapling.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "AMA",
+            "SFS",
+            "AMA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "M": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "tag": "minecraft:saplings"
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:netherite_petal",
+      "name": "Netherite Petal",
+      "image": "assets/catalog-icons/obsidium/netherite_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/netherite_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:magma_forge_manual",
+      "name": "Obsidium Manual",
+      "image": "assets/catalog-icons/obsidium/magma_forge_manual.png",
+      "imageKind": "item texture",
+      "group": "Manuals",
+      "description": "Right-click while holding this book to open the general Obsidium manual, including multiblocks, energy and machinery.",
+      "recipes": [
+        {
+          "id": "obsidium:magma_forge_manual",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:magma_forge_manual",
+            "name": "Obsidium Manual",
+            "image": "assets/catalog-icons/obsidium/magma_forge_manual.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/magma_forge_manual.json",
+          "json": "assets/catalog-recipes/magma_forge_manual.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "minecraft:book",
+                "name": "Book",
+                "image": "assets/catalog-icons/minecraft/book.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:plouton_emerald_sapling",
+      "name": "Plouton Emerald Sapling",
+      "image": "assets/catalog-icons/obsidium/plouton_emerald_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting",
+          "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+          "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:poseidon_lapis_sapling",
+      "name": "Poseidon Lapis Sapling",
+      "image": "assets/catalog-icons/obsidium/poseidon_lapis_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting",
+          "note": "Produced through a compatible rootstock/scion combination. Consult the botany manual for the grafting workflow; this is not a crafting-grid recipe.",
+          "source": "src/main/java/net/valentin/obsidium/block/GraftingRegistry.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:redstone_seed",
+      "name": "Pulse Daisy Seed",
+      "image": "assets/catalog-icons/obsidium/redstone_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:redstone_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:redstone_seed",
+            "name": "Pulse Daisy Seed",
+            "image": "assets/catalog-icons/obsidium/redstone_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/redstone_seed.json",
+          "json": "assets/catalog-recipes/redstone_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ARA",
+            "SFS",
+            "ARA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "minecraft:redstone",
+                "name": "Redstone Dust",
+                "image": "assets/catalog-icons/minecraft/redstone.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:redstone_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:redstone_seed",
+            "name": "Pulse Daisy Seed",
+            "image": "assets/catalog-icons/obsidium/redstone_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/redstone_seed_from_petal.json",
+          "json": "assets/catalog-recipes/redstone_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:redstone_petal",
+                "name": "Redstone Petal",
+                "image": "assets/catalog-icons/obsidium/redstone_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:pyretic_titan_sapling",
+      "name": "Pyretic Titan Volcanite Bonsai Sapling",
+      "image": "assets/catalog-icons/obsidium/pyretic_titan_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Grafting mutation",
+          "note": "A 5% mutation roll during grafted-sapling metamorphosis when rootstock or scion is Tartarean Netherite or Adamantine Diamond. Requires an existing rare specimen; common trees cannot bootstrap this mutation.",
+          "source": "src/main/java/net/valentin/obsidium/block/GraftedSaplingBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:pyrogenic_bloom_infuser",
+      "name": "Pyrogenic Bloom Infuser",
+      "image": "assets/catalog-icons/obsidium/pyrogenic_bloom_infuser.png",
+      "imageKind": "item texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [
+        {
+          "id": "obsidium:pyrogenic_bloom_infuser",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:pyrogenic_bloom_infuser",
+            "name": "Pyrogenic Bloom Infuser",
+            "image": "assets/catalog-icons/obsidium/pyrogenic_bloom_infuser.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/pyrogenic_bloom_infuser.json",
+          "json": "assets/catalog-recipes/pyrogenic_bloom_infuser.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "APA",
+            "FTF",
+            "APA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            },
+            "T": {
+              "item": {
+                "id": "obsidium:volcanite_thermo_core",
+                "name": "Volcanite Thermodynamic Core",
+                "image": "assets/catalog-icons/obsidium/volcanite_thermo_core.png",
+                "imageKind": "item texture"
+              }
+            },
+            "P": {
+              "item": {
+                "id": "obsidium:volcanic_plate",
+                "name": "Volcanic Plate",
+                "image": "assets/catalog-icons/obsidium/volcanic_plate.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:redstone_petal",
+      "name": "Redstone Petal",
+      "image": "assets/catalog-icons/obsidium/redstone_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/redstone_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:demetrian_botany_book",
+      "name": "Sacred Codex of Demeter",
+      "image": "assets/catalog-icons/obsidium/demetrian_botany_book.png",
+      "imageKind": "item texture",
+      "group": "Manuals",
+      "description": "Right-click while holding this book to open the Demetrian Botany guide, including grafting and resource trees.",
+      "recipes": [
+        {
+          "id": "obsidium:demetrian_botany_book",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:demetrian_botany_book",
+            "name": "Sacred Codex of Demeter",
+            "image": "assets/catalog-icons/obsidium/demetrian_botany_book.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/demetrian_botany_book.json",
+          "json": "assets/catalog-recipes/demetrian_botany_book.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "ingredients": [
+            {
+              "item": {
+                "id": "minecraft:book",
+                "name": "Book",
+                "image": "assets/catalog-icons/minecraft/book.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "tag": "minecraft:saplings"
+            },
+            {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:silver_petal",
+      "name": "Silver Petal",
+      "image": "assets/catalog-icons/obsidium/silver_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/silver_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tin_seed",
+      "name": "Silverbell Seed",
+      "image": "assets/catalog-icons/obsidium/tin_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:tin_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tin_seed",
+            "name": "Silverbell Seed",
+            "image": "assets/catalog-icons/obsidium/tin_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_seed.json",
+          "json": "assets/catalog-recipes/tin_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ARA",
+            "SFS",
+            "ARA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:tin_ingot",
+                "name": "Tin Ingot",
+                "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:tin_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:tin_seed",
+            "name": "Silverbell Seed",
+            "image": "assets/catalog-icons/obsidium/tin_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tin_seed_from_petal.json",
+          "json": "assets/catalog-recipes/tin_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:tin_petal",
+                "name": "Tin Petal",
+                "image": "assets/catalog-icons/obsidium/tin_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:lead_seed",
+      "name": "Slate Poppy Seed",
+      "image": "assets/catalog-icons/obsidium/lead_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:lead_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:lead_seed",
+            "name": "Slate Poppy Seed",
+            "image": "assets/catalog-icons/obsidium/lead_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_seed.json",
+          "json": "assets/catalog-recipes/lead_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ARA",
+            "SFS",
+            "ARA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:lead_ingot",
+                "name": "Lead Ingot",
+                "image": "assets/catalog-icons/obsidium/lead_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:lead_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:lead_seed",
+            "name": "Slate Poppy Seed",
+            "image": "assets/catalog-icons/obsidium/lead_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/lead_seed_from_petal.json",
+          "json": "assets/catalog-recipes/lead_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:lead_petal",
+                "name": "Lead Petal",
+                "image": "assets/catalog-icons/obsidium/lead_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_netherite_fruit",
+      "name": "Tartarean Netherite Fruit",
+      "image": "assets/catalog-icons/obsidium/tartarean_netherite_fruit.png",
+      "imageKind": "block texture",
+      "group": "Tree fruit",
+      "description": "A resource fruit produced by the corresponding living ore tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Tree harvest",
+          "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+          "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tartarean_netherite_sapling",
+      "name": "Tartarean Netherite Mega Sapling",
+      "image": "assets/catalog-icons/obsidium/tartarean_netherite_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [
+        {
+          "id": "obsidium:tartarean_netherite_sapling",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:tartarean_netherite_sapling",
+            "name": "Tartarean Netherite Mega Sapling",
+            "image": "assets/catalog-icons/obsidium/tartarean_netherite_sapling.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/tartarean_netherite_sapling.json",
+          "json": "assets/catalog-recipes/tartarean_netherite_sapling.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "VNV",
+            "CSC",
+            "VNV"
+          ],
+          "key": {
+            "V": {
+              "item": {
+                "id": "obsidium:supreme_volcanic_alloy",
+                "name": "Supreme Volcanic Alloy",
+                "image": "assets/catalog-icons/obsidium/supreme_volcanic_alloy.png",
+                "imageKind": "item texture"
+              }
+            },
+            "N": {
+              "item": {
+                "id": "minecraft:netherite_ingot",
+                "name": "Netherite Ingot",
+                "image": "assets/catalog-icons/minecraft/netherite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:astral_volcanic_catalyst",
+                "name": "Astral Volcanic Catalyst",
+                "image": "assets/catalog-icons/obsidium/astral_volcanic_catalyst.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "obsidium:hephaestus_volcanite_sapling",
+                "name": "Hephaestus Volcanite Tree Sapling",
+                "image": "assets/catalog-icons/obsidium/hephaestus_volcanite_sapling.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:tin_petal",
+      "name": "Tin Petal",
+      "image": "assets/catalog-icons/obsidium/tin_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/tin_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_beehive",
+      "name": "Volcanic Beehive",
+      "image": "assets/catalog-icons/obsidium/volcanic_beehive.png",
+      "imageKind": "block texture",
+      "group": "Botanical automation",
+      "description": "A botanical production block; see the botany guide for its role.",
+      "recipes": [
+        {
+          "id": "obsidium:volcanic_beehive",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:volcanic_beehive",
+            "name": "Volcanic Beehive",
+            "image": "assets/catalog-icons/obsidium/volcanic_beehive.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/volcanic_beehive.json",
+          "json": "assets/catalog-recipes/volcanic_beehive.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "BBB",
+            "HHH",
+            "BBB"
+          ],
+          "key": {
+            "B": {
+              "item": {
+                "id": "minecraft:basalt",
+                "name": "Basalt",
+                "image": "assets/catalog-icons/minecraft/basalt.png",
+                "imageKind": "block texture"
+              }
+            },
+            "H": {
+              "item": {
+                "id": "minecraft:honeycomb",
+                "name": "Honeycomb",
+                "image": "assets/catalog-icons/minecraft/honeycomb.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_honey_bottle",
+      "name": "Volcanic Honey Bottle",
+      "image": "assets/catalog-icons/obsidium/volcanic_honey_bottle.png",
+      "imageKind": "item texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Beehive harvest",
+          "note": "Use a glass bottle on a full Volcanic Beehive to collect honey. Smoke the hive with a lit campfire below it to avoid angering bees.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcanicBeehiveBlock.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanic_honeycomb",
+      "name": "Volcanic Honeycomb",
+      "image": "assets/catalog-icons/obsidium/volcanic_honeycomb.png",
+      "imageKind": "item texture",
+      "group": "Botanical tools & materials",
+      "description": "A component or tool for the Demetrian botanical production chain.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Beehive harvest",
+          "note": "Use shears on a full Volcanic Beehive to collect three honeycombs. Smoke the hive with a lit campfire below it to avoid angering bees.",
+          "source": "src/main/java/net/valentin/obsidium/block/VolcanicBeehiveBlock.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:silver_seed",
+      "name": "Volcanic Silver Seed",
+      "image": "assets/catalog-icons/obsidium/silver_seed.png",
+      "imageKind": "item texture",
+      "group": "Crop seeds",
+      "description": "Plantable seed for the corresponding resource crop.",
+      "recipes": [
+        {
+          "id": "obsidium:silver_seed",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:silver_seed",
+            "name": "Volcanic Silver Seed",
+            "image": "assets/catalog-icons/obsidium/silver_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_seed.json",
+          "json": "assets/catalog-recipes/silver_seed.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "ARA",
+            "SFS",
+            "ARA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "R": {
+              "item": {
+                "id": "obsidium:silver_ingot",
+                "name": "Silver Ingot",
+                "image": "assets/catalog-icons/obsidium/silver_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        },
+        {
+          "id": "obsidium:silver_seed_from_petal",
+          "type": "minecraft:crafting_shapeless",
+          "output": {
+            "id": "obsidium:silver_seed",
+            "name": "Volcanic Silver Seed",
+            "image": "assets/catalog-icons/obsidium/silver_seed.png",
+            "imageKind": "item texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/silver_seed_from_petal.json",
+          "json": "assets/catalog-recipes/silver_seed_from_petal.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "ingredients": [
+            {
+              "item": {
+                "id": "obsidium:silver_petal",
+                "name": "Silver Petal",
+                "image": "assets/catalog-icons/obsidium/silver_petal.png",
+                "imageKind": "item texture"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:wheat_seeds",
+                "name": "Wheat Seeds",
+                "image": "assets/catalog-icons/minecraft/wheat_seeds.png",
+                "imageKind": "item texture"
+              }
+            }
+          ]
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:volcanite_petal",
+      "name": "Volcanite Petal",
+      "image": "assets/catalog-icons/obsidium/volcanite_petal.png",
+      "imageKind": "item texture",
+      "group": "Crop petals",
+      "description": "A resource petal harvested from the corresponding crop.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Crop harvest",
+          "note": "Harvest the matching mature resource crop; drops follow its loot table.",
+          "source": "src/main/resources/data/obsidium/loot_table/blocks/volcanite_crop.json"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:zeus_tin_fruit",
+      "name": "Zeus Tin Fruit",
+      "image": "assets/catalog-icons/obsidium/zeus_tin_fruit.png",
+      "imageKind": "item texture",
+      "group": "Tree fruit",
+      "description": "A resource fruit produced by the corresponding living ore tree.",
+      "recipes": [],
+      "acquisition": [
+        {
+          "kind": "Tree harvest",
+          "note": "Harvest ripe fruiting leaves of the matching mineral tree, for example with the Geothermal Arborist.",
+          "source": "src/main/java/net/valentin/obsidium/block/GeothermalArboristBlockEntity.java"
+        }
+      ],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:zeus_tin_sapling",
+      "name": "Zeus Tin Sapling",
+      "image": "assets/catalog-icons/obsidium/zeus_tin_sapling.png",
+      "imageKind": "block texture",
+      "group": "Tree saplings",
+      "description": "A plantable sapling for the corresponding living tree.",
+      "recipes": [
+        {
+          "id": "obsidium:zeus_tin_sapling",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:zeus_tin_sapling",
+            "name": "Zeus Tin Sapling",
+            "image": "assets/catalog-icons/obsidium/zeus_tin_sapling.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/zeus_tin_sapling.json",
+          "json": "assets/catalog-recipes/zeus_tin_sapling.json",
+          "station": "Crafting table / Volcanite Worktable",
+          "worktableRequired": false,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "pattern": [
+            "AMA",
+            "SFS",
+            "AMA"
+          ],
+          "key": {
+            "A": {
+              "item": {
+                "id": "obsidium:volcanic_ash",
+                "name": "Volcanic Ash",
+                "image": "assets/catalog-icons/obsidium/volcanic_ash.png",
+                "imageKind": "item texture"
+              }
+            },
+            "M": {
+              "item": {
+                "id": "obsidium:tin_ingot",
+                "name": "Tin Ingot",
+                "image": "assets/catalog-icons/obsidium/tin_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "tag": "minecraft:saplings"
+            },
+            "F": {
+              "item": {
+                "id": "obsidium:volcanite_flux_mechanism",
+                "name": "Volcanite Flux Mechanism",
+                "image": "assets/catalog-icons/obsidium/volcanite_flux_mechanism.png",
+                "imageKind": "item texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    }
+  ]
+}

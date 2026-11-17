@@ -1,0 +1,616 @@
+{
+  "ares_iron_fence": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "ares_iron_fence_gate": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "ares_iron_leaves": {
+    "group": "Leaves",
+    "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/ares_iron_leaves.json"
+      }
+    ]
+  },
+  "ares_iron_log": {
+    "group": "Logs & planks",
+    "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/ares_iron_log.json"
+      }
+    ]
+  },
+  "ares_iron_planks": {
+    "group": "Logs & planks",
+    "description": "Planks crafted from the corresponding tree wood.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "ares_iron_slab": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "ares_iron_stairs": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "artemis_silver_fence": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "artemis_silver_fence_gate": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "artemis_silver_leaves": {
+    "group": "Leaves",
+    "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/artemis_silver_leaves.json"
+      }
+    ]
+  },
+  "artemis_silver_log": {
+    "group": "Logs & planks",
+    "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/artemis_silver_log.json"
+      }
+    ]
+  },
+  "artemis_silver_planks": {
+    "group": "Logs & planks",
+    "description": "Planks crafted from the corresponding tree wood.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "artemis_silver_slab": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "artemis_silver_stairs": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "cronus_lead_fence": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "cronus_lead_fence_gate": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "cronus_lead_leaves": {
+    "group": "Leaves",
+    "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/cronus_lead_leaves.json"
+      }
+    ]
+  },
+  "cronus_lead_log": {
+    "group": "Logs & planks",
+    "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/cronus_lead_log.json"
+      }
+    ]
+  },
+  "cronus_lead_planks": {
+    "group": "Logs & planks",
+    "description": "Planks crafted from the corresponding tree wood.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "cronus_lead_slab": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "cronus_lead_stairs": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "deepslate_lead_ore": {
+    "group": "Ore blocks",
+    "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/deepslate_lead_ore.json"
+      }
+    ]
+  },
+  "deepslate_silver_ore": {
+    "group": "Ore blocks",
+    "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/deepslate_silver_ore.json"
+      }
+    ]
+  },
+  "deepslate_tin_ore": {
+    "group": "Ore blocks",
+    "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/deepslate_tin_ore.json"
+      }
+    ]
+  },
+  "electrum_fence": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "electrum_fence_gate": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "electrum_leaves": {
+    "group": "Leaves",
+    "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/electrum_leaves.json"
+      }
+    ]
+  },
+  "electrum_log": {
+    "group": "Logs & planks",
+    "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/electrum_log.json"
+      }
+    ]
+  },
+  "electrum_planks": {
+    "group": "Logs & planks",
+    "description": "Planks crafted from the corresponding tree wood.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "electrum_slab": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "electrum_stairs": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestus_volcanite_fence": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestus_volcanite_fence_gate": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestus_volcanite_leaves": {
+    "group": "Leaves",
+    "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/hephaestus_volcanite_leaves.json"
+      }
+    ]
+  },
+  "hephaestus_volcanite_log": {
+    "group": "Logs & planks",
+    "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/hephaestus_volcanite_log.json"
+      }
+    ]
+  },
+  "hephaestus_volcanite_planks": {
+    "group": "Logs & planks",
+    "description": "Planks crafted from the corresponding tree wood.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestus_volcanite_slab": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestus_volcanite_stairs": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hermes_copper_fence": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hermes_copper_fence_gate": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hermes_copper_leaves": {
+    "group": "Leaves",
+    "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/hermes_copper_leaves.json"
+      }
+    ]
+  },
+  "hermes_copper_log": {
+    "group": "Logs & planks",
+    "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/hermes_copper_log.json"
+      }
+    ]
+  },
+  "hermes_copper_planks": {
+    "group": "Logs & planks",
+    "description": "Planks crafted from the corresponding tree wood.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hermes_copper_slab": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hermes_copper_stairs": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "lead_block": {
+    "group": "Material blocks",
+    "description": "A compact material block for construction and resource conversion.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "lead_ore": {
+    "group": "Ore blocks",
+    "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/lead_ore.json"
+      }
+    ]
+  },
+  "midas_gold_fence": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "midas_gold_fence_gate": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "midas_gold_leaves": {
+    "group": "Leaves",
+    "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/midas_gold_leaves.json"
+      }
+    ]
+  },
+  "midas_gold_log": {
+    "group": "Logs & planks",
+    "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/midas_gold_log.json"
+      }
+    ]
+  },
+  "midas_gold_planks": {
+    "group": "Logs & planks",
+    "description": "Planks crafted from the corresponding tree wood.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "midas_gold_slab": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "midas_gold_stairs": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "pyretic_titan_leaves": {
+    "group": "Leaves",
+    "description": "A Pyretic Titan building resource produced by growing its rare sapling in the Demetrian Bonsai Planter.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Bonsai production",
+        "note": "Obtain a Pyretic Titan Sapling through the rare grafting mutation (5% with eligible Tartarean Netherite or Adamantine Diamond species), then grow it in the Demetrian Bonsai Planter to produce Pyretic Titan logs and leaves.",
+        "source": "src/main/java/net/valentin/obsidium/block/DemetrianBonsaiPlanterBlockEntity.java"
+      }
+    ]
+  },
+  "pyretic_titan_log": {
+    "group": "Logs & planks",
+    "description": "A Pyretic Titan building resource produced by growing its rare sapling in the Demetrian Bonsai Planter.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Bonsai production",
+        "note": "Obtain a Pyretic Titan Sapling through the rare grafting mutation (5% with eligible Tartarean Netherite or Adamantine Diamond species), then grow it in the Demetrian Bonsai Planter to produce Pyretic Titan logs and leaves.",
+        "source": "src/main/java/net/valentin/obsidium/block/DemetrianBonsaiPlanterBlockEntity.java"
+      }
+    ]
+  },
+  "raw_lead_block": {
+    "group": "Material blocks",
+    "description": "A compact material block for construction and resource conversion.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "raw_silver_block": {
+    "group": "Material blocks",
+    "description": "A compact material block for construction and resource conversion.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "raw_tin_block": {
+    "group": "Material blocks",
+    "description": "A compact material block for construction and resource conversion.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "reinforced_tinted_glass": {
+    "group": "Glass & lighting",
+    "description": "A glass block for building and compatible industrial structures.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "silver_block": {
+    "group": "Material blocks",
+    "description": "A compact material block for construction and resource conversion.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "silver_ore": {
+    "group": "Ore blocks",
+    "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/silver_ore.json"
+      }
+    ]
+  },
+  "supreme_volcanite_glass": {
+    "group": "Glass & lighting",
+    "description": "A glass block for building and compatible industrial structures.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_netherite_fence": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_netherite_fence_gate": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_netherite_leaves": {
+    "group": "Leaves",
+    "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/tartarean_netherite_leaves.json"
+      }
+    ]
+  },
+  "tartarean_netherite_log": {
+    "group": "Logs & planks",
+    "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/tartarean_netherite_log.json"
+      }
+    ]
+  },
+  "tartarean_netherite_planks": {
+    "group": "Logs & planks",
+    "description": "Planks crafted from the corresponding tree wood.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_netherite_slab": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_netherite_stairs": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tin_block": {
+    "group": "Material blocks",
+    "description": "A compact material block for construction and resource conversion.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tin_ore": {
+    "group": "Ore blocks",
+    "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/tin_ore.json"
+      }
+    ]
+  },
+  "volcanic_cement_block": {
+    "group": "Cement",
+    "description": "A volcanic construction material for industrial builds.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanic_cement_bricks": {
+    "group": "Cement",
+    "description": "A volcanic construction material for industrial builds.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_block": {
+    "group": "Material blocks",
+    "description": "A compact material block for construction and resource conversion.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_glass": {
+    "group": "Glass & lighting",
+    "description": "A glass block for building and compatible industrial structures.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_lamp": {
+    "group": "Glass & lighting",
+    "description": "A Volcanite lighting block for buildings and workshops.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_ore": {
+    "group": "Ore blocks",
+    "description": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "An ore block found through exploration and mining. Obtaining the intact block depends on its loot conditions, including Silk Touch where required. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/volcanite_ore.json"
+      }
+    ]
+  },
+  "zeus_tin_fence": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "zeus_tin_fence_gate": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "zeus_tin_leaves": {
+    "group": "Leaves",
+    "description": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "Foliage from its corresponding living tree. Use the appropriate harvesting tool to collect the leaf block. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/zeus_tin_leaves.json"
+      }
+    ]
+  },
+  "zeus_tin_log": {
+    "group": "Logs & planks",
+    "description": "A log from its corresponding living ore tree, usable in construction and wood processing.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java",
+    "acquisition": [
+      {
+        "kind": "Harvesting",
+        "note": "A log from its corresponding living ore tree, usable in construction and wood processing. See the source loot table for exact tool requirements and drops.",
+        "source": "src/main/resources/data/obsidium/loot_table/blocks/zeus_tin_log.json"
+      }
+    ]
+  },
+  "zeus_tin_planks": {
+    "group": "Logs & planks",
+    "description": "Planks crafted from the corresponding tree wood.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "zeus_tin_slab": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "zeus_tin_stairs": {
+    "group": "Wood shapes",
+    "description": "A building shape crafted from its corresponding wood family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  }
+}

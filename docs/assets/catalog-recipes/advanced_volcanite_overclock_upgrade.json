@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WAW",
+    "AUA",
+    "WDW"
+  ],
+  "key": {
+    "W": {
+      "item": "obsidium:advanced_volcanite_energy_wire"
+    },
+    "A": {
+      "item": "obsidium:volcanic_alloy"
+    },
+    "U": {
+      "item": "obsidium:volcanite_overclock_upgrade"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "id": "obsidium:advanced_volcanite_overclock_upgrade",
+    "count": 1
+  }
+}
+

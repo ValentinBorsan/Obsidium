@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AMA",
+    "SFS",
+    "AMA"
+  ],
+  "key": {
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "M": {
+      "item": "obsidium:lead_ingot"
+    },
+    "S": {
+      "tag": "minecraft:saplings"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    }
+  },
+  "result": {
+    "id": "obsidium:cronus_lead_sapling",
+    "count": 1
+  }
+}

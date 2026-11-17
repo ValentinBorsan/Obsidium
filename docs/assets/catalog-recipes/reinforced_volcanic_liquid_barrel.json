@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "obsidium:volcanic_wood_liquid_barrel"
+    },
+    "P": {
+      "item": "obsidium:pyric_bronze_ingot"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "OPO",
+    "PBP",
+    "OPO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidium:reinforced_volcanic_liquid_barrel"
+  }
+}

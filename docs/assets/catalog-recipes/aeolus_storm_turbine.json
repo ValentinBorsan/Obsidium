@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ZLZ",
+    "TMT",
+    "CCC"
+  ],
+  "key": {
+    "Z": {
+      "item": "obsidium:zeus_tin_fruit"
+    },
+    "L": {
+      "item": "minecraft:lightning_rod"
+    },
+    "T": {
+      "item": "obsidium:volcanite_thermo_core"
+    },
+    "M": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    },
+    "C": {
+      "item": "obsidium:advanced_volcanite_casing"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:aeolus_storm_turbine"
+  }
+}
+

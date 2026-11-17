@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "obsidium:dionysian_pomace"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    }
+  },
+  "pattern": [
+    " P ",
+    "PAP",
+    " P "
+  ],
+  "result": {
+    "count": 4,
+    "id": "obsidium:ash_briquette"
+  }
+}
+

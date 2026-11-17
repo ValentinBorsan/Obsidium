@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ARA",
+    "SFS",
+    "ARA"
+  ],
+  "key": {
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "R": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "S": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    }
+  },
+  "result": {
+    "id": "obsidium:lapis_seed",
+    "count": 1
+  }
+}

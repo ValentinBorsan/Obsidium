@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " I ",
+    "PVP",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "P": {
+      "item": "minecraft:piston"
+    },
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_compactor_upgrade",
+    "count": 1
+  }
+}

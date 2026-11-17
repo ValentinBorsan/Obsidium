@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OGO",
+    "GMG",
+    "OVO"
+  ],
+  "key": {
+    "O": { "item": "minecraft:obsidian" },
+    "V": { "item": "obsidium:volcanic_alloy" },
+    "G": { "item": "minecraft:glass" },
+    "M": { "item": "minecraft:magma_block" }
+  },
+  "result": {
+    "id": "obsidium:volcanite_lamp",
+    "count": 1
+  }
+}

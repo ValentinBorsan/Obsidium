@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "VOV",
+    "OCO",
+    "VOV"
+  ],
+  "key": {
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "C": {
+      "item": "obsidium:volcanite_chest"
+    }
+  },
+  "result": {
+    "id": "obsidium:volcanite_modular_chest",
+    "count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "BPA",
+    " O "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:soul_sand"
+    },
+    "P": {
+      "item": "obsidium:volcanic_papyrus"
+    },
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:scroll_of_thanatos"
+  }
+}

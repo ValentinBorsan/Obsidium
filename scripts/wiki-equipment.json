@@ -1,0 +1,237 @@
+{
+  "faraday_boots": {
+    "group": "Armor",
+    "description": "Faraday boots, part of the Faraday equipment family. Part of the dielectric protection set for high-voltage work.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "faraday_chestplate": {
+    "group": "Armor",
+    "description": "Faraday chestplate, part of the Faraday equipment family. Part of the dielectric protection set for high-voltage work.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "faraday_helmet": {
+    "group": "Armor",
+    "description": "Faraday helmet, part of the Faraday equipment family. Part of the dielectric protection set for high-voltage work.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "faraday_leggings": {
+    "group": "Armor",
+    "description": "Faraday leggings, part of the Faraday equipment family. Part of the dielectric protection set for high-voltage work.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_axe": {
+    "group": "Tools",
+    "description": "Hephaestean axe, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_boots": {
+    "group": "Armor",
+    "description": "Hephaestean boots, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_chestplate": {
+    "group": "Armor",
+    "description": "Hephaestean chestplate, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_helmet": {
+    "group": "Armor",
+    "description": "Hephaestean helmet, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_hoe": {
+    "group": "Tools",
+    "description": "Hephaestean hoe, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_leggings": {
+    "group": "Armor",
+    "description": "Hephaestean leggings, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_paxel": {
+    "group": "Tools",
+    "description": "Hephaestean paxel, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_pickaxe": {
+    "group": "Tools",
+    "description": "Hephaestean pickaxe, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_shovel": {
+    "group": "Tools",
+    "description": "Hephaestean shovel, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_sword": {
+    "group": "Weapons",
+    "description": "Hephaestean sword, part of the Hephaestean equipment family. This family uses RF-powered equipment; inspect the item controls and available charge before use.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "promethean_axe": {
+    "group": "Tools",
+    "description": "Promethean axe, part of the Promethean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "promethean_hoe": {
+    "group": "Tools",
+    "description": "Promethean hoe, part of the Promethean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "promethean_pickaxe": {
+    "group": "Tools",
+    "description": "Promethean pickaxe, part of the Promethean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "promethean_shovel": {
+    "group": "Tools",
+    "description": "Promethean shovel, part of the Promethean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "promethean_sword": {
+    "group": "Weapons",
+    "description": "Promethean sword, part of the Promethean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_axe": {
+    "group": "Tools",
+    "description": "Tartarean axe, part of the Tartarean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_boots": {
+    "group": "Armor",
+    "description": "Tartarean boots, part of the Tartarean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_chestplate": {
+    "group": "Armor",
+    "description": "Tartarean chestplate, part of the Tartarean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_helmet": {
+    "group": "Armor",
+    "description": "Tartarean helmet, part of the Tartarean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_hoe": {
+    "group": "Tools",
+    "description": "Tartarean hoe, part of the Tartarean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_leggings": {
+    "group": "Armor",
+    "description": "Tartarean leggings, part of the Tartarean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_pickaxe": {
+    "group": "Tools",
+    "description": "Tartarean pickaxe, part of the Tartarean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_shovel": {
+    "group": "Tools",
+    "description": "Tartarean shovel, part of the Tartarean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "tartarean_sword": {
+    "group": "Weapons",
+    "description": "Tartarean sword, part of the Tartarean equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "typhonic_axe": {
+    "group": "Tools",
+    "description": "Typhonic axe, part of the Typhonic equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "typhonic_boots": {
+    "group": "Armor",
+    "description": "Typhonic boots, part of the Typhonic equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "typhonic_chestplate": {
+    "group": "Armor",
+    "description": "Typhonic chestplate, part of the Typhonic equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "typhonic_helmet": {
+    "group": "Armor",
+    "description": "Typhonic helmet, part of the Typhonic equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "typhonic_hoe": {
+    "group": "Tools",
+    "description": "Typhonic hoe, part of the Typhonic equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "typhonic_leggings": {
+    "group": "Armor",
+    "description": "Typhonic leggings, part of the Typhonic equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "typhonic_pickaxe": {
+    "group": "Tools",
+    "description": "Typhonic pickaxe, part of the Typhonic equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "typhonic_shovel": {
+    "group": "Tools",
+    "description": "Typhonic shovel, part of the Typhonic equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "typhonic_sword": {
+    "group": "Weapons",
+    "description": "Typhonic sword, part of the Typhonic equipment family.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "bow_of_artemis": {
+    "group": "Mythic equipment",
+    "description": "A mythic bow associated with Artemis.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "aegis_of_athena": {
+    "group": "Mythic equipment",
+    "description": "A mythic shield associated with Athena.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "talaria_of_hermes": {
+    "group": "Mythic equipment",
+    "description": "Mythic footwear associated with Hermes.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "thyrsus_of_dionysus": {
+    "group": "Mythic equipment",
+    "description": "A mythic staff associated with Dionysus.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "cornucopia": {
+    "group": "Mythic equipment",
+    "description": "A mythic utility item; inspect its in-game tooltip for use conditions.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "volcanite_warp_gauntlet": {
+    "group": "Mythic equipment",
+    "description": "A teleportation utility gauntlet.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "plouton_rod": {
+    "group": "Exploration & safety",
+    "description": "An ore-detection tool for exploration.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hephaestean_resonator": {
+    "group": "Exploration & safety",
+    "description": "An RF-powered scanning tool with ore and waypoint modes.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "telluric_astrolabe": {
+    "group": "Exploration & safety",
+    "description": "An exploration instrument for locating geological features.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "hv_dielectric_hot_stick": {
+    "group": "Exploration & safety",
+    "description": "A dielectric tool used with high-voltage infrastructure.",
+    "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  }
+}

@@ -144,42 +144,52 @@
     <div class="container nav-inner">
       <a href="index.html" class="brand">
         <img src="assets/sapira_mods_avatar.jpg" alt="SAPIRA MODS Logo" />
-        <span>OBSIDIUM WIKI</span>
+        <span>OBSIDIUM CODEX</span>
       </a>
       <nav class="nav-links">
         <a href="index.html">← Back to Landing Page</a>
-        <a href="wiki.html?page=Mythic-Rails-Addon">Mythic Rails</a>
+        <a href="index.html#catalog">Item Catalog</a>
       </nav>
     </div>
   </header>
 
   <main class="container wiki-layout">
     <aside class="wiki-sidebar">
-      <h3>Documentation</h3>
+      <h3>Catalog &amp; Guides</h3>
       <nav class="wiki-nav" id="wikiNav">
-        <a href="wiki.html?page=Home" data-page="Home">Wiki Home</a>
-        <a href="wiki.html?page=Item-Catalog" data-page="Item-Catalog">Items &amp; Recipes</a>
-        <a href="wiki.html?page=Caldera-and-Ores" data-page="Caldera-and-Ores">Caldera &amp; Volcanite Ores</a>
-        <a href="wiki.html?page=Power-and-Generators" data-page="Power-and-Generators">Power &amp; Generators</a>
-        <a href="wiki.html?page=Magma-Forge" data-page="Magma-Forge">Magma Forge</a>
-        <a href="wiki.html?page=Energy-Core" data-page="Energy-Core">Energy Core &amp; HV</a>
-        <a href="wiki.html?page=Storage-and-Pipes" data-page="Storage-and-Pipes">Storage, Barrels &amp; Pipes</a>
-        <a href="wiki.html?page=Mythology-and-Rituals" data-page="Mythology-and-Rituals">Mythology &amp; Rituals</a>
-        <a href="wiki.html?page=Hadron-Collider" data-page="Hadron-Collider">Hadron Collider (5×5)</a>
-        <a href="wiki.html?page=Demetrian-Botany" data-page="Demetrian-Botany">Demetrian Botany</a>
-        <a href="wiki.html?page=Mythic-Rails-Addon" data-page="Mythic-Rails-Addon">Addon: Mythic Rails</a>
+        <a href="wiki.html?page=Item-Catalog" data-page="Item-Catalog">Materials &amp; Recipes</a>
+        <a href="wiki.html?page=Multiblocks" data-page="Multiblocks">Multiblock Construction</a>
+        <a href="wiki.html?page=Mythology-Catalog" data-page="Mythology-Catalog">Mythology &amp; Rituals</a>
+        <a href="wiki.html?page=Supplies-Catalog" data-page="Supplies-Catalog">Fluids &amp; Utilities</a>
+        <a href="wiki.html?page=Building-Catalog" data-page="Building-Catalog">Building Blocks</a>
+        <a href="wiki.html?page=Equipment-Catalog" data-page="Equipment-Catalog">Equipment &amp; Exploration</a>
+        <a href="wiki.html?page=Energy-Catalog" data-page="Energy-Catalog">Energy &amp; Upgrades</a>
+        <a href="wiki.html?page=Botany-Catalog" data-page="Botany-Catalog">Botany &amp; Manuals</a>
+        <a href="wiki.html?page=Botany-Manual" data-page="Botany-Manual">Botany Manual</a>
+        <a href="wiki.html?page=Storage-Catalog" data-page="Storage-Catalog">Storage &amp; Items</a>
+        <a href="wiki.html?page=Transport-Catalog" data-page="Transport-Catalog">Pipes &amp; Wires</a>
+        <a href="wiki.html?page=Machine-Catalog" data-page="Machine-Catalog">Machines &amp; Recipes</a>
       </nav>
     </aside>
 
     <article class="wiki-content" id="wikiContent">
-      <p>Loading wiki page...</p>
+      <p>Loading catalog...</p>
     </article>
   </main>
 
   <script src="wiki-catalog/catalog.js"></script>
+  <script src="wiki-catalog/multiblocks.js"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
-    const page = (params.get("page") || "Home").replace(/[^a-zA-Z0-9_-]/g, "");
+    const requestedPage = (params.get("page") || "Item-Catalog").replace(/[^a-zA-Z0-9_-]/g, "");
+    const legacyPages = {Home:'Item-Catalog', 'Caldera-and-Ores':'Item-Catalog', 'Power-and-Generators':'Machine-Catalog', 'Magma-Forge':'Multiblocks', 'Energy-Core':'Energy-Catalog', 'Storage-and-Pipes':'Storage-Catalog', 'Mythology-and-Rituals':'Mythology-Catalog', 'Hadron-Collider':'Multiblocks', 'Demetrian-Botany':'Botany-Manual', 'Mythic-Rails-Addon':'Item-Catalog'};
+    const currentPages = ['Item-Catalog','Machine-Catalog','Transport-Catalog','Storage-Catalog','Botany-Catalog','Energy-Catalog','Multiblocks','Botany-Manual','Equipment-Catalog','Building-Catalog','Mythology-Catalog','Supplies-Catalog'];
+    const page = legacyPages[requestedPage] || (currentPages.includes(requestedPage) ? requestedPage : 'Item-Catalog');
+    if (page !== requestedPage) {
+      const canonical = new URL(window.location.href);
+      canonical.searchParams.set('page', page);
+      history.replaceState(null, '', canonical);
+    }
 
     document.querySelectorAll("#wikiNav a").forEach(a => {
       if (a.dataset.page === page) a.classList.add("active");
@@ -246,9 +256,12 @@
       return html;
     }
 
-    if (page === "Item-Catalog") {
-      document.title = "Materials & Components — Obsidium Wiki";
-      WikiCatalog.mount(document.getElementById("wikiContent"));
+    if (page === "Multiblocks") {
+      document.title = "Multiblock Construction — Obsidium Wiki";
+      WikiMultiblocks.mount(document.getElementById("wikiContent"));
+    } else if (page === "Item-Catalog" || page === "Machine-Catalog" || page === "Transport-Catalog" || page === "Storage-Catalog" || page === "Botany-Catalog" || page === "Energy-Catalog" || page === "Equipment-Catalog" || page === "Building-Catalog" || page === "Mythology-Catalog" || page === "Supplies-Catalog") {
+      document.title = (page === "Mythology-Catalog" ? "Mythology & Rituals" : page === "Supplies-Catalog" ? "Fluids & Utilities" : page === "Building-Catalog" ? "Building Blocks" : page === "Equipment-Catalog" ? "Equipment & Exploration" : page === "Energy-Catalog" ? "Energy & Upgrades" : page === "Botany-Catalog" ? "Botany & Manuals" : page === "Storage-Catalog" ? "Storage & Items" : page === "Transport-Catalog" ? "Pipes & Wires" : page === "Machine-Catalog" ? "Machines & Generators" : "Materials & Components") + " — Obsidium Wiki";
+      WikiCatalog.mount(document.getElementById("wikiContent"), page === "Mythology-Catalog" ? "mythology" : page === "Supplies-Catalog" ? "supplies" : page === "Building-Catalog" ? "building" : page === "Equipment-Catalog" ? "equipment" : page === "Energy-Catalog" ? "energy" : page === "Botany-Catalog" ? "botany" : page === "Storage-Catalog" ? "storage" : page === "Transport-Catalog" ? "transport" : page === "Machine-Catalog" ? "machines" : "materials");
     } else fetch(`wiki/${page}.md`)
       .then(res => {
         if (!res.ok) throw new Error("Page not found");
@@ -259,7 +272,7 @@
       })
       .catch(() => {
         document.getElementById("wikiContent").innerHTML =
-          `<h1>Page Not Found</h1><p>Could not load <code>wiki/${page}.md</code>. <a href="wiki.html?page=Home">Return to Wiki Home</a>.</p>`;
+          `<h1>Page Not Found</h1><p>Could not load <code>wiki/${page}.md</code>. <a href="wiki.html?page=Item-Catalog">Return to Catalog</a>.</p>`;
       });
   </script>
 </body>

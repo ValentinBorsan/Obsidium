@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "PCP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "obsidium:advanced_naiad_fluid_pipe"
+    },
+    "C": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    }
+  },
+  "result": {
+    "id": "obsidium:supreme_naiad_fluid_pipe",
+    "count": 8
+  }
+}

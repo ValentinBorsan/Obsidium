@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " E ",
+    "VCV",
+    "OTO"
+  ],
+  "key": {
+    "E": { "item": "minecraft:ender_pearl" },
+    "V": { "item": "obsidium:volcanic_alloy" },
+    "C": { "item": "obsidium:volcanite_energy_cell" },
+    "O": { "item": "minecraft:obsidian" },
+    "T": { "item": "obsidium:volcanite_thermo_core" }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:basic_volcanic_teleporter"
+  }
+}
+

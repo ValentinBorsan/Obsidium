@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "CDC",
+    "PRP"
+  ],
+  "key": {
+    "S": {
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "P": {
+      "item": "obsidium:volcanic_plate"
+    },
+    "C": {
+      "item": "obsidium:volcanite_storage_capacitor"
+    },
+    "D": {
+      "item": "obsidium:volcanite_liquid_storage_disk_128"
+    },
+    "R": {
+      "item": "obsidium:volcanite_storage_processor"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "obsidium:volcanite_liquid_storage_disk_256"
+  }
+}
