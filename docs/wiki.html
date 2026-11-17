@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obsidium Wiki — SAPIRA MODS</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .wiki-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 24px;
+      padding: 32px 0 64px;
+      align-items: start;
+    }
+    .wiki-sidebar {
+      position: sticky;
+      top: 82px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .wiki-sidebar h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .wiki-nav {
+      display: grid;
+      gap: 6px;
+    }
+    .wiki-nav a {
+      padding: 9px 12px;
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+    }
+    .wiki-nav a:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .wiki-nav a.active {
+      color: var(--gold);
+      background: rgba(244, 196, 56, 0.1);
+      border-color: var(--border-strong);
+      font-weight: 700;
+    }
+    .wiki-content {
+      background: linear-gradient(180deg, rgba(25, 18, 38, 0.95), rgba(16, 11, 24, 0.98));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+      min-height: 520px;
+    }
+    .wiki-content h1 {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+    .wiki-content h2 {
+      font-size: 1.4rem;
+      color: #ffe39a;
+      margin: 26px 0 10px;
+    }
+    .wiki-content h3 {
+      font-size: 1.12rem;
+      color: var(--cyan);
+      margin: 18px 0 8px;
+    }
+    .wiki-content p {
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .wiki-content ul, .wiki-content ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+      color: var(--muted);
+      display: grid;
+      gap: 6px;
+    }
+    .wiki-content strong {
+      color: #fff6dc;
+    }
+    .wiki-content code {
+      background: rgba(11, 8, 18, 0.9);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 5px;
+      color: var(--cyan);
+      font-size: 0.88em;
+    }
+    .wiki-content blockquote {
+      border-left: 3px solid var(--gold);
+      background: rgba(244, 196, 56, 0.08);
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      color: var(--text);
+    }
+    .wiki-content hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 22px 0;
+    }
+    .wiki-content a {
+      color: var(--cyan);
+      text-decoration: underline;
+    }
+    @media (max-width: 820px) {
+      .wiki-layout {
+        grid-template-columns: 1fr;
+      }
+      .wiki-sidebar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/sapira_mods_avatar.jpg" alt="SAPIRA MODS Logo" />
+        <span>OBSIDIUM WIKI</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">← Back to Landing Page</a>
+        <a href="wiki.html?page=Mythic-Rails-Addon">Mythic Rails</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container wiki-layout">
+    <aside class="wiki-sidebar">
+      <h3>Documentation</h3>
+      <nav class="wiki-nav" id="wikiNav">
+        <a href="wiki.html?page=Home" data-page="Home">Wiki Home</a>
+        <a href="wiki.html?page=Progression-and-Materials" data-page="Progression-and-Materials">Progression &amp; Materials</a>
+        <a href="wiki.html?page=Machines-and-Energy" data-page="Machines-and-Energy">Machines &amp; Energy</a>
+        <a href="wiki.html?page=Logistics-and-Fluids" data-page="Logistics-and-Fluids">Logistics &amp; Fluids</a>
+        <a href="wiki.html?page=Mythology-and-Rituals" data-page="Mythology-and-Rituals">Mythology &amp; Rituals</a>
+        <a href="wiki.html?page=Mythic-Rails-Addon" data-page="Mythic-Rails-Addon">Addon: Mythic Rails</a>
+      </nav>
+    </aside>
+
+    <article class="wiki-content" id="wikiContent">
+      <p>Loading wiki page...</p>
+    </article>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const page = (params.get("page") || "Home").replace(/[^a-zA-Z0-9_-]/g, "");
+
+    document.querySelectorAll("#wikiNav a").forEach(a => {
+      if (a.dataset.page === page) a.classList.add("active");
+    });
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    function inlineFormat(text) {
+      return escapeHtml(text)
+        .replace(/`([^`]+)`/g, "<code>$1</code>")
+        .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+        .replace(/\*([^*]+)\*/g, "<em>$1</em>")
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
+          if (href.endsWith(".md")) {
+            const target = href.replace(/\.md$/, "");
+            return `<a href="wiki.html?page=${encodeURIComponent(target)}">${label}</a>`;
+          }
+          return `<a href="${href}">${label}</a>`;
+        });
+    }
+
+    function renderMarkdown(md) {
+      const lines = md.replace(/\r\n/g, "\n").split("\n");
+      let html = "";
+      let inUl = false;
+      let inOl = false;
+
+      const closeLists = () => {
+        if (inUl) { html += "</ul>"; inUl = false; }
+        if (inOl) { html += "</ol>"; inOl = false; }
+      };
+
+      for (const raw of lines) {
+        const line = raw.trim();
+        if (!line) { closeLists(); continue; }
+        if (line === "---") { closeLists(); html += "<hr />"; continue; }
+        if (line.startsWith("### ")) { closeLists(); html += `<h3>${inlineFormat(line.slice(4))}</h3>`; continue; }
+        if (line.startsWith("## ")) { closeLists(); html += `<h2>${inlineFormat(line.slice(3))}</h2>`; continue; }
+        if (line.startsWith("# ")) { closeLists(); html += `<h1>${inlineFormat(line.slice(2))}</h1>`; continue; }
+        if (line.startsWith("> ")) { closeLists(); html += `<blockquote>${inlineFormat(line.slice(2))}</blockquote>`; continue; }
+
+        if (line.startsWith("- ")) {
+          if (inOl) { html += "</ol>"; inOl = false; }
+          if (!inUl) { html += "<ul>"; inUl = true; }
+          html += `<li>${inlineFormat(line.slice(2))}</li>`;
+          continue;
+        }
+        if (/^\d+\.\s+/.test(line)) {
+          if (inUl) { html += "</ul>"; inUl = false; }
+          if (!inOl) { html += "<ol>"; inOl = true; }
+          html += `<li>${inlineFormat(line.replace(/^\d+\.\s+/, ""))}</li>`;
+          continue;
+        }
+        closeLists();
+        html += `<p>${inlineFormat(line)}</p>`;
+      }
+      closeLists();
+      return html;
+    }
+
+    fetch(`wiki/${page}.md`)
+      .then(res => {
+        if (!res.ok) throw new Error("Page not found");
+        return res.text();
+      })
+      .then(md => {
+        document.getElementById("wikiContent").innerHTML = renderMarkdown(md);
+      })
+      .catch(() => {
+        document.getElementById("wikiContent").innerHTML =
+          `<h1>Page Not Found</h1><p>Could not load <code>wiki/${page}.md</code>. <a href="wiki.html?page=Home">Return to Wiki Home</a>.</p>`;
+      });
+  </script>
+</body>
+</html>
