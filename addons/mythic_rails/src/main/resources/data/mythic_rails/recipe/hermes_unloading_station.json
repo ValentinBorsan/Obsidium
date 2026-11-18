@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "IRI",
+    "CHC",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "obsidium:volcanite_ingot"
+    },
+    "R": {
+      "item": "minecraft:rail"
+    },
+    "C": {
+      "item": "minecraft:comparator"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "result": {
+    "id": "mythic_rails:hermes_unloading_station",
+    "count": 1
+  }
+}

@@ -34,11 +34,11 @@ public class DemetrianBotanyBookItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.literal("§6📖 Herbarul Sacru al Demetrei"));
-        tooltip.add(Component.literal("§7Codex complet de botanică, altoire și hibridare."));
-        tooltip.add(Component.literal("§eCapitole: §aAltoire Pas cu Pas§7, §6Arborele Genealogic§7,"));
-        tooltip.add(Component.literal("§dPomii de Minereu§7 și §2Butoiul de Puieți"));
-        tooltip.add(Component.literal("§8Click-dreapta pentru a deschide cartea"));
+        tooltip.add(Component.translatable("tooltip.obsidium.botany_book.title").withStyle(net.minecraft.ChatFormatting.GOLD));
+        tooltip.add(Component.translatable("tooltip.obsidium.botany_book.description").withStyle(net.minecraft.ChatFormatting.GRAY));
+        tooltip.add(Component.translatable("tooltip.obsidium.botany_book.chapters_grafting").withStyle(net.minecraft.ChatFormatting.GREEN));
+        tooltip.add(Component.translatable("tooltip.obsidium.botany_book.chapters_resources").withStyle(net.minecraft.ChatFormatting.LIGHT_PURPLE));
+        tooltip.add(Component.translatable("tooltip.obsidium.botany_book.open").withStyle(net.minecraft.ChatFormatting.DARK_GRAY));
         super.appendHoverText(stack, context, tooltip, flag);
     }
 }

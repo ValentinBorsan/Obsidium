@@ -83,6 +83,9 @@
     "obsidium:hadron_item_port",
     "obsidium:hadron_fluid_port",
     "obsidium:basic_volcanic_teleporter",
-    "obsidium:volcanic_core_teleporter"
+    "obsidium:volcanic_core_teleporter",
+    "obsidium:aegis_sanctuary_ward",
+    "obsidium:ambrosia_feeder",
+    "obsidium:pan_pastoral_harvester"
   ]
 }

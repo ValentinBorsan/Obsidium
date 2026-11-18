@@ -9,23 +9,33 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.SimpleContainerData;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.valentin.obsidium.ObsidiumMod;
+import net.valentin.obsidium.storage.QuantumLinkNetworkState;
 
 public class LiquidTankMenu extends AbstractContainerMenu {
+    public static final int BTN_PREV_COLOR = 0;
+    public static final int BTN_NEXT_COLOR = 1;
+    public static final int BTN_DEC_CH_1 = 2;
+    public static final int BTN_INC_CH_1 = 3;
+    public static final int BTN_DEC_CH_10 = 4;
+    public static final int BTN_INC_CH_10 = 5;
+    public static final int BTN_TOGGLE_PRIVATE = 6;
+
     private final Container container;
     private final ContainerData data;
 
     public LiquidTankMenu(int syncId, Inventory playerInventory) {
-        this(syncId, playerInventory, new SimpleContainer(2), new SimpleContainerData(5));
+        this(syncId, playerInventory, new SimpleContainer(2), new SimpleContainerData(9));
     }
 
     public LiquidTankMenu(int syncId, Inventory playerInventory, Container container, ContainerData data) {
         super(ObsidiumMod.LIQUID_TANK_MENU, syncId);
         checkContainerSize(container, 2);
-        checkContainerDataCount(data, 5);
+        checkContainerDataCount(data, 9);
         this.container = container;
         this.data = data;
 
@@ -70,6 +80,41 @@ public class LiquidTankMenu extends AbstractContainerMenu {
         if (id <= 0) return Fluids.EMPTY;
         Fluid f = BuiltInRegistries.FLUID.byId(id);
         return f != null ? f : Fluids.EMPTY;
+    }
+
+    public boolean isQuantumLinked() {
+        return data.get(5) != 0;
+    }
+
+    public DyeColor getQuantumColor() {
+        return DyeColor.byId(Math.floorMod(data.get(6), 16));
+    }
+
+    public int getQuantumChannel() {
+        return QuantumLinkNetworkState.clampChannel(data.get(7));
+    }
+
+    public boolean isQuantumPrivate() {
+        return data.get(8) != 0;
+    }
+
+    @Override
+    public boolean clickMenuButton(Player player, int id) {
+        if (!isQuantumLinked()) return false;
+        switch (id) {
+            case BTN_PREV_COLOR -> data.set(6, Math.floorMod(getQuantumColor().getId() - 1, 16));
+            case BTN_NEXT_COLOR -> data.set(6, Math.floorMod(getQuantumColor().getId() + 1, 16));
+            case BTN_DEC_CH_1 -> data.set(7, QuantumLinkNetworkState.clampChannel(getQuantumChannel() - 1));
+            case BTN_INC_CH_1 -> data.set(7, QuantumLinkNetworkState.clampChannel(getQuantumChannel() + 1));
+            case BTN_DEC_CH_10 -> data.set(7, QuantumLinkNetworkState.clampChannel(getQuantumChannel() - 10));
+            case BTN_INC_CH_10 -> data.set(7, QuantumLinkNetworkState.clampChannel(getQuantumChannel() + 10));
+            case BTN_TOGGLE_PRIVATE -> data.set(8, isQuantumPrivate() ? 0 : 1);
+            default -> {
+                return false;
+            }
+        }
+        broadcastChanges();
+        return true;
     }
 
     @Override

@@ -2,7 +2,6 @@ package net.valentin.obsidium.block;
 
 import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
-import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -48,11 +47,15 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * BlockEntity for the 5x5 Olympian Hadron Collider (CERN-style particle accelerator & fusion reactor).
- * Accelerates opposing particle beams (Beam A & Beam B) up to 99.9% c while generating continuous
- * synchrotron RF/t, then collides them for massive RF bursts + Minecraft physics transmutation outputs.
+ * BlockEntity for the 5x5 Olympian Hadron Collider (CERN-style particle
+ * accelerator & fusion reactor).
+ * Accelerates opposing particle beams (Beam A & Beam B) up to 99.9% c while
+ * generating continuous
+ * synchrotron RF/t, then collides them for massive RF bursts + Minecraft
+ * physics transmutation outputs.
  */
-public class OlympianHadronColliderBlockEntity extends BlockEntity implements MenuProvider, InventoryHolder, MachineInventory, WorldlyContainer {
+public class OlympianHadronColliderBlockEntity extends BlockEntity
+        implements MenuProvider, InventoryHolder, MachineInventory, WorldlyContainer {
     public static final int INVENTORY_SIZE = 7;
     public static final int SLOT_BEAM_A = 0;
     public static final int SLOT_BEAM_B = 1;
@@ -67,7 +70,7 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     public static final long MAX_ENERGY = 100_000_000L;
     public static final long MAX_EXTRACT = 5_000_000L;
     public static final int MAX_VELOCITY = 1000;
-    public static final int DATA_COUNT = 18;
+    public static final int DATA_COUNT = 19;
 
     public static final int FUEL_NONE = 0;
     public static final int FUEL_LAVA = 1;
@@ -83,7 +86,7 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     public static final int MODE_AUTO_COLLIDE = 0;
     public static final int MODE_STORAGE_RING = 1;
 
-    private static final int[] ALL_SLOTS = {0, 1, 2, 3, 4, 5, 6};
+    private static final int[] ALL_SLOTS = { 0, 1, 2, 3, 4, 5, 6 };
 
     private boolean isFormed = false;
     private int ringOffsetX = 0;
@@ -104,6 +107,7 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     private int syncTicker = 0;
     private int lastSyncedVel = 0;
     private int lastSyncedFlash = 0;
+    private int formationStatusMask = 0;
 
     public final SimpleEnergyStorage energyStorage = new SimpleEnergyStorage(MAX_ENERGY, 0, MAX_EXTRACT) {
         @Override
@@ -126,7 +130,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
                 case SLOT_BEAM_A, SLOT_BEAM_B -> !isFuelContainerItem(stack) && !isCoolantContainerItem(stack);
                 case SLOT_FUEL_IN -> isFuelContainerItem(stack);
                 case SLOT_COOLANT_IN -> isCoolantContainerItem(stack) || isSolidCryoItem(stack);
-                case SLOT_CONTAINER_OUT -> EnergyStorage.ITEM.find(stack, ContainerItemContext.withConstant(stack)) != null;
+                case SLOT_CONTAINER_OUT ->
+                    EnergyStorage.ITEM.find(stack, ContainerItemContext.withConstant(stack)) != null;
                 default -> false;
             };
         }
@@ -155,6 +160,7 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
                 case 15 -> collisionFlashTicks;
                 case 16 -> totalCollisions & 0xFFFF;
                 case 17 -> (totalCollisions >> 16) & 0xFFFF;
+                case 18 -> formationStatusMask;
                 default -> 0;
             };
         }
@@ -192,25 +198,70 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         this.ringOffsetZ = toCenter.getStepZ() * 2;
     }
 
-    public boolean isFormed() { return isFormed; }
-    public int getRingOffsetX() { return ringOffsetX; }
-    public int getRingOffsetZ() { return ringOffsetZ; }
-    public int getCoilCount() { return coilCount; }
-    public int getBeamVelocity() { return beamVelocity; }
-    public int getCoilTemp() { return coilTemp; }
-    public int getFuelAmount() { return fuelAmount; }
-    public int getFuelType() { return fuelType; }
-    public int getCoolantAmount() { return coolantAmount; }
-    public int getCoolantType() { return coolantType; }
-    public int getCurrentRfPerTick() { return currentRfPerTick; }
-    public int getOperatingMode() { return operatingMode; }
-    public boolean isShowHologram() { return showHologram; }
-    public int getCollisionFlashTicks() { return collisionFlashTicks; }
-    public int getTotalCollisions() { return totalCollisions; }
+    public boolean isFormed() {
+        return isFormed;
+    }
+
+    public int getRingOffsetX() {
+        return ringOffsetX;
+    }
+
+    public int getRingOffsetZ() {
+        return ringOffsetZ;
+    }
+
+    public int getCoilCount() {
+        return coilCount;
+    }
+
+    public int getBeamVelocity() {
+        return beamVelocity;
+    }
+
+    public int getCoilTemp() {
+        return coilTemp;
+    }
+
+    public int getFuelAmount() {
+        return fuelAmount;
+    }
+
+    public int getFuelType() {
+        return fuelType;
+    }
+
+    public int getCoolantAmount() {
+        return coolantAmount;
+    }
+
+    public int getCoolantType() {
+        return coolantType;
+    }
+
+    public int getCurrentRfPerTick() {
+        return currentRfPerTick;
+    }
+
+    public int getOperatingMode() {
+        return operatingMode;
+    }
+
+    public boolean isShowHologram() {
+        return showHologram;
+    }
+
+    public int getCollisionFlashTicks() {
+        return collisionFlashTicks;
+    }
+
+    public int getTotalCollisions() {
+        return totalCollisions;
+    }
 
     public void syncToClient() {
         if (this.level != null && !this.level.isClientSide()) {
-            this.level.sendBlockUpdated(this.worldPosition, this.getBlockState(), this.getBlockState(), Block.UPDATE_ALL);
+            this.level.sendBlockUpdated(this.worldPosition, this.getBlockState(), this.getBlockState(),
+                    Block.UPDATE_ALL);
         }
     }
 
@@ -226,7 +277,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     }
 
     public static boolean isFuelContainerItem(ItemStack stack) {
-        if (stack.isEmpty()) return false;
+        if (stack.isEmpty())
+            return false;
         return stack.is(Items.LAVA_BUCKET)
                 || stack.is(ObsidiumMod.BIO_OIL_BUCKET)
                 || stack.is(ObsidiumMod.BIODIESEL_BUCKET)
@@ -237,13 +289,15 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     }
 
     public static boolean isCoolantContainerItem(ItemStack stack) {
-        if (stack.isEmpty()) return false;
+        if (stack.isEmpty())
+            return false;
         return stack.is(Items.WATER_BUCKET)
                 || stack.is(ObsidiumMod.BIO_ETHANOL_BUCKET);
     }
 
     public static boolean isSolidCryoItem(ItemStack stack) {
-        if (stack.isEmpty()) return false;
+        if (stack.isEmpty())
+            return false;
         return stack.is(Items.BLUE_ICE)
                 || stack.is(Items.PACKED_ICE)
                 || stack.is(Items.ICE)
@@ -253,19 +307,28 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     }
 
     public static int getFuelTypeForFluid(FluidVariant variant) {
-        if (variant == null || variant.isBlank()) return FUEL_NONE;
-        if (variant.isOf(ObsidiumMod.PYRO_DIESEL_FLUID)) return FUEL_PYRO_DIESEL;
-        if (variant.isOf(ObsidiumMod.PYROCLASTIC_DISTILLATE_FLUID)) return FUEL_DISTILLATE;
-        if (variant.isOf(ObsidiumMod.BIODIESEL_FLUID)) return FUEL_BIODIESEL;
-        if (variant.isOf(ObsidiumMod.BIO_OIL_FLUID)) return FUEL_BIO_OIL;
-        if (variant.isOf(Fluids.LAVA)) return FUEL_LAVA;
+        if (variant == null || variant.isBlank())
+            return FUEL_NONE;
+        if (variant.isOf(ObsidiumMod.PYRO_DIESEL_FLUID))
+            return FUEL_PYRO_DIESEL;
+        if (variant.isOf(ObsidiumMod.PYROCLASTIC_DISTILLATE_FLUID))
+            return FUEL_DISTILLATE;
+        if (variant.isOf(ObsidiumMod.BIODIESEL_FLUID))
+            return FUEL_BIODIESEL;
+        if (variant.isOf(ObsidiumMod.BIO_OIL_FLUID))
+            return FUEL_BIO_OIL;
+        if (variant.isOf(Fluids.LAVA))
+            return FUEL_LAVA;
         return FUEL_NONE;
     }
 
     public static int getCoolantTypeForFluid(FluidVariant variant) {
-        if (variant == null || variant.isBlank()) return COOLANT_NONE;
-        if (variant.isOf(ObsidiumMod.BIO_ETHANOL_FLUID)) return COOLANT_BIO_ETHANOL;
-        if (variant.isOf(Fluids.WATER)) return COOLANT_WATER;
+        if (variant == null || variant.isBlank())
+            return COOLANT_NONE;
+        if (variant.isOf(ObsidiumMod.BIO_ETHANOL_FLUID))
+            return COOLANT_BIO_ETHANOL;
+        if (variant.isOf(Fluids.WATER))
+            return COOLANT_WATER;
         return COOLANT_NONE;
     }
 
@@ -289,11 +352,13 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     }
 
     public int insertFluid(FluidVariant variant, int maxMb, boolean simulate) {
-        if (variant == null || variant.isBlank() || maxMb <= 0) return 0;
+        if (variant == null || variant.isBlank() || maxMb <= 0)
+            return 0;
 
         int fType = getFuelTypeForFluid(variant);
         if (fType != FUEL_NONE) {
-            if (fuelAmount > 0 && fuelType != fType) return 0;
+            if (fuelAmount > 0 && fuelType != fType)
+                return 0;
             int toInsert = Math.min(maxMb, MAX_FUEL - fuelAmount);
             if (toInsert > 0 && !simulate) {
                 fuelType = fType;
@@ -306,7 +371,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
 
         int cType = getCoolantTypeForFluid(variant);
         if (cType != COOLANT_NONE) {
-            if (coolantAmount > 0 && coolantType != cType) return 0;
+            if (coolantAmount > 0 && coolantType != cType)
+                return 0;
             int toInsert = Math.min(maxMb, MAX_COOLANT - coolantAmount);
             if (toInsert > 0 && !simulate) {
                 coolantType = cType;
@@ -320,9 +386,13 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         return 0;
     }
 
-    /** Returns true if pos lies on the 5x5 horizontal perimeter ring of this controller. */
+    /**
+     * Returns true if pos lies on the 5x5 horizontal perimeter ring of this
+     * controller.
+     */
     public boolean isPosOnRing(BlockPos pos) {
-        if (pos.getY() != this.worldPosition.getY()) return false;
+        if (pos.getY() != this.worldPosition.getY())
+            return false;
         int cx = this.worldPosition.getX() + this.ringOffsetX;
         int cz = this.worldPosition.getZ() + this.ringOffsetZ;
         int dx = Math.abs(pos.getX() - cx);
@@ -350,7 +420,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
                 BlockPos checkPos = center.offset(dx, 0, dz);
                 int chebyshev = Math.max(Math.abs(dx), Math.abs(dz));
                 if (chebyshev == 2) {
-                    if (checkPos.equals(this.worldPosition)) continue;
+                    if (checkPos.equals(this.worldPosition))
+                        continue;
                     Block b = level.getBlockState(checkPos).getBlock();
                     if (b == ObsidiumMod.SYNCHROTRON_RING_COIL_BLOCK) {
                         coils++;
@@ -381,28 +452,85 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         return -1;
     }
 
+    private int computeDiagnosticMask(Level level, BlockPos center) {
+        int coils = 0;
+        int energyPorts = 0;
+        int itemPorts = 0;
+        int fluidPorts = 0;
+        boolean badPerimeter = false;
+        boolean innerBlocked = false;
+
+        for (int dx = -2; dx <= 2; dx++) {
+            for (int dz = -2; dz <= 2; dz++) {
+                BlockPos checkPos = center.offset(dx, 0, dz);
+                int chebyshev = Math.max(Math.abs(dx), Math.abs(dz));
+                if (chebyshev == 2) {
+                    if (checkPos.equals(this.worldPosition))
+                        continue;
+                    Block b = level.getBlockState(checkPos).getBlock();
+                    if (b == ObsidiumMod.SYNCHROTRON_RING_COIL_BLOCK)
+                        coils++;
+                    else if (b == ObsidiumMod.HADRON_ENERGY_PORT_BLOCK)
+                        energyPorts++;
+                    else if (b == ObsidiumMod.HADRON_ITEM_PORT_BLOCK)
+                        itemPorts++;
+                    else if (b == ObsidiumMod.HADRON_FLUID_PORT_BLOCK)
+                        fluidPorts++;
+                    else if (!isValidRingMember(b))
+                        badPerimeter = true;
+                } else {
+                    BlockState inner = level.getBlockState(checkPos);
+                    if (!inner.isAir() && inner.canOcclude()) {
+                        innerBlocked = true;
+                    }
+                }
+            }
+        }
+
+        int mask = (Math.min(15, coils) & 0xF) << 8;
+        if (energyPorts == 0)
+            mask |= 1;
+        if (itemPorts == 0)
+            mask |= 2;
+        if (fluidPorts == 0)
+            mask |= 4;
+        if (coils < 9)
+            mask |= 8;
+        if (badPerimeter)
+            mask |= 16;
+        if (innerBlocked)
+            mask |= 32;
+        return mask;
+    }
+
     public void clearRingFormedState(Level level) {
-        if (level == null || level.isClientSide() || !this.isFormed) return;
+        if (level == null || level.isClientSide() || !this.isFormed)
+            return;
         BlockPos center = this.worldPosition.offset(this.ringOffsetX, 0, this.ringOffsetZ);
         updateRingBlockStates(level, center, false);
     }
 
     private void updateRingBlockStates(Level level, BlockPos center, boolean formedState) {
-        if (level == null || level.isClientSide()) return;
+        if (level == null || level.isClientSide())
+            return;
         BlockState ctrlState = level.getBlockState(this.worldPosition);
         if (ctrlState.hasProperty(OlympianHadronColliderBlock.FORMED)
                 && ctrlState.getValue(OlympianHadronColliderBlock.FORMED) != formedState) {
-            level.setBlock(this.worldPosition, ctrlState.setValue(OlympianHadronColliderBlock.FORMED, formedState), Block.UPDATE_ALL);
+            level.setBlock(this.worldPosition, ctrlState.setValue(OlympianHadronColliderBlock.FORMED, formedState),
+                    Block.UPDATE_ALL);
         }
         for (int dx = -2; dx <= 2; dx++) {
             for (int dz = -2; dz <= 2; dz++) {
-                if (Math.max(Math.abs(dx), Math.abs(dz)) != 2) continue;
+                if (Math.max(Math.abs(dx), Math.abs(dz)) != 2)
+                    continue;
                 BlockPos ringPos = center.offset(dx, 0, dz);
-                if (ringPos.equals(this.worldPosition)) continue;
+                if (ringPos.equals(this.worldPosition))
+                    continue;
                 BlockState st = level.getBlockState(ringPos);
                 if (st.hasProperty(SynchrotronRingCoilBlock.FORMED)
                         && st.getValue(SynchrotronRingCoilBlock.FORMED) != formedState) {
-                    level.setBlock(ringPos, st.setValue(SynchrotronRingCoilBlock.FORMED, formedState), Block.UPDATE_ALL);
+                    level.setBlock(ringPos, st.setValue(SynchrotronRingCoilBlock.FORMED, formedState),
+                            Block.UPDATE_ALL);
                 } else if (st.hasProperty(HadronColliderPortBlock.FORMED)
                         && st.getValue(HadronColliderPortBlock.FORMED) != formedState) {
                     level.setBlock(ringPos, st.setValue(HadronColliderPortBlock.FORMED, formedState), Block.UPDATE_ALL);
@@ -440,7 +568,14 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
             }
         }
 
-        if (found != this.isFormed || foundOffX != this.ringOffsetX || foundOffZ != this.ringOffsetZ || foundCoils != this.coilCount) {
+        if (found) {
+            this.formationStatusMask = 0;
+        } else {
+            this.formationStatusMask = computeDiagnosticMask(level, this.worldPosition.relative(preferred, 2));
+        }
+
+        if (found != this.isFormed || foundOffX != this.ringOffsetX || foundOffZ != this.ringOffsetZ
+                || foundCoils != this.coilCount) {
             boolean wasFormed = this.isFormed;
             if (wasFormed && (!found || foundOffX != this.ringOffsetX || foundOffZ != this.ringOffsetZ)) {
                 updateRingBlockStates(level, this.worldPosition.offset(this.ringOffsetX, 0, this.ringOffsetZ), false);
@@ -458,7 +593,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
                 level.playSound(null, this.worldPosition, ModSounds.MULTIBLOCK_FORM, SoundSource.BLOCKS, 1.0F, 1.15F);
                 if (level instanceof ServerLevel sl) {
                     BlockPos c = this.worldPosition.offset(this.ringOffsetX, 0, this.ringOffsetZ);
-                    sl.sendParticles(ParticleTypes.ELECTRIC_SPARK, c.getX() + 0.5, c.getY() + 0.8, c.getZ() + 0.5, 40, 2.0, 0.3, 2.0, 0.08);
+                    sl.sendParticles(ParticleTypes.ELECTRIC_SPARK, c.getX() + 0.5, c.getY() + 0.8, c.getZ() + 0.5, 40,
+                            2.0, 0.3, 2.0, 0.08);
                 }
             } else if (!found && wasFormed) {
                 this.beamVelocity = 0;
@@ -472,9 +608,13 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         }
     }
 
-    /** Places missing Energy/Item/Fluid Ports and Synchrotron Ring Coils around the preferred 5x5 ring behind the controller. */
+    /**
+     * Places missing Energy/Item/Fluid Ports and Synchrotron Ring Coils around the
+     * preferred 5x5 ring behind the controller.
+     */
     public void tryAutoBuildRing(Player player) {
-        if (this.level == null || this.level.isClientSide() || this.isFormed) return;
+        if (this.level == null || this.level.isClientSide() || this.isFormed)
+            return;
 
         Direction facing = getBlockState().hasProperty(OlympianHadronColliderBlock.FACING)
                 ? getBlockState().getValue(OlympianHadronColliderBlock.FACING)
@@ -488,12 +628,16 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
 
         for (int dx = -2; dx <= 2; dx++) {
             for (int dz = -2; dz <= 2; dz++) {
-                if (Math.max(Math.abs(dx), Math.abs(dz)) != 2) continue;
+                if (Math.max(Math.abs(dx), Math.abs(dz)) != 2)
+                    continue;
                 BlockPos pos = center.offset(dx, 0, dz);
                 Block b = this.level.getBlockState(pos).getBlock();
-                if (b == ObsidiumMod.HADRON_ENERGY_PORT_BLOCK) hasEnergyPort = true;
-                else if (b == ObsidiumMod.HADRON_ITEM_PORT_BLOCK) hasItemPort = true;
-                else if (b == ObsidiumMod.HADRON_FLUID_PORT_BLOCK) hasFluidPort = true;
+                if (b == ObsidiumMod.HADRON_ENERGY_PORT_BLOCK)
+                    hasEnergyPort = true;
+                else if (b == ObsidiumMod.HADRON_ITEM_PORT_BLOCK)
+                    hasItemPort = true;
+                else if (b == ObsidiumMod.HADRON_FLUID_PORT_BLOCK)
+                    hasFluidPort = true;
             }
         }
 
@@ -504,21 +648,24 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         int placed = 0;
 
         if (!hasEnergyPort) {
-            if (!tryPlaceRequiredPort(player, energyPortTarget, ObsidiumMod.HADRON_ENERGY_PORT_BLOCK, ObsidiumMod.HADRON_ENERGY_PORT_ITEM, "Hadron Energy Port")) {
+            if (!tryPlaceRequiredPort(player, energyPortTarget, ObsidiumMod.HADRON_ENERGY_PORT_BLOCK,
+                    ObsidiumMod.HADRON_ENERGY_PORT_ITEM, "Hadron Energy Port")) {
                 evaluateMultiblock(this.level);
                 return;
             }
             placed++;
         }
         if (!hasItemPort) {
-            if (!tryPlaceRequiredPort(player, itemPortTarget, ObsidiumMod.HADRON_ITEM_PORT_BLOCK, ObsidiumMod.HADRON_ITEM_PORT_ITEM, "Hadron Item Port")) {
+            if (!tryPlaceRequiredPort(player, itemPortTarget, ObsidiumMod.HADRON_ITEM_PORT_BLOCK,
+                    ObsidiumMod.HADRON_ITEM_PORT_ITEM, "Hadron Item Port")) {
                 evaluateMultiblock(this.level);
                 return;
             }
             placed++;
         }
         if (!hasFluidPort) {
-            if (!tryPlaceRequiredPort(player, fluidPortTarget, ObsidiumMod.HADRON_FLUID_PORT_BLOCK, ObsidiumMod.HADRON_FLUID_PORT_ITEM, "Hadron Fluid Port")) {
+            if (!tryPlaceRequiredPort(player, fluidPortTarget, ObsidiumMod.HADRON_FLUID_PORT_BLOCK,
+                    ObsidiumMod.HADRON_FLUID_PORT_ITEM, "Hadron Fluid Port")) {
                 evaluateMultiblock(this.level);
                 return;
             }
@@ -527,40 +674,55 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
 
         for (int dx = -2; dx <= 2; dx++) {
             for (int dz = -2; dz <= 2; dz++) {
-                if (Math.max(Math.abs(dx), Math.abs(dz)) != 2) continue;
+                if (Math.max(Math.abs(dx), Math.abs(dz)) != 2)
+                    continue;
                 BlockPos target = center.offset(dx, 0, dz);
-                if (target.equals(this.worldPosition)) continue;
+                if (target.equals(this.worldPosition))
+                    continue;
                 BlockState existing = this.level.getBlockState(target);
-                if (isValidRingMember(existing.getBlock())) continue;
-                if (!existing.isAir() && !existing.canBeReplaced()) continue;
+                if (isValidRingMember(existing.getBlock()))
+                    continue;
+                if (!existing.isAir() && !existing.canBeReplaced())
+                    continue;
 
-                boolean hasCoil = player.isCreative() || consumeItemFromPlayer(player, ObsidiumMod.SYNCHROTRON_RING_COIL_ITEM);
+                boolean hasCoil = player.isCreative()
+                        || consumeItemFromPlayer(player, ObsidiumMod.SYNCHROTRON_RING_COIL_ITEM);
                 if (!hasCoil) {
-                    player.displayClientMessage(Component.literal("§c⚛ Need more Synchrotron Ring Coils in inventory! (Placed " + placed + " blocks)"), true);
+                    player.displayClientMessage(Component.literal(
+                            "§c⚛ Need more Synchrotron Ring Coils in inventory! (Placed " + placed + " blocks)"), true);
                     evaluateMultiblock(this.level);
                     return;
                 }
-                this.level.setBlock(target, ObsidiumMod.SYNCHROTRON_RING_COIL_BLOCK.defaultBlockState(), Block.UPDATE_ALL);
+                this.level.setBlock(target, ObsidiumMod.SYNCHROTRON_RING_COIL_BLOCK.defaultBlockState(),
+                        Block.UPDATE_ALL);
                 placed++;
             }
         }
         evaluateMultiblock(this.level);
         if (placed > 0) {
-            player.displayClientMessage(Component.literal("§b⚛ Assembled 5×5 Collider Ring (12 Coils + Energy, Item & Fluid Ports)!"), true);
+            player.displayClientMessage(
+                    Component.literal("§b⚛ Assembled 5×5 Collider Ring (12 Coils + Energy, Item & Fluid Ports)!"),
+                    true);
         }
     }
 
-    private boolean tryPlaceRequiredPort(Player player, BlockPos preferredTarget, Block portBlock, Item portItem, String portName) {
-        if (this.level == null) return false;
+    private boolean tryPlaceRequiredPort(Player player, BlockPos preferredTarget, Block portBlock, Item portItem,
+            String portName) {
+        if (this.level == null)
+            return false;
         BlockState existing = this.level.getBlockState(preferredTarget);
         boolean replacingCoil = existing.is(ObsidiumMod.SYNCHROTRON_RING_COIL_BLOCK);
         if (!existing.isAir() && !existing.canBeReplaced() && !replacingCoil) {
-            player.displayClientMessage(Component.literal("§c⚛ Clear obstruction at " + preferredTarget.toShortString() + " for " + portName + "!"), true);
+            player.displayClientMessage(
+                    Component.literal(
+                            "§c⚛ Clear obstruction at " + preferredTarget.toShortString() + " for " + portName + "!"),
+                    true);
             return false;
         }
         boolean hasPort = player.isCreative() || consumeItemFromPlayer(player, portItem);
         if (!hasPort) {
-            player.displayClientMessage(Component.literal("§c⚛ Need 1× " + portName + " in inventory to form the 5×5 Collider!"), true);
+            player.displayClientMessage(
+                    Component.literal("§c⚛ Need 1× " + portName + " in inventory to form the 5×5 Collider!"), true);
             return false;
         }
         if (replacingCoil && !player.isCreative()) {
@@ -597,29 +759,30 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         syncToClient();
     }
 
-    private record CollisionOutcome(int costA, int costB, ItemStack primary, ItemStack secondary, long burstRf) {}
+    private record CollisionOutcome(int costA, int costB, ItemStack primary, ItemStack secondary, long burstRf) {
+    }
 
     private static boolean matchesAny(Item item, Item... candidates) {
         for (Item c : candidates) {
-            if (item == c) return true;
+            if (item == c)
+                return true;
         }
         return false;
     }
 
     private static int @Nullable [] matchOrderedCosts(Item a, Item b,
-                                                       java.util.function.Predicate<Item> first, int costFirst,
-                                                       java.util.function.Predicate<Item> second, int costSecond) {
+            java.util.function.Predicate<Item> first, int costFirst,
+            java.util.function.Predicate<Item> second, int costSecond) {
         if (first.test(a) && second.test(b)) {
-            return new int[]{costFirst, costSecond};
+            return new int[] { costFirst, costSecond };
         }
         if (first.test(b) && second.test(a)) {
-            return new int[]{costSecond, costFirst};
+            return new int[] { costSecond, costFirst };
         }
         return null;
     }
 
     private CollisionOutcome computeCollisionOutcome(ItemStack stackA, ItemStack stackB) {
-        double fuelMult = getFuelMultiplier();
         long baseBurst = switch (fuelType) {
             case FUEL_PYRO_DIESEL -> 15_000_000L;
             case FUEL_DISTILLATE -> 10_000_000L;
@@ -646,63 +809,73 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         if ((costs = matchOrderedCosts(a, b,
                 x -> matchesAny(x, Items.COAL_BLOCK, ObsidiumMod.ASH_BRIQUETTE), 4,
                 x -> x == Items.IRON_BLOCK, 2)) != null) {
-            return new CollisionOutcome(costs[0], costs[1], new ItemStack(Items.DIAMOND, 2), new ItemStack(ObsidiumMod.VOLCANIC_ASH, 2), scaledBurst);
+            return new CollisionOutcome(costs[0], costs[1], new ItemStack(Items.DIAMOND, 2),
+                    new ItemStack(ObsidiumMod.VOLCANIC_ASH, 2), scaledBurst);
         }
         if ((costs = matchOrderedCosts(a, b,
                 x -> x == Items.DIAMOND, 4,
                 x -> matchesAny(x, Items.GOLD_BLOCK, Items.NETHERITE_SCRAP), 2)) != null) {
-            return new CollisionOutcome(costs[0], costs[1], new ItemStack(Items.NETHERITE_INGOT, 1), new ItemStack(ObsidiumMod.VOLCANIC_ASH, 2), scaledBurst);
+            return new CollisionOutcome(costs[0], costs[1], new ItemStack(Items.NETHERITE_INGOT, 1),
+                    new ItemStack(ObsidiumMod.VOLCANIC_ASH, 2), scaledBurst);
         }
         if ((costs = matchOrderedCosts(a, b,
                 x -> matchesAny(x, Items.COPPER_BLOCK, ObsidiumMod.PYRIC_BRONZE_INGOT), 4,
                 x -> matchesAny(x, Items.GOLD_INGOT, ObsidiumMod.SILVER_INGOT), 4)) != null) {
-            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.VOLCANIC_ALLOY, 2), new ItemStack(ObsidiumMod.VOLCANITE_INGOT, 2), scaledBurst);
+            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.VOLCANIC_ALLOY, 2),
+                    new ItemStack(ObsidiumMod.VOLCANITE_INGOT, 2), scaledBurst);
         }
         if ((costs = matchOrderedCosts(a, b,
                 x -> x == ObsidiumMod.VOLCANIC_ALLOY, 4,
                 x -> matchesAny(x, ObsidiumMod.VOLCANITE_THERMO_CORE, ObsidiumMod.CINDER_CORE), 2)) != null) {
-            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.SUPREME_VOLCANIC_ALLOY, 1), new ItemStack(ObsidiumMod.VOLCANITE_DUST, 2), (long) (scaledBurst * 1.25));
+            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.SUPREME_VOLCANIC_ALLOY, 1),
+                    new ItemStack(ObsidiumMod.VOLCANITE_DUST, 2), (long) (scaledBurst * 1.25));
         }
         if ((costs = matchOrderedCosts(a, b,
                 x -> matchesAny(x, Items.ENDER_EYE, Items.ENDER_PEARL), 4,
                 x -> matchesAny(x, ObsidiumMod.SUPREME_VOLCANIC_ALLOY, ObsidiumMod.CINDER_CORE), 2)) != null) {
-            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.ASTRAL_VOLCANIC_CATALYST, 1), new ItemStack(Items.DIAMOND, 2), (long) (scaledBurst * 1.5));
+            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.ASTRAL_VOLCANIC_CATALYST, 1),
+                    new ItemStack(Items.DIAMOND, 2), (long) (scaledBurst * 1.5));
         }
         if ((costs = matchOrderedCosts(a, b,
                 x -> matchesAny(x, Items.IRON_INGOT, ObsidiumMod.IRON_DUST), 4,
                 x -> matchesAny(x, Items.REDSTONE_BLOCK, Items.GLOWSTONE), 4)) != null) {
-            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.VOLCANITE_INGOT, 2), new ItemStack(ObsidiumMod.SILVER_INGOT, 2), scaledBurst);
+            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.VOLCANITE_INGOT, 2),
+                    new ItemStack(ObsidiumMod.SILVER_INGOT, 2), scaledBurst);
         }
         if ((costs = matchOrderedCosts(a, b,
                 x -> matchesAny(x, ObsidiumMod.TIN_INGOT, ObsidiumMod.TIN_DUST), 4,
                 x -> matchesAny(x, Items.COPPER_INGOT, ObsidiumMod.COPPER_DUST), 4)) != null) {
-            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.PYRIC_BRONZE_INGOT, 4), new ItemStack(ObsidiumMod.LEAD_INGOT, 1), scaledBurst);
+            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.PYRIC_BRONZE_INGOT, 4),
+                    new ItemStack(ObsidiumMod.LEAD_INGOT, 1), scaledBurst);
         }
         if ((costs = matchOrderedCosts(a, b,
                 x -> matchesAny(x, ObsidiumMod.LEAD_INGOT, ObsidiumMod.LEAD_DUST), 4,
                 x -> matchesAny(x, Items.IRON_INGOT, ObsidiumMod.IRON_DUST), 4)) != null) {
-            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.FEROPLUMB_INGOT, 4), new ItemStack(ObsidiumMod.SILVER_INGOT, 1), scaledBurst);
+            return new CollisionOutcome(costs[0], costs[1], new ItemStack(ObsidiumMod.FEROPLUMB_INGOT, 4),
+                    new ItemStack(ObsidiumMod.SILVER_INGOT, 1), scaledBurst);
         }
         if (ItemStack.isSameItem(stackA, stackB)) {
             // Matter-Antimatter Annihilation: 2x Burst RF!
-            return new CollisionOutcome(4, 4, new ItemStack(ObsidiumMod.VOLCANIC_ASH, 2), new ItemStack(ObsidiumMod.VOLCANITE_NUGGET, 2),
+            return new CollisionOutcome(4, 4, new ItemStack(ObsidiumMod.VOLCANIC_ASH, 2),
+                    new ItemStack(ObsidiumMod.VOLCANITE_NUGGET, 2),
                     Math.max(3_000_000L, Math.round(scaledBurst * 2.0)));
         }
-        // Generic exotic particle collision: 1.1x+ Burst RF
-        return new CollisionOutcome(4, 4, new ItemStack(ObsidiumMod.VOLCANITE_INGOT, 1), new ItemStack(ObsidiumMod.DIAMOND_NUGGET, 1),
-                Math.max(2_500_000L, Math.round(scaledBurst * (1.1 + fuelMult * 0.15))));
+        return null;
     }
 
     private boolean canFitOutput(int slot, ItemStack toInsert) {
-        if (toInsert.isEmpty()) return true;
+        if (toInsert.isEmpty())
+            return true;
         ItemStack existing = inventory.getItem(slot);
-        if (existing.isEmpty()) return true;
+        if (existing.isEmpty())
+            return true;
         return ItemStack.isSameItemSameComponents(existing, toInsert)
                 && existing.getCount() + toInsert.getCount() <= existing.getMaxStackSize();
     }
 
     private void insertIntoOutputSlot(int slot, ItemStack toInsert) {
-        if (toInsert.isEmpty()) return;
+        if (toInsert.isEmpty())
+            return;
         ItemStack existing = inventory.getItem(slot);
         if (existing.isEmpty()) {
             inventory.setItem(slot, toInsert.copy());
@@ -712,7 +885,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     }
 
     private void insertOrDropRareOutput(ServerLevel sl, ItemStack stack, double dropX, double dropY, double dropZ) {
-        if (stack.isEmpty()) return;
+        if (stack.isEmpty())
+            return;
         if (canFitOutput(SLOT_OUTPUT_MAIN, stack)) {
             insertIntoOutputSlot(SLOT_OUTPUT_MAIN, stack);
             return;
@@ -742,7 +916,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     public boolean triggerCollision(@Nullable Player caller) {
         if (!(this.level instanceof ServerLevel sl) || !this.isFormed || this.beamVelocity < 300) {
             if (caller != null && !this.level.isClientSide()) {
-                caller.displayClientMessage(Component.literal("§c⚛ Need >= 30.0% c velocity and a formed 5×5 ring to collide!"), true);
+                caller.displayClientMessage(
+                        Component.literal("§c⚛ Need >= 30.0% c velocity and a formed 5×5 ring to collide!"), true);
             }
             return false;
         }
@@ -750,12 +925,20 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         ItemStack stackB = inventory.getItem(SLOT_BEAM_B);
         if (stackA.isEmpty() || stackB.isEmpty()) {
             if (caller != null) {
-                caller.displayClientMessage(Component.literal("§c⚛ Load particles into both Beam A and Beam B slots!"), true);
+                caller.displayClientMessage(Component.literal("§c⚛ Load particles into both Beam A and Beam B slots!"),
+                        true);
             }
             return false;
         }
 
         CollisionOutcome outcome = computeCollisionOutcome(stackA, stackB);
+        if (outcome == null) {
+            if (caller != null) {
+                caller.displayClientMessage(Component
+                        .literal("§c⚛ Incompatible particles! Check [?] or Manual for valid collision recipes."), true);
+            }
+            return false;
+        }
         if (stackA.getCount() < outcome.costA() || stackB.getCount() < outcome.costB()) {
             if (caller != null) {
                 caller.displayClientMessage(Component.literal("§c⚛ Need at least " + outcome.costA()
@@ -771,13 +954,16 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         if (isSingularityAttempt) {
             if (!canFitOutput(SLOT_OUTPUT_MAIN, decayPrimary) || !canFitOutput(SLOT_OUTPUT_SECOND, decaySecondary)) {
                 if (caller != null) {
-                    caller.displayClientMessage(Component.literal("§e⚛ Output slots full! Empty collision outputs first."), true);
+                    caller.displayClientMessage(
+                            Component.literal("§e⚛ Output slots full! Empty collision outputs first."), true);
                 }
                 return false;
             }
-        } else if (!canFitOutput(SLOT_OUTPUT_MAIN, outcome.primary()) || !canFitOutput(SLOT_OUTPUT_SECOND, outcome.secondary())) {
+        } else if (!canFitOutput(SLOT_OUTPUT_MAIN, outcome.primary())
+                || !canFitOutput(SLOT_OUTPUT_SECOND, outcome.secondary())) {
             if (caller != null) {
-                caller.displayClientMessage(Component.literal("§e⚛ Output slots full! Empty collision outputs first."), true);
+                caller.displayClientMessage(Component.literal("§e⚛ Output slots full! Empty collision outputs first."),
+                        true);
             }
             return false;
         }
@@ -796,8 +982,10 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         if (isSingularityAttempt) {
             wonSingularity = sl.random.nextFloat() < 0.10f;
             if (wonSingularity) {
-                insertOrDropRareOutput(sl, outcome.primary(), this.worldPosition.getX() + 0.5, this.worldPosition.getY() + 1.25, this.worldPosition.getZ() + 0.5);
-                insertOrDropRareOutput(sl, outcome.secondary(), this.worldPosition.getX() + 0.5, this.worldPosition.getY() + 1.25, this.worldPosition.getZ() + 0.5);
+                insertOrDropRareOutput(sl, outcome.primary(), this.worldPosition.getX() + 0.5,
+                        this.worldPosition.getY() + 1.25, this.worldPosition.getZ() + 0.5);
+                insertOrDropRareOutput(sl, outcome.secondary(), this.worldPosition.getX() + 0.5,
+                        this.worldPosition.getY() + 1.25, this.worldPosition.getZ() + 0.5);
             } else {
                 insertIntoOutputSlot(SLOT_OUTPUT_MAIN, decayPrimary);
                 insertIntoOutputSlot(SLOT_OUTPUT_SECOND, decaySecondary);
@@ -808,7 +996,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
             if (cryoSuperconductingBonus && sl.random.nextFloat() < 0.10f) {
                 wonSingularity = true;
                 insertOrDropRareOutput(sl, new ItemStack(ObsidiumMod.SINGULARITY_HADRON_ALLOY, 1),
-                        this.worldPosition.getX() + 0.5, this.worldPosition.getY() + 1.25, this.worldPosition.getZ() + 0.5);
+                        this.worldPosition.getX() + 0.5, this.worldPosition.getY() + 1.25,
+                        this.worldPosition.getZ() + 0.5);
             }
         }
 
@@ -831,12 +1020,15 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
             sl.sendParticles(ParticleTypes.DRAGON_BREATH, cx, cy, cz, 60, 0.8, 0.4, 0.8, 0.05);
             sl.sendParticles(ParticleTypes.TOTEM_OF_UNDYING, cx, cy + 0.3, cz, 50, 0.7, 0.6, 0.7, 0.2);
             notifyCollisionPlayers(sl, caller, center, Component.literal(
-                    String.format("§d✦ QUANTUM MIRACLE (10%%)! Synthesized Singularity Hadron Alloy! +%,d RF", outcome.burstRf())));
+                    String.format("§d✦ QUANTUM MIRACLE (10%%)! Synthesized Singularity Hadron Alloy! +%,d RF",
+                            outcome.burstRf())));
         } else if (isSingularityAttempt) {
             notifyCollisionPlayers(sl, caller, center, Component.literal(
-                    String.format("§5⚛ Singularity decayed (10%% chance for Singularity Hadron Alloy). +%,d RF", outcome.burstRf())));
+                    String.format("§5⚛ Singularity decayed (10%% chance for Singularity Hadron Alloy). +%,d RF",
+                            outcome.burstRf())));
         } else if (caller != null) {
-            caller.displayClientMessage(Component.literal(String.format("§b💥 HADRON COLLISION! +%,d RF Burst!", outcome.burstRf())), true);
+            caller.displayClientMessage(
+                    Component.literal(String.format("§b💥 HADRON COLLISION! +%,d RF Burst!", outcome.burstRf())), true);
         }
         pushItemsOut(sl);
         setChanged();
@@ -870,29 +1062,41 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
                 }
             } else if (fuelStack.is(ObsidiumMod.PYROCLASTIC_FLASK)) {
                 if ((fuelAmount == 0 || fuelType == FUEL_DISTILLATE) && fuelAmount + 250 <= MAX_FUEL
-                        && (outContainer.isEmpty() || (outContainer.is(Items.GLASS_BOTTLE) && outContainer.getCount() < outContainer.getMaxStackSize()))) {
+                        && (outContainer.isEmpty() || (outContainer.is(Items.GLASS_BOTTLE)
+                                && outContainer.getCount() < outContainer.getMaxStackSize()))) {
                     fuelType = FUEL_DISTILLATE;
                     fuelAmount += 250;
                     fuelStack.shrink(1);
-                    if (outContainer.isEmpty()) inventory.setItem(SLOT_CONTAINER_OUT, new ItemStack(Items.GLASS_BOTTLE));
-                    else outContainer.grow(1);
+                    if (outContainer.isEmpty())
+                        inventory.setItem(SLOT_CONTAINER_OUT, new ItemStack(Items.GLASS_BOTTLE));
+                    else
+                        outContainer.grow(1);
                     setChanged();
                 }
             } else {
                 int targetType = FUEL_NONE;
-                if (fuelStack.is(Items.LAVA_BUCKET)) targetType = FUEL_LAVA;
-                else if (fuelStack.is(ObsidiumMod.BIO_OIL_BUCKET)) targetType = FUEL_BIO_OIL;
-                else if (fuelStack.is(ObsidiumMod.BIODIESEL_BUCKET)) targetType = FUEL_BIODIESEL;
-                else if (fuelStack.is(ObsidiumMod.PYROCLASTIC_DISTILLATE_BUCKET)) targetType = FUEL_DISTILLATE;
-                else if (fuelStack.is(ObsidiumMod.PYRO_DIESEL_BUCKET)) targetType = FUEL_PYRO_DIESEL;
+                if (fuelStack.is(Items.LAVA_BUCKET))
+                    targetType = FUEL_LAVA;
+                else if (fuelStack.is(ObsidiumMod.BIO_OIL_BUCKET))
+                    targetType = FUEL_BIO_OIL;
+                else if (fuelStack.is(ObsidiumMod.BIODIESEL_BUCKET))
+                    targetType = FUEL_BIODIESEL;
+                else if (fuelStack.is(ObsidiumMod.PYROCLASTIC_DISTILLATE_BUCKET))
+                    targetType = FUEL_DISTILLATE;
+                else if (fuelStack.is(ObsidiumMod.PYRO_DIESEL_BUCKET))
+                    targetType = FUEL_PYRO_DIESEL;
 
-                if (targetType != FUEL_NONE && (fuelAmount == 0 || fuelType == targetType) && fuelAmount + 1000 <= MAX_FUEL
-                        && (outContainer.isEmpty() || (outContainer.is(Items.BUCKET) && outContainer.getCount() < outContainer.getMaxStackSize()))) {
+                if (targetType != FUEL_NONE && (fuelAmount == 0 || fuelType == targetType)
+                        && fuelAmount + 1000 <= MAX_FUEL
+                        && (outContainer.isEmpty() || (outContainer.is(Items.BUCKET)
+                                && outContainer.getCount() < outContainer.getMaxStackSize()))) {
                     fuelType = targetType;
                     fuelAmount += 1000;
                     fuelStack.shrink(1);
-                    if (outContainer.isEmpty()) inventory.setItem(SLOT_CONTAINER_OUT, new ItemStack(Items.BUCKET));
-                    else outContainer.grow(1);
+                    if (outContainer.isEmpty())
+                        inventory.setItem(SLOT_CONTAINER_OUT, new ItemStack(Items.BUCKET));
+                    else
+                        outContainer.grow(1);
                     setChanged();
                 }
             }
@@ -903,26 +1107,45 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         outContainer = inventory.getItem(SLOT_CONTAINER_OUT);
         if (!coolStack.isEmpty()) {
             int bucketCoolType = COOLANT_NONE;
-            if (coolStack.is(Items.WATER_BUCKET)) bucketCoolType = COOLANT_WATER;
-            else if (coolStack.is(ObsidiumMod.BIO_ETHANOL_BUCKET)) bucketCoolType = COOLANT_BIO_ETHANOL;
+            if (coolStack.is(Items.WATER_BUCKET))
+                bucketCoolType = COOLANT_WATER;
+            else if (coolStack.is(ObsidiumMod.BIO_ETHANOL_BUCKET))
+                bucketCoolType = COOLANT_BIO_ETHANOL;
 
-            if (bucketCoolType != COOLANT_NONE && (coolantAmount == 0 || coolantType == bucketCoolType) && coolantAmount + 1000 <= MAX_COOLANT
-                    && (outContainer.isEmpty() || (outContainer.is(Items.BUCKET) && outContainer.getCount() < outContainer.getMaxStackSize()))) {
+            if (bucketCoolType != COOLANT_NONE && (coolantAmount == 0 || coolantType == bucketCoolType)
+                    && coolantAmount + 1000 <= MAX_COOLANT
+                    && (outContainer.isEmpty() || (outContainer.is(Items.BUCKET)
+                            && outContainer.getCount() < outContainer.getMaxStackSize()))) {
                 coolantType = bucketCoolType;
                 coolantAmount += 1000;
                 coolStack.shrink(1);
-                if (outContainer.isEmpty()) inventory.setItem(SLOT_CONTAINER_OUT, new ItemStack(Items.BUCKET));
-                else outContainer.grow(1);
+                if (outContainer.isEmpty())
+                    inventory.setItem(SLOT_CONTAINER_OUT, new ItemStack(Items.BUCKET));
+                else
+                    outContainer.grow(1);
                 setChanged();
             } else if (isSolidCryoItem(coolStack) && (coolantAmount == 0 || coolantType == COOLANT_WATER)) {
                 int yieldMb = 0;
                 int chillK = 0;
-                if (coolStack.is(Items.BLUE_ICE)) { yieldMb = 1000; chillK = 25; }
-                else if (coolStack.is(Items.PACKED_ICE)) { yieldMb = 500; chillK = 12; }
-                else if (coolStack.is(Items.ICE)) { yieldMb = 300; chillK = 8; }
-                else if (coolStack.is(Items.SNOW_BLOCK)) { yieldMb = 250; chillK = 5; }
-                else if (coolStack.is(Items.SNOWBALL)) { yieldMb = 100; chillK = 2; }
-                else if (coolStack.is(ObsidiumMod.DEW_DROPLET)) { yieldMb = 400; chillK = 10; }
+                if (coolStack.is(Items.BLUE_ICE)) {
+                    yieldMb = 1000;
+                    chillK = 25;
+                } else if (coolStack.is(Items.PACKED_ICE)) {
+                    yieldMb = 500;
+                    chillK = 12;
+                } else if (coolStack.is(Items.ICE)) {
+                    yieldMb = 300;
+                    chillK = 8;
+                } else if (coolStack.is(Items.SNOW_BLOCK)) {
+                    yieldMb = 250;
+                    chillK = 5;
+                } else if (coolStack.is(Items.SNOWBALL)) {
+                    yieldMb = 100;
+                    chillK = 2;
+                } else if (coolStack.is(ObsidiumMod.DEW_DROPLET)) {
+                    yieldMb = 400;
+                    chillK = 10;
+                }
 
                 if (yieldMb > 0 && coolantAmount + yieldMb <= MAX_COOLANT) {
                     coolantType = COOLANT_WATER;
@@ -937,27 +1160,34 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
 
     private void chargeSlotItem() {
         ItemStack chargeTarget = inventory.getItem(SLOT_CONTAINER_OUT);
-        if (chargeTarget.isEmpty() || energyStorage.amount <= 0) return;
-        EnergyStorage itemEnergy = EnergyStorage.ITEM.find(chargeTarget, ContainerItemContext.withConstant(chargeTarget));
-        if (itemEnergy == null) return;
+        if (chargeTarget.isEmpty() || energyStorage.amount <= 0)
+            return;
+        EnergyStorage itemEnergy = EnergyStorage.ITEM.find(chargeTarget,
+                ContainerItemContext.withConstant(chargeTarget));
+        if (itemEnergy == null)
+            return;
         EnergyStorageUtil.move(energyStorage, itemEnergy, 250_000L, null);
     }
 
     private void pushEnergyOut(Level level) {
-        if (energyStorage.amount <= 0 || !isFormed) return;
+        if (energyStorage.amount <= 0 || !isFormed)
+            return;
         BlockPos center = this.worldPosition.offset(this.ringOffsetX, 0, this.ringOffsetZ);
 
         for (int dx = -2; dx <= 2; dx++) {
             for (int dz = -2; dz <= 2; dz++) {
-                if (Math.max(Math.abs(dx), Math.abs(dz)) != 2) continue;
+                if (Math.max(Math.abs(dx), Math.abs(dz)) != 2)
+                    continue;
                 BlockPos ringPos = center.offset(dx, 0, dz);
                 for (Direction dir : Direction.values()) {
                     BlockPos neighborPos = ringPos.relative(dir);
-                    if (isPosOnRing(neighborPos)) continue;
+                    if (isPosOnRing(neighborPos))
+                        continue;
                     EnergyStorage target = EnergyStorage.SIDED.find(level, neighborPos, dir.getOpposite());
                     if (target != null && target != energyStorage) {
                         EnergyStorageUtil.move(energyStorage, target, MAX_EXTRACT, null);
-                        if (energyStorage.amount <= 0) return;
+                        if (energyStorage.amount <= 0)
+                            return;
                     }
                 }
             }
@@ -965,7 +1195,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     }
 
     private void pushItemsOut(Level level) {
-        if (level == null || level.isClientSide()) return;
+        if (level == null || level.isClientSide())
+            return;
 
         List<BlockPos> sourcePositions = new ArrayList<>();
         sourcePositions.add(this.worldPosition);
@@ -973,7 +1204,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
             BlockPos center = this.worldPosition.offset(this.ringOffsetX, 0, this.ringOffsetZ);
             for (int dx = -2; dx <= 2; dx++) {
                 for (int dz = -2; dz <= 2; dz++) {
-                    if (Math.max(Math.abs(dx), Math.abs(dz)) != 2) continue;
+                    if (Math.max(Math.abs(dx), Math.abs(dz)) != 2)
+                        continue;
                     BlockPos ringPos = center.offset(dx, 0, dz);
                     if (!ringPos.equals(this.worldPosition)) {
                         sourcePositions.add(ringPos);
@@ -982,17 +1214,19 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
             }
         }
 
-        int[] outSlots = {SLOT_OUTPUT_MAIN, SLOT_OUTPUT_SECOND, SLOT_CONTAINER_OUT};
+        int[] outSlots = { SLOT_OUTPUT_MAIN, SLOT_OUTPUT_SECOND, SLOT_CONTAINER_OUT };
         boolean changed = false;
 
         for (int slot : outSlots) {
             ItemStack stack = inventory.getItem(slot);
-            if (stack.isEmpty() || !isOutputSlot(slot, stack, null)) continue;
+            if (stack.isEmpty() || !isOutputSlot(slot, stack, null))
+                continue;
 
             for (BlockPos sourcePos : sourcePositions) {
                 for (Direction dir : Direction.values()) {
                     BlockPos neighborPos = sourcePos.relative(dir);
-                    if (neighborPos.equals(this.worldPosition) || (this.isFormed && isPosOnRing(neighborPos))) continue;
+                    if (neighborPos.equals(this.worldPosition) || (this.isFormed && isPosOnRing(neighborPos)))
+                        continue;
 
                     BlockEntity neighborBe = level.getBlockEntity(neighborPos);
                     if (neighborBe instanceof VolcaniteModularChestBlockEntity modularChest) {
@@ -1002,7 +1236,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
                             inventory.setItem(slot, rem.isEmpty() ? ItemStack.EMPTY : rem);
                             stack = inventory.getItem(slot);
                             changed = true;
-                            if (stack.isEmpty()) break;
+                            if (stack.isEmpty())
+                                break;
                         }
                     } else if (neighborBe instanceof VolcaniteStoragePipeBlockEntity) {
                         int orig = stack.getCount();
@@ -1012,11 +1247,13 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
                             inventory.setItem(slot, rem.isEmpty() ? ItemStack.EMPTY : rem);
                             stack = inventory.getItem(slot);
                             changed = true;
-                            if (stack.isEmpty()) break;
+                            if (stack.isEmpty())
+                                break;
                         }
                     }
                 }
-                if (stack.isEmpty()) break;
+                if (stack.isEmpty())
+                    break;
             }
         }
 
@@ -1032,15 +1269,16 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     }
 
     private void damageEntitiesInCore(ServerLevel sl) {
-        if (!this.isFormed) return;
+        if (!this.isFormed)
+            return;
         BlockPos center = this.worldPosition.offset(this.ringOffsetX, 0, this.ringOffsetZ);
         AABB coreBox = new AABB(
                 center.getX() - 1.0, center.getY() - 0.25, center.getZ() - 1.0,
-                center.getX() + 2.0, center.getY() + 2.25, center.getZ() + 2.0
-        );
+                center.getX() + 2.0, center.getY() + 2.25, center.getZ() + 2.0);
         List<LivingEntity> victims = sl.getEntitiesOfClass(LivingEntity.class, coreBox,
                 ent -> ent.isAlive() && !ent.isSpectator() && !(ent instanceof Player p && p.isCreative()));
-        if (victims.isEmpty()) return;
+        if (victims.isEmpty())
+            return;
 
         float dmg = this.beamVelocity > 0 ? (4.0F + (this.beamVelocity / 100.0F)) : 3.0F;
         for (LivingEntity e : victims) {
@@ -1049,16 +1287,20 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
                 e.igniteForSeconds(3);
             }
             sl.sendParticles(ParticleTypes.ELECTRIC_SPARK, e.getX(), e.getY() + 0.8, e.getZ(), 14, 0.3, 0.4, 0.3, 0.12);
-            sl.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, e.getX(), e.getY() + 0.5, e.getZ(), 8, 0.25, 0.3, 0.25, 0.04);
+            sl.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, e.getX(), e.getY() + 0.5, e.getZ(), 8, 0.25, 0.3, 0.25,
+                    0.04);
             sl.playSound(null, e.blockPosition(), SoundEvents.FIREWORK_ROCKET_BLAST, SoundSource.BLOCKS, 0.6F, 1.6F);
             if (e instanceof ServerPlayer sp) {
-                sp.displayClientMessage(Component.literal("§c☢ COLLIDER CORE HAZARD! High-energy radiation inside the 3×3 ring!"), true);
+                sp.displayClientMessage(
+                        Component.literal("§c☢ COLLIDER CORE HAZARD! High-energy radiation inside the 3×3 ring!"),
+                        true);
             }
         }
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, OlympianHadronColliderBlockEntity entity) {
-        if (level.isClientSide()) return;
+        if (level.isClientSide())
+            return;
 
         long previousEnergy = entity.energyStorage.amount;
         int previousFuel = entity.fuelAmount;
@@ -1082,7 +1324,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         int producedRf = 0;
 
         if (entity.isFormed) {
-            boolean hasBeams = !entity.inventory.getItem(SLOT_BEAM_A).isEmpty() && !entity.inventory.getItem(SLOT_BEAM_B).isEmpty();
+            boolean hasBeams = !entity.inventory.getItem(SLOT_BEAM_A).isEmpty()
+                    && !entity.inventory.getItem(SLOT_BEAM_B).isEmpty();
             int fuelCost = entity.beamVelocity > 700 ? 4 : 2;
             boolean hasFuel = entity.fuelAmount >= fuelCost && entity.fuelType != FUEL_NONE;
 
@@ -1126,7 +1369,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
                     int coolRate = entity.coolantType == COOLANT_BIO_ETHANOL ? 3 : 2;
                     entity.coolantAmount = Math.max(0, entity.coolantAmount - 1);
                     entity.coilTemp = Math.max(40, entity.coilTemp - coolRate);
-                    if (entity.coolantAmount == 0) entity.coolantType = COOLANT_NONE;
+                    if (entity.coolantAmount == 0)
+                        entity.coolantType = COOLANT_NONE;
                 } else if (entity.coilTemp > 110 && entity.syncTicker % 10 == 0) {
                     entity.coilTemp = Math.max(110, entity.coilTemp - 1);
                 }
@@ -1178,7 +1422,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
             level.setBlock(pos, updated, Block.UPDATE_ALL);
         }
 
-        // Continuous operation also changes saved data when no inventory/energy transaction occurs.
+        // Continuous operation also changes saved data when no inventory/energy
+        // transaction occurs.
         // Client synchronization alone does not mark the chunk for saving.
         if (previousEnergy != entity.energyStorage.amount || previousFuel != entity.fuelAmount
                 || previousCoolant != entity.coolantAmount || previousVelocity != entity.beamVelocity
@@ -1189,7 +1434,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         entity.syncTicker++;
         boolean stateChangedForRender = (entity.beamVelocity == 0 && entity.lastSyncedVel != 0)
                 || (entity.collisionFlashTicks == 0 && entity.lastSyncedFlash != 0);
-        if (stateChangedForRender || (entity.syncTicker % 5 == 0 && (entity.beamVelocity > 0 || entity.collisionFlashTicks > 0))) {
+        if (stateChangedForRender
+                || (entity.syncTicker % 5 == 0 && (entity.beamVelocity > 0 || entity.collisionFlashTicks > 0))) {
             entity.lastSyncedVel = entity.beamVelocity;
             entity.lastSyncedFlash = entity.collisionFlashTicks;
             entity.syncToClient();
@@ -1223,8 +1469,10 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
         MachineInventory.loadInventory(tag, inventory, provider);
         energyStorage.amount = Math.min(MAX_ENERGY, tag.getLong("Energy"));
         isFormed = tag.getBoolean("Formed");
-        if (tag.contains("RingOffX")) ringOffsetX = tag.getInt("RingOffX");
-        if (tag.contains("RingOffZ")) ringOffsetZ = tag.getInt("RingOffZ");
+        if (tag.contains("RingOffX"))
+            ringOffsetX = tag.getInt("RingOffX");
+        if (tag.contains("RingOffZ"))
+            ringOffsetZ = tag.getInt("RingOffZ");
         coilCount = tag.getInt("CoilCount");
         beamVelocity = tag.getInt("BeamVel");
         coilTemp = tag.contains("CoilTemp") ? tag.getInt("CoilTemp") : 40;
@@ -1261,7 +1509,8 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
 
     @Override
     public boolean isOutputSlot(int slot, ItemStack stack, @Nullable Direction side) {
-        if (slot == SLOT_OUTPUT_MAIN || slot == SLOT_OUTPUT_SECOND) return true;
+        if (slot == SLOT_OUTPUT_MAIN || slot == SLOT_OUTPUT_SECOND)
+            return true;
         return slot == SLOT_CONTAINER_OUT && (stack.is(Items.BUCKET) || stack.is(Items.GLASS_BOTTLE));
     }
 
@@ -1273,11 +1522,13 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     @Override
     public boolean canPlaceItemThroughFace(int index, ItemStack stack, @Nullable Direction dir) {
         if (index == SLOT_BEAM_A) {
-            if (!inventory.canPlaceItem(SLOT_BEAM_A, stack)) return false;
+            if (!inventory.canPlaceItem(SLOT_BEAM_A, stack))
+                return false;
             ItemStack a = inventory.getItem(SLOT_BEAM_A);
             ItemStack b = inventory.getItem(SLOT_BEAM_B);
             // Help pipes split different materials cleanly across Beam A and Beam B
-            if (!a.isEmpty() && !ItemStack.isSameItem(a, stack) && b.isEmpty()) return false;
+            if (!a.isEmpty() && !ItemStack.isSameItem(a, stack) && b.isEmpty())
+                return false;
             return true;
         }
         return inventory.canPlaceItem(index, stack);
@@ -1289,19 +1540,42 @@ public class OlympianHadronColliderBlockEntity extends BlockEntity implements Me
     }
 
     @Override
-    public int getContainerSize() { return inventory.getContainerSize(); }
+    public int getContainerSize() {
+        return inventory.getContainerSize();
+    }
+
     @Override
-    public boolean isEmpty() { return inventory.isEmpty(); }
+    public boolean isEmpty() {
+        return inventory.isEmpty();
+    }
+
     @Override
-    public ItemStack getItem(int slot) { return inventory.getItem(slot); }
+    public ItemStack getItem(int slot) {
+        return inventory.getItem(slot);
+    }
+
     @Override
-    public ItemStack removeItem(int slot, int amount) { return inventory.removeItem(slot, amount); }
+    public ItemStack removeItem(int slot, int amount) {
+        return inventory.removeItem(slot, amount);
+    }
+
     @Override
-    public ItemStack removeItemNoUpdate(int slot) { return inventory.removeItemNoUpdate(slot); }
+    public ItemStack removeItemNoUpdate(int slot) {
+        return inventory.removeItemNoUpdate(slot);
+    }
+
     @Override
-    public void setItem(int slot, ItemStack stack) { inventory.setItem(slot, stack); }
+    public void setItem(int slot, ItemStack stack) {
+        inventory.setItem(slot, stack);
+    }
+
     @Override
-    public boolean stillValid(Player player) { return Container.stillValidBlockEntity(this, player); }
+    public boolean stillValid(Player player) {
+        return Container.stillValidBlockEntity(this, player);
+    }
+
     @Override
-    public void clearContent() { inventory.clearContent(); }
+    public void clearContent() {
+        inventory.clearContent();
+    }
 }

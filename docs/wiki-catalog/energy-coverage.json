@@ -1,12 +1,13 @@
 {
   "category": "energy",
-  "items": 40,
-  "recipe_variants": 45,
+  "items": 41,
+  "recipe_variants": 46,
   "missing_ingredient_icons": [],
   "ids": [
     "obsidium:volcanite_advanced_pipe_energy_upgrade",
     "obsidium:volcanite_energy_unit",
     "obsidium:advanced_volcanite_portable_battery",
+    "obsidium:aegis_sanctuary_ward",
     "obsidium:astrape_energy_pylon",
     "obsidium:volcanite_basic_pipe_energy_upgrade",
     "obsidium:volcanite_energy_cell",

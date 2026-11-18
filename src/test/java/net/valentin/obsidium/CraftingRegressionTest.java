@@ -134,11 +134,11 @@ final class CraftingRegressionTest {
         }
         check(refunded.size() == 1 && ItemStack.matches(refunded.get(0), named), "Abandoned valid batch was not refunded");
         refunded.clear();
-        try {
-            new CraftingIngredientBatch(List.of(named, new ItemStack(Items.DIAMOND)), required -> {
+        try (CraftingIngredientBatch batch = new CraftingIngredientBatch(List.of(named, new ItemStack(Items.DIAMOND)), required -> {
                 if (required.is(Items.DIAMOND)) throw new IllegalStateException("Test extraction failure");
                 return named.copy();
-            }, refunded::add);
+            }, refunded::add)) {
+            check(batch.isComplete(), "Unexpected incomplete batch");
             throw new AssertionError("Expected extraction failure");
         } catch (IllegalStateException expected) {
             check(refunded.size() == 1 && ItemStack.matches(refunded.get(0), named), "Extraction exception lost reserved items");

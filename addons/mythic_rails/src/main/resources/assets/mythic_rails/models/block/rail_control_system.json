@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "mythic_rails:block/rail_control_top",
+    "front": "mythic_rails:block/rail_control_front",
+    "side": "mythic_rails:block/rail_control_side"
+  }
+}

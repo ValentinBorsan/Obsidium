@@ -140,12 +140,12 @@ public class DemetrianLumberDepotScreen extends AbstractContainerScreen<Demetria
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         this.renderBackground(guiGraphics, mouseX, mouseY, partialTick);
         super.render(guiGraphics, mouseX, mouseY, partialTick);
-        this.renderTooltip(guiGraphics, mouseX, mouseY);
 
         int x = (this.width - this.imageWidth) / 2;
         int y = (this.height - this.imageHeight) / 2;
 
         // Custom Chamber Tooltips when hovering over Chamber cards
+        boolean hoveringChamber = false;
         int[] cardX = {10, 50, 90, 130};
         for (int i = 0; i < 4; i++) {
             int cx = x + cardX[i];
@@ -154,6 +154,7 @@ public class DemetrianLumberDepotScreen extends AbstractContainerScreen<Demetria
             int ch = 74;
 
             if (mouseX >= cx && mouseX <= cx + cw && mouseY >= cy && mouseY <= cy + ch) {
+                hoveringChamber = true;
                 long amount = this.menu.getChamberAmount(i);
                 long max = DemetrianLumberDepotBlockEntity.MAX_CHAMBER_CAPACITY;
                 int pct = max > 0 ? (int) ((amount * 100L) / max) : 0;
@@ -178,6 +179,9 @@ public class DemetrianLumberDepotScreen extends AbstractContainerScreen<Demetria
 
                 guiGraphics.renderComponentTooltip(this.font, tooltip, mouseX, mouseY);
             }
+        }
+        if (!hoveringChamber) {
+            this.renderTooltip(guiGraphics, mouseX, mouseY);
         }
     }
 }

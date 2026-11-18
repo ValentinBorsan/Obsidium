@@ -1,19 +1,12 @@
 {
   "variants": {
-    "facing=north": {
-      "model": "obsidium:block/volcanite_modular_chest"
-    },
-    "facing=south": {
-      "model": "obsidium:block/volcanite_modular_chest",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "obsidium:block/volcanite_modular_chest",
-      "y": 270
-    },
-    "facing=east": {
-      "model": "obsidium:block/volcanite_modular_chest",
-      "y": 90
-    }
+    "facing=north,linked=false": { "model": "obsidium:block/volcanite_modular_chest" },
+    "facing=south,linked=false": { "model": "obsidium:block/volcanite_modular_chest", "y": 180 },
+    "facing=west,linked=false":  { "model": "obsidium:block/volcanite_modular_chest", "y": 270 },
+    "facing=east,linked=false":  { "model": "obsidium:block/volcanite_modular_chest", "y": 90 },
+    "facing=north,linked=true":  { "model": "obsidium:block/volcanite_modular_chest_linked" },
+    "facing=south,linked=true":  { "model": "obsidium:block/volcanite_modular_chest_linked", "y": 180 },
+    "facing=west,linked=true":   { "model": "obsidium:block/volcanite_modular_chest_linked", "y": 270 },
+    "facing=east,linked=true":   { "model": "obsidium:block/volcanite_modular_chest_linked", "y": 90 }
   }
 }

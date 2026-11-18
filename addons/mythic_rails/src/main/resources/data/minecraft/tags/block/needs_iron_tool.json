@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "mythic_rails:hermes_loading_station",
+    "mythic_rails:hermes_unloading_station",
+    "mythic_rails:hermes_fluid_loading_station",
+    "mythic_rails:hermes_fluid_unloading_station",
+    "mythic_rails:hermes_energy_loading_station",
+    "mythic_rails:hermes_energy_unloading_station",
+    "mythic_rails:rail_bumper",
+    "mythic_rails:rail_semaphore",
+    "mythic_rails:signal_connector",
+    "mythic_rails:rail_control_system"
+  ]
+}

@@ -52,6 +52,11 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
         g.pose().popPose();
     }
 
+    private void drawCenteredScaledString(GuiGraphics g, String text, int centerX, int y, float scale, int color) {
+        int scaledW = Math.round(this.font.width(text) * scale);
+        drawScaledString(g, text, centerX - scaledW / 2, y, scale, color);
+    }
+
     private static String formatCompactRf(long rf) {
         if (rf >= 1_000_000_000L) return String.format("%.2fG", rf / 1_000_000_000.0);
         if (rf >= 1_000_000L) return String.format("%.1fM", rf / 1_000_000.0);
@@ -91,56 +96,63 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
 
     @Override
     protected void renderLabels(GuiGraphics g, int mouseX, int mouseY) {
-        g.drawString(this.font, "§b⚛ HADRON COLLIDER", 8, 7, 0xFF73F2FF, false);
+        g.drawString(this.font, "§b⚛ HADRON COLLIDER", 8, 8, 0xFF73F2FF, false);
 
-        // Header right buttons / status
+        // Header right buttons / status (non-overlapping with [?] at 217..229)
         if (!this.menu.isFormed()) {
             boolean holo = this.menu.isShowHologram();
-            drawScaledString(g, holo ? "Holo:ON" : "Holo:OFF", 136, 9, 0.72f, holo ? 0xFF55FFFF : 0xFF9E9E9E);
-            drawScaledString(g, "Auto-Build", 174, 9, 0.72f, 0xFFFFD54F);
+            drawCenteredScaledString(g, holo ? "Holo:ON" : "Holo:OFF", 144, 10, 0.68f, holo ? 0xFF55FFFF : 0xFF9E9E9E);
+            drawCenteredScaledString(g, "Auto-Build", 191, 10, 0.68f, 0xFFFFD54F);
         } else {
-            drawScaledString(g, "5×5 LOCKED (" + this.menu.getCoilCount() + " Coils)", 136, 9, 0.72f, 0xFF55FF99);
+            drawCenteredScaledString(g, "5×5 LOCKED (" + this.menu.getCoilCount() + " Coils)", 168, 10, 0.66f, 0xFF55FF99);
         }
-        g.drawString(this.font, "?", 221, 7, 0xFFFFD54F, false);
+        g.drawString(this.font, "?", 221, 8, 0xFFFFD54F, false);
 
-        // Slot mini labels
-        drawScaledString(g, "Beam A↻", 46, 33, 0.70f, 0xFF66EEFF);
-        drawScaledString(g, "Beam B↺", 170, 33, 0.70f, 0xFFFF9955);
-        drawScaledString(g, "Fuel", 14, 16, 0.70f, 0xFFFF8844);
-        drawScaledString(g, "Cryo", 209, 16, 0.70f, 0xFF66DDFF);
-        drawScaledString(g, "Out", 112, 83, 0.70f, 0xFFCEB8FF);
+        // Slot mini labels (cleanly positioned inside their columns)
+        drawCenteredScaledString(g, "Fuel", 20, 22, 0.68f, 0xFFFF8844);
+        drawCenteredScaledString(g, "Cryo", 216, 22, 0.68f, 0xFF66DDFF);
+        drawCenteredScaledString(g, "Cell", 20, 84, 0.66f, 0xFFA694C8);
+        drawCenteredScaledString(g, "Beam A↻", 56, 33, 0.68f, 0xFF66EEFF);
+        drawCenteredScaledString(g, "Beam B↺", 180, 33, 0.68f, 0xFFFF9955);
+        drawCenteredScaledString(g, "Out", 118, 83, 0.68f, 0xFFCEB8FF);
 
         // Center Speed Readout under radar
         int vel = this.menu.getBeamVelocity();
-        double cPct = Math.min(99.9, (vel / 1000.0) * 99.9);
-        String cStr = String.format("%.1f%% c", cPct);
-        int cw = (int) (this.font.width(cStr) * 0.85f);
-        drawScaledString(g, cStr, 118 - cw / 2, 73, 0.85f, vel >= 999 ? 0xFF55FFAA : 0xFF73F2FF);
+        if (!this.menu.isFormed()) {
+            drawCenteredScaledString(g, "UNFORMED", 118, 74, 0.70f, 0xFFFF5566);
+        } else {
+            double cPct = Math.min(99.9, (vel / 1000.0) * 99.9);
+            String cStr = String.format("%.1f%% c", cPct);
+            drawCenteredScaledString(g, cStr, 118, 74, 0.80f, vel >= 999 ? 0xFF55FFAA : 0xFF73F2FF);
+        }
 
-        // Buttons text
+        // Centered Buttons text
         String modeTxt = this.menu.getOperatingMode() == 0 ? "AutoSmash" : "HoldRing";
-        drawScaledString(g, modeTxt, 51, 87, 0.72f, 0xFFE6DDFF);
+        drawCenteredScaledString(g, modeTxt, 70, 88, 0.70f, 0xFFE6DDFF);
 
         boolean canSmash = this.menu.isFormed() && vel >= 300
                 && !this.menu.getSlot(0).getItem().isEmpty()
                 && !this.menu.getSlot(1).getItem().isEmpty();
-        drawScaledString(g, "SMASH!", 150, 87, 0.75f, canSmash ? 0xFFFFEE55 : 0xFF887799);
+        drawCenteredScaledString(g, "SMASH!", 166, 88, 0.72f, canSmash ? 0xFFFFEE55 : 0xFF887799);
 
-        // Temperature & RF Telemetry
+        // Temperature & RF Telemetry inside clean readout cards
         int temp = this.menu.getCoilTemp();
         int tempColor = temp < 120 ? 0xFF55FFFF : (temp >= 550 ? 0xFFFF4455 : 0xFFFFAA44);
-        drawScaledString(g, temp + " K", 52, 102, 0.75f, tempColor);
+        drawCenteredScaledString(g, temp + " K", 70, 101, 0.72f, tempColor);
         if (temp < 120) {
-            drawScaledString(g, "CRYO LOCK", 47, 111, 0.65f, 0xFF55FFAA);
+            drawCenteredScaledString(g, "CRYO LOCK", 70, 109, 0.62f, 0xFF55FFAA);
+        } else {
+            drawCenteredScaledString(g, temp >= 550 ? "OVERHEAT" : "NOMINAL", 70, 109, 0.62f, temp >= 550 ? 0xFFFF5566 : 0xFF8E82A8);
         }
 
         String rft = "+" + formatCompactRf(this.menu.getCurrentRfPerTick()) + "/t";
-        drawScaledString(g, rft, 145, 102, 0.75f, 0xFF55FF99);
-        drawScaledString(g, "Hits:" + this.menu.getTotalCollisions(), 145, 111, 0.65f, 0xFFD0C4E0);
+        drawCenteredScaledString(g, rft, 166, 101, 0.72f, 0xFF55FF99);
+        drawCenteredScaledString(g, "Hits: " + this.menu.getTotalCollisions(), 166, 109, 0.62f, 0xFFD0C4E0);
 
         g.drawString(this.font, this.playerInventoryTitle, this.inventoryLabelX, this.inventoryLabelY, 0xFFB8B0C8, false);
         String storedLabel = formatCompactRf(this.menu.getEnergyAmount()) + " / 100M RF";
-        drawScaledString(g, storedLabel, 134, 124, 0.72f, 0xFF73F2FF);
+        int storedW = Math.round(this.font.width(storedLabel) * 0.72f);
+        drawScaledString(g, storedLabel, 200 - storedW, 124, 0.72f, 0xFF73F2FF);
     }
 
     @Override
@@ -149,8 +161,8 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
             int i = (this.width - this.imageWidth) / 2;
             int j = (this.height - this.imageHeight) / 2;
 
-            // Manual [?] button (216..228, 6..18)
-            if (mouseX >= i + 216 && mouseX <= i + 228 && mouseY >= j + 6 && mouseY <= j + 18) {
+            // Manual [?] button (217..229, 6..18)
+            if (mouseX >= i + 217 && mouseX <= i + 229 && mouseY >= j + 6 && mouseY <= j + 18) {
                 if (this.minecraft != null && this.minecraft.player != null) {
                     this.minecraft.player.playSound(SoundEvents.UI_BUTTON_CLICK.value(), 0.55F, 1.25F);
                     this.minecraft.setScreen(new net.valentin.obsidium.screen.MagmaForgeManualScreen(7, 0));
@@ -169,13 +181,13 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
                 return true;
             }
             if (!this.menu.isFormed()) {
-                // Holo toggle (133..169, 6..18)
-                if (mouseX >= i + 133 && mouseX <= i + 169 && mouseY >= j + 6 && mouseY <= j + 18) {
+                // Holo toggle (122..166, 6..18)
+                if (mouseX >= i + 122 && mouseX <= i + 166 && mouseY >= j + 6 && mouseY <= j + 18) {
                     sendButton(2);
                     return true;
                 }
-                // Auto-Build 5x5 (171..214, 6..18)
-                if (mouseX >= i + 171 && mouseX <= i + 214 && mouseY >= j + 6 && mouseY <= j + 18) {
+                // Auto-Build 5x5 (168..214, 6..18)
+                if (mouseX >= i + 168 && mouseX <= i + 214 && mouseY >= j + 6 && mouseY <= j + 18) {
                     sendButton(3);
                     return true;
                 }
@@ -205,21 +217,21 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
         g.fill(i + 4, j + 4, i + this.imageWidth - 4, j + 20, 0xFF181226);
         g.fill(i + 4, j + 20, i + this.imageWidth - 4, j + 21, 0xFF3E2D5E);
 
-        // Recipe [?] badge (216..228, 6..18)
-        g.fill(i + 216, j + 6, i + 228, j + 18, 0xFF281F3D);
-        drawBorder(g, i + 216, j + 6, 12, 12, 0xFFDCA220);
+        // Recipe [?] badge (217..229, 6..18)
+        g.fill(i + 217, j + 6, i + 229, j + 18, 0xFF281F3D);
+        drawBorder(g, i + 217, j + 6, 12, 12, 0xFFDCA220);
 
         // Unformed Hologram & Auto-Build buttons
         if (!this.menu.isFormed()) {
             boolean holo = this.menu.isShowHologram();
-            g.fill(i + 133, j + 6, i + 169, j + 18, holo ? 0xFF113344 : 0xFF221B30);
-            drawBorder(g, i + 133, j + 6, 36, 12, holo ? 0xFF55FFFF : 0xFF554A6A);
+            g.fill(i + 122, j + 6, i + 166, j + 18, holo ? 0xFF113344 : 0xFF221B30);
+            drawBorder(g, i + 122, j + 6, 44, 12, holo ? 0xFF55FFFF : 0xFF554A6A);
 
-            g.fill(i + 171, j + 6, i + 214, j + 18, 0xFF332612);
-            drawBorder(g, i + 171, j + 6, 43, 12, 0xFFFFB74D);
+            g.fill(i + 168, j + 6, i + 214, j + 18, 0xFF332612);
+            drawBorder(g, i + 168, j + 6, 46, 12, 0xFFFFB74D);
         } else {
-            g.fill(i + 133, j + 6, i + 214, j + 18, 0xFF0E2B1E);
-            drawBorder(g, i + 133, j + 6, 81, 12, 0xFF35C47C);
+            g.fill(i + 122, j + 6, i + 214, j + 18, 0xFF0E2B1E);
+            drawBorder(g, i + 122, j + 6, 92, 12, 0xFF35C47C);
         }
 
         // Slots
@@ -227,8 +239,8 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
         drawSlotBox(g, i + 171, j + 41, 0xFFFF8833); // Beam B
         drawSlotBox(g, i + 97, j + 91, 0xFFDCA220); // Out 1
         drawSlotBox(g, i + 121, j + 91, 0xFFDCA220); // Out 2
-        drawSlotBox(g, i + 11, j + 23, 0xFFFF6622); // Fuel In
-        drawSlotBox(g, i + 207, j + 23, 0xFF33CCFF); // Cryo In
+        drawSlotBox(g, i + 11, j + 29, 0xFFFF6622); // Fuel In
+        drawSlotBox(g, i + 207, j + 29, 0xFF33CCFF); // Cryo In
         drawSlotBox(g, i + 11, j + 91, 0xFF7A6A99); // Container Return / Charge
 
         // Propulsion Fuel Tank (32, 24, 12x84)
@@ -250,12 +262,12 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
             g.fill(i + 192, j + 108 - fillH, i + 204, j + 108, coolColor);
         }
 
-        // Stored Energy Vertical Bar (209, 48, 14x60)
-        g.fill(i + 209, j + 48, i + 223, j + 108, 0xFF09070E);
-        drawBorder(g, i + 208, j + 47, 16, 62, 0xFF2A5866);
+        // Stored Energy Vertical Bar (209, 52, 14x56)
+        g.fill(i + 209, j + 52, i + 223, j + 108, 0xFF09070E);
+        drawBorder(g, i + 208, j + 51, 16, 58, 0xFF2A5866);
         long energyAmt = this.menu.getEnergyAmount();
         if (energyAmt > 0) {
-            int fillH = Math.max(2, (int) ((energyAmt / (double) OlympianHadronColliderBlockEntity.MAX_ENERGY) * 60));
+            int fillH = Math.max(2, (int) ((energyAmt / (double) OlympianHadronColliderBlockEntity.MAX_ENERGY) * 56));
             for (int row = 0; row < fillH; row += 2) {
                 int yPos = j + 107 - row;
                 int col = (row % 4 == 0) ? 0xFF00E5FF : 0xFF0099CC;
@@ -320,6 +332,12 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
         g.fill(i + 143, j + 84, i + 188, j + 97, canSmash ? 0xFF4A2414 : 0xFF1E1828);
         drawBorder(g, i + 143, j + 84, 45, 13, canSmash ? 0xFFFFAA00 : 0xFF443A54);
 
+        // Telemetry Readout Cards (Temp & RF/t)
+        g.fill(i + 48, j + 99, i + 93, j + 116, 0xFF141020);
+        drawBorder(g, i + 48, j + 99, 45, 17, 0xFF2A2140);
+        g.fill(i + 143, j + 99, i + 188, j + 116, 0xFF141020);
+        drawBorder(g, i + 143, j + 99, 45, 17, 0xFF2A2140);
+
         // Relativistic Speed Bar (48, 118 -> 188, 121)
         g.fill(i + 48, j + 118, i + 188, j + 121, 0xFF0A0812);
         int speedW = (int) ((vel / 1000.0) * 140);
@@ -365,8 +383,8 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
             g.renderTooltip(this.font, tip, Optional.empty(), mouseX, mouseY);
         }
 
-        // Stored Energy Bar Tooltip (208..224, 47..109)
-        if (mouseX >= i + 208 && mouseX <= i + 224 && mouseY >= j + 47 && mouseY <= j + 109) {
+        // Stored Energy Bar Tooltip (208..224, 51..109)
+        if (mouseX >= i + 208 && mouseX <= i + 224 && mouseY >= j + 51 && mouseY <= j + 109) {
             List<Component> tip = new ArrayList<>();
             tip.add(Component.literal("§b⚡ Synchrotron Energy Buffer"));
             tip.add(Component.literal(String.format("§f%,d / %,d RF", this.menu.getEnergyAmount(), OlympianHadronColliderBlockEntity.MAX_ENERGY)));
@@ -375,8 +393,8 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
             g.renderTooltip(this.font, tip, Optional.empty(), mouseX, mouseY);
         }
 
-        // Fusion Recipes Tooltip on [?] (216..228, 6..18)
-        if (mouseX >= i + 216 && mouseX <= i + 228 && mouseY >= j + 6 && mouseY <= j + 18) {
+        // Fusion Recipes Tooltip on [?] (217..229, 6..18)
+        if (mouseX >= i + 217 && mouseX <= i + 229 && mouseY >= j + 6 && mouseY <= j + 18) {
             List<Component> tip = new ArrayList<>();
             tip.add(Component.literal("§e⚛ CERN Minecraft-Physics Collisions"));
             tip.add(Component.literal("§d• 4× Supreme + 4× Astral ➔ §5Singularity Alloy (10% Chance!)"));
@@ -406,6 +424,33 @@ public class OlympianHadronColliderScreen extends AbstractContainerScreen<Olympi
             tip.add(Component.literal("§d⚙ Collider Operating Mode"));
             tip.add(Component.literal("§fAutoSmash: §7Automatically collides at 99.9% c."));
             tip.add(Component.literal("§fHoldRing: §7Locks at 99.9% c for peak continuous RF/t until manual SMASH."));
+            g.renderTooltip(this.font, tip, Optional.empty(), mouseX, mouseY);
+        }
+
+        // Unformed Diagnostic Tooltip over Center Radar (92..144, 24..80)
+        if (!this.menu.isFormed() && mouseX >= i + 92 && mouseX <= i + 144 && mouseY >= j + 24 && mouseY <= j + 80) {
+            int mask = this.menu.getFormationStatusMask();
+            boolean missEnergy = (mask & 1) != 0;
+            boolean missItem = (mask & 2) != 0;
+            boolean missFluid = (mask & 4) != 0;
+            boolean lowCoils = (mask & 8) != 0;
+            boolean badPerimeter = (mask & 16) != 0;
+            boolean innerBlocked = (mask & 32) != 0;
+            int coils = (mask >> 8) & 0xF;
+
+            List<Component> tip = new ArrayList<>();
+            tip.add(Component.literal("§c⚛ 5×5 Collider Not Formed"));
+            tip.add(Component.literal((missEnergy ? "§c✗ " : "§a✓ ") + "1× Hadron Energy Port"));
+            tip.add(Component.literal((missItem ? "§c✗ " : "§a✓ ") + "1× Hadron Item Port"));
+            tip.add(Component.literal((missFluid ? "§c✗ " : "§a✓ ") + "1× Hadron Fluid Port"));
+            tip.add(Component.literal((lowCoils ? "§c✗ " : "§a✓ ") + "Synchrotron Coils (" + coils + "/9 min)"));
+            if (badPerimeter) {
+                tip.add(Component.literal("§c✗ Missing or invalid block on 5×5 ring"));
+            }
+            if (innerBlocked) {
+                tip.add(Component.literal("§c✗ Solid block inside 3×3 interior"));
+            }
+            tip.add(Component.literal("§7Controller must be at the center of a 5×5 side."));
             g.renderTooltip(this.font, tip, Optional.empty(), mouseX, mouseY);
         }
     }

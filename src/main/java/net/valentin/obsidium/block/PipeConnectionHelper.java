@@ -21,10 +21,21 @@ public class PipeConnectionHelper {
         BlockEntity toEntity = level.getBlockEntity(to);
         boolean fromPipe = isLogisticsPipe(fromEntity);
         boolean toPipe = isLogisticsPipe(toEntity);
+        if (fromPipe && toPipe) {
+            boolean fromHermes = fromEntity instanceof HermesItemPipeBlockEntity;
+            boolean toHermes = toEntity instanceof HermesItemPipeBlockEntity;
+            if (fromHermes != toHermes) return false;
+            if ((fromEntity instanceof VolcaniteUniversalConduitBlockEntity)
+                    != (toEntity instanceof VolcaniteUniversalConduitBlockEntity)) return false;
+        }
         if (!fromPipe && !toPipe) return true; // preserve traversal through existing network components
         if (fromEntity instanceof VolcaniteStoragePipeBlockEntity pipe && pipe.isSideDisconnected(direction)) return false;
         if (toEntity instanceof VolcaniteStoragePipeBlockEntity pipe && pipe.isSideDisconnected(direction.getOpposite())) return false;
         return true;
+    }
+
+    public static boolean isOpticFiber(Block block) {
+        return block != null && block.getClass() == VolcaniteStoragePipeBlock.class;
     }
 
     public static boolean isLogisticsPipe(BlockEntity entity) {
@@ -58,9 +69,12 @@ public class PipeConnectionHelper {
         if (state.isAir()) return false;
         Block block = state.getBlock();
 
-        // 1. Always connects to other Optic Fibers / Logistics Pipes / Storage Network blocks (including Grand Chest & Modular Chest)
-        if (isLogisticsPipe(block) || isStorageNetworkBlock(block)) {
+        // 1. Optic Fiber only connects to other Optic Fibers & Storage Network blocks (never to Hermes/Naiad/Energy wires)
+        if (isOpticFiber(block) || isStorageNetworkBlock(block)) {
             return true;
+        }
+        if (block instanceof HermesItemPipeBlock || block instanceof NaiadFluidPipeBlock || block instanceof VolcaniteEnergyWireBlock || block instanceof VolcaniteUniversalConduitBlock) {
+            return false;
         }
 
         // 2. Connects to external chests, tanks, or machines ONLY if an Import or Export Connector is mounted on this face!
@@ -77,8 +91,13 @@ public class PipeConnectionHelper {
         if (state.isAir()) return false;
         Block block = state.getBlock();
 
-        // 1. Volcanite logistics pipes and universal conduits share a network.
-        if (isLogisticsPipe(block)) {
+        // Never cross-connect to different pipe types (Optic Fiber, Fluid Pipe, Energy Wire, Universal Conduit)
+        if (isOpticFiber(block) || block instanceof NaiadFluidPipeBlock || block instanceof VolcaniteEnergyWireBlock || block instanceof VolcaniteUniversalConduitBlock) {
+            return false;
+        }
+
+        // 1. Hermes Item Pipes connect to other Hermes Item Pipes.
+        if (block instanceof HermesItemPipeBlock) {
             return true;
         }
 

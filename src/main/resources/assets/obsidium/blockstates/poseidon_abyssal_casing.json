@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "formed=false": { "model": "obsidium:block/poseidon_abyssal_casing" },
+    "formed=true": { "model": "obsidium:block/poseidon_abyssal_casing_formed" }
+  }
+}

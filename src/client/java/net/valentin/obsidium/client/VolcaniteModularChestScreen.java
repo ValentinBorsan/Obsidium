@@ -5,7 +5,9 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.DyeColor;
 import net.valentin.obsidium.block.VolcaniteModularChestMenu;
+import net.valentin.obsidium.item.QuantumLinkModuleItem;
 
 import java.util.List;
 
@@ -46,14 +48,34 @@ public class VolcaniteModularChestScreen extends AbstractContainerScreen<Volcani
         drawMiniButton(guiGraphics, x + 128, y + 4, 22, 11, "A-Z", 0xFF00CED1, mouseX, mouseY);
         drawMiniButton(guiGraphics, x + 152, y + 4, 18, 11, "⬇", 0xFF66FF88, mouseX, mouseY);
 
-        // Page navigation controls (between storage grid and player inventory: x + 98..170, y + 127..137)
-        int curPage = this.menu.getCurrentPage() + 1;
-        int maxPages = this.menu.getUnlockedPages();
-        drawMiniButton(guiGraphics, x + 98, y + 127, 14, 10, "◀", curPage > 1 ? 0xFFFFCC44 : 0xFF555566, mouseX, mouseY);
-        String pageLabel = curPage + "/" + maxPages;
-        int pw = this.font.width(pageLabel);
-        guiGraphics.drawString(this.font, pageLabel, x + 134 - pw / 2, y + 128, maxPages > 1 ? 0xFFFFCC44 : 0xFF9999AA, false);
-        drawMiniButton(guiGraphics, x + 156, y + 127, 14, 10, "▶", curPage < maxPages ? 0xFFFFCC44 : 0xFF555566, mouseX, mouseY);
+        // Page navigation controls OR Quantum Link Channel Controls (between storage grid and player inventory: y + 127..137)
+        if (this.menu.isQuantumLinked()) {
+            DyeColor qColor = this.menu.getQuantumColor();
+            int rgb = 0xFF000000 | QuantumLinkModuleItem.getChannelRgb(qColor);
+            drawMiniButton(guiGraphics, x + 64, y + 127, 10, 10, "<", 0xFFD088FF, mouseX, mouseY);
+            guiGraphics.fill(x + 75, y + 127, x + 87, y + 137, 0xFF000000);
+            guiGraphics.fill(x + 76, y + 128, x + 86, y + 136, rgb);
+            drawMiniButton(guiGraphics, x + 88, y + 127, 10, 10, ">", 0xFFD088FF, mouseX, mouseY);
+
+            drawMiniButton(guiGraphics, x + 101, y + 127, 12, 10, "--", 0xFF77AADD, mouseX, mouseY);
+            drawMiniButton(guiGraphics, x + 114, y + 127, 10, 10, "-", 0xFF99CCFF, mouseX, mouseY);
+            String chLabel = "#" + this.menu.getQuantumChannel();
+            int chw = this.font.width(chLabel);
+            guiGraphics.drawString(this.font, chLabel, x + 139 - chw / 2, y + 128, 0xFFE6C8FF, false);
+            drawMiniButton(guiGraphics, x + 154, y + 127, 10, 10, "+", 0xFF99CCFF, mouseX, mouseY);
+            drawMiniButton(guiGraphics, x + 165, y + 127, 12, 10, "++", 0xFF77AADD, mouseX, mouseY);
+
+            boolean priv = this.menu.isQuantumPrivate();
+            drawMiniButton(guiGraphics, x + 179, y + 127, 23, 10, priv ? "PRV" : "PUB", priv ? 0xFFFF6688 : 0xFF66FFAA, mouseX, mouseY);
+        } else {
+            int curPage = this.menu.getCurrentPage() + 1;
+            int maxPages = this.menu.getUnlockedPages();
+            drawMiniButton(guiGraphics, x + 98, y + 127, 14, 10, "◀", curPage > 1 ? 0xFFFFCC44 : 0xFF555566, mouseX, mouseY);
+            String pageLabel = curPage + "/" + maxPages;
+            int pw = this.font.width(pageLabel);
+            guiGraphics.drawString(this.font, pageLabel, x + 134 - pw / 2, y + 128, maxPages > 1 ? 0xFFFFCC44 : 0xFF9999AA, false);
+            drawMiniButton(guiGraphics, x + 156, y + 127, 14, 10, "▶", curPage < maxPages ? 0xFFFFCC44 : 0xFF555566, mouseX, mouseY);
+        }
 
         // Universal Flex Module sidebar background (x: 174..200, y: 16..126)
         guiGraphics.fill(x + 174, y + 16, x + 200, y + 126, 0xFF1A1322);
@@ -133,24 +155,40 @@ public class VolcaniteModularChestScreen extends AbstractContainerScreen<Volcani
                 return true;
             }
 
-            // Prev Page (x + 98..112, y + 127..137)
-            if (mouseX >= x + 98 && mouseX < x + 112 && mouseY >= y + 127 && mouseY < y + 137) {
-                int cur = this.menu.getCurrentPage();
-                if (cur > 0) {
-                    this.menu.setCurrentPageClient(cur - 1);
-                    this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, VolcaniteModularChestMenu.BTN_PREV_PAGE);
-                }
-                return true;
-            }
+            if (this.menu.isQuantumLinked() && button == 0 && mouseY >= y + 127 && mouseY < y + 137) {
+                int qBtn = -1;
+                if (mouseX >= x + 64 && mouseX < x + 74) qBtn = VolcaniteModularChestMenu.BTN_Q_PREV_COLOR;
+                else if (mouseX >= x + 88 && mouseX < x + 98) qBtn = VolcaniteModularChestMenu.BTN_Q_NEXT_COLOR;
+                else if (mouseX >= x + 101 && mouseX < x + 113) qBtn = VolcaniteModularChestMenu.BTN_Q_DEC_10;
+                else if (mouseX >= x + 114 && mouseX < x + 124) qBtn = VolcaniteModularChestMenu.BTN_Q_DEC_1;
+                else if (mouseX >= x + 154 && mouseX < x + 164) qBtn = VolcaniteModularChestMenu.BTN_Q_INC_1;
+                else if (mouseX >= x + 165 && mouseX < x + 177) qBtn = VolcaniteModularChestMenu.BTN_Q_INC_10;
+                else if (mouseX >= x + 179 && mouseX < x + 202) qBtn = VolcaniteModularChestMenu.BTN_Q_TOGGLE_PRIVATE;
 
-            // Next Page (x + 156..170, y + 127..137)
-            if (mouseX >= x + 156 && mouseX < x + 170 && mouseY >= y + 127 && mouseY < y + 137) {
-                int cur = this.menu.getCurrentPage();
-                if (cur + 1 < this.menu.getUnlockedPages()) {
-                    this.menu.setCurrentPageClient(cur + 1);
-                    this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, VolcaniteModularChestMenu.BTN_NEXT_PAGE);
+                if (qBtn >= 0) {
+                    this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, qBtn);
+                    return true;
                 }
-                return true;
+            } else {
+                // Prev Page (x + 98..112, y + 127..137)
+                if (mouseX >= x + 98 && mouseX < x + 112 && mouseY >= y + 127 && mouseY < y + 137) {
+                    int cur = this.menu.getCurrentPage();
+                    if (cur > 0) {
+                        this.menu.setCurrentPageClient(cur - 1);
+                        this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, VolcaniteModularChestMenu.BTN_PREV_PAGE);
+                    }
+                    return true;
+                }
+
+                // Next Page (x + 156..170, y + 127..137)
+                if (mouseX >= x + 156 && mouseX < x + 170 && mouseY >= y + 127 && mouseY < y + 137) {
+                    int cur = this.menu.getCurrentPage();
+                    if (cur + 1 < this.menu.getUnlockedPages()) {
+                        this.menu.setCurrentPageClient(cur + 1);
+                        this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, VolcaniteModularChestMenu.BTN_NEXT_PAGE);
+                    }
+                    return true;
+                }
             }
         }
 
@@ -219,7 +257,8 @@ public class VolcaniteModularChestScreen extends AbstractContainerScreen<Volcani
                             Component.literal("  §6• Compactor / Precision Compactor: §7Auto-crafts 3×3 & 2×2 items"),
                             Component.literal("  §5• Void / Selective Void Upgrade: §7Voids overflow or chosen items"),
                             Component.literal("  §a• Logistics Module: §7Auto-pulls outputs from machine above"),
-                            Component.literal("  §e• Overclock Upgrade: §72×/4×/8× module speed & range")
+                            Component.literal("  §e• Overclock Upgrade: §72×/4×/8× module speed & range"),
+                            Component.literal("  §d• Quantum Link: §7Empty all local storage pages before installing")
                     ), mouseX, mouseY);
                 }
             }

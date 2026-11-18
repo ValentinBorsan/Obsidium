@@ -36,6 +36,20 @@ Run `./gradlew remapJar`. The installable jar is written to `build/libs/obsidium
 
 GitHub Actions builds the project on pushes and pull requests and uploads the jars as a workflow artifact.
 
+## Tests
+
+Run `./gradlew build --offline --no-daemon` for JVM regressions, and `python3 scripts/runtime-tests.py` for isolated Fabric server checks covering pumping, Quantum chests and compaction. See [TESTING.md](TESTING.md) for prerequisites, reports and the Prism/multiplayer checklist.
+
+## Progression
+
+The default progression uses a thermal early game, a processing and automation mid game, and boss-gated rare renewal / Supreme technology in late game. See [the progression notes](docs/PROGRESIE_EARLY_MID_LATE.md) for changed recipes, modpack tuning and obtainability checks.
+
 ## License
 
-Obsidium is distributed under CC0 1.0 Universal. See [LICENSE](LICENSE).
+Obsidium uses the **MIT License** for new project-author contributions. See [LICENSE](LICENSE). Earlier releases and material distributed under CC0 retain their CC0 permissions; see [license history](LICENSE-HISTORY.md).
+
+### Mythic Rails — addon separat
+
+Mythic Rails adaugă cartul de marfă Hermes cu 54 de sloturi și stații automate
+de încărcare/descărcare cu GUI, șine proprii și o locomotivă cu combustibil.
+[Instalare, teste și etape următoare](addons/mythic_rails/README.md).

@@ -19,8 +19,6 @@ public class VolcanitePipeModuleScreen extends AbstractContainerScreen<Volcanite
     private Button syncAllButton;
     private Button toggleModeButton;
     private Button toggleTypeButton;
-    private Button priorityDownButton;
-    private Button priorityUpButton;
     private Button routingModeButton;
     private Button redstoneModeButton;
     private Button toggleFilterModeButton;
@@ -61,9 +59,9 @@ public class VolcanitePipeModuleScreen extends AbstractContainerScreen<Volcanite
                 .bounds(x + 90, y + 33, 78, 16).build());
 
         // Row 3 (y+74): Priority (-/+), Routing (RR/NEAR), Redstone Mode
-        this.priorityDownButton = this.addRenderableWidget(Button.builder(Component.literal("-"), b -> clickMenuBtn(4))
+        this.addRenderableWidget(Button.builder(Component.literal("-"), b -> clickMenuBtn(4))
                 .bounds(x + 8, y + 74, 14, 15).build());
-        this.priorityUpButton = this.addRenderableWidget(Button.builder(Component.literal("+"), b -> clickMenuBtn(5))
+        this.addRenderableWidget(Button.builder(Component.literal("+"), b -> clickMenuBtn(5))
                 .bounds(x + 47, y + 74, 14, 15).build());
         this.routingModeButton = this.addRenderableWidget(Button.builder(Component.literal("NEAR"), b -> clickMenuBtn(6))
                 .bounds(x + 63, y + 74, 52, 15).build());

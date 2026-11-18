@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "VPV",
+    "PBP",
+    "VPV"
+  ],
+  "key": {
+    "V": { "item": "obsidium:volcanic_alloy" },
+    "P": { "item": "minecraft:prismarine_bricks" },
+    "B": { "item": "obsidium:supreme_naiad_fluid_pipe" }
+  },
+  "result": {
+    "id": "obsidium:poseidon_abyssal_casing",
+    "count": 4
+  }
+}

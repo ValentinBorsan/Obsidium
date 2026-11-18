@@ -871,6 +871,8 @@ public class ObsidiumMod implements ModInitializer {
 		new net.valentin.obsidium.item.VolcaniteVoidUpgradeItem(new Item.Properties().stacksTo(16).fireResistant()));
 	public static final Item VOLCANITE_FILTERED_VOID_UPGRADE = registerItem("volcanite_filtered_void_upgrade",
 		new net.valentin.obsidium.item.VolcaniteFilteredVoidUpgradeItem(new Item.Properties().stacksTo(16).fireResistant()));
+	public static final Item QUANTUM_LINK_MODULE = registerItem("quantum_link_module",
+		new net.valentin.obsidium.item.QuantumLinkModuleItem(new Item.Properties().stacksTo(16).rarity(net.minecraft.world.item.Rarity.RARE).fireResistant()));
 
 	public static final Item VOLCANITE_OVERCLOCK_UPGRADE = registerItem("volcanite_overclock_upgrade",
 		new net.valentin.obsidium.item.VolcaniteOverclockUpgradeItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.UNCOMMON), 1, 2.0f, 1.75f));
@@ -937,6 +939,9 @@ public class ObsidiumMod implements ModInitializer {
 
 	public static final Block VOLCANITE_CHUNK_LOADER = registerBlock("volcanite_chunk_loader", new net.valentin.obsidium.block.VolcaniteChunkLoaderBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK).strength(5.0f, 1200.0f).requiresCorrectToolForDrops()));
 	public static final Item VOLCANITE_CHUNK_LOADER_ITEM = registerItem("volcanite_chunk_loader", new BlockItem(VOLCANITE_CHUNK_LOADER, new Item.Properties().fireResistant()));
+
+	public static final Block AEGIS_SANCTUARY_WARD = registerBlock("aegis_sanctuary_ward", new net.valentin.obsidium.block.AegisSanctuaryWardBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK).strength(4.5f, 1200.0f).requiresCorrectToolForDrops().lightLevel(s -> s.getValue(net.valentin.obsidium.block.AegisSanctuaryWardBlock.LIT) ? 10 : 0)));
+	public static final Item AEGIS_SANCTUARY_WARD_ITEM = registerItem("aegis_sanctuary_ward", new BlockItem(AEGIS_SANCTUARY_WARD, new Item.Properties().fireResistant()));
 
 	public static final Block VOLCANITE_GENERATOR_BLOCK = registerBlock("volcanite_generator", 
 		new net.valentin.obsidium.block.VolcaniteGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK).strength(5.0f, 1200.0f).requiresCorrectToolForDrops()));
@@ -1018,14 +1023,34 @@ public class ObsidiumMod implements ModInitializer {
 		new BlockItem(VOLCANITE_UNIVERSAL_CONDUIT_BLOCK, new Item.Properties()));
 
 	public static final Block NAIAD_FLUID_PIPE_BLOCK = registerBlock("naiad_fluid_pipe", 
-		new net.valentin.obsidium.block.NaiadFluidPipeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+		new net.valentin.obsidium.block.NaiadFluidPipeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion(), 1, 250L));
 	public static final Item NAIAD_FLUID_PIPE_ITEM = registerItem("naiad_fluid_pipe", 
 		new BlockItem(NAIAD_FLUID_PIPE_BLOCK, new Item.Properties()));
 
+	public static final Block ADVANCED_NAIAD_FLUID_PIPE_BLOCK = registerBlock("advanced_naiad_fluid_pipe",
+		new net.valentin.obsidium.block.NaiadFluidPipeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion(), 2, 1_000L));
+	public static final Item ADVANCED_NAIAD_FLUID_PIPE_ITEM = registerItem("advanced_naiad_fluid_pipe",
+		new BlockItem(ADVANCED_NAIAD_FLUID_PIPE_BLOCK, new Item.Properties()));
+
+	public static final Block SUPREME_NAIAD_FLUID_PIPE_BLOCK = registerBlock("supreme_naiad_fluid_pipe",
+		new net.valentin.obsidium.block.NaiadFluidPipeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion(), 3, 4_000L));
+	public static final Item SUPREME_NAIAD_FLUID_PIPE_ITEM = registerItem("supreme_naiad_fluid_pipe",
+		new BlockItem(SUPREME_NAIAD_FLUID_PIPE_BLOCK, new Item.Properties()));
+
 	public static final Block HERMES_ITEM_PIPE_BLOCK = registerBlock("hermes_item_pipe", 
-		new net.valentin.obsidium.block.HermesItemPipeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+		new net.valentin.obsidium.block.HermesItemPipeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion(), 1, 8, 5));
 	public static final Item HERMES_ITEM_PIPE_ITEM = registerItem("hermes_item_pipe", 
 		new BlockItem(HERMES_ITEM_PIPE_BLOCK, new Item.Properties()));
+
+	public static final Block ADVANCED_HERMES_ITEM_PIPE_BLOCK = registerBlock("advanced_hermes_item_pipe",
+		new net.valentin.obsidium.block.HermesItemPipeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion(), 2, 16, 3));
+	public static final Item ADVANCED_HERMES_ITEM_PIPE_ITEM = registerItem("advanced_hermes_item_pipe",
+		new BlockItem(ADVANCED_HERMES_ITEM_PIPE_BLOCK, new Item.Properties()));
+
+	public static final Block SUPREME_HERMES_ITEM_PIPE_BLOCK = registerBlock("supreme_hermes_item_pipe",
+		new net.valentin.obsidium.block.HermesItemPipeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion(), 3, 64, 1));
+	public static final Item SUPREME_HERMES_ITEM_PIPE_ITEM = registerItem("supreme_hermes_item_pipe",
+		new BlockItem(SUPREME_HERMES_ITEM_PIPE_BLOCK, new Item.Properties()));
 		
 	public static final Block VOLCANITE_ENERGY_CELL_BLOCK = registerBlock("volcanite_energy_cell", 
 		new net.valentin.obsidium.block.VolcaniteEnergyCellBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
@@ -1466,6 +1491,12 @@ public class ObsidiumMod implements ModInitializer {
 			BlockEntityType.Builder.of(net.valentin.obsidium.block.VolcaniteChunkLoaderBlockEntity::new, VOLCANITE_CHUNK_LOADER).build(null)
 	);
 
+	public static final BlockEntityType<net.valentin.obsidium.block.AegisSanctuaryWardBlockEntity> AEGIS_SANCTUARY_WARD_BE = Registry.register(
+			BuiltInRegistries.BLOCK_ENTITY_TYPE,
+			ResourceLocation.fromNamespaceAndPath(MOD_ID, "aegis_sanctuary_ward_be"),
+			BlockEntityType.Builder.of(net.valentin.obsidium.block.AegisSanctuaryWardBlockEntity::new, AEGIS_SANCTUARY_WARD).build(null)
+	);
+
 	public static final BlockEntityType<VolcaniteGeneratorBlockEntity> VOLCANITE_GENERATOR_BE = Registry.register(
 			BuiltInRegistries.BLOCK_ENTITY_TYPE,
 			ResourceLocation.fromNamespaceAndPath(MOD_ID, "volcanite_generator_be"),
@@ -1528,13 +1559,15 @@ public class ObsidiumMod implements ModInitializer {
 	public static final BlockEntityType<net.valentin.obsidium.block.NaiadFluidPipeBlockEntity> NAIAD_FLUID_PIPE_BE = Registry.register(
 			BuiltInRegistries.BLOCK_ENTITY_TYPE,
 			ResourceLocation.fromNamespaceAndPath(MOD_ID, "naiad_fluid_pipe_be"),
-			BlockEntityType.Builder.of(net.valentin.obsidium.block.NaiadFluidPipeBlockEntity::new, NAIAD_FLUID_PIPE_BLOCK).build(null)
+			BlockEntityType.Builder.of(net.valentin.obsidium.block.NaiadFluidPipeBlockEntity::new,
+					NAIAD_FLUID_PIPE_BLOCK, ADVANCED_NAIAD_FLUID_PIPE_BLOCK, SUPREME_NAIAD_FLUID_PIPE_BLOCK).build(null)
 	);
 
 	public static final BlockEntityType<net.valentin.obsidium.block.HermesItemPipeBlockEntity> HERMES_ITEM_PIPE_BE = Registry.register(
 			BuiltInRegistries.BLOCK_ENTITY_TYPE,
 			ResourceLocation.fromNamespaceAndPath(MOD_ID, "hermes_item_pipe_be"),
-			BlockEntityType.Builder.of(net.valentin.obsidium.block.HermesItemPipeBlockEntity::new, HERMES_ITEM_PIPE_BLOCK).build(null)
+			BlockEntityType.Builder.of(net.valentin.obsidium.block.HermesItemPipeBlockEntity::new,
+					HERMES_ITEM_PIPE_BLOCK, ADVANCED_HERMES_ITEM_PIPE_BLOCK, SUPREME_HERMES_ITEM_PIPE_BLOCK).build(null)
 	);
 	
 	public static final BlockEntityType<net.valentin.obsidium.block.VolcaniteLavaPumpBlockEntity> VOLCANITE_LAVA_PUMP_BE = Registry.register(
@@ -1922,6 +1955,12 @@ public class ObsidiumMod implements ModInitializer {
 			new MenuType<>(net.valentin.obsidium.block.LiquidTankMenu::new, FeatureFlags.VANILLA_SET)
 	);
 
+	public static final MenuType<net.valentin.obsidium.block.PipeConfigMenu> PIPE_CONFIG_MENU = Registry.register(
+			BuiltInRegistries.MENU,
+			ResourceLocation.fromNamespaceAndPath(MOD_ID, "pipe_config"),
+			new MenuType<>(net.valentin.obsidium.block.PipeConfigMenu::new, FeatureFlags.VANILLA_SET)
+	);
+
 	public static final MenuType<net.valentin.obsidium.block.CreativeWaterTankMenu> CREATIVE_WATER_TANK_MENU = Registry.register(
 			BuiltInRegistries.MENU,
 			ResourceLocation.fromNamespaceAndPath(MOD_ID, "creative_water_tank_menu"),
@@ -2169,6 +2208,71 @@ public class ObsidiumMod implements ModInitializer {
 		BuiltInRegistries.MENU,
 		ResourceLocation.fromNamespaceAndPath(MOD_ID, "olympian_hadron_collider_menu"),
 		new MenuType<>(net.valentin.obsidium.block.OlympianHadronColliderMenu::new, FeatureFlags.VANILLA_SET)
+	);
+
+	// Poseidon Abyssal Pump (2x2x2 End-Game Fluid Extractor Multiblock)
+	public static final Block POSEIDON_ABYSSAL_PUMP_BLOCK = registerBlock("poseidon_abyssal_pump",
+		new net.valentin.obsidium.block.PoseidonAbyssalPumpBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK)
+			.strength(5.0f, 1500.0f).lightLevel(s -> s.getValue(net.valentin.obsidium.block.PoseidonAbyssalPumpBlock.FORMED) ? 12 : 4)));
+	public static final Item POSEIDON_ABYSSAL_PUMP_ITEM = registerItem("poseidon_abyssal_pump",
+		new BlockItem(POSEIDON_ABYSSAL_PUMP_BLOCK, new Item.Properties().fireResistant().rarity(net.minecraft.world.item.Rarity.EPIC)));
+
+	public static final Block POSEIDON_ABYSSAL_CASING_BLOCK = registerBlock("poseidon_abyssal_casing",
+		new net.valentin.obsidium.block.PoseidonAbyssalCasingBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK)
+			.strength(4.5f, 1200.0f).noOcclusion().lightLevel(s -> s.getValue(net.valentin.obsidium.block.PoseidonAbyssalCasingBlock.FORMED) ? 8 : 2)));
+	public static final Item POSEIDON_ABYSSAL_CASING_ITEM = registerItem("poseidon_abyssal_casing",
+		new BlockItem(POSEIDON_ABYSSAL_CASING_BLOCK, new Item.Properties().fireResistant().rarity(net.minecraft.world.item.Rarity.RARE)));
+
+	public static final BlockEntityType<net.valentin.obsidium.block.PoseidonAbyssalPumpBlockEntity> POSEIDON_ABYSSAL_PUMP_BE = Registry.register(
+		BuiltInRegistries.BLOCK_ENTITY_TYPE,
+		ResourceLocation.fromNamespaceAndPath(MOD_ID, "poseidon_abyssal_pump_be"),
+		BlockEntityType.Builder.of(net.valentin.obsidium.block.PoseidonAbyssalPumpBlockEntity::new, POSEIDON_ABYSSAL_PUMP_BLOCK).build(null)
+	);
+
+	public static final BlockEntityType<net.valentin.obsidium.block.PoseidonAbyssalCasingBlockEntity> POSEIDON_ABYSSAL_CASING_BE = Registry.register(
+		BuiltInRegistries.BLOCK_ENTITY_TYPE,
+		ResourceLocation.fromNamespaceAndPath(MOD_ID, "poseidon_abyssal_casing_be"),
+		BlockEntityType.Builder.of(net.valentin.obsidium.block.PoseidonAbyssalCasingBlockEntity::new, POSEIDON_ABYSSAL_CASING_BLOCK).build(null)
+	);
+
+	public static final MenuType<net.valentin.obsidium.block.PoseidonAbyssalPumpMenu> POSEIDON_ABYSSAL_PUMP_MENU = Registry.register(
+		BuiltInRegistries.MENU,
+		ResourceLocation.fromNamespaceAndPath(MOD_ID, "poseidon_abyssal_pump_menu"),
+		new MenuType<>(net.valentin.obsidium.block.PoseidonAbyssalPumpMenu::new, FeatureFlags.VANILLA_SET)
+	);
+
+	public static final MenuType<net.valentin.obsidium.block.AegisSanctuaryWardMenu> AEGIS_SANCTUARY_WARD_MENU = Registry.register(
+		BuiltInRegistries.MENU,
+		ResourceLocation.fromNamespaceAndPath(MOD_ID, "aegis_sanctuary_ward_menu"),
+		new MenuType<>(net.valentin.obsidium.block.AegisSanctuaryWardMenu::new, FeatureFlags.VANILLA_SET)
+	);
+
+	public static final Block AMBROSIA_FEEDER = registerBlock("ambrosia_feeder",
+		new net.valentin.obsidium.block.AmbrosiaFeederBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK).strength(4.0f, 1200.0f).requiresCorrectToolForDrops()));
+	public static final Item AMBROSIA_FEEDER_ITEM = registerItem("ambrosia_feeder", new BlockItem(AMBROSIA_FEEDER, new Item.Properties().fireResistant()));
+	public static final BlockEntityType<net.valentin.obsidium.block.AmbrosiaFeederBlockEntity> AMBROSIA_FEEDER_BE = Registry.register(
+		BuiltInRegistries.BLOCK_ENTITY_TYPE,
+		ResourceLocation.fromNamespaceAndPath(MOD_ID, "ambrosia_feeder_be"),
+		BlockEntityType.Builder.of(net.valentin.obsidium.block.AmbrosiaFeederBlockEntity::new, AMBROSIA_FEEDER).build(null)
+	);
+	public static final MenuType<net.valentin.obsidium.block.AmbrosiaFeederMenu> AMBROSIA_FEEDER_MENU = Registry.register(
+		BuiltInRegistries.MENU,
+		ResourceLocation.fromNamespaceAndPath(MOD_ID, "ambrosia_feeder_menu"),
+		new MenuType<>(net.valentin.obsidium.block.AmbrosiaFeederMenu::new, FeatureFlags.VANILLA_SET)
+	);
+
+	public static final Block PAN_HARVESTER = registerBlock("pan_pastoral_harvester",
+		new net.valentin.obsidium.block.PanHarvesterBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK).strength(4.0f, 1200.0f).requiresCorrectToolForDrops()));
+	public static final Item PAN_HARVESTER_ITEM = registerItem("pan_pastoral_harvester", new BlockItem(PAN_HARVESTER, new Item.Properties().fireResistant()));
+	public static final BlockEntityType<net.valentin.obsidium.block.PanHarvesterBlockEntity> PAN_HARVESTER_BE = Registry.register(
+		BuiltInRegistries.BLOCK_ENTITY_TYPE,
+		ResourceLocation.fromNamespaceAndPath(MOD_ID, "pan_pastoral_harvester_be"),
+		BlockEntityType.Builder.of(net.valentin.obsidium.block.PanHarvesterBlockEntity::new, PAN_HARVESTER).build(null)
+	);
+	public static final MenuType<net.valentin.obsidium.block.PanHarvesterMenu> PAN_HARVESTER_MENU = Registry.register(
+		BuiltInRegistries.MENU,
+		ResourceLocation.fromNamespaceAndPath(MOD_ID, "pan_pastoral_harvester_menu"),
+		new MenuType<>(net.valentin.obsidium.block.PanHarvesterMenu::new, FeatureFlags.VANILLA_SET)
 	);
 
 	// Advanced Volcanite Quantum Teleporter Pads

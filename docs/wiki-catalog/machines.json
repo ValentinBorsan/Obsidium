@@ -4,7 +4,7 @@
   "title": "Machines & Generators",
   "note": "Images are copied from game textures; machine and block images use a representative face. Crafting recipes may be overridden by modpacks. Machine crafting recipes describe how to build the machine, not its processing recipes.",
   "scope": "Processing machines, generators, industrial controllers, pumps, botanical automation and craftable multiblock components. Storage, transport, ritual blocks and hidden formed parts are covered separately.",
-  "count": 44,
+  "count": 46,
   "items": [
     {
       "id": "obsidium:advanced_dionysian_press",
@@ -301,6 +301,82 @@
       ],
       "acquisition": [],
       "source": "src/main/java/net/valentin/obsidium/block/AeolusStormTurbineBlockEntity.java"
+    },
+    {
+      "id": "obsidium:ambrosia_feeder",
+      "name": "Ambrosia Pastoral Feeder",
+      "image": "assets/catalog-icons/obsidium/ambrosia_feeder.png",
+      "imageKind": "block texture",
+      "group": "Pastoral automation",
+      "description": "Feeds animals using species food, grows babies, shears sheep and collects eggs in a 9×4×9 area. Redstone pauses operation.",
+      "recipes": [
+        {
+          "id": "obsidium:ambrosia_feeder",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:ambrosia_feeder",
+            "name": "Ambrosia Pastoral Feeder",
+            "image": "assets/catalog-icons/obsidium/ambrosia_feeder.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/ambrosia_feeder.json",
+          "json": "assets/catalog-recipes/ambrosia_feeder.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "GHG",
+            "VCV",
+            "OOO"
+          ],
+          "key": {
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "H": {
+              "item": {
+                "id": "minecraft:hay_block",
+                "name": "Hay Bale",
+                "image": "assets/catalog-icons/minecraft/hay_block.png",
+                "imageKind": "block texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:chest",
+                "name": "Chest",
+                "image": "assets/catalog-icons/minecraft/chest.png",
+                "imageKind": "block texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/AmbrosiaFeederBlockEntity.java"
     },
     {
       "id": "obsidium:apollo_solar_generator",
@@ -2433,6 +2509,82 @@
       ],
       "acquisition": [],
       "source": "src/main/java/net/valentin/obsidium/block/OlympianHadronColliderBlockEntity.java"
+    },
+    {
+      "id": "obsidium:pan_pastoral_harvester",
+      "name": "Pan's Pastoral Harvester",
+      "image": "assets/catalog-icons/obsidium/pan_pastoral_harvester.png",
+      "imageKind": "block texture",
+      "group": "Pastoral automation",
+      "description": "Harvests surplus tagged livestock in a 9×4×9 area, preserving named, baby and tamed animals. Uses 1,200 RF per successful hit and pauses when products are queued. Exports do not require a harvest-energy reserve.",
+      "recipes": [
+        {
+          "id": "obsidium:pan_pastoral_harvester",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:pan_pastoral_harvester",
+            "name": "Pan's Pastoral Harvester",
+            "image": "assets/catalog-icons/obsidium/pan_pastoral_harvester.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/pan_pastoral_harvester.json",
+          "json": "assets/catalog-recipes/pan_pastoral_harvester.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "GSG",
+            "VCV",
+            "OOO"
+          ],
+          "key": {
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "S": {
+              "item": {
+                "id": "minecraft:iron_sword",
+                "name": "Iron Sword",
+                "image": "assets/catalog-icons/minecraft/iron_sword.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "minecraft:hopper",
+                "name": "Hopper",
+                "image": "assets/catalog-icons/minecraft/hopper.png",
+                "imageKind": "item texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/PanHarvesterBlockEntity.java"
     },
     {
       "id": "obsidium:poseidon_abyssal_casing",

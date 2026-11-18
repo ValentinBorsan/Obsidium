@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LAL",
+    "GCG",
+    "LSL"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:oak_leaves"
+    },
+    "A": {
+      "item": "minecraft:iron_axe"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "minecraft:composter"
+    },
+    "S": {
+      "item": "minecraft:oak_sapling"
+    }
+  },
+  "result": {
+    "id": "mythic_rails:arborist_module",
+    "count": 1
+  }
+}

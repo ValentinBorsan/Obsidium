@@ -9,6 +9,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -24,13 +25,16 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
 import net.valentin.obsidium.ObsidiumMod;
+import net.valentin.obsidium.item.QuantumLinkModuleItem;
 import net.valentin.obsidium.item.VolcaniteBottleItem;
+import net.valentin.obsidium.item.VolcaniteWrenchItem;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.world.item.TooltipFlag;
@@ -39,12 +43,13 @@ import net.minecraft.network.chat.Component;
 
 public class VolcanicWoodLiquidBarrelBlock extends LiquidTankBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final BooleanProperty LINKED = BooleanProperty.create("linked");
     private final boolean reinforced;
 
     public VolcanicWoodLiquidBarrelBlock(Properties properties, boolean reinforced) {
         super(properties);
         this.reinforced = reinforced;
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(LINKED, false));
     }
 
     public VolcanicWoodLiquidBarrelBlock(Properties properties) {
@@ -53,13 +58,13 @@ public class VolcanicWoodLiquidBarrelBlock extends LiquidTankBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, LINKED);
     }
 
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(LINKED, false);
     }
 
     @Override
@@ -86,6 +91,40 @@ public class VolcanicWoodLiquidBarrelBlock extends LiquidTankBlock {
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof LiquidTankBlockEntity tank) {
+            // 0. Quantum Link Module install / Dye recolor / Wrench unlink
+            if (stack.is(ObsidiumMod.QUANTUM_LINK_MODULE) && !tank.isQuantumLinked()) {
+                if (!level.isClientSide()) {
+                    tank.setQuantumLinked(true, player.getUUID());
+                    if (!player.isCreative()) {
+                        stack.shrink(1);
+                    }
+                    level.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.0F, 1.2F);
+                    player.displayClientMessage(Component.literal("§d[Quantum Barrel] §aLinked to Channel #" + tank.getQuantumChannel() + " (" + QuantumLinkModuleItem.getColorDisplayName(tank.getQuantumColor()) + ", " + (tank.isQuantumPrivate() ? "Private" : "Public") + ")"), true);
+                }
+                return ItemInteractionResult.sidedSuccess(level.isClientSide());
+            }
+            if (tank.isQuantumLinked() && stack.getItem() instanceof DyeItem dyeItem) {
+                if (!level.isClientSide()) {
+                    tank.ensureQuantumOwner(player.getUUID());
+                    tank.setQuantumColor(dyeItem.getDyeColor());
+                    if (!player.isCreative()) {
+                        stack.shrink(1);
+                    }
+                    level.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    player.displayClientMessage(Component.literal("§d[Quantum Barrel] §fColor set to §e" + QuantumLinkModuleItem.getColorDisplayName(dyeItem.getDyeColor()) + " §7(Ch #" + tank.getQuantumChannel() + ")"), true);
+                }
+                return ItemInteractionResult.sidedSuccess(level.isClientSide());
+            }
+            if (tank.isQuantumLinked() && player.isShiftKeyDown() && VolcaniteWrenchItem.isWrench(stack)) {
+                if (!level.isClientSide()) {
+                    tank.setQuantumLinked(false, null);
+                    Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, new ItemStack(ObsidiumMod.QUANTUM_LINK_MODULE));
+                    level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_NETHERITE.value(), SoundSource.BLOCKS, 0.9F, 1.1F);
+                    player.displayClientMessage(Component.literal("§d[Quantum Barrel] §eQuantum Link Module removed!"), true);
+                }
+                return ItemInteractionResult.sidedSuccess(level.isClientSide());
+            }
+
             // 1. Water Bucket Insert
             if (stack.is(Items.WATER_BUCKET)) {
                 if (tank.canAccept(FluidVariant.of(Fluids.WATER)) && tank.getFluidAmount() + 1000 <= tank.getMaxCapacity()) {
@@ -225,7 +264,7 @@ public class VolcanicWoodLiquidBarrelBlock extends LiquidTankBlock {
             // 7. Empty Bucket Extract (1000 mB)
             else if (stack.is(Items.BUCKET) && tank.getFluidAmount() >= 1000 && !tank.getStoredFluid().isBlank()) {
                 Fluid fluid = tank.getStoredFluid().getFluid();
-                Item bucketItem = fluid.getBucket();
+                Item bucketItem = net.valentin.obsidium.fluid.FluidBucketMapping.filledBucket(tank.getStoredFluid());
                 if (bucketItem != null && bucketItem != Items.AIR) {
                     if (!level.isClientSide()) {
                         tank.extractFluid(tank.getStoredFluid(), 1000, false);
@@ -244,7 +283,7 @@ public class VolcanicWoodLiquidBarrelBlock extends LiquidTankBlock {
                 }
             }
             // 8. Empty Glass Bottle Extract (250 mB)
-            else if (stack.is(Items.GLASS_BOTTLE) && tank.getFluidAmount() >= 250 && !tank.getStoredFluid().isBlank()) {
+            else if (stack.is(Items.GLASS_BOTTLE) && tank.getFluidAmount() >= 250 && !tank.getStoredFluid().isBlank() && !tank.getStoredFluid().hasComponents()) {
                 Fluid fluid = tank.getStoredFluid().getFluid();
                 ItemStack result = ItemStack.EMPTY;
                 if (fluid == Fluids.WATER) {
@@ -277,6 +316,7 @@ public class VolcanicWoodLiquidBarrelBlock extends LiquidTankBlock {
         if (!level.isClientSide()) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof LiquidTankBlockEntity tank) {
+                tank.ensureQuantumOwner(player.getUUID());
                 player.openMenu(tank);
             }
         }
@@ -315,6 +355,9 @@ public class VolcanicWoodLiquidBarrelBlock extends LiquidTankBlock {
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!state.is(newState.getBlock())) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
+            if (blockEntity instanceof LiquidTankBlockEntity tank && tank.isQuantumLinked()) {
+                Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, new ItemStack(ObsidiumMod.QUANTUM_LINK_MODULE));
+            }
             if (blockEntity instanceof InventoryHolder holder) {
                 Containers.dropContents(level, pos, holder.getInventory());
             }

@@ -1,76 +1,19 @@
 {
-    "textures": {
-        "pipe": "obsidium:block/naiad_fluid_pipe"
-    },
-    "elements": [
-        {
-            "from": [
-                5,
-                0,
-                5
-            ],
-            "to": [
-                11,
-                5,
-                11
-            ],
-            "faces": {
-                "down": {
-                    "uv": [
-                        5,
-                        5,
-                        11,
-                        11
-                    ],
-                    "texture": "#pipe",
-                    "cullface": "down"
-                },
-                "up": {
-                    "uv": [
-                        5,
-                        5,
-                        11,
-                        11
-                    ],
-                    "texture": "#pipe"
-                },
-                "north": {
-                    "uv": [
-                        5,
-                        5,
-                        11,
-                        11
-                    ],
-                    "texture": "#pipe"
-                },
-                "south": {
-                    "uv": [
-                        5,
-                        5,
-                        11,
-                        11
-                    ],
-                    "texture": "#pipe"
-                },
-                "west": {
-                    "uv": [
-                        5,
-                        5,
-                        11,
-                        11
-                    ],
-                    "texture": "#pipe"
-                },
-                "east": {
-                    "uv": [
-                        5,
-                        5,
-                        11,
-                        11
-                    ],
-                    "texture": "#pipe"
-                }
-            }
-        }
-    ]
+  "textures": {
+    "pipe": "obsidium:block/naiad_fluid_pipe",
+    "core": "obsidium:block/naiad_fluid_pipe_core"
+  },
+  "elements": [
+    {
+      "from": [5, 0, 5],
+      "to": [11, 5, 11],
+      "faces": {
+        "down":  { "uv": [0, 0, 16, 16], "texture": "#core", "cullface": "down" },
+        "north": { "uv": [0, 6, 16, 16], "texture": "#pipe" },
+        "south": { "uv": [0, 6, 16, 16], "texture": "#pipe" },
+        "west":  { "uv": [0, 6, 16, 16], "texture": "#pipe" },
+        "east":  { "uv": [0, 6, 16, 16], "texture": "#pipe" }
+      }
+    }
+  ]
 }

@@ -1,0 +1,29 @@
+{
+  "parent": "obsidium:odyssey/root",
+  "display": {
+    "icon": {
+      "id": "obsidium:volcanite_furnace"
+    },
+    "title": {
+      "translate": "advancement.obsidium.achievements.thermal_foundation.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.achievements.thermal_foundation.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "furnace": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "obsidium:volcanite_furnace"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 25
+  }
+}

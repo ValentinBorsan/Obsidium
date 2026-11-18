@@ -1,0 +1,31 @@
+{
+  "parent": "obsidium:odyssey/digital_nexus",
+  "display": {
+    "icon": {
+      "id": "obsidium:quantum_link_module"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.quantum_infrastructure.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.quantum_infrastructure.description"
+    },
+    "frame": "goal",
+    "show_toast": true
+  },
+  "criteria": {
+    "obtained": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:quantum_link_module"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

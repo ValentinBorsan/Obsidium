@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " R ",
+    "OCO",
+    " R "
+  ],
+  "key": {
+    "R": {
+      "item": "mythic_rails:obsidian_rail"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "C": {
+      "item": "minecraft:lever"
+    }
+  },
+  "result": {
+    "id": "mythic_rails:switch_rail",
+    "count": 4
+  }
+}

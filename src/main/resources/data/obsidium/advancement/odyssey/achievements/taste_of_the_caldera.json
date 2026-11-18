@@ -1,0 +1,31 @@
+{
+  "parent": "obsidium:odyssey/root",
+  "display": {
+    "icon": {
+      "id": "obsidium:volcanic_honey_bottle"
+    },
+    "title": {
+      "translate": "advancement.obsidium.achievements.taste_of_the_caldera.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.achievements.taste_of_the_caldera.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "drink": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "obsidium:volcanic_honey_bottle"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  }
+}

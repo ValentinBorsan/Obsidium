@@ -42,7 +42,7 @@ Use the in-game manuals, Odyssey advancements and online wiki to discover system
 
 ## Explore the wiki & item catalog
 
-Find what you need before you build: the wiki brings together **405 core items across 10 categories**, with game images, visual crafting recipes and acquisition methods.
+Find what you need before you build: the wiki brings together **408 core items across 10 categories**, with game images, visual crafting recipes and acquisition methods.
 
 - **Browse by system:** materials, machines, pipes, storage, botany, energy, equipment, building blocks, mythology and supplies.
 - **Craft at the right station:** recipe labels identify when a **Volcanite Worktable** is needed instead of the vanilla crafting table.

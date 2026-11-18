@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "mythic_rails:block/cargo_side",
+    "up": "mythic_rails:block/cargo_top",
+    "down": "mythic_rails:block/station_bottom",
+    "north": "mythic_rails:block/cargo_front",
+    "south": "mythic_rails:block/cargo_side",
+    "east": "mythic_rails:block/cargo_side",
+    "west": "mythic_rails:block/cargo_side"
+  }
+}

@@ -64,7 +64,7 @@ public class TelluricAstrolabeItem extends Item {
                     String dir = PloutonRodItem.getDirectionString(playerPos, targetPos);
 
                     player.displayClientMessage(
-                            Component.literal("§6★ [Astrolab Teluric] §cCalderă Vulcanică blocată! §e" + dist + "m §7spre §a[" + dir + "] §8(X: " + targetPos.getX() + ", Z: " + targetPos.getZ() + ")"),
+                            Component.literal("§6★ [Telluric Astrolabe] §cVolcanic Caldera locked! §e" + dist + "m §7towards §a[" + dir + "] §8(X: " + targetPos.getX() + ", Z: " + targetPos.getZ() + ")"),
                             true
                     );
                     level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.LODESTONE_COMPASS_LOCK, SoundSource.PLAYERS, 1.0F, 1.2F);
@@ -72,7 +72,7 @@ public class TelluricAstrolabeItem extends Item {
                     stack.hurtAndBreak(1, player, hand == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND);
                 } else {
                     player.displayClientMessage(
-                            Component.literal("§6[Astrolab Teluric] §cNicio Calderă Vulcanică detectată pe o rază de 6.400 blocuri."),
+                            Component.literal("§6[Telluric Astrolabe] §cNo Volcanic Caldera detected within 6,400 blocks."),
                             true
                     );
                     level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.FIRE_EXTINGUISH, SoundSource.PLAYERS, 0.8F, 1.0F);
@@ -136,17 +136,17 @@ public class TelluricAstrolabeItem extends Item {
 
         // 4. Print clean, structured output to Chat
         player.sendSystemMessage(Component.literal("§8§m--------------------------------------------------"));
-        player.sendSystemMessage(Component.literal(" §6✦ §e§lAstrolab Teluric §8— §7Cartografiere Biomi"));
-        player.sendSystemMessage(Component.literal(" §7Poziție curentă: §8X: " + playerPos.getX() + ", Z: " + playerPos.getZ()));
+        player.sendSystemMessage(Component.literal(" §6✦ §e§lTelluric Astrolabe §8— §7Biome Cartography"));
+        player.sendSystemMessage(Component.literal(" §7Current position: §8X: " + playerPos.getX() + ", Z: " + playerPos.getZ()));
         player.sendSystemMessage(Component.literal(""));
 
-        player.sendSystemMessage(Component.literal(" §6Biomi Detectați în Proximitate §8(~400 blocuri):"));
+        player.sendSystemMessage(Component.literal(" §6Nearby Biomes Detected §8(~400 blocks):"));
         int count = 0;
         for (BiomeScanEntry entry : sortedBiomes) {
             if (count++ >= 8) break; // Display top 8 closest distinct biomes
 
             Component biomeName = Component.translatable(Util.makeDescriptionId("biome", entry.id));
-            String distText = entry.distance == 0 ? "§a[Biom Curent]" : "§e" + entry.distance + "m §7spre §b[" + entry.direction + "]";
+            String distText = entry.distance == 0 ? "§a[Current Biome]" : "§e" + entry.distance + "m §7towards §b[" + entry.direction + "]";
             player.sendSystemMessage(
                     Component.literal("  §8• ").append(biomeName.copy().withStyle(ChatFormatting.YELLOW))
                             .append(Component.literal(" §8— " + distText))
@@ -161,15 +161,15 @@ public class TelluricAstrolabeItem extends Item {
             int cDist = (int) Math.sqrt(playerPos.distSqr(cPos));
             String cDir = PloutonRodItem.getDirectionString(playerPos, cPos);
 
-            player.sendSystemMessage(Component.literal(" §6★ §c§lCalderă Vulcanică §e(Zăcământ Volcanit):"));
-            player.sendSystemMessage(Component.literal("    §7Distanță: §6§l" + cDist + "m §8| §7Direcție: §a§l[" + cDir + "] §8| §7Coordonate: §8X: " + cPos.getX() + ", Z: " + cPos.getZ()));
-            player.sendSystemMessage(Component.literal("    §8(Apasă §eShift + Click Dreapta §8pentru a bloca busola către Calderă)"));
+            player.sendSystemMessage(Component.literal(" §6★ §c§lVolcanic Caldera §e(Volcanite Deposit):"));
+            player.sendSystemMessage(Component.literal("    §7Distance: §6§l" + cDist + "m §8| §7Direction: §a§l[" + cDir + "] §8| §7Coordinates: §8X: " + cPos.getX() + ", Z: " + cPos.getZ()));
+            player.sendSystemMessage(Component.literal("    §8(Use §eShift + Right-Click §8to lock compass onto the Caldera)"));
 
             // Particle trail towards Caldera
             spawnDirectionalParticles(level, playerPos, cPos);
             level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.FIRECHARGE_USE, SoundSource.PLAYERS, 0.7F, 1.1F);
         } else {
-            player.sendSystemMessage(Component.literal(" §7• §cCalderă Vulcanică: §7Nicio formațiune pe o rază de 6.400 blocuri."));
+            player.sendSystemMessage(Component.literal(" §7• §cVolcanic Caldera: §7None detected within 6,400 blocks."));
         }
 
         player.sendSystemMessage(Component.literal("§8§m--------------------------------------------------"));
@@ -231,14 +231,14 @@ public class TelluricAstrolabeItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.literal("§6Astrolab Teluric antic faurit pentru explorare:").withStyle(ChatFormatting.GOLD));
-        tooltip.add(Component.literal("§7• Click Dreapta: Scanează toți biomii apropiați (~400m)").withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.literal("§7  și localizează Caldera Vulcanică până la §66.400 blocuri§7.").withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.literal("§7• Shift + Click Dreapta: Blochează busola pe Calderă.").withStyle(ChatFormatting.GRAY));
+        tooltip.add(Component.literal("§6Ancient Telluric Astrolabe forged for exploration:").withStyle(ChatFormatting.GOLD));
+        tooltip.add(Component.literal("§7• Right-Click: Scans all nearby biomes (~400m)").withStyle(ChatFormatting.GRAY));
+        tooltip.add(Component.literal("§7  and locates Volcanic Calderas up to §66,400 blocks§7.").withStyle(ChatFormatting.GRAY));
+        tooltip.add(Component.literal("§7• Shift + Right-Click: Locks compass onto Caldera.").withStyle(ChatFormatting.GRAY));
 
         BlockPos lock = getCalderaLock(stack);
         if (lock != null) {
-            tooltip.add(Component.literal("§6★ Calderă Blocată: §eX: " + lock.getX() + ", Z: " + lock.getZ()).withStyle(ChatFormatting.LIGHT_PURPLE));
+            tooltip.add(Component.literal("§6★ Locked Caldera: §eX: " + lock.getX() + ", Z: " + lock.getZ()).withStyle(ChatFormatting.LIGHT_PURPLE));
         }
     }
 

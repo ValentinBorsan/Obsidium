@@ -91,18 +91,26 @@ public class VolcaniteEnergyWireRenderer implements BlockEntityRenderer<Volcanit
             poseStack.popPose();
         }
 
-        // Render glowing energy spark in the center of the wire if holding energy
-        if (entity.energyStorage.amount > 0) {
+        // Render colored dye band around wire center if color-isolated
+        if (entity.getPipeColor() >= 0) {
+            int rgb = net.valentin.obsidium.item.QuantumLinkModuleItem.getChannelRgb(net.minecraft.world.item.DyeColor.byId(entity.getPipeColor()));
+            int r = (rgb >> 16) & 0xFF, g = (rgb >> 8) & 0xFF, b = rgb & 0xFF;
+            poseStack.pushPose();
+            poseStack.translate(0.5, 0.5, 0.5);
+            Matrix4f matrix = poseStack.last().pose();
+            VertexConsumer consumer = bufferSource.getBuffer(RenderType.entityCutout(INSERT_TEXTURE));
+            renderBox(consumer, matrix, -0.145F, 0.145F, -0.145F, 0.145F, -0.145F, 0.145F, r, g, b, 255, 0x00F000F0, packedOverlay);
+            poseStack.popPose();
+        }
+
+        // Render glowing quantum core in the center of the wire if quantum linked
+        if (entity.isQuantumLinked()) {
             poseStack.pushPose();
             poseStack.translate(0.5, 0.5, 0.5);
             Matrix4f matrix = poseStack.last().pose();
             VertexConsumer consumer = bufferSource.getBuffer(RenderType.entityCutout(INSERT_TEXTURE));
             int glowLight = 0x00F000F0;
-            int tier = entity.getTier();
-            int sr = (tier == 3) ? 230 : (tier == 2) ? 80 : 255;
-            int sg = (tier == 3) ? 80 : (tier == 2) ? 220 : 230;
-            int sb = (tier == 3) ? 255 : (tier == 2) ? 255 : 80;
-            renderBox(consumer, matrix, -0.10F, 0.10F, -0.10F, 0.10F, -0.10F, 0.10F, sr, sg, sb, 230, glowLight, packedOverlay);
+            renderBox(consumer, matrix, -0.11F, 0.11F, -0.11F, 0.11F, -0.11F, 0.11F, 180, 75, 255, 230, glowLight, packedOverlay);
             poseStack.popPose();
         }
     }

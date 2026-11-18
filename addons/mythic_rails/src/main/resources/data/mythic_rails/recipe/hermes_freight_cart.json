@@ -1,0 +1,11 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "category":"misc",
+  "pattern":["III","CMC","III"],
+  "key":{
+    "I":{"item":"obsidium:volcanite_ingot"},
+    "C":{"item":"minecraft:chest"},
+    "M":{"item":"minecraft:minecart"}
+  },
+  "result":{"id":"mythic_rails:hermes_freight_cart","count":1}
+}

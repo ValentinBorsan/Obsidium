@@ -11,7 +11,6 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.valentin.obsidium.ObsidiumMod;
-import net.valentin.obsidium.item.VolcaniteBottleItem;
 
 public class VolcanicDistillationChamberMenu extends AbstractContainerMenu {
     private final Container container;

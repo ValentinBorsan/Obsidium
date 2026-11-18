@@ -1,0 +1,41 @@
+plugins {
+    id 'net.fabricmc.fabric-loom-remap'
+}
+version = '0.5.0'
+group = 'net.valentin'
+base { archivesName = 'obsidium-mythic-rails' }
+loom {
+    splitEnvironmentSourceSets()
+    mods {
+        mythic_rails {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+dependencies {
+    minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${rootProject.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
+    modImplementation "teamreborn:energy:4.1.0"
+}
+processResources {
+    def addonVersion = project.version
+    inputs.property 'version', addonVersion
+    filesMatching('fabric.mod.json') { expand version: addonVersion }
+}
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+tasks.withType(JavaCompile).configureEach { options.release = 21 }
+test { failOnNoDiscoveredTests = false }
+
+// Keep bundled notices consistent with the license declared in fabric.mod.json.
+jar {
+    from(rootProject.file('LICENSE')) { rename { 'LICENSE_mythic_rails' } }
+    from(rootProject.file('LICENSE-HISTORY.md'))
+    from(rootProject.file('licenses')) { into 'licenses' }
+}

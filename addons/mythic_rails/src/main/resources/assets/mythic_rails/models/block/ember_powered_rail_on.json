@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/rail_flat",
+  "textures": {
+    "rail": "mythic_rails:block/ember_powered_rail_on"
+  }
+}

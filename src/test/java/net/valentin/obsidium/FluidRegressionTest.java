@@ -25,6 +25,47 @@ final class FluidRegressionTest {
 
     static void run() {
         FluidVariant water = variant(Fluids.WATER);
+        DropletTank pumpSource = new DropletTank(81_000, 81_000);
+        DropletTank fractionalTarget = new DropletTank(40, 0);
+        check(FluidNetworkTransfers.pump(pumpSource, fractionalTarget, water, 50) == 0
+                && pumpSource.amount == 81_000 && fractionalTarget.amount == 0,
+                "Pump must not create fractional liquid");
+        DropletTank partialTarget = new DropletTank(283, 0);
+        check(FluidNetworkTransfers.pump(pumpSource, partialTarget, water, 50) == 3
+                && pumpSource.amount == 80_757 && partialTarget.amount == 243,
+                "Pump must debit exactly the whole mB accepted");
+        for (int retry = 0; retry < 20; retry++) {
+            check(FluidNetworkTransfers.pump(pumpSource, partialTarget, water, 50) == 0,
+                    "Repeated pumping filled a fractional remainder");
+        }
+        DropletTank insufficient = new DropletTank(40, 40);
+        DropletTank emptyTarget = new DropletTank(81_000, 0);
+        check(FluidNetworkTransfers.pump(insufficient, emptyTarget, water, 50) == 0
+                && insufficient.amount == 40 && emptyTarget.amount == 0,
+                "Insufficient source must roll back destination");
+        DropletTank shortSource = new DropletTank(162, 162);
+        check(FluidNetworkTransfers.pump(shortSource, emptyTarget, water, 50) == 0
+                && shortSource.amount == 162 && emptyTarget.amount == 0,
+                "Partial source debit must roll back both endpoints");
+        check(FluidNetworkTransfers.pump(pumpSource, emptyTarget, water, 50) == 50
+                && emptyTarget.amount == 4050 && pumpSource.amount == 76_707,
+                "Pump exceeded its budget or lost liquid");
+        check(FluidNetworkTransfers.pump(pumpSource, pumpSource, water, 50) == 0
+                && pumpSource.amount == 76_707, "Self pumping must be a no-op");
+        DropletTank throwingSource = new DropletTank(81_000, 81_000) {
+            @Override public long extract(FluidVariant fluid, long max, TransactionContext transaction) {
+                super.extract(fluid, max, transaction);
+                throw new IllegalStateException("Pump extraction failure");
+            }
+        };
+        try {
+            FluidNetworkTransfers.pump(throwingSource, emptyTarget, water, 50);
+            throw new AssertionError("Expected pump failure");
+        } catch (IllegalStateException expected) {
+            check(throwingSource.amount == 81_000 && emptyTarget.amount == 4050,
+                    "Pump exception must restore both endpoints");
+        }
+
         TestTank small = new TestTank(500, 0);
         check(move(List.of(small.access::transfer), water, 1000, true, false, true) == 0,
                 "An incomplete bucket deposit must fail");

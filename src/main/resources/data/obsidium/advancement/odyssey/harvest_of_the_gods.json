@@ -1,5 +1,5 @@
 {
-  "parent": "obsidium:odyssey/magmatic_smelting",
+  "parent": "obsidium:odyssey/workshop_automation",
   "display": {
     "icon": {
       "id": "obsidium:dionysian_press"

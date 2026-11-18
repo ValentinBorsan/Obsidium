@@ -2,24 +2,26 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "VSV",
-    "S#S",
-    "VSV"
+    "VNV",
+    "CSC",
+    "VNV"
   ],
   "key": {
     "V": {
-      "item": "obsidium:volcanite_ingot"
+      "item": "obsidium:supreme_volcanic_alloy"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "C": {
+      "item": "obsidium:astral_volcanic_catalyst"
     },
     "S": {
-      "item": "minecraft:netherite_scrap"
-    },
-    "#": {
       "item": "obsidium:hephaestus_volcanite_sapling"
     }
   },
   "result": {
-    "count": 2,
-    "id": "obsidium:tartarean_netherite_sapling"
+    "id": "obsidium:tartarean_netherite_sapling",
+    "count": 1
   }
 }
-

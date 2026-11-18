@@ -1,5 +1,50 @@
 # Changelog
 
+## Obsidium 1.1.1 — 2026-11-18
+
+- Adds Aegis Sanctuary Ward, Ambrosia Pastoral Feeder and Pan's Pastoral Harvester.
+- Protects named/tamed animals and babies; preserves harvest overflow across restart
+  and releases queued items when the controller is broken.
+- Fixes low-energy export, fragmented output space, breeding food and container
+  handling; aligns pastoral work areas and English/Romanian interface text.
+- Updates the catalog to 408 core items and adopts MIT for new project-author work,
+  preserving permissions for material previously distributed under CC0.
+- Validation: offline build and regression checks pass; the 1.1.1 remapped JAR
+  boots with the Prism runtime. Release record: `build/reports/release-1.1.1/summary.json`.
+- See the detailed audit-fix and licensing entries below for scope and test evidence.
+
+## Licensing — MIT Adoption — 2026-11-18
+
+- Adopted MIT for new project-author contributions; aligned core and addon metadata.
+- Preserved CC0 history and permissions for material already released under CC0.
+- Bundled the current license, history and archived CC0 text with both JARs.
+
+## Pastoral Machines — Audit Fixes — 2026-11-18
+
+- Pan now harvests only species in `obsidium:pastoral_harvestable` and excludes
+  named animals, babies, tamed pets and tamed horses. Default livestock: cows,
+  mooshrooms, pigs, sheep, chickens and rabbits.
+- Captures the selected animal's standard item-drop pipeline into storage. Overflow
+  persists across saves/restarts and blocks additional harvesting until drained;
+  breaking the controller releases pending items once. Full buffers stop harvesting.
+- Auto-export runs without a harvest-energy reserve. Output insertion merges across
+  slots atomically; failed collection leaves world item stacks intact.
+- Ambrosia uses Minecraft food tags plus `obsidium:pastoral_feed`, preserves returned
+  food containers and caches its GUI animal count. Both working areas match 9×4×9.
+- Localized pastoral GUI/tooltips in English/Romanian, clarified natural-spawn-only
+  Aegis protection and added pending-output status. Menu buttons reject invalid use.
+- Added the three blocks to the wiki; catalog coverage is now 408 explicit core items.
+- Validation: **36 pastoral checks pass**, including same-world restart, no-power
+  export, protected animals, backpressure, overflow persistence, split-stack/atomic
+  insertion, food container retention, Fabric rollback, destruction and Ward controls.
+  Evidence: `build/reports/runtime-tests/20261118-072023-543988/summary.json`.
+- Full offline build and storage/fluid/crafting regressions pass. Remapped production
+  JAR boots with Prism Java/Loader 0.16.5 and the current addon in a temporary world:
+  `build/reports/production-smoke/20261118-072202-761431/summary.json`.
+  Catalog, multiblock and locale-key checks pass. In-game visual review remains pending.
+- Loot compatibility covers `Entity.spawnAtLocation`; mods bypassing that path or
+  spawning drops asynchronously need separate compatibility checks.
+
 ## Website — Navigation & Collection Refinement — 2026-11-17
 
 - Refined the index into aligned illustrated category cards, with category search,

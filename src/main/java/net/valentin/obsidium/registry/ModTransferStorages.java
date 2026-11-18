@@ -30,6 +30,11 @@ public final class ModTransferStorages {
 			return (core != null && core.isFormed()) ? core.energyStorage : null;
 		}, KERAUNOS_HV_PORT_BLOCK);
 		EnergyStorage.SIDED.registerForBlockEntity((be, dir) -> be.energyStorage, OLYMPIAN_HADRON_COLLIDER_BE);
+		EnergyStorage.SIDED.registerForBlockEntity((be, dir) -> be.energyStorage, POSEIDON_ABYSSAL_PUMP_BE);
+		EnergyStorage.SIDED.registerForBlockEntity((be, dir) -> {
+			PoseidonAbyssalPumpBlockEntity ctrl = be.getController();
+			return ctrl != null ? ctrl.energyStorage : null;
+		}, POSEIDON_ABYSSAL_CASING_BE);
 		EnergyStorage.SIDED.registerForBlocks((level, pos, state, blockEntity, direction) -> {
 			OlympianHadronColliderBlockEntity collider = SynchrotronRingCoilBlock.findController(level, pos);
 			return (collider != null && collider.isFormed()) ? collider.energyStorage : null;
@@ -38,7 +43,7 @@ public final class ModTransferStorages {
 		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, VOLCANITE_GRINDER_BE);
 		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, VOLCANITE_FURNACE_BE);
 		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, ADVANCED_VOLCANITE_FURNACE_BE);
-		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, VOLCANITE_ENERGY_WIRE_BE);
+		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.getEnergyStorage(direction), VOLCANITE_ENERGY_WIRE_BE);
 		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.sidedEnergyStorage, HEPHAESTEAN_CHARGING_PLATE_BE);
 		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, ASTRAPE_ENERGY_PYLON_BE);
 		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, GEOTHERMAL_ARBORIST_BE);
@@ -53,6 +58,11 @@ public final class ModTransferStorages {
 		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyForwarder, VOLCANITE_NETWORK_NODE_RECEIVER_BE);
 		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, VOLCANITE_LIQUID_STORAGE_TANK_BE);
 		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, MAGMA_FORGE_CORE_BE);
+		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, AEGIS_SANCTUARY_WARD_BE);
+		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, AMBROSIA_FEEDER_BE);
+		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, PAN_HARVESTER_BE);
+		ItemStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> InventoryStorage.of(blockEntity, direction), AMBROSIA_FEEDER_BE);
+		ItemStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> InventoryStorage.of(blockEntity, direction), PAN_HARVESTER_BE);
 		EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> ((HydrothermalLithofierBlockEntity) blockEntity).energyStorage, HYDROTHERMAL_LITHOFIER_BE);
 		EnergyStorage.SIDED.registerForBlockEntity((be, dir) -> be.energyStorage, TARTARUS_PISTON_ENGINE_BE);
 		EnergyStorage.SIDED.registerForBlockEntity((be, dir) -> be.energyStorage, VOLCANIC_DIESEL_GENERATOR_BE);
@@ -551,6 +561,11 @@ public final class ModTransferStorages {
 		}, GEOTHERMAL_ARBORIST_BE);
 
 		FluidStorage.SIDED.registerForBlockEntity((be, dir) -> createColliderFluidStorage(be), OLYMPIAN_HADRON_COLLIDER_BE);
+		FluidStorage.SIDED.registerForBlockEntity((be, dir) -> be.fluidStorage, POSEIDON_ABYSSAL_PUMP_BE);
+		FluidStorage.SIDED.registerForBlockEntity((be, dir) -> {
+			PoseidonAbyssalPumpBlockEntity ctrl = be.getController();
+			return ctrl != null ? ctrl.fluidStorage : null;
+		}, POSEIDON_ABYSSAL_CASING_BE);
 		FluidStorage.SIDED.registerForBlocks((level, pos, state, blockEntity, direction) -> {
 			OlympianHadronColliderBlockEntity collider = SynchrotronRingCoilBlock.findController(level, pos);
 			return (collider != null && collider.isFormed()) ? createColliderFluidStorage(collider) : null;
@@ -669,11 +684,11 @@ public final class ModTransferStorages {
 				return new SingleSlotStorage<FluidVariant>() {
 					@Override
 					public long insert(FluidVariant resource, long maxAmount, TransactionContext transaction) {
-						if (resource.isBlank() || maxAmount <= 0) return 0;
+						if (resource.isBlank() || resource.hasComponents() || maxAmount <= 0) return 0;
 						ItemStack currentStack = context.getItemVariant().toStack();
 						FluidVariant current = VolcaniteBottleItem.getFluid(currentStack);
 						int currentAmt = VolcaniteBottleItem.getFluidAmount(currentStack);
-						if (!current.isBlank() && current != resource) return 0;
+						if (!current.isBlank() && !current.equals(resource)) return 0;
 						int space = bottle.getCapacity() - currentAmt;
 						int toInsert = (int) Math.min(space, maxAmount / 81L);
 						if (toInsert <= 0) return 0;
@@ -689,11 +704,11 @@ public final class ModTransferStorages {
 
 					@Override
 					public long extract(FluidVariant resource, long maxAmount, TransactionContext transaction) {
-						if (resource.isBlank() || maxAmount <= 0) return 0;
+						if (resource.isBlank() || resource.hasComponents() || maxAmount <= 0) return 0;
 						ItemStack currentStack = context.getItemVariant().toStack();
 						FluidVariant current = VolcaniteBottleItem.getFluid(currentStack);
 						int currentAmt = VolcaniteBottleItem.getFluidAmount(currentStack);
-						if (current.isBlank() || current != resource || currentAmt <= 0) return 0;
+						if (current.isBlank() || !current.equals(resource) || currentAmt <= 0) return 0;
 						int toExtract = (int) Math.min(currentAmt, maxAmount / 81L);
 						if (toExtract <= 0) return 0;
 						transaction.addCloseCallback((t, result) -> {

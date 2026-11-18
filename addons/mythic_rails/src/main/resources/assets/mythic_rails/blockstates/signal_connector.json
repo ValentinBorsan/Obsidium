@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "linked=false": {
+      "model": "mythic_rails:block/signal_connector"
+    },
+    "linked=true": {
+      "model": "mythic_rails:block/signal_connector_linked"
+    }
+  }
+}

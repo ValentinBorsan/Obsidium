@@ -1,0 +1,31 @@
+{
+  "parent": "obsidium:odyssey/workshop_automation",
+  "display": {
+    "icon": {
+      "id": "obsidium:supreme_volcanic_alloy"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.late_industry.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.late_industry.description"
+    },
+    "frame": "goal",
+    "show_toast": true
+  },
+  "criteria": {
+    "obtained": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:supreme_volcanic_alloy"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "obsidium:odyssey/late_industry",
+  "display": {
+    "icon": {
+      "id": "obsidium:olympian_hadron_collider"
+    },
+    "title": {
+      "translate": "advancement.obsidium.achievements.collider_architect.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.achievements.collider_architect.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "controller": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "obsidium:olympian_hadron_collider"
+      }
+    },
+    "coil": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "obsidium:synchrotron_ring_coil"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 200
+  }
+}

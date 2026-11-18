@@ -2,6 +2,8 @@ package net.valentin.obsidium.sound;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 
 import java.io.File;
 import java.io.FileReader;
@@ -33,7 +35,7 @@ public final class MachineSoundConfig {
             props.load(reader);
             muted = Boolean.parseBoolean(props.getProperty("machine_muted", "false"));
             machineVolume = Float.parseFloat(props.getProperty("machine_volume", "1.0"));
-            machineVolume = Math.max(0.0f, Math.min(1.0f, machineVolume));
+            machineVolume = Float.isFinite(machineVolume) ? Math.max(0.0f, Math.min(1.0f, machineVolume)) : 1.0f;
         } catch (Exception e) {
             // fallback to defaults
         }
@@ -61,21 +63,33 @@ public final class MachineSoundConfig {
     public static void setMuted(boolean value) {
         ensureLoaded();
         muted = value;
+        if (value) stopActiveMachineSounds();
         save();
     }
 
     public static boolean toggleMute() {
         ensureLoaded();
-        muted = !muted;
-        save();
+        setMuted(!muted);
         if (Minecraft.getInstance().player != null) {
             Minecraft.getInstance().player.displayClientMessage(
-                Component.literal(muted ? "§6[Obsidium] §cMachine Sounds: MUTED §7(Click sound icon in GUI to unmute)"
-                                        : "§6[Obsidium] §aMachine Sounds: UNMUTED §7(100% volume)"),
+                Component.translatable(muted ? "message.obsidium.machine_sounds_muted"
+                                            : "message.obsidium.machine_sounds_enabled"),
                 true
             );
         }
         return muted;
+    }
+
+    public static boolean isMachineSound(ResourceLocation id) {
+        return id != null && "obsidium".equals(id.getNamespace())
+                && (id.getPath().startsWith("machine.") || id.getPath().startsWith("machine/"));
+    }
+
+    private static void stopActiveMachineSounds() {
+        var manager = Minecraft.getInstance().getSoundManager();
+        for (ResourceLocation id : BuiltInRegistries.SOUND_EVENT.keySet()) {
+            if (isMachineSound(id)) manager.stop(id, null);
+        }
     }
 
     public static float getEffectiveVolume(String soundPath) {

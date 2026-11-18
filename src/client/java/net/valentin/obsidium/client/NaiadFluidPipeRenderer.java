@@ -46,6 +46,11 @@ public class NaiadFluidPipeRenderer implements BlockEntityRenderer<NaiadFluidPip
             ValveMode mode = entity.getValveMode(dir);
             if (mode == ValveMode.NONE) continue;
 
+            if (entity.getLevel() != null) {
+                net.minecraft.world.level.block.entity.BlockEntity neighborBe = entity.getLevel().getBlockEntity(entity.getBlockPos().relative(dir));
+                if (neighborBe instanceof NaiadFluidPipeBlockEntity) continue;
+            }
+
             poseStack.pushPose();
             poseStack.translate(0.5, 0.5, 0.5);
 
@@ -70,15 +75,15 @@ public class NaiadFluidPipeRenderer implements BlockEntityRenderer<NaiadFluidPip
             VertexConsumer consumer = bufferSource.getBuffer(RenderType.entityCutout(texture));
             Matrix4f matrix = poseStack.last().pose();
 
-            // 1. Sleek 8x8 Collar around pipe arm (-0.40 to -0.25 in Z)
-            renderBox(consumer, matrix, -0.25F, 0.25F, -0.25F, 0.25F, -0.40F, -0.25F, mr, mg, mb, 255, packedLight, packedOverlay);
+            // 1. Sleek 7x7 Collar around pipe arm (-0.40 to -0.25 in Z)
+            renderBox(consumer, matrix, -0.22F, 0.22F, -0.22F, 0.22F, -0.40F, -0.25F, mr, mg, mb, 255, packedLight, packedOverlay);
 
-            // 2. 10x10 Docking Flange touching the connected block flush (-0.5005 to -0.40 in Z)
-            renderBox(consumer, matrix, -0.3125F, 0.3125F, -0.3125F, 0.3125F, -0.5005F, -0.40F, mr, mg, mb, 255, packedLight, packedOverlay);
+            // 2. 8.5x8.5 Docking Flange touching the connected block flush (-0.5005 to -0.40 in Z)
+            renderBox(consumer, matrix, -0.265F, 0.265F, -0.265F, 0.265F, -0.5005F, -0.40F, mr, mg, mb, 255, packedLight, packedOverlay);
 
             // 3. Glowing neon indicator ring (emissive 0x00F000F0) - Orange for Export, Cyan for Import!
             int glowLight = 0x00F000F0;
-            renderBox(consumer, matrix, -0.255F, 0.255F, -0.255F, 0.255F, -0.34F, -0.31F, mr, mg, mb, 255, glowLight, packedOverlay);
+            renderBox(consumer, matrix, -0.225F, 0.225F, -0.225F, 0.225F, -0.34F, -0.31F, mr, mg, mb, 255, glowLight, packedOverlay);
 
             // 4. Liquid indicator jewel (Deep Blue 0, 160, 255)
             renderBox(consumer, matrix, -0.10F, 0.10F, -0.10F, 0.10F, -0.502F, -0.45F, 0, 160, 255, 255, glowLight, packedOverlay);
@@ -86,14 +91,26 @@ public class NaiadFluidPipeRenderer implements BlockEntityRenderer<NaiadFluidPip
             poseStack.popPose();
         }
 
-        // Render glowing water nymph core inside pipe center if it contains fluid
-        if (entity.fluidStorage.amount > 0) {
+        // Render colored dye band around pipe center if color-isolated
+        if (entity.getPipeColor() >= 0) {
+            int rgb = net.valentin.obsidium.item.QuantumLinkModuleItem.getChannelRgb(net.minecraft.world.item.DyeColor.byId(entity.getPipeColor()));
+            int r = (rgb >> 16) & 0xFF, g = (rgb >> 8) & 0xFF, b = rgb & 0xFF;
+            poseStack.pushPose();
+            poseStack.translate(0.5, 0.5, 0.5);
+            Matrix4f matrix = poseStack.last().pose();
+            VertexConsumer consumer = bufferSource.getBuffer(RenderType.entityCutout(INSERT_TEXTURE));
+            renderBox(consumer, matrix, -0.205F, 0.205F, -0.205F, 0.205F, -0.205F, 0.205F, r, g, b, 255, 0x00F000F0, packedOverlay);
+            poseStack.popPose();
+        }
+
+        // Render glowing quantum core inside pipe center if quantum linked
+        if (entity.isQuantumLinked()) {
             poseStack.pushPose();
             poseStack.translate(0.5, 0.5, 0.5);
             Matrix4f matrix = poseStack.last().pose();
             VertexConsumer consumer = bufferSource.getBuffer(RenderType.entityCutout(INSERT_TEXTURE));
             int glowLight = 0x00F000F0;
-            renderBox(consumer, matrix, -0.14F, 0.14F, -0.14F, 0.14F, -0.14F, 0.14F, 30, 180, 255, 220, glowLight, packedOverlay);
+            renderBox(consumer, matrix, -0.15F, 0.15F, -0.15F, 0.15F, -0.15F, 0.15F, 180, 75, 255, 230, glowLight, packedOverlay);
             poseStack.popPose();
         }
     }

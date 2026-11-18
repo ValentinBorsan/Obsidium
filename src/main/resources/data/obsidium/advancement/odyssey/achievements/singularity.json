@@ -1,0 +1,33 @@
+{
+  "parent": "obsidium:odyssey/achievements/collider_architect",
+  "display": {
+    "icon": {
+      "id": "obsidium:singularity_hadron_alloy"
+    },
+    "title": {
+      "translate": "advancement.obsidium.achievements.singularity.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.achievements.singularity.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "alloy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:singularity_hadron_alloy"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 250
+  }
+}

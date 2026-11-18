@@ -239,6 +239,16 @@ public class VolcaniteStoragePipeBlock extends Block implements SimpleWaterlogge
                 }
             }
         }
+        if (this instanceof VolcaniteUniversalConduitBlock) {
+            Block neighborBlock = level != null ? level.getBlockState(neighborPos).getBlock() : null;
+            if (neighborBlock instanceof VolcaniteUniversalConduitBlock) {
+                return true;
+            }
+            if (neighborBlock instanceof HermesItemPipeBlock || PipeConnectionHelper.isOpticFiber(neighborBlock)) {
+                return false;
+            }
+            return PipeConnectionHelper.canConnect(level, neighborPos, dir);
+        }
         if (isOpticFiber()) {
             return PipeConnectionHelper.canOpticFiberConnect(level, neighborPos, dir, pipeBe);
         }

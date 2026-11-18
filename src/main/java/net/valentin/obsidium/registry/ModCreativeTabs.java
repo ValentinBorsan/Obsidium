@@ -293,6 +293,8 @@ public final class ModCreativeTabs {
 		entries.accept(KERAUNOS_HV_CORE_ITEM);
 		entries.accept(KERAUNOS_HV_PORT_ITEM);
 		entries.accept(OLYMPIAN_HADRON_COLLIDER_ITEM);
+		entries.accept(POSEIDON_ABYSSAL_PUMP_ITEM);
+		entries.accept(POSEIDON_ABYSSAL_CASING_ITEM);
 		entries.accept(SYNCHROTRON_RING_COIL_ITEM);
 		entries.accept(HADRON_ENERGY_PORT_ITEM);
 		entries.accept(HADRON_ITEM_PORT_ITEM);
@@ -325,7 +327,11 @@ public final class ModCreativeTabs {
 		entries.accept(HEPHAESTEAN_CHARGING_PLATE_ITEM);
 		entries.accept(VOLCANITE_UNIVERSAL_CONDUIT_ITEM);
 		entries.accept(NAIAD_FLUID_PIPE_ITEM);
+		entries.accept(ADVANCED_NAIAD_FLUID_PIPE_ITEM);
+		entries.accept(SUPREME_NAIAD_FLUID_PIPE_ITEM);
 		entries.accept(HERMES_ITEM_PIPE_ITEM);
+		entries.accept(ADVANCED_HERMES_ITEM_PIPE_ITEM);
+		entries.accept(SUPREME_HERMES_ITEM_PIPE_ITEM);
 		entries.accept(VOLCANITE_ENERGY_CELL_ITEM);
 		entries.accept(VOLCANITE_ENERGY_UNIT_ITEM);
 		entries.accept(VOLCANITE_ENERGY_CORE_ITEM);
@@ -379,6 +385,9 @@ public final class ModCreativeTabs {
 		entries.accept(VOLCANITE_NETWORK_NODE_EMITTER_ITEM);
 		entries.accept(VOLCANITE_NETWORK_NODE_RECEIVER_ITEM);
 		entries.accept(VOLCANITE_CHUNK_LOADER_ITEM);
+		entries.accept(AEGIS_SANCTUARY_WARD_ITEM);
+		entries.accept(AMBROSIA_FEEDER_ITEM);
+		entries.accept(PAN_HARVESTER_ITEM);
 		entries.accept(VOLCANITE_STORAGE_DISK_DRIVE_ITEM);
 		entries.accept(VOLCANITE_STORAGE_UNIT_ITEM);
 		entries.accept(VOLCANITE_WRENCH);
@@ -399,6 +408,7 @@ public final class ModCreativeTabs {
 		entries.accept(VOLCANITE_FILTERED_COMPACTOR_UPGRADE);
 		entries.accept(VOLCANITE_VOID_UPGRADE);
 		entries.accept(VOLCANITE_FILTERED_VOID_UPGRADE);
+		entries.accept(QUANTUM_LINK_MODULE);
 		entries.accept(VOLCANITE_OVERCLOCK_UPGRADE);
 		entries.accept(ADVANCED_VOLCANITE_OVERCLOCK_UPGRADE);
 		entries.accept(SUPREME_VOLCANITE_OVERCLOCK_UPGRADE);

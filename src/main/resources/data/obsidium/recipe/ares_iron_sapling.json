@@ -1,11 +1,27 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "pattern": [
+    "AMA",
+    "SFS",
+    "AMA"
+  ],
   "key": {
-    "S": {"item": "minecraft:stick"},
-    "A": {"item": "obsidium:volcanic_ash"},
-    "M": {"item": "minecraft:raw_iron"}
+    "A": {
+      "item": "obsidium:volcanic_ash"
+    },
+    "M": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "tag": "minecraft:saplings"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
+    }
   },
-  "pattern": [" S ", "AMA"],
-  "result": {"count": 1, "id": "obsidium:ares_iron_sapling"}
+  "result": {
+    "id": "obsidium:ares_iron_sapling",
+    "count": 1
+  }
 }

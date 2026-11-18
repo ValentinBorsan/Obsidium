@@ -591,5 +591,15 @@
     "group": "Tree saplings",
     "description": "A plantable sapling for the corresponding living tree.",
     "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "ambrosia_feeder": {
+    "group": "Pastoral automation",
+    "description": "Feeds animals using species food, grows babies, shears sheep and collects eggs in a 9\u00d74\u00d79 area. Redstone pauses operation.",
+    "source": "src/main/java/net/valentin/obsidium/block/AmbrosiaFeederBlockEntity.java"
+  },
+  "pan_pastoral_harvester": {
+    "group": "Pastoral automation",
+    "description": "Harvests surplus tagged livestock in a 9\u00d74\u00d79 area, preserving named, baby and tamed animals. Uses 1,200 RF per successful hit and pauses when products are queued. Exports do not require a harvest-energy reserve.",
+    "source": "src/main/java/net/valentin/obsidium/block/PanHarvesterBlockEntity.java"
   }
 }

@@ -11,7 +11,7 @@
 		"sources": "https://github.com/ValentinBorsan/Obsidium",
 		"issues": "https://github.com/ValentinBorsan/Obsidium/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/obsidium/icon.png",
 	"environment": "*",
 	"entrypoints": {

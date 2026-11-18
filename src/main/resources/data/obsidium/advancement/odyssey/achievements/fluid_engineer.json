@@ -1,0 +1,35 @@
+{
+  "parent": "obsidium:odyssey/achievements/first_circuit",
+  "display": {
+    "icon": {
+      "id": "obsidium:volcanite_lava_pump"
+    },
+    "title": {
+      "translate": "advancement.obsidium.achievements.fluid_engineer.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.achievements.fluid_engineer.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "pump": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "obsidium:volcanite_lava_pump"
+      }
+    },
+    "pipe": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "obsidium:naiad_fluid_pipe"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}

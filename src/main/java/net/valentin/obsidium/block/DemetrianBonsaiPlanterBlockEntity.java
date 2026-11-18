@@ -86,8 +86,20 @@ public class DemetrianBonsaiPlanterBlockEntity extends BlockEntity implements Wo
         }
     }
 
+    public static boolean isRareResourceSapling(ItemStack sapling) {
+        return sapling.is(ObsidiumMod.TARTAREAN_NETHERITE_SAPLING_ITEM)
+                || sapling.is(ObsidiumMod.ADAMANTINE_DIAMOND_SAPLING_ITEM)
+                || sapling.is(ObsidiumMod.PYRETIC_TITAN_SAPLING_ITEM);
+    }
+
+    public static int requiredGrowthTicks(ItemStack sapling) {
+        return BASE_GROWTH_TICKS * (isRareResourceSapling(sapling)
+                ? net.valentin.obsidium.config.ModConfig.get().getRareResourceGrowthMultiplier() : 1);
+    }
+
     public void serverTick() {
         ItemStack sapling = items.get(SLOT_SAPLING);
+        maxGrowthTicks = requiredGrowthTicks(sapling);
         if (sapling.isEmpty()) {
             growthTicks = 0;
             return;
@@ -344,7 +356,9 @@ public class DemetrianBonsaiPlanterBlockEntity extends BlockEntity implements Wo
         if (held.getItem() instanceof VolcanicHoneyBottleItem) {
             if (!items.get(SLOT_SAPLING).isEmpty() && growthTicks < maxGrowthTicks) {
                 if (!this.level.isClientSide()) {
-                    growthTicks = maxGrowthTicks;
+                    maxGrowthTicks = requiredGrowthTicks(getSapling());
+                    if (isRareResourceSapling(getSapling())) advanceGrowth(600);
+                    else growthTicks = maxGrowthTicks;
                     if (!player.getAbilities().instabuild) {
                         held.shrink(1);
                         ItemStack bottle = new ItemStack(Items.GLASS_BOTTLE);

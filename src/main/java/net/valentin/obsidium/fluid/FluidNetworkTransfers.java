@@ -36,6 +36,20 @@ public final class FluidNetworkTransfers {
         }
     }
 
+    /** Commit destination and source together, transferring only whole millibuckets. */
+    public static int pump(Storage<FluidVariant> source, Storage<FluidVariant> target,
+                           FluidVariant fluid, int maxAmount) {
+        if (source == target || fluid.isBlank() || maxAmount <= 0) return 0;
+        try (Transaction transaction = Transaction.openOuter()) {
+            int inserted = transferStorage(target, fluid, maxAmount, true, transaction);
+            if (inserted == 0) return 0;
+            int extracted = transferStorage(source, fluid, inserted, false, transaction);
+            if (extracted != inserted) return 0;
+            transaction.commit();
+            return inserted;
+        }
+    }
+
     /** Never commit fractional mB that cannot be represented by the caller. */
     public static int transferStorage(Storage<FluidVariant> storage, FluidVariant fluid, int amount,
                                       boolean inserting, TransactionContext parent) {

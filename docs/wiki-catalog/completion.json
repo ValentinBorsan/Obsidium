@@ -1,6 +1,6 @@
 {
   "scope": "Literal core item registrations in ObsidiumMod.java; aliases and dynamically registered content are not separate entries.",
-  "registered": 405,
-  "covered": 405,
+  "registered": 408,
+  "covered": 408,
   "missing": []
 }

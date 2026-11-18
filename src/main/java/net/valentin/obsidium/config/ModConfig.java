@@ -73,6 +73,12 @@ public class ModConfig {
     public long basicBatteryCapacity = 500_000L;
     public long advancedBatteryCapacity = 5_000_000L;
 
+    // Modpacks can tune rare renewable production without changing common crops.
+    public int rareResourceGrowthMultiplier = 4;
+    public int getRareResourceGrowthMultiplier() {
+        return Math.max(1, Math.min(64, rareResourceGrowthMultiplier));
+    }
+
     public int solarGeneratorMiddayRate = 80;
     public int steamGeneratorOutputRate = 120;
     public int biomassGeneratorOutputRate = 100;

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "mythic_rails:block/energy_unloading_top",
+    "front": "mythic_rails:block/energy_unloading_front",
+    "side": "mythic_rails:block/station_side",
+    "bottom": "mythic_rails:block/station_bottom"
+  }
+}

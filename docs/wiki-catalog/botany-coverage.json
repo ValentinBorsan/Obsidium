@@ -1,11 +1,12 @@
 {
   "category": "botany",
-  "items": 71,
-  "recipe_variants": 50,
+  "items": 73,
+  "recipe_variants": 52,
   "missing_ingredient_icons": [],
   "ids": [
     "obsidium:netherite_seed",
     "obsidium:adamantine_diamond_sapling",
+    "obsidium:ambrosia_feeder",
     "obsidium:apollo_quartz_sapling",
     "obsidium:ares_iron_fruit",
     "obsidium:ares_iron_sapling",
@@ -55,6 +56,7 @@
     "obsidium:midas_gold_sapling",
     "obsidium:netherite_petal",
     "obsidium:magma_forge_manual",
+    "obsidium:pan_pastoral_harvester",
     "obsidium:plouton_emerald_sapling",
     "obsidium:poseidon_lapis_sapling",
     "obsidium:redstone_seed",

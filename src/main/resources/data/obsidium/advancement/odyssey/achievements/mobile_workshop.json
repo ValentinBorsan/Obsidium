@@ -1,0 +1,29 @@
+{
+  "parent": "obsidium:odyssey/achievements/thermal_foundation",
+  "display": {
+    "icon": {
+      "id": "obsidium:basic_backpack"
+    },
+    "title": {
+      "translate": "advancement.obsidium.achievements.mobile_workshop.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.achievements.mobile_workshop.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "backpack": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "obsidium:basic_backpack"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 25
+  }
+}

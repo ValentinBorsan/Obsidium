@@ -71,7 +71,37 @@ public class VolcaniteLogisticsModuleItem extends Item {
         // Case 2: Clicked on a Naiad Fluid Pipe
         if (clickedBe instanceof NaiadFluidPipeBlockEntity naiadBe) {
             if (!level.isClientSide()) {
-                Direction targetFace = clickedFace;
+                net.minecraft.world.phys.BlockHitResult bHit = new net.minecraft.world.phys.BlockHitResult(context.getClickLocation(), clickedFace, clickedPos, false);
+                Direction targetFace = net.valentin.obsidium.block.NaiadFluidPipeBlock.getTargetFaceFromHit(bHit, clickedPos);
+
+                // If the hit face points to another pipe or non-fluid neighbor, pick the closest external FluidStorage face
+                BlockPos checkPos = clickedPos.relative(targetFace);
+                boolean validExternal = !(level.getBlockEntity(checkPos) instanceof NaiadFluidPipeBlockEntity)
+                        && net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage.SIDED.find(level, checkPos, targetFace.getOpposite()) != null;
+                if (!validExternal) {
+                    net.minecraft.world.phys.Vec3 hitOffset = context.getClickLocation().subtract(clickedPos.getX() + 0.5, clickedPos.getY() + 0.5, clickedPos.getZ() + 0.5);
+                    Direction bestFace = null;
+                    double bestScore = -Double.MAX_VALUE;
+                    for (Direction d : Direction.values()) {
+                        BlockPos np = clickedPos.relative(d);
+                        if (level.getBlockEntity(np) instanceof NaiadFluidPipeBlockEntity) continue;
+                        if (net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage.SIDED.find(level, np, d.getOpposite()) != null) {
+                            double score = hitOffset.x * d.getStepX() + hitOffset.y * d.getStepY() + hitOffset.z * d.getStepZ();
+                            if (score > bestScore) {
+                                bestScore = score;
+                                bestFace = d;
+                            }
+                        }
+                    }
+                    if (bestFace != null) {
+                        targetFace = bestFace;
+                    } else {
+                        if (player != null) {
+                            player.displayClientMessage(Component.literal("§b[Naiad Pipe] §eValves can only be placed on tank/machine connections!"), true);
+                        }
+                        return InteractionResult.sidedSuccess(false);
+                    }
+                }
                 if (naiadBe.getValveMode(targetFace) == NaiadFluidPipeBlockEntity.ValveMode.NONE) {
                     naiadBe.setValveMode(targetFace, NaiadFluidPipeBlockEntity.ValveMode.EXTRACT);
                     if (player != null && !player.getAbilities().instabuild) {

@@ -198,5 +198,10 @@
     "group": "Storage upgrades",
     "description": "Voids excess items in a compatible bulk-storage barrel.",
     "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+  },
+  "aegis_sanctuary_ward": {
+    "group": "Spawn protection",
+    "description": "Suppresses natural hostile spawning in a box extending \u00b148 X/Z and \u00b124 Y at 800 RF/t. Manual control and redstone pause it; other spawn sources and existing mobs are unaffected.",
+    "source": "src/main/java/net/valentin/obsidium/block/AegisSanctuaryWardBlockEntity.java"
   }
 }

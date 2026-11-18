@@ -93,11 +93,12 @@ public class VolcaniteEnergyWireBlock extends Block implements SimpleWaterlogged
         String tierName = switch (tier) {
             case 2 -> "§b★ Advanced Tier";
             case 3 -> "§d★ Supreme Tier";
+            case 4 -> "§5★ Singularity Tier";
             default -> "§e★ Basic Tier";
         };
         tooltip.add(Component.literal(tierName));
         tooltip.add(Component.literal("§7Max Transfer: §a" + String.format("%,d", maxTransfer) + " RF/t"));
-        tooltip.add(Component.literal("§7Internal Buffer: §e" + String.format("%,d", capacity) + " RF"));
+        tooltip.add(Component.literal("§7Transfer Mode: §eDirect (No Internal Buffer)"));
         tooltip.add(Component.literal("§8Right-click face with Wrench to configure:"));
         tooltip.add(Component.literal("§8• Normal (Bidirectional) / Extract / Insert"));
         tooltip.add(Component.literal("§8Shift + Right-Click to dismantle"));
@@ -159,12 +160,20 @@ public class VolcaniteEnergyWireBlock extends Block implements SimpleWaterlogged
         if (level == null) return false;
 
         BlockEntity neighborBe = level.getBlockEntity(neighborPos);
-        if (neighborBe instanceof VolcaniteEnergyWireBlockEntity otherWire && otherWire.isSideDisconnected(dir.getOpposite())) {
-            return false;
+        if (neighborBe instanceof VolcaniteEnergyWireBlockEntity otherWire) {
+            if (otherWire.isSideDisconnected(dir.getOpposite())) {
+                return false;
+            }
+            if (wireBe != null && wireBe.getPipeColor() != otherWire.getPipeColor()) {
+                return false;
+            }
         }
 
         BlockState state = level.getBlockState(neighborPos);
         Block block = state.getBlock();
+        if (block instanceof NaiadFluidPipeBlock || block instanceof VolcaniteStoragePipeBlock) {
+            return false;
+        }
         if (block instanceof VolcaniteEnergyWireBlock || 
             block instanceof VolcaniteGeneratorBlock || 
             block instanceof VolcaniteGrinderBlock || 
@@ -175,7 +184,6 @@ public class VolcaniteEnergyWireBlock extends Block implements SimpleWaterlogged
             block instanceof VolcaniteEnergyCoreBlock ||
             block == ObsidiumMod.VOLCANITE_CASING_BLOCK ||
             block == ObsidiumMod.ADVANCED_VOLCANITE_CASING_BLOCK ||
-            block instanceof VolcaniteUniversalConduitBlock ||
             block instanceof VolcaniteSteamGeneratorBlock ||
             block instanceof VolcaniteGeothermalGeneratorBlock ||
             block instanceof SupremeVolcanicGeneratorBlock ||
@@ -211,6 +219,41 @@ public class VolcaniteEnergyWireBlock extends Block implements SimpleWaterlogged
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof VolcaniteEnergyWireBlockEntity wireBe) {
+            // 0a. Dye Color Isolation
+            if (stack.getItem() instanceof net.minecraft.world.item.DyeItem dyeItem) {
+                if (!level.isClientSide()) {
+                    int newCol = dyeItem.getDyeColor().getId();
+                    int targetCol = (wireBe.getPipeColor() == newCol) ? -1 : newCol;
+                    wireBe.setPipeColor(targetCol);
+                    if (targetCol >= 0 && player != null && !player.getAbilities().instabuild) {
+                        stack.shrink(1);
+                    }
+                    level.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    if (player != null) {
+                        String msg = targetCol >= 0
+                                ? "§6[Astrape Wire] §fColor channel: §e" + net.valentin.obsidium.item.QuantumLinkModuleItem.getColorDisplayName(dyeItem.getDyeColor())
+                                : "§6[Astrape Wire] §7Color channel cleared (Default)";
+                        player.displayClientMessage(Component.literal(msg), true);
+                    }
+                }
+                return ItemInteractionResult.sidedSuccess(level.isClientSide());
+            }
+
+            // 0b. Quantum Link Module
+            if (stack.is(ObsidiumMod.QUANTUM_LINK_MODULE) && !wireBe.isQuantumLinked()) {
+                if (!level.isClientSide()) {
+                    wireBe.setQuantumLinked(true, player != null ? player.getUUID() : null);
+                    if (player != null && !player.getAbilities().instabuild) {
+                        stack.shrink(1);
+                    }
+                    level.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.0F, 1.2F);
+                    if (player != null) {
+                        player.displayClientMessage(Component.literal("§d[Astrape Wire] §aQuantum Link installed! Open GUI to set channel."), true);
+                    }
+                }
+                return ItemInteractionResult.sidedSuccess(level.isClientSide());
+            }
+
             // 0. Facade application
             if (stack.getItem() instanceof PipeFacadeItem) {
                 if (wireBe.getFacadeBlock() != null) {
@@ -246,6 +289,29 @@ public class VolcaniteEnergyWireBlock extends Block implements SimpleWaterlogged
                     return ItemInteractionResult.sidedSuccess(level.isClientSide());
                 }
             }
+        }
+
+        if (stack.getItem() instanceof net.valentin.obsidium.item.VolcaniteLogisticsModuleItem && be instanceof VolcaniteEnergyWireBlockEntity wireBe) {
+            Direction targetFace = getTargetFaceFromHit(hitResult, pos);
+            if (!state.getValue(getProperty(targetFace))) {
+                if (!level.isClientSide() && player != null) {
+                    player.displayClientMessage(Component.literal("§c[Astrape Wire] Cannot configure a disconnected face!"), true);
+                }
+                return ItemInteractionResult.FAIL;
+            }
+            if (!level.isClientSide()) {
+                VolcaniteEnergyWireBlockEntity.WireMode next = wireBe.cycleWireMode(targetFace);
+                level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 0.8F, 1.2F);
+                if (player != null) {
+                    String modeDesc = switch (next) {
+                        case EXTRACT -> "§6EXTRACT / EXPORT (Pull Energy)";
+                        case INSERT -> "§bINSERT / IMPORT (Push Energy)";
+                        case NORMAL -> "§eNORMAL (Bidirectional)";
+                    };
+                    player.displayClientMessage(Component.literal("§6[Astrape Wire] §eFace §f" + targetFace.getName().toUpperCase() + " §emode: " + modeDesc), true);
+                }
+            }
+            return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
 
         if (VolcaniteWrenchItem.isWrench(stack)) {
@@ -298,8 +364,8 @@ public class VolcaniteEnergyWireBlock extends Block implements SimpleWaterlogged
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        BlockEntity be = level.getBlockEntity(pos);
         if (player.isShiftKeyDown()) {
-            BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof VolcaniteEnergyWireBlockEntity wireBe && wireBe.getFacadeBlock() != null) {
                 if (!level.isClientSide()) {
                     Block fBlock = wireBe.getFacadeBlock();
@@ -313,6 +379,12 @@ public class VolcaniteEnergyWireBlock extends Block implements SimpleWaterlogged
                 }
                 return InteractionResult.sidedSuccess(level.isClientSide());
             }
+        } else if (be instanceof VolcaniteEnergyWireBlockEntity wireBe) {
+            if (!level.isClientSide()) {
+                wireBe.ensureQuantumOwner(player.getUUID());
+                player.openMenu(wireBe);
+            }
+            return InteractionResult.sidedSuccess(level.isClientSide());
         }
         return InteractionResult.PASS;
     }
@@ -321,10 +393,15 @@ public class VolcaniteEnergyWireBlock extends Block implements SimpleWaterlogged
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!state.is(newState.getBlock())) {
             BlockEntity be = level.getBlockEntity(pos);
-            if (be instanceof VolcaniteEnergyWireBlockEntity wireBe && wireBe.getFacadeBlock() != null) {
-                ItemStack drop = PipeFacadeItem.getFacadeFor(wireBe.getFacadeBlock());
-                if (!drop.isEmpty()) {
-                    Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), drop);
+            if (be instanceof VolcaniteEnergyWireBlockEntity wireBe) {
+                if (wireBe.isQuantumLinked()) {
+                    Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, new ItemStack(ObsidiumMod.QUANTUM_LINK_MODULE));
+                }
+                if (wireBe.getFacadeBlock() != null) {
+                    ItemStack drop = PipeFacadeItem.getFacadeFor(wireBe.getFacadeBlock());
+                    if (!drop.isEmpty()) {
+                        Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), drop);
+                    }
                 }
             }
             super.onRemove(state, level, pos, newState, isMoving);

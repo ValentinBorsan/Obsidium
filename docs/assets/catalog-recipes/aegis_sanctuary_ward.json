@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GEG",
+    "VCV",
+    "OOO"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    },
+    "C": {
+      "item": "obsidium:volcanite_energy_cell"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "id": "obsidium:aegis_sanctuary_ward",
+    "count": 1
+  }
+}

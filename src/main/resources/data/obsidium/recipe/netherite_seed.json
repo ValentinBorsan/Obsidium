@@ -1,24 +1,27 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "pattern": [
+    "NAN",
+    "CSC",
+    "NAN"
+  ],
   "key": {
-    "S": {
-      "item": "obsidium:diamond_seed"
+    "N": {
+      "item": "minecraft:netherite_ingot"
     },
     "A": {
-      "item": "obsidium:volcanic_ash"
+      "item": "obsidium:supreme_volcanic_alloy"
     },
-    "R": {
-      "item": "minecraft:netherite_scrap"
+    "C": {
+      "item": "obsidium:astral_volcanic_catalyst"
+    },
+    "S": {
+      "item": "obsidium:diamond_seed"
     }
   },
-  "pattern": [
-    "RAR",
-    "ASA",
-    "RAR"
-  ],
   "result": {
-    "count": 1,
-    "id": "obsidium:netherite_seed"
+    "id": "obsidium:netherite_seed",
+    "count": 1
   }
 }

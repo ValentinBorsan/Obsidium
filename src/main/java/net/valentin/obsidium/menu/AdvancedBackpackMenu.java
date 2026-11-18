@@ -22,6 +22,7 @@ public class AdvancedBackpackMenu extends AbstractContainerMenu {
     private final InteractionHand hand;
     private final Player player;
     private final int heldSlotIndex;
+    private final ItemStack openedBackpack;
     private final ContainerData data;
 
     public AdvancedBackpackMenu(int syncId, Inventory playerInventory) {
@@ -33,6 +34,7 @@ public class AdvancedBackpackMenu extends AbstractContainerMenu {
         this.hand = hand;
         this.player = playerInventory.player;
         this.heldSlotIndex = (hand == InteractionHand.MAIN_HAND) ? playerInventory.selected : 40;
+        this.openedBackpack = playerInventory.getItem(this.heldSlotIndex);
 
         this.backpackContainer = new SimpleContainer(AdvancedBackpackItem.TOTAL_CONTAINER_SIZE);
 
@@ -231,7 +233,7 @@ public class AdvancedBackpackMenu extends AbstractContainerMenu {
     }
 
     public ItemStack getBackpackStack() {
-        return player.getItemInHand(hand);
+        return openedBackpack;
     }
 
     public long getStoredEnergy() {
@@ -264,6 +266,7 @@ public class AdvancedBackpackMenu extends AbstractContainerMenu {
 
     @Override
     public void broadcastChanges() {
+        if (!player.level().isClientSide() && !stillValid(player)) return;
         super.broadcastChanges();
 
         if (!player.level().isClientSide()) {
@@ -313,8 +316,10 @@ public class AdvancedBackpackMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        ItemStack stack = player.getItemInHand(hand);
-        return !player.isRemoved() && stack.getItem() instanceof AdvancedBackpackItem;
+        return player == this.player && !player.isRemoved()
+                && player.getInventory().getItem(heldSlotIndex) == openedBackpack
+                && player.getItemInHand(hand) == openedBackpack
+                && openedBackpack.getItem() instanceof AdvancedBackpackItem;
     }
 
     @Override
@@ -328,6 +333,7 @@ public class AdvancedBackpackMenu extends AbstractContainerMenu {
 
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
+        if (!player.level().isClientSide() && !stillValid(player)) return ItemStack.EMPTY;
         ItemStack itemStack = ItemStack.EMPTY;
         Slot slot = this.slots.get(index);
         if (slot != null && slot.hasItem()) {

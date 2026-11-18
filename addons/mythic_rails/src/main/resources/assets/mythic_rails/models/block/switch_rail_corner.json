@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/rail_curved",
+  "textures": {
+    "rail": "mythic_rails:block/switch_rail_corner"
+  }
+}

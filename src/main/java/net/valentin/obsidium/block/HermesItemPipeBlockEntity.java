@@ -23,8 +23,9 @@ public class HermesItemPipeBlockEntity extends VolcaniteStoragePipeBlockEntity {
         if (level.isClientSide()) return;
         entity.itemPipeTickCounter++;
 
-        // Fast O(1) early-exit: item pipes only act every 5 ticks and only if a Logistics Module is mounted
-        if (entity.itemPipeTickCounter % 5 != 0 || !entity.hasAnyModule()) {
+        int interval = (state.getBlock() instanceof HermesItemPipeBlock hp) ? Math.max(1, hp.getTickInterval()) : 5;
+        // Fast O(1) early-exit: item pipes only act every interval ticks and only if a Logistics Module is mounted
+        if (entity.itemPipeTickCounter % interval != 0 || !entity.hasAnyModule()) {
             return;
         }
 
@@ -57,7 +58,8 @@ public class HermesItemPipeBlockEntity extends VolcaniteStoragePipeBlockEntity {
             }
             if (insertTargets.isEmpty()) continue;
 
-            int maxItems = entity.getMaxItemTransfer(dir);
+            int tierMax = (entity.getBlockState().getBlock() instanceof HermesItemPipeBlock hp) ? hp.getMaxItemsPerTransfer() : 8;
+            int maxItems = Math.max(tierMax, entity.getMaxItemTransfer(dir));
 
             int size = sourceContainer.getContainerSize();
             int startSlot = entity.lastExtractedSlot[dir.get3DDataValue()];

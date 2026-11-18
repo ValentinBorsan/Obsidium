@@ -12,3 +12,6 @@ pluginManagement {
 // Match the mod id so the distributable JAR has a clear name.
 rootProject.name = 'obsidium'
 
+
+// Optional railway addon, distributed as its own JAR.
+include 'addons:mythic_rails'

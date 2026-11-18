@@ -299,14 +299,14 @@ public class VolcaniteWrenchItem extends Item {
                     if (nowDisconnected) {
                         level.playSound(null, pos, SoundEvents.SPYGLASS_STOP_USING, SoundSource.BLOCKS, 1.0F, 1.2F);
                         if (player != null) {
-                            player.displayClientMessage(Component.literal(String.format("§6[Wrench] §cDisconnected §f%s §cside from §e%s §8| §6⚡ §a%,d §7/ §e%,d RF",
-                                targetFace.getName().toUpperCase(), targetDesc, wireBe.energyStorage.amount, wireBe.energyStorage.capacity)), true);
+                            player.displayClientMessage(Component.literal(String.format("§6[Wrench] §cDisconnected §f%s §cside from §e%s §8| §6⚡ §a%,d RF/t",
+                                targetFace.getName().toUpperCase(), targetDesc, wireBe.getEffectiveMaxTransfer())), true);
                         }
                     } else {
                         level.playSound(null, pos, SoundEvents.SPYGLASS_USE, SoundSource.BLOCKS, 1.0F, 1.4F);
                         if (player != null) {
-                            player.displayClientMessage(Component.literal(String.format("§6[Wrench] §aConnected §f%s §aside to §e%s §8| §6⚡ §a%,d §7/ §e%,d RF",
-                                targetFace.getName().toUpperCase(), targetDesc, wireBe.energyStorage.amount, wireBe.energyStorage.capacity)), true);
+                            player.displayClientMessage(Component.literal(String.format("§6[Wrench] §aConnected §f%s §aside to §e%s §8| §6⚡ §a%,d RF/t",
+                                targetFace.getName().toUpperCase(), targetDesc, wireBe.getEffectiveMaxTransfer())), true);
                         }
                     }
                 }

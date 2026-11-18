@@ -1,0 +1,31 @@
+{
+  "parent": "obsidium:odyssey/mechanical_pulverization",
+  "display": {
+    "icon": {
+      "id": "obsidium:volcanite_flux_mechanism"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.workshop_automation.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.workshop_automation.description"
+    },
+    "frame": "goal",
+    "show_toast": true
+  },
+  "criteria": {
+    "obtained": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:volcanite_flux_mechanism"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

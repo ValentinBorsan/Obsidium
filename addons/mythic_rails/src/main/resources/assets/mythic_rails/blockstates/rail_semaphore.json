@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "facing=north,red=false": {
+      "model": "mythic_rails:block/rail_semaphore_green",
+      "y": 0
+    },
+    "facing=north,red=true": {
+      "model": "mythic_rails:block/rail_semaphore_red",
+      "y": 0
+    },
+    "facing=east,red=false": {
+      "model": "mythic_rails:block/rail_semaphore_green",
+      "y": 90
+    },
+    "facing=east,red=true": {
+      "model": "mythic_rails:block/rail_semaphore_red",
+      "y": 90
+    },
+    "facing=south,red=false": {
+      "model": "mythic_rails:block/rail_semaphore_green",
+      "y": 180
+    },
+    "facing=south,red=true": {
+      "model": "mythic_rails:block/rail_semaphore_red",
+      "y": 180
+    },
+    "facing=west,red=false": {
+      "model": "mythic_rails:block/rail_semaphore_green",
+      "y": 270
+    },
+    "facing=west,red=true": {
+      "model": "mythic_rails:block/rail_semaphore_red",
+      "y": 270
+    }
+  }
+}

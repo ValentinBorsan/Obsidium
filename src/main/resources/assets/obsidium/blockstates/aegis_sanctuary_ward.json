@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "obsidium:block/aegis_sanctuary_ward"
+    },
+    "lit=true": {
+      "model": "obsidium:block/aegis_sanctuary_ward_on"
+    }
+  }
+}

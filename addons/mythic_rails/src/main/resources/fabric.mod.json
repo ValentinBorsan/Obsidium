@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "mythic_rails",
+  "version": "${version}",
+  "name": "Obsidium: Mythic Rails",
+  "description": "Railway logistics for Obsidium: freight carts, loading and unloading stations.",
+  "authors": [
+    "ValentinBorsan"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.valentin.mythicrails.MythicRails"
+    ],
+    "client": [
+      "net.valentin.mythicrails.MythicRailsClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*",
+    "obsidium": ">=1.1.0"
+  },
+  "mixins": [
+    "mythic_rails.mixins.json"
+  ]
+}

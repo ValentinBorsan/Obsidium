@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mythic_rails:obsidian_rail",
+    "mythic_rails:ember_powered_rail",
+    "mythic_rails:volcanite_speed_rail",
+    "mythic_rails:obsidian_detector_rail",
+    "mythic_rails:switch_rail"
+  ]
+}

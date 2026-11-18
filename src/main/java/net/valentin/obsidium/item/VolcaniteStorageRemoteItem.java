@@ -10,7 +10,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -18,7 +17,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.valentin.obsidium.block.VolcaniteStorageControllerBlock;
 
 import java.util.List;
@@ -69,38 +67,42 @@ public class VolcaniteStorageRemoteItem extends Item {
         }
 
         if (!level.isClientSide()) {
-            String dim = tag.getString("Dim");
-            boolean sameDim = level.dimension().location().toString().equals(dim);
-            if (!sameDim && !net.valentin.obsidium.config.ModConfig.get().remoteTerminalCrossDimension) {
-                player.displayClientMessage(Component.literal("§cCannot connect across dimensions!"), true);
+            var controller = resolveController(player, stack);
+            if (controller == null) {
+                player.displayClientMessage(Component.literal("§cCannot reach linked controller: check dimension, range and loaded chunk."), true);
                 return InteractionResultHolder.fail(stack);
             }
-
-            BlockPos pos = new BlockPos(tag.getInt("X"), tag.getInt("Y"), tag.getInt("Z"));
-            double distSq = player.distanceToSqr(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
-            int maxRange = net.valentin.obsidium.config.ModConfig.get().remoteTerminalRange;
-            if (sameDim && distSq > (double) maxRange * maxRange) {
-                player.displayClientMessage(Component.literal("§cOut of range! Maximum remote distance is " + maxRange + " blocks (" + (int) Math.sqrt(distSq) + "m away)."), true);
-                return InteractionResultHolder.fail(stack);
-            }
-
-            if (!level.isLoaded(pos)) {
-                player.displayClientMessage(Component.literal("§cController chunk is not loaded!"), true);
-                return InteractionResultHolder.fail(stack);
-            }
-
-            BlockEntity be = level.getBlockEntity(pos);
-            if (be instanceof MenuProvider menuProvider) {
-                player.openMenu(menuProvider);
-                level.playSound(null, player.blockPosition(), SoundEvents.ENDER_EYE_DEATH, SoundSource.PLAYERS, 0.5F, 1.8F);
-                return InteractionResultHolder.sidedSuccess(stack, false);
-            } else {
-                player.displayClientMessage(Component.literal("§cVolcanite Storage Controller not found at linked location!"), true);
-                return InteractionResultHolder.fail(stack);
-            }
+            player.openMenu(new net.minecraft.world.SimpleMenuProvider((id, inventory, opener) -> {
+                var menu = (net.valentin.obsidium.block.VolcaniteStorageTerminalMenu) controller.createMenu(id, inventory, opener);
+                return menu.withRemote(stack, opener);
+            }, controller.getDisplayName()));
+            level.playSound(null, player.blockPosition(), SoundEvents.ENDER_EYE_DEATH, SoundSource.PLAYERS, 0.5F, 1.8F);
+            return InteractionResultHolder.sidedSuccess(stack, false);
         }
 
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
+    }
+
+    /** Resolves only loaded controllers; never loads or generates a destination chunk. */
+    public static net.valentin.obsidium.block.VolcaniteStorageControllerBlockEntity resolveController(Player player, ItemStack stack) {
+        if (!(stack.getItem() instanceof VolcaniteStorageRemoteItem) || player.getServer() == null) return null;
+        CompoundTag tag = stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
+        if (!tag.getBoolean("Linked") || !tag.contains("X", 3) || !tag.contains("Y", 3)
+                || !tag.contains("Z", 3)) return null;
+        var id = net.minecraft.resources.ResourceLocation.tryParse(tag.getString("Dim"));
+        if (id == null) return null;
+        var destination = player.getServer().getLevel(net.minecraft.resources.ResourceKey.create(
+                net.minecraft.core.registries.Registries.DIMENSION, id));
+        if (destination == null) return null;
+        boolean sameDimension = destination == player.level();
+        var config = net.valentin.obsidium.config.ModConfig.get();
+        if (!sameDimension && !config.remoteTerminalCrossDimension) return null;
+        BlockPos pos = new BlockPos(tag.getInt("X"), tag.getInt("Y"), tag.getInt("Z"));
+        double range = Math.max(0, config.remoteTerminalRange);
+        if (sameDimension && player.distanceToSqr(net.minecraft.world.phys.Vec3.atCenterOf(pos)) > range * range) return null;
+        if (!destination.isInWorldBounds(pos) || !destination.getChunkSource().hasChunk(pos.getX() >> 4, pos.getZ() >> 4)) return null;
+        return destination.getBlockEntity(pos) instanceof net.valentin.obsidium.block.VolcaniteStorageControllerBlockEntity controller
+                && !controller.isRemoved() ? controller : null;
     }
 
     @Override

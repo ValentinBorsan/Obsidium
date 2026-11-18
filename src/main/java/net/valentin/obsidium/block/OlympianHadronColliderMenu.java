@@ -68,16 +68,16 @@ public class OlympianHadronColliderMenu extends AbstractContainerMenu {
             }
         });
 
-        // Slot 4: Propulsion Fuel Input (12, 24)
-        this.addSlot(new Slot(container, OlympianHadronColliderBlockEntity.SLOT_FUEL_IN, 12, 24) {
+        // Slot 4: Propulsion Fuel Input (12, 30)
+        this.addSlot(new Slot(container, OlympianHadronColliderBlockEntity.SLOT_FUEL_IN, 12, 30) {
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return OlympianHadronColliderBlockEntity.isFuelContainerItem(stack);
             }
         });
 
-        // Slot 5: Cryo-Coolant Input (208, 24)
-        this.addSlot(new Slot(container, OlympianHadronColliderBlockEntity.SLOT_COOLANT_IN, 208, 24) {
+        // Slot 5: Cryo-Coolant Input (208, 30)
+        this.addSlot(new Slot(container, OlympianHadronColliderBlockEntity.SLOT_COOLANT_IN, 208, 30) {
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return OlympianHadronColliderBlockEntity.isCoolantContainerItem(stack)
@@ -158,6 +158,10 @@ public class OlympianHadronColliderMenu extends AbstractContainerMenu {
 
     public int getTotalCollisions() {
         return (this.data.get(16) & 0xFFFF) | ((this.data.get(17) & 0xFFFF) << 16);
+    }
+
+    public int getFormationStatusMask() {
+        return this.data.get(18);
     }
 
     @Override

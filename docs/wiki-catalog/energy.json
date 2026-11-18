@@ -4,7 +4,7 @@
   "title": "Energy & Upgrades",
   "note": "Images are copied from game textures; machine and block images use a representative face. Crafting recipes may be overridden by modpacks. Machine crafting recipes describe how to build the machine, not its processing recipes.",
   "scope": "Energy cells, cores, portable batteries, wireless pylons, charging, configuration tools and machine/storage/conduit upgrades. Generators and wires have dedicated categories; creative-only items are covered separately.",
-  "count": 40,
+  "count": 41,
   "items": [
     {
       "id": "obsidium:volcanite_advanced_pipe_energy_upgrade",
@@ -287,6 +287,82 @@
       ],
       "acquisition": [],
       "source": "src/main/java/net/valentin/obsidium/ObsidiumMod.java"
+    },
+    {
+      "id": "obsidium:aegis_sanctuary_ward",
+      "name": "Aegis Sanctuary Ward",
+      "image": "assets/catalog-icons/obsidium/aegis_sanctuary_ward.png",
+      "imageKind": "block texture",
+      "group": "Spawn protection",
+      "description": "Suppresses natural hostile spawning in a box extending ±48 X/Z and ±24 Y at 800 RF/t. Manual control and redstone pause it; other spawn sources and existing mobs are unaffected.",
+      "recipes": [
+        {
+          "id": "obsidium:aegis_sanctuary_ward",
+          "type": "minecraft:crafting_shaped",
+          "output": {
+            "id": "obsidium:aegis_sanctuary_ward",
+            "name": "Aegis Sanctuary Ward",
+            "image": "assets/catalog-icons/obsidium/aegis_sanctuary_ward.png",
+            "imageKind": "block texture"
+          },
+          "count": 1,
+          "source": "src/main/resources/data/obsidium/recipe/aegis_sanctuary_ward.json",
+          "json": "assets/catalog-recipes/aegis_sanctuary_ward.json",
+          "station": "Volcanite Worktable",
+          "worktableRequired": true,
+          "stationSource": "src/main/java/net/valentin/obsidium/mixin/CraftingMenuMixin.java",
+          "stationNote": "The vanilla crafting table blocks this recipe when the grid contains an Obsidium item. Use the Volcanite Worktable for that case. Other crafting implementations may differ.",
+          "pattern": [
+            "GEG",
+            "VCV",
+            "OOO"
+          ],
+          "key": {
+            "G": {
+              "item": {
+                "id": "minecraft:gold_ingot",
+                "name": "Gold Ingot",
+                "image": "assets/catalog-icons/minecraft/gold_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "E": {
+              "item": {
+                "id": "minecraft:ender_pearl",
+                "name": "Ender Pearl",
+                "image": "assets/catalog-icons/minecraft/ender_pearl.png",
+                "imageKind": "item texture"
+              }
+            },
+            "V": {
+              "item": {
+                "id": "obsidium:volcanite_ingot",
+                "name": "Volcanite Ingot",
+                "image": "assets/catalog-icons/obsidium/volcanite_ingot.png",
+                "imageKind": "item texture"
+              }
+            },
+            "C": {
+              "item": {
+                "id": "obsidium:volcanite_energy_cell",
+                "name": "Basic Volcanite Energy Cell",
+                "image": "assets/catalog-icons/obsidium/volcanite_energy_cell.png",
+                "imageKind": "block texture"
+              }
+            },
+            "O": {
+              "item": {
+                "id": "minecraft:obsidian",
+                "name": "Obsidian",
+                "image": "assets/catalog-icons/minecraft/obsidian.png",
+                "imageKind": "block texture"
+              }
+            }
+          }
+        }
+      ],
+      "acquisition": [],
+      "source": "src/main/java/net/valentin/obsidium/block/AegisSanctuaryWardBlockEntity.java"
     },
     {
       "id": "obsidium:astrape_energy_pylon",

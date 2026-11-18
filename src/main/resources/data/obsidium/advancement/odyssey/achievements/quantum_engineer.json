@@ -1,0 +1,29 @@
+{
+  "parent": "obsidium:odyssey/achievements/advanced_routing",
+  "display": {
+    "icon": {
+      "id": "obsidium:quantum_link_module"
+    },
+    "title": {
+      "translate": "advancement.obsidium.achievements.quantum_engineer.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.achievements.quantum_engineer.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "module": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "obsidium:quantum_link_module"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

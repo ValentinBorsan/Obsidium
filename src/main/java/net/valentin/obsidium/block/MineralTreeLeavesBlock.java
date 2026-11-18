@@ -49,7 +49,9 @@ public class MineralTreeLeavesBlock extends LeavesBlock {
         super.randomTick(state, level, pos, random);
         BlockState current = level.getBlockState(pos);
         if (current.is(this) && !current.getValue(FRUITING)
-                && current.getValue(DISTANCE) <= 6 && random.nextInt(800) == 0) {
+                && current.getValue(DISTANCE) <= 6 && random.nextInt(800 *
+                        (("tartarean_netherite".equals(species()) || "adamantine_diamond".equals(species()) || "pyretic_titan".equals(species()))
+                                ? net.valentin.obsidium.config.ModConfig.get().getRareResourceGrowthMultiplier() : 1)) == 0) {
             level.setBlock(pos, current.setValue(FRUITING, true), 2);
         }
     }

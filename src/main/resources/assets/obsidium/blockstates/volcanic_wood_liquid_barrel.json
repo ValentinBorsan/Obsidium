@@ -1,9 +1,12 @@
 {
   "variants": {
-    "facing=north": { "model": "obsidium:block/volcanic_wood_liquid_barrel" },
-    "facing=east":  { "model": "obsidium:block/volcanic_wood_liquid_barrel", "y": 90 },
-    "facing=south": { "model": "obsidium:block/volcanic_wood_liquid_barrel", "y": 180 },
-    "facing=west":  { "model": "obsidium:block/volcanic_wood_liquid_barrel", "y": 270 }
+    "facing=north,linked=false": { "model": "obsidium:block/volcanic_wood_liquid_barrel" },
+    "facing=east,linked=false":  { "model": "obsidium:block/volcanic_wood_liquid_barrel", "y": 90 },
+    "facing=south,linked=false": { "model": "obsidium:block/volcanic_wood_liquid_barrel", "y": 180 },
+    "facing=west,linked=false":  { "model": "obsidium:block/volcanic_wood_liquid_barrel", "y": 270 },
+    "facing=north,linked=true":  { "model": "obsidium:block/volcanic_wood_liquid_barrel_linked" },
+    "facing=east,linked=true":   { "model": "obsidium:block/volcanic_wood_liquid_barrel_linked", "y": 90 },
+    "facing=south,linked=true":  { "model": "obsidium:block/volcanic_wood_liquid_barrel_linked", "y": 180 },
+    "facing=west,linked=true":   { "model": "obsidium:block/volcanic_wood_liquid_barrel_linked", "y": 270 }
   }
 }
-

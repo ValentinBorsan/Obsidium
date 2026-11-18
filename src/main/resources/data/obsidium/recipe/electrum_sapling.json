@@ -2,27 +2,29 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    " G ",
-    "ASA",
-    " L "
+    "AGA",
+    "SFS",
+    "ALA"
   ],
   "key": {
-    "G": {
-      "item": "minecraft:gold_nugget"
-    },
-    "L": {
-      "item": "obsidium:silver_nugget"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    },
     "A": {
       "item": "obsidium:volcanic_ash"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "L": {
+      "item": "obsidium:silver_ingot"
+    },
+    "S": {
+      "tag": "minecraft:saplings"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
     }
   },
   "result": {
-    "count": 1,
-    "id": "obsidium:electrum_sapling"
+    "id": "obsidium:electrum_sapling",
+    "count": 1
   }
 }
-

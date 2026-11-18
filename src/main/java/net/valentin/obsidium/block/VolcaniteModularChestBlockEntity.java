@@ -7,6 +7,7 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -18,6 +19,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingInput;
@@ -25,11 +27,13 @@ import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.valentin.obsidium.ObsidiumMod;
 import net.valentin.obsidium.item.HermesFilterUpgradeItem;
+import net.valentin.obsidium.item.QuantumLinkModuleItem;
 import net.valentin.obsidium.item.VolcaniteAdvancedFilterModuleItem;
 import net.valentin.obsidium.item.VolcaniteBarrelUpgradeItem;
 import net.valentin.obsidium.item.VolcaniteCompactorUpgradeItem;
@@ -48,6 +52,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.UUID;
 
 public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity implements WorldlyContainer {
     public static final int SLOTS_PER_PAGE = 54;
@@ -84,6 +89,11 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
     private int currentPage = 0;
     private boolean lastQuantitySortDescending = true;
 
+    private DyeColor quantumColor = DyeColor.PURPLE;
+    private int quantumChannel = 1;
+    private boolean quantumPrivate = false;
+    private @Nullable UUID quantumOwner = null;
+
     public final ContainerData data = new ContainerData() {
         @Override
         public int get(int index) {
@@ -91,27 +101,133 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
                 case 0 -> getCurrentPage();
                 case 1 -> getUnlockedPages();
                 case 2 -> lastQuantitySortDescending ? 1 : 0;
+                case 3 -> hasQuantumLinkModule() ? 1 : 0;
+                case 4 -> quantumColor.getId();
+                case 5 -> quantumChannel;
+                case 6 -> quantumPrivate ? 1 : 0;
                 default -> 0;
             };
         }
 
         @Override
         public void set(int index, int value) {
-            if (index == 0) {
-                setCurrentPage(value);
-            } else if (index == 2) {
-                lastQuantitySortDescending = (value != 0);
+            switch (index) {
+                case 0 -> setCurrentPage(value);
+                case 2 -> lastQuantitySortDescending = (value != 0);
+                case 4 -> setQuantumColor(DyeColor.byId(Math.floorMod(value, 16)));
+                case 5 -> setQuantumChannel(value);
+                case 6 -> setQuantumPrivate(value != 0);
             }
         }
 
         @Override
         public int getCount() {
-            return 3;
+            return 7;
         }
     };
 
     public VolcaniteModularChestBlockEntity(BlockPos pos, BlockState state) {
         super(ObsidiumMod.VOLCANITE_MODULAR_CHEST_BE, pos, state);
+    }
+
+    public boolean canInstallQuantumLink() {
+        if (hasQuantumLinkModule()) return true;
+        for (int i = 0; i < MAX_STORAGE_SLOTS; i++) {
+            if (!items.get(i).isEmpty()) return false;
+        }
+        return true;
+    }
+
+    private NonNullList<ItemStack> getActiveStorageItems() {
+        String key = getActiveQuantumKey();
+        if (key != null) {
+            var network = net.valentin.obsidium.storage.QuantumLinkNetworkState.get(this.level);
+            if (network != null) return network.getItemVault(key);
+        }
+        return items;
+    }
+
+    @Override
+    public void setChanged() {
+        super.setChanged();
+        // Slot merges and partial shift-clicks mutate the stack returned by getItem directly.
+        String key = getActiveQuantumKey();
+        if (key != null) {
+            var network = net.valentin.obsidium.storage.QuantumLinkNetworkState.get(this.level);
+            if (network != null) network.setDirty();
+        }
+    }
+
+    public boolean hasQuantumLinkModule() {
+        for (int i = SLOT_MOD_0; i < TOTAL_SLOTS; i++) {
+            if (items.get(i).getItem() instanceof QuantumLinkModuleItem) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Nullable
+    public String getActiveQuantumKey() {
+        if (!hasQuantumLinkModule() || this.level == null || this.level.isClientSide()) {
+            return null;
+        }
+        return net.valentin.obsidium.storage.QuantumLinkNetworkState.buildChannelKey(quantumPrivate, quantumOwner, quantumColor, quantumChannel);
+    }
+
+    public DyeColor getQuantumColor() {
+        return quantumColor;
+    }
+
+    public int getQuantumChannel() {
+        return quantumChannel;
+    }
+
+    public boolean isQuantumPrivate() {
+        return quantumPrivate;
+    }
+
+    public void ensureQuantumOwner(@Nullable UUID owner) {
+        if (this.quantumOwner == null && owner != null) {
+            this.quantumOwner = owner;
+            setChanged();
+        }
+    }
+
+    public void setQuantumColor(DyeColor color) {
+        if (color != null && this.quantumColor != color) {
+            this.quantumColor = color;
+            syncQuantumVisuals();
+        }
+    }
+
+    public void setQuantumChannel(int channel) {
+        int clamped = net.valentin.obsidium.storage.QuantumLinkNetworkState.clampChannel(channel);
+        if (this.quantumChannel != clamped) {
+            this.quantumChannel = clamped;
+            syncQuantumVisuals();
+        }
+    }
+
+    public void setQuantumPrivate(boolean priv) {
+        if (this.quantumPrivate != priv) {
+            this.quantumPrivate = priv;
+            syncQuantumVisuals();
+        }
+    }
+
+    public void syncQuantumVisuals() {
+        setChanged();
+        if (this.level != null && !this.level.isClientSide()) {
+            boolean linked = hasQuantumLinkModule();
+            BlockState st = getBlockState();
+            if (st.hasProperty(VolcaniteModularChestBlock.LINKED) && st.getValue(VolcaniteModularChestBlock.LINKED) != linked) {
+                st = st.setValue(VolcaniteModularChestBlock.LINKED, linked);
+                this.level.setBlock(worldPosition, st, Block.UPDATE_ALL);
+            } else {
+                this.level.sendBlockUpdated(worldPosition, st, st, Block.UPDATE_ALL);
+            }
+        }
     }
 
     public static boolean isValidModule(ItemStack stack) {
@@ -128,7 +244,8 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
                 || item instanceof VolcaniteLogisticsModuleItem
                 || item instanceof VolcaniteOverclockUpgradeItem
                 || item instanceof HermesFilterUpgradeItem
-                || item instanceof VolcaniteAdvancedFilterModuleItem;
+                || item instanceof VolcaniteAdvancedFilterModuleItem
+                || item instanceof QuantumLinkModuleItem;
     }
 
     public static boolean isFilterModule(ItemStack stack) {
@@ -198,6 +315,9 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
     }
 
     public int getUnlockedPages() {
+        if (hasQuantumLinkModule()) {
+            return 1;
+        }
         int pages = 1;
         for (int i = SLOT_MOD_0; i < TOTAL_SLOTS; i++) {
             Item item = items.get(i).getItem();
@@ -258,30 +378,65 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
         return true;
     }
 
+    @Nullable
+    private NonNullList<ItemStack> resolveStorageListForSlot(int slot, boolean markNetworkDirty) {
+        if (slot >= 0 && slot < SLOTS_PER_PAGE) {
+            String key = getActiveQuantumKey();
+            if (key != null) {
+                net.valentin.obsidium.storage.QuantumLinkNetworkState network = net.valentin.obsidium.storage.QuantumLinkNetworkState.get(this.level);
+                if (network != null) {
+                    if (markNetworkDirty) network.setDirty();
+                    return network.getItemVault(key);
+                }
+            }
+        }
+        return this.items;
+    }
+
     @Override
     public ItemStack getItem(int slot) {
         if (slot < 0 || slot >= TOTAL_SLOTS) return ItemStack.EMPTY;
-        return items.get(slot);
+        NonNullList<ItemStack> target = resolveStorageListForSlot(slot, false);
+        return target.get(slot);
     }
 
     @Override
     public ItemStack removeItem(int slot, int amount) {
-        ItemStack stack = ContainerHelper.removeItem(items, slot, amount);
-        if (!stack.isEmpty()) setChanged();
+        if (slot < 0 || slot >= TOTAL_SLOTS) return ItemStack.EMPTY;
+        NonNullList<ItemStack> target = resolveStorageListForSlot(slot, true);
+        ItemStack stack = ContainerHelper.removeItem(target, slot, amount);
+        if (!stack.isEmpty()) {
+            if (slot >= SLOT_MOD_0) {
+                syncQuantumVisuals();
+            } else {
+                setChanged();
+            }
+        }
         return stack;
     }
 
     @Override
     public ItemStack removeItemNoUpdate(int slot) {
-        return ContainerHelper.takeItem(items, slot);
+        if (slot < 0 || slot >= TOTAL_SLOTS) return ItemStack.EMPTY;
+        NonNullList<ItemStack> target = resolveStorageListForSlot(slot, true);
+        ItemStack stack = ContainerHelper.takeItem(target, slot);
+        if (slot >= SLOT_MOD_0 && !stack.isEmpty()) {
+            syncQuantumVisuals();
+        }
+        return stack;
     }
 
     @Override
     public void setItem(int slot, ItemStack stack) {
         if (slot < 0 || slot >= TOTAL_SLOTS) return;
-        items.set(slot, stack);
+        NonNullList<ItemStack> target = resolveStorageListForSlot(slot, true);
+        target.set(slot, stack);
         if (stack.getCount() > getMaxStackSize()) stack.setCount(getMaxStackSize());
-        setChanged();
+        if (slot >= SLOT_MOD_0) {
+            syncQuantumVisuals();
+        } else {
+            setChanged();
+        }
     }
 
     @Override
@@ -291,7 +446,22 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
 
     @Override
     public void clearContent() {
+        setChanged();
+        getActiveStorageItems().clear();
         items.clear();
+    }
+
+    /** Local contents belong to the physical block; the shared vault survives its removal. */
+    public void dropLocalContents(Level level, BlockPos pos) {
+        for (ItemStack stack : items) {
+            if (!stack.isEmpty()) net.minecraft.world.Containers.dropItemStack(level,
+                    pos.getX(), pos.getY(), pos.getZ(), stack);
+        }
+    }
+
+    public void clearLocalContents() {
+        items.clear();
+        super.setChanged();
     }
 
     @Override
@@ -310,6 +480,12 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
         ContainerHelper.saveAllItems(tag, this.items, registries);
         tag.putBoolean("FlexModulesV2", true);
         tag.putInt("CurrentPage", this.currentPage);
+        tag.putInt("QuantumColor", this.quantumColor.getId());
+        tag.putInt("QuantumChannel", this.quantumChannel);
+        tag.putBoolean("QuantumPrivate", this.quantumPrivate);
+        if (this.quantumOwner != null) {
+            tag.putUUID("QuantumOwner", this.quantumOwner);
+        }
     }
 
     @Override
@@ -318,6 +494,14 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
         this.items = NonNullList.withSize(TOTAL_SLOTS, ItemStack.EMPTY);
         ContainerHelper.loadAllItems(tag, this.items, registries);
         this.currentPage = tag.getInt("CurrentPage");
+        if (tag.contains("QuantumColor")) {
+            this.quantumColor = DyeColor.byId(Math.floorMod(tag.getInt("QuantumColor"), 16));
+        }
+        if (tag.contains("QuantumChannel")) {
+            this.quantumChannel = net.valentin.obsidium.storage.QuantumLinkNetworkState.clampChannel(tag.getInt("QuantumChannel"));
+        }
+        this.quantumPrivate = tag.getBoolean("QuantumPrivate");
+        this.quantumOwner = tag.hasUUID("QuantumOwner") ? tag.getUUID("QuantumOwner") : null;
 
         // Automatically migrate legacy 58-slot saves (where modules sat at 54..57) into 216..219
         if (!tag.getBoolean("FlexModulesV2")) {
@@ -331,6 +515,20 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
         }
     }
 
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        CompoundTag tag = new CompoundTag();
+        tag.putInt("QuantumColor", this.quantumColor.getId());
+        tag.putInt("QuantumChannel", this.quantumChannel);
+        tag.putBoolean("QuantumPrivate", this.quantumPrivate);
+        return tag;
+    }
+
+    @Override
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
     // WorldlyContainer: Automation accesses all unlocked storage slots (0 .. unlockedSlots - 1)
     @Override
     public int[] getSlotsForFace(Direction side) {
@@ -340,7 +538,8 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
     @Override
     public boolean canPlaceItem(int slot, ItemStack stack) {
         if (slot >= SLOT_MOD_0 && slot < TOTAL_SLOTS) {
-            return isValidModule(stack);
+            return isValidModule(stack)
+                    && (!(stack.getItem() instanceof QuantumLinkModuleItem) || canInstallQuantumLink());
         }
         return slot >= 0 && slot < getUnlockedSlots() && matchesChestFilters(stack);
     }
@@ -487,6 +686,7 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
      * (either Descending: highest quantity first, or Ascending: lowest quantity first).
      */
     public void sortByQuantity(boolean descending) {
+        NonNullList<ItemStack> storage = getActiveStorageItems();
         this.lastQuantitySortDescending = descending;
         int limit = getUnlockedSlots();
 
@@ -495,7 +695,7 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
         List<ItemGroupKey> uniqueOrder = new ArrayList<>();
 
         for (int i = 0; i < limit; i++) {
-            ItemStack st = items.get(i);
+            ItemStack st = storage.get(i);
             if (!st.isEmpty()) {
                 ItemGroupKey key = ItemGroupKey.of(st);
                 if (!totalCounts.containsKey(key)) {
@@ -504,7 +704,7 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
                 } else {
                     totalCounts.put(key, totalCounts.get(key) + st.getCount());
                 }
-                items.set(i, ItemStack.EMPTY);
+                storage.set(i, ItemStack.EMPTY);
             }
         }
 
@@ -526,7 +726,7 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
             int maxStack = key.representative().getMaxStackSize();
             while (remaining > 0 && slotIdx < limit) {
                 int take = Math.min(remaining, maxStack);
-                items.set(slotIdx++, key.representative().copyWithCount(take));
+                storage.set(slotIdx++, key.representative().copyWithCount(take));
                 remaining -= take;
             }
         }
@@ -538,12 +738,13 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
      * with larger stacks placed before partial stacks of the same item.
      */
     public void sortAlphabetically() {
+        NonNullList<ItemStack> storage = getActiveStorageItems();
         int limit = getUnlockedSlots();
         Map<ItemGroupKey, Integer> totalCounts = new HashMap<>();
         List<ItemGroupKey> uniqueOrder = new ArrayList<>();
 
         for (int i = 0; i < limit; i++) {
-            ItemStack st = items.get(i);
+            ItemStack st = storage.get(i);
             if (!st.isEmpty()) {
                 ItemGroupKey key = ItemGroupKey.of(st);
                 if (!totalCounts.containsKey(key)) {
@@ -552,7 +753,7 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
                 } else {
                     totalCounts.put(key, totalCounts.get(key) + st.getCount());
                 }
-                items.set(i, ItemStack.EMPTY);
+                storage.set(i, ItemStack.EMPTY);
             }
         }
 
@@ -566,7 +767,7 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
             int maxStack = key.representative().getMaxStackSize();
             while (remaining > 0 && slotIdx < limit) {
                 int take = Math.min(remaining, maxStack);
-                items.set(slotIdx++, key.representative().copyWithCount(take));
+                storage.set(slotIdx++, key.representative().copyWithCount(take));
                 remaining -= take;
             }
         }
@@ -598,9 +799,10 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
     }
 
     public boolean containsItemType(ItemStack stack) {
+        NonNullList<ItemStack> storage = getActiveStorageItems();
         int limit = getUnlockedSlots();
         for (int i = 0; i < limit; i++) {
-            ItemStack inSlot = items.get(i);
+            ItemStack inSlot = storage.get(i);
             if (!inSlot.isEmpty() && ItemStack.isSameItemSameComponents(inSlot, stack)) {
                 return true;
             }
@@ -609,9 +811,10 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
     }
 
     public boolean hasFullStackOf(ItemStack stack) {
+        NonNullList<ItemStack> storage = getActiveStorageItems();
         int limit = getUnlockedSlots();
         for (int i = 0; i < limit; i++) {
-            ItemStack inSlot = items.get(i);
+            ItemStack inSlot = storage.get(i);
             if (!inSlot.isEmpty() && ItemStack.isSameItemSameComponents(inSlot, stack) && inSlot.getCount() >= inSlot.getMaxStackSize()) {
                 return true;
             }
@@ -689,6 +892,7 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
     // --- Network Storage Methods ---
 
     public ItemStack insertItem(ItemStack stack, boolean simulate) {
+        NonNullList<ItemStack> storage = getActiveStorageItems();
         if (stack.isEmpty()) return ItemStack.EMPTY;
         if (!matchesChestFilters(stack)) return stack;
         ItemStack current = stack.copy();
@@ -697,7 +901,7 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
 
         // 1. Fill existing matching stacks in unlocked pages
         for (int i = 0; i < limit; i++) {
-            ItemStack inSlot = items.get(i);
+            ItemStack inSlot = storage.get(i);
             if (!inSlot.isEmpty() && ItemStack.isSameItemSameComponents(inSlot, current)) {
                 int space = Math.min(inSlot.getMaxStackSize(), this.getMaxStackSize()) - inSlot.getCount();
                 if (space > 0) {
@@ -714,11 +918,11 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
 
         // 2. Place in empty unlocked slots
         for (int i = 0; i < limit; i++) {
-            ItemStack inSlot = items.get(i);
+            ItemStack inSlot = storage.get(i);
             if (inSlot.isEmpty()) {
                 int toAdd = Math.min(current.getMaxStackSize(), current.getCount());
                 if (!simulate) {
-                    items.set(i, current.copyWithCount(toAdd));
+                    storage.set(i, current.copyWithCount(toAdd));
                     setChanged();
                 }
                 current.shrink(toAdd);
@@ -735,21 +939,24 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
     }
 
     public ItemStack extractItem(Item item, int amount, boolean simulate) {
-        ItemStack result = StorageItemTransfers.extract(items, getUnlockedSlots(), item, amount, simulate);
+        NonNullList<ItemStack> storage = getActiveStorageItems();
+        ItemStack result = StorageItemTransfers.extract(storage, getUnlockedSlots(), item, amount, simulate);
         if (!simulate && !result.isEmpty()) setChanged();
         return result;
     }
 
     public ItemStack extractMatchingItem(ItemStack template, int amount, boolean simulate) {
-        ItemStack result = StorageItemTransfers.extractMatching(items, getUnlockedSlots(), template, amount, simulate);
+        NonNullList<ItemStack> storage = getActiveStorageItems();
+        ItemStack result = StorageItemTransfers.extractMatching(storage, getUnlockedSlots(), template, amount, simulate);
         if (!simulate && !result.isEmpty()) setChanged();
         return result;
     }
 
     public void collectStoredItems(Map<Item, Integer> map) {
+        NonNullList<ItemStack> storage = getActiveStorageItems();
         int limit = getUnlockedSlots();
         for (int i = 0; i < limit; i++) {
-            ItemStack current = items.get(i);
+            ItemStack current = storage.get(i);
             if (!current.isEmpty()) {
                 map.put(current.getItem(), map.getOrDefault(current.getItem(), 0) + current.getCount());
             }
@@ -757,10 +964,11 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
     }
 
     public int getTotalStored() {
+        NonNullList<ItemStack> storage = getActiveStorageItems();
         int total = 0;
         int limit = getUnlockedSlots();
         for (int i = 0; i < limit; i++) {
-            ItemStack current = items.get(i);
+            ItemStack current = storage.get(i);
             if (!current.isEmpty()) {
                 total += current.getCount();
             }
@@ -773,37 +981,39 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
     }
 
     private void cleanOverflowDuplicates() {
+        NonNullList<ItemStack> storage = getActiveStorageItems();
         // Keeps the last slot free for incoming hopper items if every single unlocked slot is occupied by duplicates
         int limit = getUnlockedSlots();
-        ItemStack last = items.get(limit - 1);
+        ItemStack last = storage.get(limit - 1);
         if (last.isEmpty()) return;
 
         for (int i = 0; i < limit - 1; i++) {
-            ItemStack s = items.get(i);
+            ItemStack s = storage.get(i);
             if (s.isEmpty()) return; // Still has empty slots
         }
 
         // All unlocked slots are occupied: check if the last slot's item already has at least 2 full stacks earlier in the chest
         int fullStacks = 0;
         for (int i = 0; i < limit - 1; i++) {
-            ItemStack s = items.get(i);
+            ItemStack s = storage.get(i);
             if (ItemStack.isSameItemSameComponents(s, last) && s.getCount() >= s.getMaxStackSize()) {
                 fullStacks++;
             }
         }
         if (fullStacks >= 2) {
-            items.set(limit - 1, ItemStack.EMPTY);
+            storage.set(limit - 1, ItemStack.EMPTY);
             setChanged();
         }
     }
 
     private void cleanFilteredVoidItems(Level level) {
+        NonNullList<ItemStack> storage = getActiveStorageItems();
         int limit = getUnlockedSlots();
         boolean removedAny = false;
         for (int i = 0; i < limit; i++) {
-            ItemStack st = items.get(i);
+            ItemStack st = storage.get(i);
             if (!st.isEmpty() && shouldFilteredVoid(st)) {
-                items.set(i, ItemStack.EMPTY);
+                storage.set(i, ItemStack.EMPTY);
                 removedAny = true;
             }
         }
@@ -883,6 +1093,7 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
     }
 
     private void runAutoCompaction(Level level) {
+        NonNullList<ItemStack> storage = getActiveStorageItems();
         if (level == null || level.getServer() == null) return;
         int limit = getUnlockedSlots();
         int maxCraftsPerCycle = Math.max(1, getCompactorCount() * (1 << getOverclockTier()));
@@ -890,7 +1101,7 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
         // Count totals per item across all unlocked slots
         Map<Item, Integer> counts = new HashMap<>();
         for (int i = 0; i < limit; i++) {
-            ItemStack st = items.get(i);
+            ItemStack st = storage.get(i);
             if (!st.isEmpty() && !st.isDamaged() && !st.isEnchanted()) {
                 counts.merge(st.getItem(), st.getCount(), Integer::sum);
             }
@@ -915,32 +1126,31 @@ public class VolcaniteModularChestBlockEntity extends BaseContainerBlockEntity i
             ItemStack craftedResult = rule.result().copyWithCount(crafts * rule.result().getCount());
             int toConsume = crafts * rule.requiredCount();
 
-            // Consume ingredients across slots first, then insert result (or rollback if chest is completely full)
-            List<int[]> consumedFrom = new ArrayList<>();
-            int remainingToConsume = toConsume;
-            for (int i = 0; i < limit && remainingToConsume > 0; i++) {
-                ItemStack st = items.get(i);
-                if (!st.isEmpty() && st.is(entry.getKey()) && !st.isDamaged() && !st.isEnchanted()) {
-                    int take = Math.min(remainingToConsume, st.getCount());
-                    st.shrink(take);
-                    if (st.isEmpty()) items.set(i, ItemStack.EMPTY);
-                    consumedFrom.add(new int[]{i, take});
-                    remainingToConsume -= take;
-                }
+            // A failed insertion may already have changed output stacks. Restore the
+            // entire active inventory, including components, rather than just ingredients.
+            List<ItemStack> beforeCraft = new ArrayList<>(limit);
+            for (int i = 0; i < limit; i++) {
+                beforeCraft.add(storage.get(i).copy());
             }
-
-            ItemStack leftover = insertStorageItem(craftedResult);
-            if (!leftover.isEmpty()) {
-                // Rollback if result couldn't fit
-                for (int[] rec : consumedFrom) {
-                    ItemStack cur = items.get(rec[0]);
-                    if (cur.isEmpty()) {
-                        items.set(rec[0], new ItemStack(entry.getKey(), rec[1]));
-                    } else {
-                        cur.grow(rec[1]);
+            boolean committed = false;
+            try {
+                int remainingToConsume = toConsume;
+                for (int i = 0; i < limit && remainingToConsume > 0; i++) {
+                    ItemStack st = storage.get(i);
+                    if (!st.isEmpty() && st.is(entry.getKey()) && !st.isDamaged() && !st.isEnchanted()) {
+                        int take = Math.min(remainingToConsume, st.getCount());
+                        st.shrink(take);
+                        if (st.isEmpty()) storage.set(i, ItemStack.EMPTY);
+                        remainingToConsume -= take;
                     }
                 }
-                continue;
+                if (remainingToConsume > 0 || !insertStorageItem(craftedResult).isEmpty()) continue;
+                committed = true;
+            } finally {
+                if (!committed) {
+                    for (int i = 0; i < limit; i++) storage.set(i, beforeCraft.get(i));
+                    setChanged();
+                }
             }
 
             setChanged();

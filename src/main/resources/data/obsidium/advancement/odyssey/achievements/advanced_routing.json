@@ -1,0 +1,48 @@
+{
+  "parent": "obsidium:odyssey/workshop_automation",
+  "display": {
+    "icon": {
+      "id": "obsidium:advanced_hermes_item_pipe"
+    },
+    "title": {
+      "translate": "advancement.obsidium.achievements.advanced_routing.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.achievements.advanced_routing.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "hermes_item_pipe": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "obsidium:advanced_hermes_item_pipe"
+      }
+    },
+    "naiad_fluid_pipe": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "obsidium:advanced_naiad_fluid_pipe"
+      }
+    },
+    "volcanite_energy_wire": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "obsidium:advanced_volcanite_energy_wire"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 75
+  },
+  "requirements": [
+    [
+      "hermes_item_pipe",
+      "naiad_fluid_pipe",
+      "volcanite_energy_wire"
+    ]
+  ]
+}

@@ -31,6 +31,15 @@ import java.util.Map;
 public class VolcaniteStorageTerminalMenu extends AbstractContainerMenu {
     private final VolcaniteStorageControllerBlockEntity controller;
     private final ContainerData data;
+    private ItemStack remote;
+    private Player remotePlayer;
+
+    public VolcaniteStorageTerminalMenu withRemote(ItemStack remote, Player player) {
+        this.remote = remote;
+        this.remotePlayer = player;
+        return this;
+    }
+
     private final SimpleContainer displayInventory = new SimpleContainer(54);
     private int scrollRow = 0;
     private String searchFilter = "";
@@ -300,6 +309,7 @@ public class VolcaniteStorageTerminalMenu extends AbstractContainerMenu {
 
     @Override
     public boolean clickMenuButton(Player player, int id) {
+        if (!player.level().isClientSide() && !stillValid(player)) return false;
         if (id == 100) {
             this.viewMode = 0;
             this.scrollRow = 0;
@@ -344,6 +354,7 @@ public class VolcaniteStorageTerminalMenu extends AbstractContainerMenu {
 
     @Override
     public void clicked(int slotId, int button, ClickType clickType, Player player) {
+        if (!player.level().isClientSide() && !stillValid(player)) return;
         if (controller != null && slotId >= 0 && slotId < 54) {
             ItemStack carried = getCarried();
 
@@ -493,6 +504,7 @@ public class VolcaniteStorageTerminalMenu extends AbstractContainerMenu {
 
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
+        if (!player.level().isClientSide() && !stillValid(player)) return ItemStack.EMPTY;
         if (controller == null) return ItemStack.EMPTY;
         ItemStack itemStack = ItemStack.EMPTY;
         Slot slot = this.slots.get(index);
@@ -531,14 +543,19 @@ public class VolcaniteStorageTerminalMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        if (controller != null && controller.getLevel() != null) {
-            if (controller.isRemoved()) return false;
-            boolean hasRemote = player.getMainHandItem().getItem() instanceof net.valentin.obsidium.item.VolcaniteStorageRemoteItem
-                    || player.getOffhandItem().getItem() instanceof net.valentin.obsidium.item.VolcaniteStorageRemoteItem
-                    || player.getInventory().contains(new ItemStack(net.valentin.obsidium.ObsidiumMod.VOLCANITE_STORAGE_REMOTE));
-            double maxDist = hasRemote ? 128.0 : 8.0;
-            return player.distanceToSqr(net.minecraft.world.phys.Vec3.atCenterOf(controller.getBlockPos())) <= maxDist * maxDist;
+        if (controller == null) return true; // Client menu has no block entity.
+        var level = controller.getLevel();
+        if (level == null || controller.isRemoved() || !level.getChunkSource().hasChunk(controller.getBlockPos().getX() >> 4, controller.getBlockPos().getZ() >> 4)
+                || level.getBlockEntity(controller.getBlockPos()) != controller) return false;
+        if (remote != null) {
+            boolean carried = false;
+            for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+                if (player.getInventory().getItem(i) == remote) carried = true;
+            }
+            return player == remotePlayer && carried
+                    && net.valentin.obsidium.item.VolcaniteStorageRemoteItem.resolveController(player, remote) == controller;
         }
-        return true;
+        return player.level() == level
+                && player.distanceToSqr(net.minecraft.world.phys.Vec3.atCenterOf(controller.getBlockPos())) <= 64;
     }
 }

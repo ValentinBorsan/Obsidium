@@ -1,24 +1,27 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "pattern": [
+    "ARA",
+    "SFS",
+    "ARA"
+  ],
   "key": {
-    "S": {
-      "item": "minecraft:wheat_seeds"
-    },
     "A": {
       "item": "obsidium:volcanic_ash"
     },
     "R": {
       "item": "obsidium:silver_ingot"
+    },
+    "S": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "F": {
+      "item": "obsidium:volcanite_flux_mechanism"
     }
   },
-  "pattern": [
-    "RAR",
-    "ASA",
-    "RAR"
-  ],
   "result": {
-    "count": 1,
-    "id": "obsidium:silver_seed"
+    "id": "obsidium:silver_seed",
+    "count": 1
   }
 }

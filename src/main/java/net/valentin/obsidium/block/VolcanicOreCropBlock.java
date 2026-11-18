@@ -116,13 +116,24 @@ public class VolcanicOreCropBlock extends CropBlock {
         return this.getAge(state) < this.getMaxAge();
     }
 
+    public boolean isRareResourceCrop() {
+        return seedSupplier.get() == net.valentin.obsidium.ObsidiumMod.DIAMOND_SEED
+                || seedSupplier.get() == net.valentin.obsidium.ObsidiumMod.NETHERITE_SEED;
+    }
+
+    @Override
+    protected int getBonemealAgeIncrease(Level level) {
+        return isRareResourceCrop() ? 1 : super.getBonemealAgeIncrease(level);
+    }
+
     @Override
     public void randomTick(BlockState state, net.minecraft.server.level.ServerLevel level, BlockPos pos, net.minecraft.util.RandomSource random) {
         int age = this.getAge(state);
         if (age < this.getMaxAge()) {
             boolean thermalBoost = isThermalEnvironment(level, pos);
             // Normal growth is chance 1 in 12, with thermal boost it is 1 in 5 (more than 2x faster!)
-            int chance = thermalBoost ? 5 : 12;
+            int chance = (thermalBoost ? 5 : 12) * (isRareResourceCrop()
+                    ? net.valentin.obsidium.config.ModConfig.get().getRareResourceGrowthMultiplier() : 1);
             if (random.nextInt(chance) == 0) {
                 level.setBlock(pos, this.getStateForAge(age + 1), 2);
                 if (thermalBoost && random.nextFloat() < 0.4f) {
@@ -155,7 +166,7 @@ public class VolcanicOreCropBlock extends CropBlock {
         // Magmatic Agriculture: Volcanic Ash as sacred super-fertilizer!
         if (stack.is(net.valentin.obsidium.ObsidiumMod.VOLCANIC_ASH) && this.getAge(state) < this.getMaxAge()) {
             if (!level.isClientSide()) {
-                int boost = 2 + level.random.nextInt(2); // Advances by 2-3 growth stages!
+                int boost = isRareResourceCrop() ? 1 : 2 + level.random.nextInt(2); // Advances by 2-3 growth stages!
                 int newAge = Math.min(this.getMaxAge(), this.getAge(state) + boost);
                 level.setBlock(pos, this.getStateForAge(newAge), 2);
                 if (!player.getAbilities().instabuild) {

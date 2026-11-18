@@ -12,7 +12,7 @@
       "item": "minecraft:obsidian"
     },
     "F": {
-      "item": "minecraft:furnace"
+      "item": "obsidium:volcanite_furnace"
     }
   },
   "pattern": [

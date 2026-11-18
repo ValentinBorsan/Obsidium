@@ -10,6 +10,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
@@ -21,29 +22,32 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.valentin.obsidium.ObsidiumMod;
+import net.valentin.obsidium.item.QuantumLinkModuleItem;
 import net.valentin.obsidium.item.VolcaniteWrenchItem;
 import org.jetbrains.annotations.Nullable;
 
 public class VolcaniteModularChestBlock extends Block implements EntityBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+    public static final BooleanProperty LINKED = BooleanProperty.create("linked");
 
     public VolcaniteModularChestBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(LINKED, false));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, LINKED);
     }
 
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(LINKED, false);
     }
 
     @Nullable
@@ -71,11 +75,27 @@ public class VolcaniteModularChestBlock extends Block implements EntityBlock {
                 if (!level.isClientSide()) {
                     ItemStack drop = new ItemStack(ObsidiumMod.VOLCANITE_MODULAR_CHEST_ITEM);
                     chest.saveToItem(drop, level.registryAccess());
-                    chest.clearContent();
+                    chest.clearLocalContents();
                     level.removeBlock(pos, false);
                     Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, drop);
                     level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_NETHERITE.value(), SoundSource.BLOCKS, 0.9F, 1.1F);
                     player.displayClientMessage(Component.literal("§6[Modular Chest] §aDismantled with contents & modules preserved!"), true);
+                }
+                return ItemInteractionResult.sidedSuccess(level.isClientSide());
+            }
+        }
+        // Right-click with Dye when Quantum Linked: change channel color
+        if (player != null && stack.getItem() instanceof DyeItem dyeItem) {
+            BlockEntity be = level.getBlockEntity(pos);
+            if (be instanceof VolcaniteModularChestBlockEntity chest && chest.hasQuantumLinkModule()) {
+                if (!level.isClientSide()) {
+                    chest.ensureQuantumOwner(player.getUUID());
+                    chest.setQuantumColor(dyeItem.getDyeColor());
+                    if (!player.isCreative()) {
+                        stack.shrink(1);
+                    }
+                    level.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    player.displayClientMessage(Component.literal("§d[Quantum Chest] §fColor set to §e" + QuantumLinkModuleItem.getColorDisplayName(dyeItem.getDyeColor()) + " §7(Ch #" + chest.getQuantumChannel() + ")"), true);
                 }
                 return ItemInteractionResult.sidedSuccess(level.isClientSide());
             }
@@ -87,6 +107,9 @@ public class VolcaniteModularChestBlock extends Block implements EntityBlock {
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (!level.isClientSide()) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
+            if (blockEntity instanceof VolcaniteModularChestBlockEntity chest) {
+                chest.ensureQuantumOwner(player.getUUID());
+            }
             if (blockEntity instanceof net.minecraft.world.MenuProvider menuProvider) {
                 player.openMenu(menuProvider);
             }
@@ -99,7 +122,7 @@ public class VolcaniteModularChestBlock extends Block implements EntityBlock {
         if (!state.is(newState.getBlock())) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
             if (blockEntity instanceof VolcaniteModularChestBlockEntity chest) {
-                Containers.dropContents(level, pos, chest);
+                chest.dropLocalContents(level, pos);
             }
             super.onRemove(state, level, pos, newState, isMoving);
         }

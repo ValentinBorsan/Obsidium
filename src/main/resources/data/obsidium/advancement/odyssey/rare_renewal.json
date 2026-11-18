@@ -1,0 +1,31 @@
+{
+  "parent": "obsidium:odyssey/late_industry",
+  "display": {
+    "icon": {
+      "id": "obsidium:tartarean_netherite_sapling"
+    },
+    "title": {
+      "translate": "advancement.obsidium.odyssey.rare_renewal.title"
+    },
+    "description": {
+      "translate": "advancement.obsidium.odyssey.rare_renewal.description"
+    },
+    "frame": "goal",
+    "show_toast": true
+  },
+  "criteria": {
+    "obtained": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "obsidium:tartarean_netherite_sapling"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

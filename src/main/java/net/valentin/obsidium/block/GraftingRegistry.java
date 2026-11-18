@@ -17,8 +17,8 @@ public final class GraftingRegistry {
             return ObsidiumMod.ADAMANTINE_DIAMOND_SAPLING;
         }
 
-        // 2. Tartarean Netherite Tree (Volcanite + Lead)
-        if (isPair(r, s, "hephaestus_volcanite", "cronus_lead") || isPair(r, s, "hephaestus_volcanite", "ares_iron")) {
+        // Rare renewal requires an existing late-game specimen; common trees cannot bootstrap Netherite.
+        if (isPair(r, s, "tartarean_netherite", "hephaestus_volcanite")) {
             return ObsidiumMod.TARTAREAN_NETHERITE_SAPLING;
         }
 
@@ -58,7 +58,8 @@ public final class GraftingRegistry {
         }
 
         // 10. Hades Coal Tree (Oak + Volcanite or Dark Oak + Coal)
-        if (isPair(r, s, "oak", "hades_coal") || isPair(r, s, "dark_oak", "coal")) {
+        if (isPair(r, s, "oak", "hephaestus_volcanite")
+                || isPair(r, s, "oak", "hades_coal") || isPair(r, s, "dark_oak", "coal")) {
             return ObsidiumMod.HADES_COAL_SAPLING;
         }
 
@@ -78,6 +79,13 @@ public final class GraftingRegistry {
         }
 
         return ObsidiumMod.MIDAS_GOLD_SAPLING;
+    }
+
+    public static boolean canProduceRareMutation(String rootstock, String scion) {
+        return "tartarean_netherite".equalsIgnoreCase(rootstock)
+                || "tartarean_netherite".equalsIgnoreCase(scion)
+                || "adamantine_diamond".equalsIgnoreCase(rootstock)
+                || "adamantine_diamond".equalsIgnoreCase(scion);
     }
 
     private static boolean isPair(String r, String s, String a, String b) {

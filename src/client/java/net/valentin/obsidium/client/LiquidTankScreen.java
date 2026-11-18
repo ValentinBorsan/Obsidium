@@ -9,10 +9,12 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.valentin.obsidium.ObsidiumMod;
 import net.valentin.obsidium.block.LiquidTankMenu;
+import net.valentin.obsidium.item.QuantumLinkModuleItem;
 
 import java.util.List;
 
@@ -129,5 +131,71 @@ public class LiquidTankScreen extends AbstractContainerScreen<LiquidTankMenu> {
                 }
             }
         }
+
+        // Quantum Link Channel Controls (x: 122..169, y: 20..73)
+        if (this.menu.isQuantumLinked()) {
+            int px = i + 122;
+            int py = j + 20;
+            guiGraphics.fill(px, py, px + 48, py + 54, 0xFF15101D);
+            guiGraphics.fill(px + 1, py + 1, px + 47, py + 53, 0xFF20182C);
+
+            DyeColor color = this.menu.getQuantumColor();
+            int rgb = 0xFF000000 | QuantumLinkModuleItem.getChannelRgb(color);
+            // Color row: [<] [swatch] [>]
+            drawMiniBtn(guiGraphics, px + 2, py + 3, 10, 11, "<", 0xFFD088FF, mouseX, mouseY);
+            guiGraphics.fill(px + 14, py + 3, px + 34, py + 14, 0xFF000000);
+            guiGraphics.fill(px + 15, py + 4, px + 33, py + 13, rgb);
+            drawMiniBtn(guiGraphics, px + 36, py + 3, 10, 11, ">", 0xFFD088FF, mouseX, mouseY);
+
+            // Channel label & buttons: [-][-10][+10][+]
+            String chText = "#" + this.menu.getQuantumChannel();
+            int cw = this.font.width(chText);
+            guiGraphics.drawString(this.font, chText, px + 24 - cw / 2, py + 17, 0xFFE6C8FF, false);
+
+            drawMiniBtn(guiGraphics, px + 2, py + 27, 10, 11, "-", 0xFF99CCFF, mouseX, mouseY);
+            drawMiniBtn(guiGraphics, px + 13, py + 27, 10, 11, "--", 0xFF77AADD, mouseX, mouseY);
+            drawMiniBtn(guiGraphics, px + 25, py + 27, 10, 11, "++", 0xFF77AADD, mouseX, mouseY);
+            drawMiniBtn(guiGraphics, px + 36, py + 27, 10, 11, "+", 0xFF99CCFF, mouseX, mouseY);
+
+            // Public / Private toggle
+            boolean priv = this.menu.isQuantumPrivate();
+            drawMiniBtn(guiGraphics, px + 2, py + 40, 44, 11, priv ? "PRIVATE" : "PUBLIC", priv ? 0xFFFF6688 : 0xFF66FFAA, mouseX, mouseY);
+        }
+    }
+
+    private void drawMiniBtn(GuiGraphics g, int bx, int by, int bw, int bh, String text, int borderColor, int mouseX, int mouseY) {
+        boolean hovered = mouseX >= bx && mouseX < bx + bw && mouseY >= by && mouseY < by + bh;
+        g.fill(bx, by, bx + bw, by + bh, hovered ? 0xFFFFFFFF : borderColor);
+        g.fill(bx + 1, by + 1, bx + bw - 1, by + bh - 1, hovered ? 0xFF342648 : 0xFF1A1424);
+        int tw = this.font.width(text);
+        g.drawString(this.font, text, bx + (bw - tw) / 2, by + (bh - 7) / 2, hovered ? 0xFFFFFFFF : borderColor, false);
+    }
+
+    @Override
+    public boolean mouseClicked(double mouseX, double mouseY, int button) {
+        if (button == 0 && this.menu.isQuantumLinked() && this.minecraft != null && this.minecraft.gameMode != null) {
+            int i = (this.width - this.imageWidth) / 2;
+            int j = (this.height - this.imageHeight) / 2;
+            int px = i + 122;
+            int py = j + 20;
+            int btnId = -1;
+            if (inBox(mouseX, mouseY, px + 2, py + 3, 10, 11)) btnId = LiquidTankMenu.BTN_PREV_COLOR;
+            else if (inBox(mouseX, mouseY, px + 36, py + 3, 10, 11)) btnId = LiquidTankMenu.BTN_NEXT_COLOR;
+            else if (inBox(mouseX, mouseY, px + 2, py + 27, 10, 11)) btnId = LiquidTankMenu.BTN_DEC_CH_1;
+            else if (inBox(mouseX, mouseY, px + 13, py + 27, 10, 11)) btnId = LiquidTankMenu.BTN_DEC_CH_10;
+            else if (inBox(mouseX, mouseY, px + 25, py + 27, 10, 11)) btnId = LiquidTankMenu.BTN_INC_CH_10;
+            else if (inBox(mouseX, mouseY, px + 36, py + 27, 10, 11)) btnId = LiquidTankMenu.BTN_INC_CH_1;
+            else if (inBox(mouseX, mouseY, px + 2, py + 40, 44, 11)) btnId = LiquidTankMenu.BTN_TOGGLE_PRIVATE;
+
+            if (btnId >= 0) {
+                this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, btnId);
+                return true;
+            }
+        }
+        return super.mouseClicked(mouseX, mouseY, button);
+    }
+
+    private static boolean inBox(double mx, double my, int x, int y, int w, int h) {
+        return mx >= x && mx < x + w && my >= y && my < y + h;
     }
 }

@@ -40,7 +40,11 @@ public class ObsidiumModClient implements ClientModInitializer {
 		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.VOLCANITE_STORAGE_PIPE_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
 		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.VOLCANITE_UNIVERSAL_CONDUIT_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
 		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.HERMES_ITEM_PIPE_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
+		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.ADVANCED_HERMES_ITEM_PIPE_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
+		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.SUPREME_HERMES_ITEM_PIPE_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
 		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.NAIAD_FLUID_PIPE_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
+		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.ADVANCED_NAIAD_FLUID_PIPE_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
+		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.SUPREME_NAIAD_FLUID_PIPE_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
 		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.VOLCANITE_ENERGY_WIRE_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
 		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.ADVANCED_VOLCANITE_ENERGY_WIRE_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
 		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.SUPREME_VOLCANITE_ENERGY_WIRE_BLOCK, net.minecraft.client.renderer.RenderType.cutout());
@@ -80,6 +84,8 @@ public class ObsidiumModClient implements ClientModInitializer {
 		net.minecraft.client.renderer.blockentity.BlockEntityRenderers.register(ObsidiumMod.VOLCANITE_ENERGY_CELL_BE, net.valentin.obsidium.client.VolcaniteEnergyCellRenderer::new);
 		net.minecraft.client.renderer.blockentity.BlockEntityRenderers.register(ObsidiumMod.VOLCANITE_ENERGY_UNIT_BE, net.valentin.obsidium.client.VolcaniteEnergyCellRenderer::new);
 		net.minecraft.client.renderer.blockentity.BlockEntityRenderers.register(ObsidiumMod.OLYMPIAN_HADRON_COLLIDER_BE, net.valentin.obsidium.client.OlympianHadronColliderRenderer::new);
+		net.minecraft.client.renderer.blockentity.BlockEntityRenderers.register(ObsidiumMod.POSEIDON_ABYSSAL_PUMP_BE, net.valentin.obsidium.client.PoseidonAbyssalPumpRenderer::new);
+		net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(ObsidiumMod.POSEIDON_ABYSSAL_CASING_BLOCK, net.minecraft.client.renderer.RenderType.translucent());
 		net.minecraft.client.renderer.blockentity.BlockEntityRenderers.register(ObsidiumMod.BASIC_VOLCANIC_TELEPORTER_BE, net.valentin.obsidium.client.VolcanicTeleporterRenderer::new);
 		net.minecraft.client.renderer.blockentity.BlockEntityRenderers.register(ObsidiumMod.VOLCANIC_CORE_TELEPORTER_BE, net.valentin.obsidium.client.VolcanicTeleporterRenderer::new);
 
@@ -96,6 +102,20 @@ public class ObsidiumModClient implements ClientModInitializer {
 			}
 			return -1;
 		}, ObsidiumMod.VOLCANITE_STORAGE_PIPE_BLOCK);
+
+		// Dynamic Quantum Link Color (16 DyeColors) for Modular Chest & Liquid Barrels
+		net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+			if (world != null && pos != null) {
+				net.minecraft.world.level.block.entity.BlockEntity be = world.getBlockEntity(pos);
+				if (be instanceof net.valentin.obsidium.block.VolcaniteModularChestBlockEntity chest && chest.hasQuantumLinkModule()) {
+					return net.valentin.obsidium.item.QuantumLinkModuleItem.getChannelRgb(chest.getQuantumColor());
+				}
+				if (be instanceof net.valentin.obsidium.block.LiquidTankBlockEntity tank && tank.isQuantumLinked()) {
+					return net.valentin.obsidium.item.QuantumLinkModuleItem.getChannelRgb(tank.getQuantumColor());
+				}
+			}
+			return -1;
+		}, ObsidiumMod.VOLCANITE_MODULAR_CHEST_BLOCK, ObsidiumMod.VOLCANIC_WOOD_LIQUID_BARREL_BLOCK, ObsidiumMod.REINFORCED_VOLCANIC_LIQUID_BARREL_BLOCK);
 
 		// Cutout render layer for Volcanic Ore Crops
 		net.minecraft.client.renderer.RenderType cutout = net.minecraft.client.renderer.RenderType.cutout();
@@ -120,6 +140,7 @@ public class ObsidiumModClient implements ClientModInitializer {
 		MenuScreens.register(ObsidiumMod.VOLCANITE_FURNACE_MENU, VolcaniteFurnaceScreen::new);
 		MenuScreens.register(ObsidiumMod.VOLCANITE_WORKTABLE_MENU, net.valentin.obsidium.client.VolcaniteWorktableScreen::new);
 		MenuScreens.register(ObsidiumMod.LIQUID_TANK_MENU, net.valentin.obsidium.client.LiquidTankScreen::new);
+		MenuScreens.register(ObsidiumMod.PIPE_CONFIG_MENU, net.valentin.obsidium.client.PipeConfigScreen::new);
 		MenuScreens.register(ObsidiumMod.CREATIVE_LAVA_TANK_MENU, net.valentin.obsidium.client.CreativeLavaTankScreen::new);
 		MenuScreens.register(ObsidiumMod.CREATIVE_WATER_TANK_MENU, net.valentin.obsidium.client.CreativeWaterTankScreen::new);
 		MenuScreens.register(ObsidiumMod.MAGMA_FORGE_MENU, net.valentin.obsidium.screen.MagmaForgeScreen::new);
@@ -166,6 +187,10 @@ public class ObsidiumModClient implements ClientModInitializer {
 		MenuScreens.register(ObsidiumMod.APOLLO_SOLAR_GENERATOR_MENU, net.valentin.obsidium.client.ApolloSolarGeneratorScreen::new);
 		MenuScreens.register(ObsidiumMod.AEOLUS_STORM_TURBINE_MENU, net.valentin.obsidium.client.AeolusStormTurbineScreen::new);
 		MenuScreens.register(ObsidiumMod.OLYMPIAN_HADRON_COLLIDER_MENU, net.valentin.obsidium.client.OlympianHadronColliderScreen::new);
+		MenuScreens.register(ObsidiumMod.POSEIDON_ABYSSAL_PUMP_MENU, net.valentin.obsidium.client.PoseidonAbyssalPumpScreen::new);
+		MenuScreens.register(ObsidiumMod.AEGIS_SANCTUARY_WARD_MENU, net.valentin.obsidium.client.AegisSanctuaryWardScreen::new);
+		MenuScreens.register(ObsidiumMod.AMBROSIA_FEEDER_MENU, net.valentin.obsidium.client.AmbrosiaFeederScreen::new);
+		MenuScreens.register(ObsidiumMod.PAN_HARVESTER_MENU, net.valentin.obsidium.client.PanHarvesterScreen::new);
 		MenuScreens.register(ObsidiumMod.VOLCANIC_TELEPORTER_MENU, net.valentin.obsidium.client.VolcaniteTeleporterScreen::new);
 
 		ClientPlayNetworking.registerGlobalReceiver(net.valentin.obsidium.network.TeleportNetworkSyncPayload.TYPE, (payload, context) -> {

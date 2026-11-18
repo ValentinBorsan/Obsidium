@@ -4,9 +4,11 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "CraftingMenuMixin",
+    "NaturalSpawnerMixin",
     "OverworldBiomeBuilderMixin",
     "SurfaceRuleDataMixin",
-    "WaterPotionStorageMixin"
+    "WaterPotionStorageMixin",
+    "PastoralEntityDropsMixin"
   ],
   "client": [
     "SoundEngineMixin",

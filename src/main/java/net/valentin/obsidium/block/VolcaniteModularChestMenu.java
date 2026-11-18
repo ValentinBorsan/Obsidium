@@ -1,5 +1,8 @@
 package net.valentin.obsidium.block;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.inventory.ClickType;
+import net.valentin.obsidium.item.QuantumLinkModuleItem;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
@@ -10,8 +13,10 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.SimpleContainerData;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.valentin.obsidium.ObsidiumMod;
+import net.valentin.obsidium.storage.QuantumLinkNetworkState;
 
 public class VolcaniteModularChestMenu extends AbstractContainerMenu {
     public static final int BTN_SORT_QUANTITY_DESC = 0;
@@ -20,6 +25,13 @@ public class VolcaniteModularChestMenu extends AbstractContainerMenu {
     public static final int BTN_QUICK_STACK = 3;
     public static final int BTN_PREV_PAGE = 4;
     public static final int BTN_NEXT_PAGE = 5;
+    public static final int BTN_Q_PREV_COLOR = 6;
+    public static final int BTN_Q_NEXT_COLOR = 7;
+    public static final int BTN_Q_DEC_1 = 8;
+    public static final int BTN_Q_INC_1 = 9;
+    public static final int BTN_Q_DEC_10 = 10;
+    public static final int BTN_Q_INC_10 = 11;
+    public static final int BTN_Q_TOGGLE_PRIVATE = 12;
 
     public static final int MENU_STORAGE_SLOTS = VolcaniteModularChestBlockEntity.MAX_STORAGE_SLOTS; // 216 (4 pages x 54)
     public static final int MENU_MOD_SLOT_START = VolcaniteModularChestBlockEntity.SLOT_MOD_0; // 216
@@ -29,12 +41,12 @@ public class VolcaniteModularChestMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public VolcaniteModularChestMenu(int syncId, Inventory playerInventory) {
-        this(syncId, playerInventory, new SimpleContainer(VolcaniteModularChestBlockEntity.TOTAL_SLOTS), new SimpleContainerData(3));
+        this(syncId, playerInventory, new SimpleContainer(VolcaniteModularChestBlockEntity.TOTAL_SLOTS), new SimpleContainerData(7));
     }
 
     public VolcaniteModularChestMenu(int syncId, Inventory playerInventory, Container container) {
         this(syncId, playerInventory, container,
-                container instanceof VolcaniteModularChestBlockEntity chest ? chest.data : new SimpleContainerData(3));
+                container instanceof VolcaniteModularChestBlockEntity chest ? chest.data : new SimpleContainerData(7));
     }
 
     public VolcaniteModularChestMenu(int syncId, Inventory playerInventory, Container container, ContainerData data) {
@@ -61,7 +73,8 @@ public class VolcaniteModularChestMenu extends AbstractContainerMenu {
             this.addSlot(new Slot(container, containerModSlot, 178, 20 + m * 24) {
                 @Override
                 public boolean mayPlace(ItemStack stack) {
-                    return VolcaniteModularChestBlockEntity.isValidModule(stack);
+                    return VolcaniteModularChestBlockEntity.isValidModule(stack)
+                            && container.canPlaceItem(containerModSlot, stack);
                 }
 
                 @Override
@@ -113,10 +126,75 @@ public class VolcaniteModularChestMenu extends AbstractContainerMenu {
         return this.data.get(2) != 0;
     }
 
+    public boolean isQuantumLinked() {
+        return this.data.get(3) != 0;
+    }
+
+    public DyeColor getQuantumColor() {
+        return DyeColor.byId(Math.floorMod(this.data.get(4), 16));
+    }
+
+    public int getQuantumChannel() {
+        return QuantumLinkNetworkState.clampChannel(this.data.get(5));
+    }
+
+    public boolean isQuantumPrivate() {
+        return this.data.get(6) != 0;
+    }
+
     @Override
     public boolean clickMenuButton(Player player, int id) {
         if (this.container instanceof VolcaniteModularChestBlockEntity chest) {
             switch (id) {
+                case BTN_Q_PREV_COLOR -> {
+                    chest.ensureQuantumOwner(player.getUUID());
+                    chest.setQuantumColor(DyeColor.byId(Math.floorMod(chest.getQuantumColor().getId() - 1, 16)));
+                    playClickSound(player, 1.1F);
+                    broadcastChanges();
+                    return true;
+                }
+                case BTN_Q_NEXT_COLOR -> {
+                    chest.ensureQuantumOwner(player.getUUID());
+                    chest.setQuantumColor(DyeColor.byId(Math.floorMod(chest.getQuantumColor().getId() + 1, 16)));
+                    playClickSound(player, 1.2F);
+                    broadcastChanges();
+                    return true;
+                }
+                case BTN_Q_DEC_1 -> {
+                    chest.ensureQuantumOwner(player.getUUID());
+                    chest.setQuantumChannel(chest.getQuantumChannel() - 1);
+                    playClickSound(player, 1.0F);
+                    broadcastChanges();
+                    return true;
+                }
+                case BTN_Q_INC_1 -> {
+                    chest.ensureQuantumOwner(player.getUUID());
+                    chest.setQuantumChannel(chest.getQuantumChannel() + 1);
+                    playClickSound(player, 1.15F);
+                    broadcastChanges();
+                    return true;
+                }
+                case BTN_Q_DEC_10 -> {
+                    chest.ensureQuantumOwner(player.getUUID());
+                    chest.setQuantumChannel(chest.getQuantumChannel() - 10);
+                    playClickSound(player, 0.95F);
+                    broadcastChanges();
+                    return true;
+                }
+                case BTN_Q_INC_10 -> {
+                    chest.ensureQuantumOwner(player.getUUID());
+                    chest.setQuantumChannel(chest.getQuantumChannel() + 10);
+                    playClickSound(player, 1.25F);
+                    broadcastChanges();
+                    return true;
+                }
+                case BTN_Q_TOGGLE_PRIVATE -> {
+                    chest.ensureQuantumOwner(player.getUUID());
+                    chest.setQuantumPrivate(!chest.isQuantumPrivate());
+                    playClickSound(player, 1.3F);
+                    broadcastChanges();
+                    return true;
+                }
                 case BTN_SORT_QUANTITY_DESC -> {
                     chest.sortByQuantity(true);
                     playClickSound(player, 1.2F);
@@ -175,6 +253,28 @@ public class VolcaniteModularChestMenu extends AbstractContainerMenu {
         return this.container.stillValid(player);
     }
 
+    private boolean rejectQuantumInstallation(Player player, ItemStack stack) {
+        if (stack.getItem() instanceof QuantumLinkModuleItem
+                && container instanceof VolcaniteModularChestBlockEntity chest
+                && !chest.canInstallQuantumLink()) {
+            player.displayClientMessage(Component.translatable("message.obsidium.quantum_chest_empty_required"), true);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public void clicked(int slotId, int button, ClickType clickType, Player player) {
+        if (slotId >= MENU_MOD_SLOT_START && slotId < MENU_MOD_SLOT_END) {
+            ItemStack incoming = clickType == ClickType.SWAP
+                    ? ((button >= 0 && button < 9) || button == 40
+                        ? player.getInventory().getItem(button) : ItemStack.EMPTY) : getCarried();
+            if ((clickType == ClickType.PICKUP || clickType == ClickType.SWAP)
+                    && rejectQuantumInstallation(player, incoming)) return;
+        }
+        super.clicked(slotId, button, clickType, player);
+    }
+
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
         ItemStack itemStack = ItemStack.EMPTY;
@@ -194,8 +294,11 @@ public class VolcaniteModularChestMenu extends AbstractContainerMenu {
                         getUnlockedPages() * VolcaniteModularChestBlockEntity.SLOTS_PER_PAGE);
                 int curPageStart = getCurrentPage() * VolcaniteModularChestBlockEntity.SLOTS_PER_PAGE;
                 int curPageEnd = Math.min(unlockedSlots, curPageStart + VolcaniteModularChestBlockEntity.SLOTS_PER_PAGE);
+                if (rejectQuantumInstallation(player, stackInSlot)) return ItemStack.EMPTY;
                 if (VolcaniteModularChestBlockEntity.isValidModule(stackInSlot)) {
                     if (!this.moveItemStackTo(stackInSlot, MENU_MOD_SLOT_START, MENU_MOD_SLOT_END, false)) {
+                        // A link module belongs in a bay, never silently in local storage.
+                        if (stackInSlot.getItem() instanceof QuantumLinkModuleItem) return ItemStack.EMPTY;
                         if (!this.moveItemStackTo(stackInSlot, curPageStart, curPageEnd, false)
                                 && !this.moveItemStackTo(stackInSlot, 0, unlockedSlots, false)) {
                             return ItemStack.EMPTY;

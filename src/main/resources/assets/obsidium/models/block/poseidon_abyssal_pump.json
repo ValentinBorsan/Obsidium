@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "obsidium:block/poseidon_abyssal_pump_side",
+    "front": "obsidium:block/poseidon_abyssal_pump_front",
+    "side": "obsidium:block/poseidon_abyssal_pump_side"
+  }
+}

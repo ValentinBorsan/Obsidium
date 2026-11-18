@@ -1,25 +1,43 @@
 package net.valentin.obsidium.block;
 
 import net.minecraft.core.BlockPos;
+import net.valentin.obsidium.fluid.TickTransferBudget;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.Container;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.valentin.obsidium.ObsidiumMod;
+import net.valentin.obsidium.storage.QuantumLinkNetworkState;
 import team.reborn.energy.api.EnergyStorage;
-import team.reborn.energy.api.EnergyStorageUtil;
 import team.reborn.energy.api.base.SimpleEnergyStorage;
+import team.reborn.energy.api.EnergyStorageUtil;
+import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
+import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Queue;
+import java.util.Set;
+import java.util.UUID;
 
 import org.jetbrains.annotations.Nullable;
 
-public class VolcaniteEnergyWireBlockEntity extends BlockEntity implements PipeFacadeHolder {
+public class VolcaniteEnergyWireBlockEntity extends BlockEntity implements PipeFacadeHolder, PipeConfigurable, MenuProvider {
     public enum WireMode {
         NORMAL(0),
         EXTRACT(1),
@@ -65,34 +83,179 @@ public class VolcaniteEnergyWireBlockEntity extends BlockEntity implements PipeF
         return 20_000L;
     }
 
-    public final SimpleEnergyStorage energyStorage = new SimpleEnergyStorage(2_000_000L, 500_000L, 500_000L) {
-        @Override
-        public long getCapacity() {
-            return VolcaniteEnergyWireBlockEntity.this.getCapacity();
-        }
+    private static final int MAX_NETWORK_SCAN = 512;
+    private static final ThreadLocal<Set<BlockPos>> ACTIVE_ROUTING = ThreadLocal.withInitial(HashSet::new);
 
-        @Override
-        public long insert(long maxAmount, net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext transaction) {
-            long space = Math.max(0, getCapacity() - this.amount);
-            long allowed = Math.min(maxAmount, Math.min(space, getMaxTransfer()));
-            return super.insert(allowed, transaction);
-        }
-
-        @Override
-        public long extract(long maxAmount, net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext transaction) {
-            long allowed = Math.min(maxAmount, getMaxTransfer());
-            return super.extract(allowed, transaction);
-        }
-
-        @Override
-        protected void onFinalCommit() {
-            setChanged();
-        }
+    // Drain-only migration buffer: old saved energy remains available after upgrading.
+    private final SimpleEnergyStorage legacyEnergy = new SimpleEnergyStorage(Long.MAX_VALUE, 0, Long.MAX_VALUE) {
+        @Override protected void onFinalCommit() { setChanged(); }
     };
+
+    private final TickTransferBudget transferBudget = new TickTransferBudget();
+    private static long available(ConsumerEntry entry, Level level) {
+        long available = entry.maxRate();
+        for (var wire : entry.path()) available = Math.min(available,
+                wire.transferBudget.remaining(level.getGameTime(), wire.getEffectiveMaxTransfer()));
+        return available;
+    }
+    private static void consume(ConsumerEntry entry, long amount, TransactionContext transaction) {
+        for (var wire : entry.path()) wire.transferBudget.consume(amount, transaction);
+    }
+
+    private record WireNode(BlockPos pos, long pathMaxRate, List<VolcaniteEnergyWireBlockEntity> path) {}
+    private record ConsumerEntry(EnergyStorage storage, long maxRate, List<VolcaniteEnergyWireBlockEntity> path) {}
+    private record SourceEntry(EnergyStorage storage, @Nullable BlockPos excludePos) {}
+
+    public long getEffectiveMaxTransfer() {
+        return Math.max(1L, (getMaxTransfer() * throughputPercent) / 100L);
+    }
+
+    @Nullable
+    public EnergyStorage getEnergyStorage(@Nullable Direction side) {
+        if (side != null && isSideDisconnected(side)) {
+            return null;
+        }
+        WireMode mode = side != null ? getWireMode(side) : WireMode.NORMAL;
+        return new EnergyStorage() {
+            @Override
+            public boolean supportsInsertion() {
+                return mode != WireMode.INSERT;
+            }
+
+            @Override
+            public long insert(long maxAmount, TransactionContext transaction) {
+                if (mode == WireMode.INSERT || maxAmount <= 0L) return 0L;
+                if (level == null || level.isClientSide() || !isRedstoneAllowed(level, worldPosition)) return 0L;
+                Set<BlockPos> active = ACTIVE_ROUTING.get();
+                if (!active.add(worldPosition)) return 0L;
+                try {
+                    long toSend = Math.min(maxAmount, getEffectiveMaxTransfer());
+                    BlockPos excludePos = side != null ? worldPosition.relative(side) : null;
+                    List<ConsumerEntry> consumers = collectConsumers(level, worldPosition, excludePos);
+                    if (consumers.isEmpty()) return 0L;
+                    if (roundRobin && consumers.size() > 1) {
+                        int offset = Math.floorMod(rrIndex, consumers.size());
+                        if (offset > 0) {
+                            List<ConsumerEntry> rotated = new ArrayList<>(consumers.size());
+                            rotated.addAll(consumers.subList(offset, consumers.size()));
+                            rotated.addAll(consumers.subList(0, offset));
+                            consumers = rotated;
+                        }
+                    }
+                    long totalInserted = 0L;
+                    for (ConsumerEntry c : consumers) {
+                        long allowed = Math.min(toSend - totalInserted, available(c, level));
+                        if (allowed <= 0L) continue;
+                        long moved = c.storage().insert(allowed, transaction);
+                        consume(c, moved, transaction);
+                        totalInserted += moved;
+                        if (totalInserted >= toSend) break;
+                    }
+                    if (roundRobin && totalInserted > 0L) {
+                        rrIndex = (rrIndex + 1) % consumers.size();
+                    }
+                    return totalInserted;
+                } finally {
+                    active.remove(worldPosition);
+                }
+            }
+
+            @Override
+            public boolean supportsExtraction() {
+                return legacyEnergy.amount > 0L;
+            }
+
+            @Override
+            public long extract(long maxAmount, TransactionContext transaction) {
+                if (level == null || !isRedstoneAllowed(level, worldPosition)) return 0L;
+                long allowed = Math.min(maxAmount, transferBudget.remaining(level.getGameTime(), getEffectiveMaxTransfer()));
+                long moved = legacyEnergy.extract(allowed, transaction);
+                transferBudget.consume(moved, transaction);
+                return moved;
+            }
+
+            @Override
+            public long getAmount() {
+                return legacyEnergy.amount;
+            }
+
+            @Override
+            public long getCapacity() {
+                return legacyEnergy.amount;
+            }
+        };
+    }
 
     private final boolean[] disconnected = new boolean[6];
     private final WireMode[] wireModes = new WireMode[6];
     private net.minecraft.world.level.block.Block facadeBlock = null;
+
+    private int pipeColor = -1;
+    private int redstoneMode = REDSTONE_ALWAYS;
+    private boolean roundRobin = false;
+    private int throughputPercent = 100;
+    private int rrIndex = 0;
+
+    private boolean quantumLinked = false;
+    private DyeColor quantumColor = DyeColor.PURPLE;
+    private int quantumChannel = 1;
+    private boolean quantumPrivate = false;
+    private @Nullable UUID quantumOwner = null;
+
+    @Override public int getPipeKind() { return KIND_ENERGY; }
+    @Override public int getPipeColor() { return pipeColor; }
+    @Override public void setPipeColor(int color) {
+        int clamped = (color >= 0 && color < 16) ? color : -1;
+        if (this.pipeColor != clamped) {
+            this.pipeColor = clamped;
+            setChanged();
+            if (level != null && !level.isClientSide()) {
+                BlockState state = getBlockState();
+                if (state.getBlock() instanceof VolcaniteEnergyWireBlock wireBlock) {
+                    BlockState newState = wireBlock.makeConnections(level, worldPosition)
+                            .setValue(VolcaniteEnergyWireBlock.WATERLOGGED, state.getValue(VolcaniteEnergyWireBlock.WATERLOGGED));
+                    level.setBlock(worldPosition, newState, 3);
+                }
+                level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+            }
+        }
+    }
+    @Override public int getRedstoneMode() { return redstoneMode; }
+    @Override public void setRedstoneMode(int mode) { this.redstoneMode = Math.floorMod(mode, 4); setChanged(); }
+    @Override public boolean isRoundRobin() { return roundRobin; }
+    @Override public void setRoundRobin(boolean rr) { this.roundRobin = rr; setChanged(); }
+    @Override public int getThroughputPercent() { return throughputPercent; }
+    @Override public void setThroughputPercent(int pct) { this.throughputPercent = pct; setChanged(); }
+    @Override public int getFaceModeOrdinal(Direction dir) { return getWireMode(dir).getId(); }
+    @Override public void cycleFaceMode(Direction dir) { cycleWireMode(dir); }
+    @Override public boolean isQuantumLinked() { return quantumLinked; }
+    public void setQuantumLinked(boolean linked, @Nullable UUID owner) {
+        this.quantumLinked = linked;
+        if (owner != null) this.quantumOwner = owner;
+        setChanged();
+        if (level != null && !level.isClientSide()) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        }
+    }
+    @Override public DyeColor getQuantumColor() { return quantumColor; }
+    @Override public void setQuantumColor(DyeColor color) { if (color != null) { this.quantumColor = color; setChanged(); } }
+    @Override public int getQuantumChannel() { return quantumChannel; }
+    @Override public void setQuantumChannel(int ch) { this.quantumChannel = QuantumLinkNetworkState.clampChannel(ch); setChanged(); }
+    @Override public boolean isQuantumPrivate() { return quantumPrivate; }
+    @Override public @Nullable UUID getQuantumOwner() { return quantumOwner; }
+    @Override public void setQuantumPrivate(boolean priv) { this.quantumPrivate = priv; setChanged(); }
+    @Override public void ensureQuantumOwner(@Nullable UUID owner) { if (this.quantumOwner == null && owner != null) { this.quantumOwner = owner; setChanged(); } }
+    @Override public @Nullable Container getFilterContainer() { return null; }
+
+    @Override
+    public Component getDisplayName() {
+        return getBlockState().getBlock().getName();
+    }
+
+    @Override
+    public AbstractContainerMenu createMenu(int syncId, Inventory playerInventory, Player player) {
+        return new PipeConfigMenu(syncId, playerInventory, this);
+    }
 
     @Override
     @Nullable
@@ -162,75 +325,148 @@ public class VolcaniteEnergyWireBlockEntity extends BlockEntity implements PipeF
         return next;
     }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, VolcaniteEnergyWireBlockEntity entity) {
-        if (level.isClientSide()) return;
+    private boolean hasInsertFace() {
+        for (WireMode m : wireModes) {
+            if (m == WireMode.INSERT) return true;
+        }
+        return false;
+    }
 
-        boolean didSomething = false;
-        long maxTransfer = entity.getMaxTransfer();
-        
-        for (Direction dir : Direction.values()) {
-            if (entity.isSideDisconnected(dir)) continue;
+    private static EnergyStorage createQuantumInsertStorage(QuantumLinkNetworkState netState, String qKey) {
+        return netState.getEnergyStorage(qKey);
+    }
 
-            BlockPos neighborPos = pos.relative(dir);
-            if (!level.isLoaded(neighborPos)) continue;
+    private static EnergyStorage createQuantumExtractStorage(QuantumLinkNetworkState netState, String qKey) {
+        return netState.getEnergyStorage(qKey);
+    }
 
-            BlockEntity neighborBe = level.getBlockEntity(neighborPos);
-            if (neighborBe instanceof VolcaniteEnergyWireBlockEntity otherWire && otherWire.isSideDisconnected(dir.getOpposite())) {
-                continue;
+    private List<ConsumerEntry> collectConsumers(Level level, BlockPos startPos, @Nullable BlockPos excludePos) {
+        List<ConsumerEntry> consumers = new ArrayList<>();
+        Set<BlockPos> visited = new HashSet<>();
+        Queue<WireNode> queue = new ArrayDeque<>();
+        visited.add(startPos);
+        queue.add(new WireNode(startPos, getEffectiveMaxTransfer(), List.of(this)));
+        QuantumLinkNetworkState netState = QuantumLinkNetworkState.get(level);
+
+        while (!queue.isEmpty()) {
+            WireNode node = queue.poll();
+            BlockEntity be = level.getBlockEntity(node.pos());
+            if (!(be instanceof VolcaniteEnergyWireBlockEntity wire)) continue;
+            if (!wire.isRedstoneAllowed(level, node.pos())) continue;
+
+            if (wire.quantumLinked && netState != null && !wire.hasInsertFace()) {
+                String qKey = QuantumLinkNetworkState.buildChannelKey(wire.quantumPrivate, wire.quantumOwner, wire.quantumColor, wire.quantumChannel);
+                consumers.add(new ConsumerEntry(createQuantumInsertStorage(netState, qKey), node.pathMaxRate(), node.path()));
             }
 
-            WireMode mode = entity.wireModes[dir.get3DDataValue()];
-            EnergyStorage target = EnergyStorage.SIDED.find(level, neighborPos, dir.getOpposite());
-            if (target == null) continue;
+            for (Direction dir : Direction.values()) {
+                if (wire.isSideDisconnected(dir)) continue;
+                BlockPos np = node.pos().relative(dir);
+                if (!level.isLoaded(np)) continue;
 
-            // 1. EXTRACT / Export Mode (Pull energy from adjacent generator/machine into wire)
-            if (mode == WireMode.EXTRACT) {
-                if (target.supportsExtraction() && entity.energyStorage.amount < entity.getCapacity()) {
-                    long space = entity.getCapacity() - entity.energyStorage.amount;
-                    long toMove = Math.min(maxTransfer, space);
-                    long moved = EnergyStorageUtil.move(target, entity.energyStorage, toMove, null);
-                    if (moved > 0) didSomething = true;
-                }
-            }
-            // 2. INSERT / Import Mode (Push energy from wire into adjacent machine)
-            else if (mode == WireMode.INSERT) {
-                if (target.supportsInsertion() && entity.energyStorage.amount > 0) {
-                    long toMove = Math.min(maxTransfer, entity.energyStorage.amount);
-                    long moved = EnergyStorageUtil.move(entity.energyStorage, target, toMove, null);
-                    if (moved > 0) didSomething = true;
-                }
-            }
-            // 3. NORMAL Mode (Auto-balance and bidirectional push/pull)
-            else {
-                // Adjacent is another energy wire: balance energy smoothly without heavy diffusion drop-off (throttled every 2 ticks with hash phase offset)
-                if (neighborBe instanceof VolcaniteEnergyWireBlockEntity otherWire) {
-                    if ((level.getGameTime() + Math.abs(pos.hashCode())) % 2 == 0) {
-                        if (entity.energyStorage.amount > otherWire.energyStorage.amount) {
-                            long effectiveRate = Math.min(maxTransfer, otherWire.getMaxTransfer());
-                            long diff = (entity.energyStorage.amount - otherWire.energyStorage.amount + 1) / 2;
-                            long toMove = Math.min(diff, effectiveRate);
-                            long moved = EnergyStorageUtil.move(entity.energyStorage, target, toMove, null);
-                            if (moved > 0) didSomething = true;
+                BlockEntity nbe = level.getBlockEntity(np);
+                if (nbe instanceof VolcaniteEnergyWireBlockEntity otherWire) {
+                    if (!otherWire.isSideDisconnected(dir.getOpposite()) && wire.pipeColor == otherWire.pipeColor) {
+                        if (visited.size() < MAX_NETWORK_SCAN && visited.add(np)) {
+                            long nextRate = Math.min(node.pathMaxRate(), otherWire.getEffectiveMaxTransfer());
+                            var path = new ArrayList<>(node.path());
+                            path.add(otherWire);
+                            queue.add(new WireNode(np, nextRate, path));
                         }
                     }
-                } else {
-                    // Pull from pure producers (generators that don't accept insertion)
-                    if (target.supportsExtraction() && !target.supportsInsertion() && entity.energyStorage.amount < entity.getCapacity()) {
-                        long space = entity.getCapacity() - entity.energyStorage.amount;
-                        long toMove = Math.min(maxTransfer, space);
-                        long moved = EnergyStorageUtil.move(target, entity.energyStorage, toMove, null);
-                        if (moved > 0) didSomething = true;
-                    }
+                    continue;
+                }
 
-                    // Push to consumers (skip output/receiver Astrape Pylons so wires don't push energy back into the pylon feeding them)
-                    if (target.supportsInsertion() && entity.energyStorage.amount > 0
-                            && !(neighborBe instanceof AstrapeEnergyPylonBlockEntity pylon && pylon.isOutputPylon(level))) {
-                        long toMove = Math.min(maxTransfer, entity.energyStorage.amount);
-                        long moved = EnergyStorageUtil.move(entity.energyStorage, target, toMove, null);
-                        if (moved > 0) didSomething = true;
-                    }
+                if (excludePos != null && np.equals(excludePos)) continue;
+                WireMode mode = wire.getWireMode(dir);
+                if (mode == WireMode.EXTRACT) continue;
+                if (nbe instanceof AstrapeEnergyPylonBlockEntity pylon && pylon.isOutputPylon(level)) continue;
+
+                EnergyStorage target = EnergyStorage.SIDED.find(level, np, dir.getOpposite());
+                if (target != null && target.supportsInsertion()) {
+                    consumers.add(new ConsumerEntry(target, node.pathMaxRate(), node.path()));
                 }
             }
+        }
+        return consumers;
+    }
+
+    public static void tick(Level level, BlockPos pos, BlockState state, VolcaniteEnergyWireBlockEntity entity) {
+        if (level.isClientSide()) return;
+        if (!entity.isRedstoneAllowed(level, pos)) return;
+
+        List<SourceEntry> sources = new ArrayList<>();
+        if (entity.legacyEnergy.amount > 0L) sources.add(new SourceEntry(entity.legacyEnergy, null));
+        for (Direction dir : Direction.values()) {
+            if (entity.isSideDisconnected(dir)) continue;
+            BlockPos np = pos.relative(dir);
+            if (!level.isLoaded(np)) continue;
+            BlockEntity nbe = level.getBlockEntity(np);
+            if (nbe instanceof VolcaniteEnergyWireBlockEntity) continue;
+
+            WireMode mode = entity.getWireMode(dir);
+            if (mode == WireMode.INSERT) continue;
+
+            EnergyStorage target = EnergyStorage.SIDED.find(level, np, dir.getOpposite());
+            if (target == null || !target.supportsExtraction()) continue;
+
+            if (mode == WireMode.EXTRACT || !target.supportsInsertion()) {
+                sources.add(new SourceEntry(target, np));
+            }
+        }
+
+        if (entity.quantumLinked && entity.hasInsertFace()) {
+            QuantumLinkNetworkState netState = QuantumLinkNetworkState.get(level);
+            if (netState != null) {
+                String qKey = QuantumLinkNetworkState.buildChannelKey(entity.quantumPrivate, entity.quantumOwner, entity.quantumColor, entity.quantumChannel);
+                sources.add(new SourceEntry(createQuantumExtractStorage(netState, qKey), null));
+            }
+        }
+
+        if (sources.isEmpty()) return;
+
+        Set<BlockPos> active = ACTIVE_ROUTING.get();
+        if (!active.add(pos)) return;
+        boolean didSomething = false;
+        try {
+            long wireMax = entity.getEffectiveMaxTransfer();
+            for (SourceEntry src : sources) {
+                List<ConsumerEntry> consumers = entity.collectConsumers(level, pos, src.excludePos());
+                if (consumers.isEmpty()) continue;
+
+                if (entity.roundRobin && consumers.size() > 1) {
+                    int offset = Math.floorMod(entity.rrIndex, consumers.size());
+                    if (offset > 0) {
+                        List<ConsumerEntry> rotated = new ArrayList<>(consumers.size());
+                        rotated.addAll(consumers.subList(offset, consumers.size()));
+                        rotated.addAll(consumers.subList(0, offset));
+                        consumers = rotated;
+                    }
+                }
+
+                long remaining = wireMax;
+                for (ConsumerEntry c : consumers) {
+                    long toMove = Math.min(remaining, available(c, level));
+                    if (toMove <= 0L) continue;
+                    long moved;
+                    try (Transaction transaction = Transaction.openOuter()) {
+                        moved = EnergyStorageUtil.move(src.storage(), c.storage(), toMove, transaction);
+                        consume(c, moved, transaction);
+                        if (moved > 0L) transaction.commit();
+                    }
+                    if (moved > 0L) {
+                        remaining -= moved;
+                        didSomething = true;
+                    }
+                    if (remaining <= 0L) break;
+                }
+
+                if (entity.roundRobin) {
+                    entity.rrIndex = (entity.rrIndex + 1) % consumers.size();
+                }
+            }
+        } finally {
+            active.remove(pos);
         }
 
         if (didSomething) {
@@ -241,7 +477,7 @@ public class VolcaniteEnergyWireBlockEntity extends BlockEntity implements PipeF
     @Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider provider) {
         super.saveAdditional(tag, provider);
-        tag.putLong("Energy", energyStorage.amount);
+        tag.putLong("Energy", legacyEnergy.amount);
         byte[] discBytes = new byte[6];
         byte[] modeBytes = new byte[6];
         for (int i = 0; i < 6; i++) {
@@ -253,12 +489,21 @@ public class VolcaniteEnergyWireBlockEntity extends BlockEntity implements PipeF
         if (facadeBlock != null) {
             tag.putString("FacadeBlock", net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(facadeBlock).toString());
         }
+        tag.putInt("PipeColor", pipeColor);
+        tag.putInt("RedstoneMode", redstoneMode);
+        tag.putBoolean("RoundRobin", roundRobin);
+        tag.putInt("Throughput", throughputPercent);
+        tag.putBoolean("QuantumLinked", quantumLinked);
+        tag.putInt("QuantumColor", quantumColor.getId());
+        tag.putInt("QuantumChannel", quantumChannel);
+        tag.putBoolean("QuantumPrivate", quantumPrivate);
+        if (quantumOwner != null) tag.putUUID("QuantumOwner", quantumOwner);
     }
 
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider provider) {
         super.loadAdditional(tag, provider);
-        this.energyStorage.amount = tag.getLong("Energy");
+        legacyEnergy.amount = Math.max(0L, tag.getLong("Energy"));
         if (tag.contains("Disconnected")) {
             byte[] discBytes = tag.getByteArray("Disconnected");
             for (int i = 0; i < Math.min(6, discBytes.length); i++) {
@@ -276,6 +521,15 @@ public class VolcaniteEnergyWireBlockEntity extends BlockEntity implements PipeF
         } else {
             facadeBlock = null;
         }
+        pipeColor = tag.contains("PipeColor") ? tag.getInt("PipeColor") : -1;
+        redstoneMode = tag.getInt("RedstoneMode");
+        roundRobin = tag.getBoolean("RoundRobin");
+        if (tag.contains("Throughput")) throughputPercent = tag.getInt("Throughput");
+        quantumLinked = tag.getBoolean("QuantumLinked");
+        if (tag.contains("QuantumColor")) quantumColor = DyeColor.byId(Math.floorMod(tag.getInt("QuantumColor"), 16));
+        if (tag.contains("QuantumChannel")) quantumChannel = QuantumLinkNetworkState.clampChannel(tag.getInt("QuantumChannel"));
+        quantumPrivate = tag.getBoolean("QuantumPrivate");
+        quantumOwner = tag.hasUUID("QuantumOwner") ? tag.getUUID("QuantumOwner") : null;
     }
 
     @Override

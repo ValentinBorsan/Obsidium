@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GSG",
+    "VCV",
+    "OOO"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "S": {
+      "item": "minecraft:iron_sword"
+    },
+    "V": {
+      "item": "obsidium:volcanite_ingot"
+    },
+    "C": {
+      "item": "minecraft:hopper"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "id": "obsidium:pan_pastoral_harvester",
+    "count": 1
+  }
+}

@@ -20,6 +20,7 @@ public class BasicBackpackMenu extends AbstractContainerMenu {
     private final InteractionHand hand;
     private final Player player;
     private final int heldSlotIndex;
+    private final ItemStack openedBackpack;
 
     public BasicBackpackMenu(int syncId, Inventory playerInventory) {
         this(syncId, playerInventory, InteractionHand.MAIN_HAND);
@@ -30,6 +31,7 @@ public class BasicBackpackMenu extends AbstractContainerMenu {
         this.hand = hand;
         this.player = playerInventory.player;
         this.heldSlotIndex = (hand == InteractionHand.MAIN_HAND) ? playerInventory.selected : 40;
+        this.openedBackpack = playerInventory.getItem(this.heldSlotIndex);
 
         this.backpackContainer = new SimpleContainer(BasicBackpackItem.CONTAINER_SIZE);
 
@@ -84,7 +86,7 @@ public class BasicBackpackMenu extends AbstractContainerMenu {
     }
 
     private ItemStack getBackpackStack() {
-        return player.getItemInHand(hand);
+        return openedBackpack;
     }
 
     private void onBackpackInventoryChanged(Container container) {
@@ -102,8 +104,10 @@ public class BasicBackpackMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        ItemStack stack = player.getItemInHand(hand);
-        return !player.isRemoved() && stack.getItem() instanceof BasicBackpackItem;
+        return player == this.player && !player.isRemoved()
+                && player.getInventory().getItem(heldSlotIndex) == openedBackpack
+                && player.getItemInHand(hand) == openedBackpack
+                && openedBackpack.getItem() instanceof BasicBackpackItem;
     }
 
     @Override
@@ -117,6 +121,7 @@ public class BasicBackpackMenu extends AbstractContainerMenu {
 
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
+        if (!player.level().isClientSide() && !stillValid(player)) return ItemStack.EMPTY;
         ItemStack itemStack = ItemStack.EMPTY;
         Slot slot = this.slots.get(index);
         if (slot != null && slot.hasItem()) {

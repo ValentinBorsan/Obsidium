@@ -76,12 +76,7 @@ public class GraftedSaplingBlockEntity extends BlockEntity {
 
     public void forceMetamorphosis() {
         if (this.level instanceof ServerLevel sl && canMetamorphose()) {
-            boolean isVolcanicOrHybrid = "hephaestus_volcanite".equalsIgnoreCase(rootstockSpecies)
-                    || "hephaestus_volcanite".equalsIgnoreCase(scionSpecies)
-                    || "tartarean_netherite".equalsIgnoreCase(rootstockSpecies)
-                    || "tartarean_netherite".equalsIgnoreCase(scionSpecies)
-                    || "electrum".equalsIgnoreCase(rootstockSpecies)
-                    || "electrum".equalsIgnoreCase(scionSpecies);
+            boolean isVolcanicOrHybrid = GraftingRegistry.canProduceRareMutation(rootstockSpecies, scionSpecies);
 
             Block hybridBlock;
             boolean isRareTitanMutation = isVolcanicOrHybrid && sl.random.nextFloat() < 0.05F;

@@ -1,0 +1,57 @@
+{
+    "multipart": [
+        {
+            "apply": {
+                "model": "obsidium:block/hermes_item_pipe_center"
+            }
+        },
+        {
+            "when": {
+                "up": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/hermes_item_pipe_up"
+            }
+        },
+        {
+            "when": {
+                "down": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/hermes_item_pipe_down"
+            }
+        },
+        {
+            "when": {
+                "north": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/hermes_item_pipe_north"
+            }
+        },
+        {
+            "when": {
+                "east": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/hermes_item_pipe_east"
+            }
+        },
+        {
+            "when": {
+                "south": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/hermes_item_pipe_south"
+            }
+        },
+        {
+            "when": {
+                "west": "true"
+            },
+            "apply": {
+                "model": "obsidium:block/hermes_item_pipe_west"
+            }
+        }
+    ]
+}

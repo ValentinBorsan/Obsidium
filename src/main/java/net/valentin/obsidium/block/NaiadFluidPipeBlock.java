@@ -64,13 +64,38 @@ public class NaiadFluidPipeBlock extends Block implements SimpleWaterloggedBlock
     private static final VoxelShape WEST_SHAPE = Block.box(0, 5, 5, 5, 11, 11);
     private static final VoxelShape EAST_SHAPE = Block.box(11, 5, 5, 16, 11, 11);
 
-    public NaiadFluidPipeBlock(Properties properties) {
+    private final int tier;
+    private final long transferRateMb;
+
+    public NaiadFluidPipeBlock(Properties properties, int tier, long transferRateMb) {
         super(properties);
+        this.tier = tier;
+        this.transferRateMb = transferRateMb;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(NORTH, false).setValue(EAST, false)
                 .setValue(SOUTH, false).setValue(WEST, false)
                 .setValue(UP, false).setValue(DOWN, false)
                 .setValue(WATERLOGGED, false));
+    }
+
+    public NaiadFluidPipeBlock(Properties properties) {
+        this(properties, 1, 250L);
+    }
+
+    public int getTier() { return tier; }
+    public long getTransferRateMb() { return transferRateMb; }
+
+    @Override
+    public void appendHoverText(ItemStack stack, net.minecraft.world.item.Item.TooltipContext context, java.util.List<Component> tooltip, net.minecraft.world.item.TooltipFlag flag) {
+        String tierName = switch (tier) {
+            case 2 -> "§b★ Advanced Tier";
+            case 3 -> "§d★ Supreme Tier";
+            default -> "§e★ Basic Tier";
+        };
+        tooltip.add(Component.literal(tierName));
+        tooltip.add(Component.literal("§7Max Transfer: §b" + String.format("%,d", transferRateMb) + " mB/t"));
+        tooltip.add(Component.literal("§8Right-click empty-handed for Pipe Config GUI"));
+        tooltip.add(Component.literal("§8Right-click with Dye to isolate color channel"));
     }
 
     @Override
@@ -142,12 +167,18 @@ public class NaiadFluidPipeBlock extends Block implements SimpleWaterloggedBlock
             if (neighborPipe.isSideDisconnected(dir.getOpposite())) {
                 return false;
             }
+            if (pipeBe != null && pipeBe.getPipeColor() != neighborPipe.getPipeColor()) {
+                return false;
+            }
             return true;
         }
 
-        // Connect to anything holding or moving fluids
+        // Connect to anything holding or moving fluids (never to other pipe/wire types)
         BlockState neighborState = level.getBlockState(neighborPos);
         Block block = neighborState.getBlock();
+        if (block instanceof VolcaniteStoragePipeBlock || block instanceof VolcaniteEnergyWireBlock) {
+            return false;
+        }
         if (block instanceof LiquidTankBlock ||
             block instanceof VolcaniteLavaPumpBlock ||
             block instanceof HydrothermalCondenserBlock ||
@@ -221,6 +252,41 @@ public class NaiadFluidPipeBlock extends Block implements SimpleWaterloggedBlock
             return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
 
+        // 0b. DYE COLOR ISOLATION
+        if (stack.getItem() instanceof net.minecraft.world.item.DyeItem dyeItem) {
+            if (!level.isClientSide()) {
+                int newCol = dyeItem.getDyeColor().getId();
+                int targetCol = (pipeBe.getPipeColor() == newCol) ? -1 : newCol;
+                pipeBe.setPipeColor(targetCol);
+                if (targetCol >= 0 && player != null && !player.getAbilities().instabuild) {
+                    stack.shrink(1);
+                }
+                level.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                if (player != null) {
+                    String msg = targetCol >= 0
+                            ? "§b[Naiad Pipe] §fColor channel: §e" + net.valentin.obsidium.item.QuantumLinkModuleItem.getColorDisplayName(dyeItem.getDyeColor())
+                            : "§b[Naiad Pipe] §7Color channel cleared (Default)";
+                    player.displayClientMessage(Component.literal(msg), true);
+                }
+            }
+            return ItemInteractionResult.sidedSuccess(level.isClientSide());
+        }
+
+        // 0c. QUANTUM LINK MODULE
+        if (stack.is(ObsidiumMod.QUANTUM_LINK_MODULE) && !pipeBe.isQuantumLinked()) {
+            if (!level.isClientSide()) {
+                pipeBe.setQuantumLinked(true, player != null ? player.getUUID() : null);
+                if (player != null && !player.getAbilities().instabuild) {
+                    stack.shrink(1);
+                }
+                level.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.0F, 1.2F);
+                if (player != null) {
+                    player.displayClientMessage(Component.literal("§d[Naiad Pipe] §aQuantum Link installed! Open GUI to set channel."), true);
+                }
+            }
+            return ItemInteractionResult.sidedSuccess(level.isClientSide());
+        }
+
         // 1. LOGISTICS VALVE MODULE
         if (stack.getItem() instanceof VolcaniteLogisticsModuleItem) {
             if (!state.getValue(getProperty(targetFace))) {
@@ -234,6 +300,7 @@ public class NaiadFluidPipeBlock extends Block implements SimpleWaterloggedBlock
                 NaiadFluidPipeBlockEntity.ValveMode current = pipeBe.getValveMode(targetFace);
                 if (current == NaiadFluidPipeBlockEntity.ValveMode.NONE) {
                     pipeBe.setValveMode(targetFace, NaiadFluidPipeBlockEntity.ValveMode.EXTRACT);
+                    pipeBe.setHasValveModule(targetFace, true);
                     if (player != null && !player.getAbilities().instabuild) {
                         stack.shrink(1);
                     }
@@ -264,12 +331,18 @@ public class NaiadFluidPipeBlock extends Block implements SimpleWaterloggedBlock
             }
 
             if (!level.isClientSide()) {
-                if (pipeBe.getValveMode(targetFace) != NaiadFluidPipeBlockEntity.ValveMode.NONE && !player.isShiftKeyDown()) {
-                    NaiadFluidPipeBlockEntity.ValveMode next = pipeBe.cycleValveMode(targetFace);
-                    level.playSound(null, pos, SoundEvents.ANVIL_USE, SoundSource.BLOCKS, 0.6F, 1.6F);
+                BlockPos neighborPos = pos.relative(targetFace);
+                BlockEntity neighborBe = level.getBlockEntity(neighborPos);
+                if (state.getValue(getProperty(targetFace)) && !(neighborBe instanceof NaiadFluidPipeBlockEntity)) {
+                    NaiadFluidPipeBlockEntity.ValveMode next = pipeBe.cycleValveModeWithNone(targetFace);
+                    level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 0.8F, 1.2F);
                     if (player != null) {
-                        String modeDesc = next == NaiadFluidPipeBlockEntity.ValveMode.EXTRACT ? "§6EXTRACT (Pulling)" : "§bINSERT (Pushing)";
-                        player.displayClientMessage(Component.literal("§6[Wrench] §b[Naiad Pipe] §7Face §f" + targetFace.getName().toUpperCase() + " §7valve mode: " + modeDesc), true);
+                        String modeDesc = switch (next) {
+                            case EXTRACT -> "§6EXTRACT / EXPORT (Pull Fluid)";
+                            case INSERT -> "§bINSERT / IMPORT (Push Fluid)";
+                            case NONE -> "§eNORMAL (Bidirectional)";
+                        };
+                        player.displayClientMessage(Component.literal("§6[Wrench] §b[Naiad Pipe] §7Face §f" + targetFace.getName().toUpperCase() + " §7mode: " + modeDesc), true);
                     }
                 } else {
                     boolean nowDisconnected = pipeBe.toggleSideDisconnected(targetFace);
@@ -330,12 +403,10 @@ public class NaiadFluidPipeBlock extends Block implements SimpleWaterloggedBlock
                     }
                     return InteractionResult.sidedSuccess(level.isClientSide());
                 }
-            } else if (pipeBe.getValveMode(targetFace) != NaiadFluidPipeBlockEntity.ValveMode.NONE) {
+            } else {
                 if (!level.isClientSide()) {
-                    NaiadFluidPipeBlockEntity.ValveMode next = pipeBe.cycleValveMode(targetFace);
-                    level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 0.8F, 1.2F);
-                    String modeDesc = next == NaiadFluidPipeBlockEntity.ValveMode.EXTRACT ? "§6EXTRACT (Pulling)" : "§bINSERT (Pushing)";
-                    player.displayClientMessage(Component.literal("§b[Naiad Pipe] §7Face §f" + targetFace.getName().toUpperCase() + " §7valve mode: " + modeDesc), true);
+                    pipeBe.ensureQuantumOwner(player.getUUID());
+                    player.openMenu(pipeBe);
                 }
                 return InteractionResult.sidedSuccess(level.isClientSide());
             }
@@ -349,6 +420,12 @@ public class NaiadFluidPipeBlock extends Block implements SimpleWaterloggedBlock
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof NaiadFluidPipeBlockEntity pipeBe) {
                 pipeBe.dropAllValves();
+                if (pipeBe.isQuantumLinked()) {
+                    net.minecraft.world.Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, new ItemStack(ObsidiumMod.QUANTUM_LINK_MODULE));
+                }
+                if (pipeBe.getFilterContainer() != null) {
+                    net.minecraft.world.Containers.dropContents(level, pos, pipeBe.getFilterContainer());
+                }
                 if (pipeBe.getFacadeBlock() != null) {
                     ItemStack drop = net.valentin.obsidium.item.PipeFacadeItem.getFacadeFor(pipeBe.getFacadeBlock());
                     if (!drop.isEmpty()) {

@@ -698,8 +698,7 @@ public class GeothermalArboristBlockEntity extends BlockEntity implements MenuPr
         boolean eligible = mutationSelection == 0
                 ? (species.contains("midas_gold") && (species.contains("hermes_copper") || species.contains("artemis_silver")))
                     || (species.contains("hermes_copper") && species.contains("zeus_tin"))
-                : species.contains("hephaestus_volcanite")
-                    && (species.contains("ares_iron") || species.contains("cronus_lead") || species.contains("midas_gold"));
+                : species.contains("tartarean_netherite") && species.contains("hephaestus_volcanite");
         if (!eligible) return;
 
         mutationProgress = Math.min(MUTATION_PROGRESS_REQUIRED,
@@ -744,8 +743,7 @@ public class GeothermalArboristBlockEntity extends BlockEntity implements MenuPr
         boolean eligible = mutationSelection == 0
                 ? (species.contains("midas_gold") && (species.contains("hermes_copper") || species.contains("artemis_silver")))
                     || (species.contains("hermes_copper") && species.contains("zeus_tin"))
-                : species.contains("hephaestus_volcanite")
-                    && (species.contains("ares_iron") || species.contains("cronus_lead") || species.contains("midas_gold"));
+                : species.contains("tartarean_netherite") && species.contains("hephaestus_volcanite");
         if (!eligible) return;
 
         // Steady passive advance: +2 per cycle when trees are coexisting
@@ -799,7 +797,7 @@ public class GeothermalArboristBlockEntity extends BlockEntity implements MenuPr
         Set<String> species = getNearbyLeavesSpecies(level, machinePos);
         return (species.contains("midas_gold") && (species.contains("hermes_copper") || species.contains("artemis_silver")))
                 || (species.contains("hermes_copper") && species.contains("zeus_tin"))
-                || (species.contains("hephaestus_volcanite") && (species.contains("ares_iron") || species.contains("cronus_lead") || species.contains("midas_gold")));
+                || (species.contains("tartarean_netherite") && species.contains("hephaestus_volcanite"));
     }
 
     private boolean hasSeedInInputSlots() {

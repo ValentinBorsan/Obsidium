@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "obsidium:block/aegis_sanctuary_ward_top",
+    "side": "obsidium:block/aegis_sanctuary_ward_side_on"
+  }
+}

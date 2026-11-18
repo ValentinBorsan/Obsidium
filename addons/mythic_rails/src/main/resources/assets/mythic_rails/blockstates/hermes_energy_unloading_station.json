@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "facing=north,enabled=true": {
+      "model": "mythic_rails:block/hermes_energy_unloading_station",
+      "y": 0
+    },
+    "facing=north,enabled=false": {
+      "model": "mythic_rails:block/hermes_energy_unloading_station",
+      "y": 0
+    },
+    "facing=east,enabled=true": {
+      "model": "mythic_rails:block/hermes_energy_unloading_station",
+      "y": 90
+    },
+    "facing=east,enabled=false": {
+      "model": "mythic_rails:block/hermes_energy_unloading_station",
+      "y": 90
+    },
+    "facing=south,enabled=true": {
+      "model": "mythic_rails:block/hermes_energy_unloading_station",
+      "y": 180
+    },
+    "facing=south,enabled=false": {
+      "model": "mythic_rails:block/hermes_energy_unloading_station",
+      "y": 180
+    },
+    "facing=west,enabled=true": {
+      "model": "mythic_rails:block/hermes_energy_unloading_station",
+      "y": 270
+    },
+    "facing=west,enabled=false": {
+      "model": "mythic_rails:block/hermes_energy_unloading_station",
+      "y": 270
+    }
+  }
+}
